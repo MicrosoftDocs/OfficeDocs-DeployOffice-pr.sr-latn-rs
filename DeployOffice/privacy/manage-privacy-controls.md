@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u sistemu Office 365 ProPlus pomoću regulatornih postavki.
 hideEdit: true
-ms.openlocfilehash: 096d6a368965ecedcff3807bbbf3e90649eb8562
-ms.sourcegitcommit: 6145cfe372725bedab7bc6a80adab100561f74fd
+ms.openlocfilehash: 069b21632044354afded61ccc9b1d099cd9cda98
+ms.sourcegitcommit: 8dd9721bd618ae6e4d27f2c45c5dc8e3219858ac
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "34106902"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "34250397"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Koristite regulatorne postavke za upravljanje kontrolama privatnosti u programu Office 365 ProPlus
 
@@ -85,6 +85,9 @@ Razumemo da možda želite da odaberete koji tipovi povezanih iskustava su dostu
 - Dozvolite upotrebu povezanih iskustava u sistemu Office
 
 Ako ne konfigurišete ove regulatorne postavke, sva povezana iskustva će biti dostupna. To korisnicima pruža sve funkcije i funkcionalnosti dostupne kroz Office 365 ProPlus. Mi razumemo da ćete možda morati da isključite neka ili sva od ovih povezanih iskustava da ispunite određene zahteve vaše organizacije.
+
+> [!IMPORTANT]
+> Trenutno postoji problem sa ove 4 postavke smernica, ali radimo na njegovom rešavanju. Za sada, da biste onemogućili neku od tih postavki smernica koristeći alatku Group Policy Management, morate da izaberete radio dugme **Omogućeno** i da izaberete stavku **Onemogućeno** sa padajuće liste u odeljku **Opcije**. Izbor radio dugmeta **Onemogućeno** neće onemogućiti ove postavke smernica.
 
 Ako odlučite da svojim korisnicima ne ponudite neke vrste povezanih iskustava, traka ili komande na meniju za ta povezana iskustva će biti nedostupne, ili će korisnici dobiti poruku o grešci kada pokušaju da koriste ta povezana iskustva. U tom slučaju, nema [obaveznih uslužnih podataka](required-service-data.md) za ta povezana iskustva koja se šalju korporaciji Microsoft.
 
