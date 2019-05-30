@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u sistemu Office 365 ProPlus pomoću regulatornih postavki.
 hideEdit: true
-ms.openlocfilehash: 069b21632044354afded61ccc9b1d099cd9cda98
-ms.sourcegitcommit: 8dd9721bd618ae6e4d27f2c45c5dc8e3219858ac
+ms.openlocfilehash: a28da8a54ecb37f6fd26576ce2dfb4614521dd19
+ms.sourcegitcommit: c4147043c5e6581d58a6d09edbf95266e67dd796
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "34250397"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "34545472"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Koristite regulatorne postavke za upravljanje kontrolama privatnosti u programu Office 365 ProPlus
 
@@ -87,7 +87,7 @@ Razumemo da možda želite da odaberete koji tipovi povezanih iskustava su dostu
 Ako ne konfigurišete ove regulatorne postavke, sva povezana iskustva će biti dostupna. To korisnicima pruža sve funkcije i funkcionalnosti dostupne kroz Office 365 ProPlus. Mi razumemo da ćete možda morati da isključite neka ili sva od ovih povezanih iskustava da ispunite određene zahteve vaše organizacije.
 
 > [!IMPORTANT]
-> Trenutno postoji problem sa ove 4 postavke smernica, ali radimo na njegovom rešavanju. Za sada, da biste onemogućili neku od tih postavki smernica koristeći alatku Group Policy Management, morate da izaberete radio dugme **Omogućeno** i da izaberete stavku **Onemogućeno** sa padajuće liste u odeljku **Opcije**. Izbor radio dugmeta **Onemogućeno** neće onemogućiti ove postavke smernica.
+> Problem vezan za onemogućavanje ove 4 postavke smernica je nedavno popravljen objavljivanjem novih datoteka Administrativnog predloška (ADMX/ADML) 28. maja 2019. Ručno preuzmite i instalirate ažurirane datoteke „Smernice grupe“ sa lokacije [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=49030).
 
 Ako odlučite da svojim korisnicima ne ponudite neke vrste povezanih iskustava, traka ili komande na meniju za ta povezana iskustva će biti nedostupne, ili će korisnici dobiti poruku o grešci kada pokušaju da koriste ta povezana iskustva. U tom slučaju, nema [obaveznih uslužnih podataka](required-service-data.md) za ta povezana iskustva koja se šalju korporaciji Microsoft.
 
@@ -207,8 +207,8 @@ Neki administratori žele da promene postavke direktno u registratoru, na primer
 |Podesite nivo dijagnostičkih podataka klijentskog softvera koje Office šalje korporaciji Microsoft  | SendTelemetry |1 =Obavezno <br/> 2=Opcionalno <br/> 3=Nijedno|
 |Dozvolite upotrebu povezanih iskustava koja analiziraju sadržaj u sistemu Office  | UserContentDisabled | 1 =Omogućeno <br/> 2 =Onemogućeno|
 |Dozvolite upotrebu povezanih iskustava u sistemu Office koja preuzimaju mrežni sadržaj  | DownloadContentDisabled | 1 =Omogućeno <br/> 2 =Onemogućeno|
-|Dozvolite upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office   |  DisconnectedState |1 =Omogućeno <br/> 2 =Onemogućeno|
-|Dozvolite upotrebu povezanih iskustava u sistemu Office | ControllerConnectedServicesEnabled  | 1 =Omogućeno <br/> 2 =Onemogućeno|
+|Dozvolite upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office   | ControllerConnectedServicesEnabled  |1 =Omogućeno <br/> 2 =Onemogućeno|
+|Dozvolite upotrebu povezanih iskustava u sistemu Office | DisconnectedState  | 1 =Omogućeno <br/> 2 =Onemogućeno|
 
 Da biste napravili. reg datoteku za postavke privatnosti, otvorite „Beležnicu“ i dodajte sledeće redove. Prilagodite vrednosti tako da odgovaraju vašim potrebama, a zatim sačuvajte datoteku. Uverite se da ime datoteke ima oznaku tipa. reg
 
