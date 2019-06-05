@@ -3,7 +3,7 @@ title: Obavezni dijagnostički podaci za Office
 ms.author: danbrown
 author: DHB-MSFT
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: reference
 ms.service: o365-proplus-itpro
 localization_priority: Priority
@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: 9b22b428999c51b46e6f6ce662fad99f5a727b4c
-ms.sourcegitcommit: 6145cfe372725bedab7bc6a80adab100561f74fd
+ms.openlocfilehash: a5ac5dfded3dbb51693b5d15616675b067c59dc3
+ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "34106938"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "34701712"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -2989,7 +2989,7 @@ Prikupljaju se sledeća polja:
 
   - **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen tu datoteku.
 
-  - **Data\_Doc\_IsSyncBacked -** Zastavica koja ukazuje na to da na računaru postoji kopija dokumenta koja se automatski sinhronizuje
+  - **Data\_Doc\_IsSyncBacked -** Zastavica koja označava da na računaru postoji kopija dokumenta koja se automatski sinhronizuje
 
   - **Data\_Doc\_Location -** Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
 
@@ -3081,7 +3081,7 @@ Prikupljaju se sledeća polja:
 
   - **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen tu datoteku.
 
-  - **Data\_Doc\_IsSyncBacked -** Zastavica koja ukazuje na to da na računaru postoji kopija dokumenta koja se automatski sinhronizuje
+  - **Data\_Doc\_IsSyncBacked -** Zastavica koja označava da na računaru postoji kopija dokumenta koja se automatski sinhronizuje
 
   - **Data\_Doc\_Location -** Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
 
@@ -3177,7 +3177,7 @@ Prikupljaju se sledeća polja:
 
   - **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen tu datoteku.
 
-  - **Data\_Doc\_IsSyncBacked -** Zastavica koja ukazuje na to da na računaru postoji kopija dokumenta koja se automatski sinhronizuje
+  - **Data\_Doc\_IsSyncBacked -** Zastavica koja označava da na računaru postoji kopija dokumenta koja se automatski sinhronizuje
 
   - **Data\_Doc\_Location -** Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
 
@@ -3293,7 +3293,7 @@ Prikupljaju se sledeća polja:
 
   - **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen tu datoteku.
 
-  - **Data\_Doc\_IsSyncBacked -** Zastavica koja ukazuje na to da na računaru postoji kopija dokumenta koja se automatski sinhronizuje
+  - **Data\_Doc\_IsSyncBacked -** Zastavica koja označava da na računaru postoji kopija dokumenta koja se automatski sinhronizuje
 
   - **Data\_Doc\_Location -** Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
 
@@ -4781,7 +4781,7 @@ Prikupljaju se sledeća polja:
 
   - **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen tu datoteku.
 
-  - **Data\_Doc\_IsSyncBacked -** Zastavica koja ukazuje na to da na računaru postoji kopija dokumenta koja se automatski sinhronizuje
+  - **Data\_Doc\_IsSyncBacked -** Zastavica koja označava da na računaru postoji kopija dokumenta koja se automatski sinhronizuje
 
   - **Data\_Doc\_Location -** Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
 
@@ -5239,7 +5239,7 @@ Prikupljaju se sledeća polja:
 
   - **TotalWorkingSetMB** - Količina memorije u megabajtima u radnom skupu procesa.
 
-  - **VirtualSetMB** - Količina memorije u megabajtima u virtuelnom skupu procesa. (Samo za MacOS/iOS)
+  - **VirtualSetMB** - Količina memorije u megabajtima u virtualnom skupu procesa. (Samo za MacOS/iOS)
 
   - **WorkingSetPeakMB** - najveća količina memorije u megabajtima koja je do sada bila u radnom skupu procesa.
 
