@@ -11,7 +11,7 @@ ms.collection: Ent_O365
 ms.custom:
 - Ent_Office_ProPlus
 - Ent_Office_Privacy
-description: Pruža administratorima sistema Office pregled neophodnih uslužnih podataka o povezanim iskustvima koji se prikupljaju u sistemu Office.
+description: Pruža administratorima sistema Office pregled neophodnih podataka o usluzi koji se prikupljaju o povezanim iskustvima u sistemu Office.
 hideEdit: true
 ms.openlocfilehash: 88f8aadc098af6e167206486566e32af1767c741
 ms.sourcegitcommit: 894a18676566981183dbe2d78f7466c9bb2c6354
@@ -30,29 +30,29 @@ ms.locfileid: "33468562"
 
 Office se sastoji od aplikacija klijentskog softvera i povezanih iskustava dizajniranih tako da vam omogućavaju da efikasnije kreirate, komunicirate i sarađujete. Rad sa drugima na dokumentu uskladištenom u usluzi OneDrive for Business ili prevođenje sadržaja Word dokumenta na neki drugi jezik su primeri povezanih iskustava.
 
-Neophodni uslužni podaci su od suštinskog značaja jer nam omogućavaju da isporučimo ova povezana iskustva bazirana na oblaku i učinimo ih bezbednim i funkcionalnim za naše klijente, kao što se očekuje. Neophodne podatke o usluzi čine tri tipa informacija.
+Neophodni podaci o usluzi imaju suštinski značaj jer nam omogućavaju da isporučimo ova povezana iskustva zasnovana na oblaku i učinimo ih bezbednim i funkcionalnim za naše klijente, kao što se očekuje. Neophodne podatke o usluzi čine tri tipa informacija.
 
 - **Sadržaj klijenta**, što je sadržaj koji kreirate pomoću sistema Office, kao što je tekst koji ste otkucali u Word dokumentu i koristi se zajedno sa povezanim iskustvom.
 - **Funkcionalni podaci**, koji uključuju informacije potrebne da povezano iskustvo izvrši svoj zadatak, kao što su informacije o konfiguraciji aplikacije.
 - **Uslužni dijagnostički podaci**, odnosno podaci potrebni da biste zaštitili uslugu, redovno je ažurirali i obezbedili da funkcioniše kao što je očekivano. Zbog toga što su ti podaci strogo vezani za povezano iskustvo, oni su odvojeni od nivoa obaveznih ili opcionalnih dijagnostičkih podataka.
 
-## <a name="example-of-required-service-data-for-a-connected-experience"></a>Primer neophodnih uslužnih podataka za povezano iskustvo
+## <a name="example-of-required-service-data-for-a-connected-experience"></a>Primer neophodnih podataka o usluzi za povezano iskustvo
 
-Da biste lakše razumeli neophodne podatke o usluzi, sledi primer scenarija za Dizajner za PowerPoint, povezani utisak pri radu koji možete da koristite prilikom kreiranja slajdova za prezentaciju. PowerPoint Designer vam pomaže da poboljšate slajdove tako što automatski generiše dizajnerske ideje koje možete da koristite. Dok stavljate sadržaj na slajd, Designer radi u pozadini da bi taj sadržaj preneo na profesionalno dizajnirane rasporede.
+Da biste lakše razumeli neophodne podatke o usluzi, sledi primer scenarija za Dizajner za PowerPoint, povezano iskustvo koje možete da koristite prilikom kreiranja slajdova za prezentaciju. PowerPoint Designer vam pomaže da poboljšate slajdove tako što automatski generiše dizajnerske ideje koje možete da koristite. Dok stavljate sadržaj na slajd, Designer radi u pozadini da bi taj sadržaj preneo na profesionalno dizajnirane rasporede.
 
-Neophodni podaci o usluzi koji se šalju korporaciji Microsoft da bismo omogućili ovaj povezani utisak pri radu mogu da obuhvate sledeće:
+Neophodni podaci o usluzi koji se šalju korporaciji Microsoft kako bismo omogućili ovo povezano iskustvo mogu da obuhvate sledeće:
 
 - *Sadržaj klijenta*, kao što su tekst ili slike koje ste dodali na slajd.
 - *Funkcionalne podatke*, kao što je slajd na kome radite i njegov raspored.
 - *Uslužne dijagnostičke podatke*, kao što su događaji koji nam govore da li je ideja za dizajn ispravno primenjena na vašem slajdu i da li uslužni pozivi rade ispravno.
 
-## <a name="view-and-manage-required-service-data"></a>Prikaz i upravljanje neophodnim uslužnim podacima
+## <a name="view-and-manage-required-service-data"></a>Prikaz neophodnih podataka o usluzi i upravljanje njima
 
 Možete da vidite dijagnostičke podatke koristeći Prikazivač dijagnostičkih podataka. Za više informacija pogledajte članak [Primeri događaja za uslužne dijagnostičke podatke](#examples-of-events-for-service-diagnostic-data).
 
-Pružamo vam mogućnost da izaberete tipove povezanih iskustava koje želite da koristite u sistemu Office, što određuje koji se neophodni uslužni podaci šalju nama. Na primer, PowerPoint Designer je jedan od nekoliko povezanih iskustava koji analizira vaš sadržaj. Ako odlučite da isključite povezana iskustva koja analiziraju sadržaj, nama se neće slati nikakvi neophodni uslužni podaci o funkciji PowerPoint Designer jer nam ona neće biti dostupna za korišćenje.
+Pružamo vam mogućnost da izaberete tipove povezanih iskustava koje želite da koristite u sistemu Office, što određuje koji se neophodni podaci o usluzi šalju nama. Na primer, Dizajner za PowerPoint predstavlja jedno od nekoliko povezanih iskustava koja analiziraju vaš sadržaj. Ako odlučite da isključite povezana iskustva koja analiziraju sadržaj, nama se neće slati nikakvi neophodni podaci o usluzi za funkciju Dizajner za PowerPoint jer nam ona neće biti dostupna za korišćenje.
 
-Neophodni uslužni podaci o osnovnim uslugama sistema Office se takođe prikupljaju i šalju korporaciji Microsoft, kao što je usluga licenciranja koja potvrđuje da ste ispravno licencirani da koristite Office. Ovi podaci o osnovnim uslugama se šalju bez obzira na sva druga podešavanja vezana za privatnost koja ste konfigurisali.
+Neophodni podaci o usluzi prikupljaju se i šalju korporaciji Microsoft i za osnovne usluge sistema Office, kao što je usluga licenciranja koja potvrđuje da ste ispravno licencirani da koristite Office. Ovi podaci o osnovnim uslugama se šalju bez obzira na sva druga podešavanja vezana za privatnost koja ste konfigurisali.
 
 Za više informacija pogledajte sledeće članke:
 
