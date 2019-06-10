@@ -3,7 +3,7 @@ title: Neophodni podaci o usluzi za Office
 ms.author: danbrown
 author: DHB-MSFT
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: reference
 ms.service: o365-proplus-itpro
 localization_priority: Priority
@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža administratorima sistema Office pregled neophodnih podataka o usluzi koji se prikupljaju o povezanim iskustvima u sistemu Office.
 hideEdit: true
-ms.openlocfilehash: 88f8aadc098af6e167206486566e32af1767c741
-ms.sourcegitcommit: 894a18676566981183dbe2d78f7466c9bb2c6354
+ms.openlocfilehash: 9a276e00f5c852ffda00844c5e1aaa9187f581c3
+ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "33468562"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "34701021"
 ---
 # <a name="required-service-data-for-office"></a>Neophodni podaci o usluzi za Office 
 
