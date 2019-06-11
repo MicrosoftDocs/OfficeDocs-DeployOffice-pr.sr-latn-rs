@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: 81b5ff2e1451f910f2e9695dba488d39d27b7241
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 291ec1b925b021f3d35e504d95649a7bdd34adc0
+ms.sourcegitcommit: 186aae0571f8ef5f62882b4edb10378ee8e42b6e
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701291"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "34813352"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -2718,6 +2718,14 @@ Prikupljaju se sledeća polja:
 
   - **TimerDetectedChange** - Da li je promena otkrivena u redovnom vremenskom pingu.
 
+### <a name="officesystemprivacyfallbacktosettingsstore"></a>Office.System.PrivacyFallbackToSettingsStore
+
+Koristi se da bi se utvrdilo da li postoje neuspesi u čitanju postavki privatnosti korisnika iz Roaming prodavnice.
+
+Prikupljaju se sledeća polja:
+
+  - **Oznaka - **Oznaka koda koja pokazuje koja postavka se vratila u skladište postavki.
+
 ### <a name="officesystemsessiondatao365"></a>Office.System.SessionDataO365
 
 Metapodaci koji su potrebni da bi se izolovala greška reprodukovanja.
@@ -2746,7 +2754,7 @@ Prikupljaju se sledeća polja:
 
   - **IsCeip -** Da li je Office instalacija registrovana u neaktivanom Programu za unapređenje na osnovu korisničkog iskustva
 
-  - **IsDebug -** Da li je to Office izdanje za otklanjanje grešaka
+  - **IsDebug -** Da li je ovo debug verzija programa Office.
 
   - **IsImmersive -** Da li je Office aplikacija jedinstvena za Windows ili je sveobuhvatna.
 

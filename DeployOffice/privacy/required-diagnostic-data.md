@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: a5ac5dfded3dbb51693b5d15616675b067c59dc3
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: d42f2bd20e3e2169e58d6f5c0a563f1b117ea847
+ms.sourcegitcommit: 186aae0571f8ef5f62882b4edb10378ee8e42b6e
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701712"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "34813316"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -65,6 +65,7 @@ Sledeća tabela sadrži listu kategorija za obavezne dijagnostičke podatke. Nav
 | **Upotreba proizvoda i usluga**    | [Uspešnost funkcija aplikacije](#application-feature-success-subtype)   | Uspešnost funkcionalnosti aplikacije. Ograničena na otvaranje i zatvaranje aplikacije i dokumenata, uređivanje i deljenje (saradnju) datoteka. |
 | | [Status aplikacije i pokretanje](#application-status-and-boot-subtype)    | Utvrđivanje da li su se određene funkcije događaja odigrale, kao što su pokretanje ili zaustavljanje i da li funkcija radi.   |
 | | [Konfiguracija pristupačnosti sistema Office](#office-accessibility-configuration-subtype)  | Funkcije pristupačnosti u sistemu Office       |
+| | [Privatnost](#privacy-subtype)| Postavke privatnosti za Office|
 | **Performanse proizvoda i usluga**       | [Neočekivani izlaz iz aplikacije (pad)](#unexpected-application-exit-crash-subtype)  | Neočekivani izlazi (padovi) iz aplikacije i njeno stanje u trenutku kada se to dogodi.    |
 |  | [Performanse funkcija aplikacije](#application-feature-performance-subtype)  | Loše vreme odziva ili performansi u scenarijima kao što su pokretanje aplikacije ili otvaranje datoteke. |
 |  | [Greška u aktivnosti aplikacije](#application-activity-error-subtype)   | Greške u funkcionalnosti funkcije ili korisničkog iskustva.  |
@@ -971,6 +972,7 @@ Podtipovi podataka koji spadaju u ovu kategoriji su:
 - [Uspešnost funkcija aplikacije](#application-feature-success-subtype)
 - [Status aplikacije i pokretanje](#application-status-and-boot-subtype)
 - [Konfiguracija pristupačnosti sistema Office](#office-accessibility-configuration-subtype)
+- [Privatnost](#privacy-subtype)
 
 
 ### <a name="application-feature-success-subtype"></a>*Podtip uspešnosti funkcija aplikacije*
@@ -4000,8 +4002,12 @@ Prikupljaju se sledeća polja:
   - **Data\_CheckRequiredPartsLoaded -** Trajanje izvršavanja metode CheckRequiredPartsLoaded u milisekundama
 
   - **Data\_CheckWebSharingViolationForIncOpen -** Trajanje izvršavanja metode CheckWebSharingViolationForIncOpen u milisekundama
+   
+  - **Data_CloseAndReopenWithoutDiscard –** Da li je dokument zatvoren i ponovo otvoren tokom otvorenog procesa bez odbacivanja.
 
   - **Data\_ContentTransaction -** Unapred definisani skup vrednosti koji se odnosi na to kada transakcija može biti kreirana (dozvoljeno pri učitavanju dokumenta, dozvoljeno pri završenom otvaranju, itd.)
+
+  - **Data_CorrelationId –** GUID je prosleđen programu PowerPoint pomoću programa ProtocolHandler za korelaciju telemetrije. ProtokolHandler je odvojeni proces koji upravlja Office vezama za OS.
 
   - **Data\_CppUncaughtExceptionCount:long -** Neopaženi osnovni izuzeci dok je aktivnost pokrenuta
 
@@ -4337,7 +4343,7 @@ Primenjuje se za Office aplikacije za UWP.  Ovaj događaj se aktivira kada se Of
 
 Prikupljaju se sledeća polja:
 
-- **appVersionBuild** - Broj verzije izdanja aplikacije.
+- **verzija izdanja aplikacije ** – Broj verzije izdanja aplikacije.
 
 - **appVersionMajor** - Broj glavne verzije aplikacije.
 
@@ -4911,6 +4917,50 @@ Ovaj događaj ukazuje na to da je program Office Word prestao da čita naglas te
 Prikupljaju se sledeća polja:
 
   - Nijedno
+
+### <a name="privacy-subtype"></a>*Podtip privatnosti*
+
+Postavke privatnosti za Office 
+
+#### <a name="officeintelligentserviceprivacyconsentprivacyevent"></a>Office.IntelligentService.PrivacyConsent.PrivacyEvent
+
+Ovaj događaj predstavlja akciju koju je pokrenuo korisnik ili sistem koji je deo korisničkog iskustva za Office. Pokreće se u dijalozima Prvo pokretanje privatnosti, dijalogu Privatnost naloga i obaveštenjima o privatnosti. Događaj se koristi da bi se razumelo sledeće: korisnici koji su saglasni sa postavkama privatnosti za Office, korisnici koji menjaju postavke privatnosti za Office i postavke privatnosti za Office koje se ažuriraju u korisničkim sesijama.
+
+Prikupljaju se sledeća polja:
+
+  - **Data_ActionId - ** Radnja korisnika u dijalogu „Privatnost“
+
+  - **Data_ControllerConnectedServicesState –** Postavka korisničke politike za dodatna opciona povezana iskustva
+
+  - **Data_DownloadedContentServiceGroupState –** Korisničke postavke za preuzet sadržaj 
+ 
+  - **Data_ForwardLinkId-** Veza sa dokumentacijom o privatnosti za korisnički scenario
+
+  - **Data_HRESULT-** Zapis grešaka tokom interakcije sa dijalogom o privatnosti
+
+  - **Data_IsEnterpriseUser –** Kategorija licence korisnika
+
+  - **Data_OfficeServiceConnectionState –** Korisnička podešavanje za povezane usluge
+
+  - **Data_RecordRegistry –** Zapis o prikazivanju dijaloga o privatnosti preduzeća
+
+  - **Data_Scenario –** Scenario prvog pokretanja zasnovan na korisničkoj licenci i kategoriji
+
+  - **Data_SeenInsidersDialog –** Zapis o prikazivanju dijaloga o privatnosti insajdera
+
+  - **Data_SendTelemetryOption –** Korisničko podešavanje za telemetriju
+
+  - **Data_SendTelemetryOption –** Postavka korisničkih smernica za telemetriju
+
+  - **Data_UserCategory –** Tip korisničkog naloga  
+
+  - **Data_UserCCSDisabled-** Korisnička razmena za dodatna opciona povezana iskustva
+
+   - **Data_UserContentServiceGroupState –** Korisničke postavke za analizu sadržaja
+
+  - **Data_WillShowDialogs –** Zapis korisnika koji treba da vidi prvi put pokrenut dijalog o privatnosti
+
+
 
 ## <a name="product-and-service-performance-data-events"></a>Podaci događaja performanse proizvoda i usluga
 
