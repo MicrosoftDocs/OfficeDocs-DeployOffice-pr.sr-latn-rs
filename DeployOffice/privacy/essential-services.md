@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: 291ec1b925b021f3d35e504d95649a7bdd34adc0
-ms.sourcegitcommit: 186aae0571f8ef5f62882b4edb10378ee8e42b6e
+ms.openlocfilehash: 14b2426d021e5c559cabd3c969f80df9131cc9b9
+ms.sourcegitcommit: 22ae0005d3106ff02949fb613b82e0245abfa49f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "34813352"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "35817983"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -50,7 +50,7 @@ Sledeća tabela sadrži listu osnovnih usluga za Office i njihov opis.
 | ------ | ---- |
 | [Potvrda identiteta](#authentication-events) | Potvrda identiteta je usluga koja se nalazi na bilo kom uređaju i koja potvrđuje vaš korisnički identitet u sistemu Office. Ona je potrebna za prijavljivanje u Office, aktiviranje Office licence, pristup vašim datotekama koje su uskladištene u oblaku i za pružanje doslednog iskustva u svim Office sesijama i uređajima.    |
 | [Klikni i pokreni](#click-to-run-events) | „Klikni i pokreni“ je tehnologija instaliranja koja se koristi za instalaciju i ažuriranje sistema Office na operativnom sistemu Windows. Ona proverava da li postoje nove verzije sistema Office, a kada nova verzija postane dostupna, preuzima je i instalira. „Klikni i pokreni“ će otkrivati potrebu za preuzimanjem i instaliranjem Office ispravki, kao i bezbednosnih zakrpi.     |
-| [Usluga poboljšane konfiguracije (UPK)](#experimentation-and-configuration-service-ecs-events) | UPK omogućava korporaciji Microsoft da ponovo konfiguriše instalacije sistema Office, a da vi ne morate ponovo da ga instalirate. Koristi se za kontrolu postepenog objavljivanja funkcija i ažuriranja, dok se uticaj objavljivanja nadgleda preko dijagnostičkih podataka koji se prikupljaju. Takođe se koristi i za smanjivanje bezbednosnih problema i problema performansi uz pomoć funkcija ili ažuriranja. Osim toga, UPK podržava promene u konfiguraciji koje se odnose na dijagnostičke podatke kako bi se obezbedilo prikupljanje odgovarajućih događaja. |
+| [Usluga poboljšane konfiguracije (UPK)](#enhanced-configuration-service-ecs-events) | UPK omogućava korporaciji Microsoft da ponovo konfiguriše instalacije sistema Office, a da vi ne morate ponovo da ga instalirate. Koristi se za kontrolu postepenog objavljivanja funkcija i ažuriranja, dok se uticaj objavljivanja nadgleda preko dijagnostičkih podataka koji se prikupljaju. Takođe se koristi i za smanjivanje bezbednosnih problema i problema performansi uz pomoć funkcija ili ažuriranja. Osim toga, UPK podržava promene u konfiguraciji koje se odnose na dijagnostičke podatke kako bi se obezbedilo prikupljanje odgovarajućih događaja. |
 | [Licenciranje](#licensing-events)     | Licenciranje je usluga zasnovana na tehnologiji oblaka koja održava vašu Office aktivaciju tokom novih instalacija i čuva licencu na vašim uređajima nakon aktivacije. Ona registruje svaki od vaših uređaja i aktivira Office, provera status vaše pretplate na sistem Office i upravlja vašom šifrom proizvoda.    |
 | [Konfiguracija usluga](#services-configuration-events)  | Konfiguracija usluga pruža mogućnost ažuriranja postavki konfiguracije za Office da bi se omogućile ili onemogućile funkcije klijenta. Ova funkcija se poziva svaki put kada se pokrene Office aplikacija i pruža detalje o ostalim konfiguracijama i uslugama sistema Office. Konfiguracija usluga takođe kontroliše koje usluge su određene kao osnovne.  |
 | [Telemetrija ](#telemetry-events)  | Usluga telemetrije se koristi za prikupljanje dijagnostičkih podataka iz Office aplikacija. Ona omogućava prikupljanje dijagnostičkih podataka koje generiše Office, i obaveznih i opcionalnih. Takođe je odgovorna za delimično prikupljanje neophodnih dijagnostičkih podataka o usluzi za Office.  |
@@ -2395,7 +2395,7 @@ Prikupljaju se sledeća polja:
   - **Data\_targetBuild -** - Verzija koju pokušavamo da nadogradimo na Office
 
 
-## <a name="experimentation-and-configuration-service-ecs-events"></a>Događaji za eksperimentalne i konfiguracijske (ECS) usluge
+## <a name="enhanced-configuration-service-ecs-events"></a>Događaji usluge poboljšane konfiguracije (UPK)
 
 ### <a name="officeexperimentationfeaturequerybatched"></a>Office.Experimentation.FeatureQueryBatched
 
@@ -2436,7 +2436,7 @@ Koristi se za određivanje da li se korisnik nalazi u dobrom ili lošem statusu,
 
 Prikupljaju se sledeća polja:
 
-  - **ACID** - GUID identifikator koji predstavlja Office proizvode za koje je korisnik licenciran
+  - **ESID** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
 
   - **DwEulaId** – Numerički identifikator za tip EULA ugovora koji je korisnik prihvatio
 
@@ -2448,9 +2448,9 @@ Od suštinskog je značaja za određivanje koliko korisnika nailazi na probleme 
 
 Prikupljaju se sledeća polja:
 
-  - **Acid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran
+  - **Esid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
 
-  - **ReferralData** - Identifikator za OEM koji je instalirao Office na računar
+  - **ReferralData** - Identifikator za OEM koji je instalirao Office na računaru
 
 ### <a name="officelicensingactivationwizard"></a>Office.Licensing.ActivationWizard 
 
@@ -2480,13 +2480,13 @@ Ovo se prikuplja pri svakoj sesiji koja izveštava o statusu licence na računar
 
 Prikupljaju se sledeća polja:
 
-  - **Acid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
+  - **Acid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran  
 
   - **IsSessionLicensing** - Da li je trenutno pokrenuta u režimu aktivacije deljenog računara ili nije. 
 
-  - **LicenseCategory** - Kategorija Office licence koju korisnik koristi 
+  - **LicenseCategory** - Kategorija Office licence koju koristi korisnik 
 
-  - **Licences** - Lista sa imenima svih Office licenci koje se nalaze na računaru 
+  - **Licenses** - Lista sa imenima svih Office licenci koje se nalaze na računaru 
 
   - **LicenseStatuses** - Status svih Office licenci koje se nalaze na računaru 
 
@@ -2510,7 +2510,7 @@ Ako uređaj uđe u režim smanjene funkcionalnosti, šaljemo ovaj signal da bism
 
 Prikupljaju se sledeća polja:
 
-  - **ACID** - GUID identifikator koji predstavlja Office proizvode za koje je korisnik licenciran
+  - **ESID** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
 
   - **DaysRemaining** - Broj dana koji je preostao do isteka trenutne Office licence
 
@@ -2536,7 +2536,7 @@ U slučaju da primetimo probleme sa tokom posla aktivacije, pokrećemo čarobnja
 
 Prikupljaju se sledeća polja:
 
-  - **Acid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran
+  - **Esid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
 
   - **LicenseStatus** - Status Office licence koju korisnik koristi
 
@@ -2556,7 +2556,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officelicensinglicexitofficeprocess"></a>Office.Licensing.LicExitOfficeProcess 
 
-Ako dođe do zatvoranja/pada sistema Office zbog problema sa licenciranjem, šaljemo ovaj signal da bismo to naznačili. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu i ne nedostaje mu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru.
+Ako dođe do zatvaranja ili pada sistema Office zbog problema sa licenciranjem, šaljemo ovaj signal da bismo to naznačili. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu i ne nedostaje mu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru.
 
 Prikupljaju se sledeća polja:
 
@@ -2578,7 +2578,7 @@ Ovo se prikuplja ako smo korisniku prikazali EULA ugovor, a on je izabrao da ga 
 
 Prikupljaju se sledeća polja:
 
-  - **Acid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran
+  - **Esid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
 
   - **OptInShown** - Ukazuje na to da li je dijalog za davanje saglasnosti koji se prikazuje pri prvom pokretanju aplikacije već prikazan. 
 
@@ -2602,13 +2602,13 @@ Ovo se prikuplja pri svakoj sesiji uređaja koji je pokrenut na modernom paketu 
 
 Prikupljaju se sledeća polja:
 
-  - **Acid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
+  - **Esid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran  
 
   - **AllAcids** - Lista svih GUID proizvoda za koje je korisnik trenutno licenciran 
 
-  - **Category** - Kategorija Office licence koju korisnik koristi 
+  - **Kategorija** - Kategorija Office licence koju korisnik koristi 
 
-  - **DaysRemaining** - Broj dana koji je preostao do isteka trenutne Office licence 
+  - **DaysRemaining** -Broj dana koji je preostao do isteka trenutne Office licence 
 
   - **LicenseId** - Alfanumerički identifikator licence koji je izdat korisniku 
 
@@ -2616,7 +2616,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officelicensingofficeclientlicensingdolicensevalidation"></a>Office.Licensing.OfficeClientLicensing.DoLicenseValidation 
 
-Ovo su metapodaci licenciranja koji se prikupljaju pri svakom pokretanju i koji izveštavaju o proizvodu, statusu, tipu i drugim svojstvima licence koja su važna za određivanje skupa funkcija dostupnih korisniku. Od suštinske je važnosti za određivanje skupa funkcija koje su dostupne korisniku i da li nedostaje neka funkcionalnost. Takođe se koristi i za izračunavanje broja dnevno/mesečno aktivnih korisnika, kao i za različite izveštaje koje koriste razni timovi u svim Office oblastima (marketing/DIG/licenciranje) jer nam to govori koji tip proizvoda koristi korisnik, da li je u pitanju pretplata na proizvod i da li nedostaje neka bitna funkcionalnost.
+Ovo su metapodaci licenciranja koji se prikupljaju pri svakom pokretanju i koji izveštavaju o proizvodu, statusu, tipu i drugim svojstvima licence koja su važna za određivanje skupa funkcija dostupnih korisniku. Od suštinske je važnosti za određivanje skupa funkcija koje su dostupne korisniku i da li nedostaje neka funkcionalnost. Takođe se koristi i za izračunavanje broja dnevno/mesečno aktivnih korisnika, kao i za različite izveštaje koje koriste razni timovi u svim Office oblastima, jer nam to govori koji tip proizvoda koristi korisnik, da li je u pitanju pretplata na proizvod i da li nedostaje neka bitna funkcionalnost.
 
 Prikupljaju se sledeća polja:
 
@@ -2630,7 +2630,7 @@ Prikupljaju se sledeća polja:
 
   - **IsvNext** - Ukazuje na to da li koristimo novi moderni paket licenciranja ili ne 
 
-  - **LicenseCategory** - Kategorija Office licence koju koristi korisnik 
+  - **LicenseCategory** -Kategorija Office licence koju koristi korisnik 
 
   - **LicenseStatus** - Status Office licence koju korisnik koristi 
 
@@ -2652,7 +2652,7 @@ Ovaj događaj ne prikuplja polja.
 
 ### <a name="officelicensingpurchase"></a>Office.Licensing.Purchase 
 
-Sprovodimo eksperiment koji korisniku pruža mogućnost da isproba i podesi automatsko plaćanje za Office direktno iz aplikacije bez potrebe da napušta njen kontekstualni meni. Ovo izveštava o uspešnosti ili neuspešnosti datog eksperimenta, kao i o kôdu greške. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu i ne nedostaje mu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru.
+Sprovodimo eksperiment koji korisniku pruža mogućnost da isproba i podesi automatsko plaćanje za Office direktno iz aplikacije bez potrebe da napušta kontekst aplikacije. Ovo izveštava o uspešnosti ili neuspešnosti datog eksperimenta, kao i o kôdu greške. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu i ne nedostaje mu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru.
 
 Prikupljaju se sledeća polja:
 
