@@ -36,7 +36,7 @@ Ovi dijagnostički podaci se prikupljaju i šalju korporaciji Microsoft o Office
 
 Ako odaberete da nam pošaljete opcionalne dijagnostičke podatke, oni se prikupljaju uz obavezne dijagnostičke podatke.
 
-Primeri opcionalno dijagnostičkih podataka koje prikupljamo uključuju podatke vezane za slike koje korisnici umeću u Word dokumente da bismo obezbedili bolje opcije slike, kao i podaci o vremenu potrebnom da se PowerPoint slajd pojavi na ekranu da bismo poboljšali iskustvo ako je sporo.
+Primeri opcionalnih dijagnostičkih podataka koje prikupljamo sadrže podatke vezane za slike koje korisnici umeću u Word dokumente da bismo obezbedili bolje opcije slike, kao i podatke o vremenu potrebnom da se PowerPoint slajd pojavi na ekranu da bismo poboljšali iskustvo ako je sporo.
 
 Za više informacija o dijagnostičkim podacima pogledajte sledeće članke:
 
@@ -90,7 +90,7 @@ Sledeća tabela sadrži primere događaja za ovu kategoriju, kao i njihove opise
 | ------ | ------- |
 | Office.Word.Commanding.Highlight  | Ovaj događaj ukazuje na to da je Word izvršio komandu za isticanje teksta. Koristimo ga za otkrivanje grešaka u komandi za isticanje teksta.  |
 | Office.Translator.AddInLoaded   | Signal koji ukazuje na to da je prevodilačka funkcija uspešno učitana i prikazana.  |
-| Office.Graphics.GVizInsertShape |Prati uspeh ili neuspeh funkcije „Umetni sliku" i izveštava o detaljima tipova umetnutih slika i njihovim izvorima.| 
+| Office.Graphics.GVizInsertShape |Prati korišćenje funkcije „Umetni oblik" i izveštava o detaljima tipova umetnutih oblika i njihovim izvorima.| 
 | Office.PowerPoint.PPT.Desktop.SummaryZoomInsertionRule   | Ovaj događaj određuje da li postoje odeljci prisutni u dokumentu kada korisnik umeće zumiranje rezimea i da li bira da izbriše postojeće odeljke. |
 | Office.Security.SecureReaderHost.ProtectedViewValidation | Prati kada i zašto je datoteka otvorena u zaštićenom prikazu. Koristi se za dijagnostikovanje uslova u kojima zaštićeni prikaz nije ispravno pokrenut da bi se obezbedio pravilan rad funkcije. |
 
