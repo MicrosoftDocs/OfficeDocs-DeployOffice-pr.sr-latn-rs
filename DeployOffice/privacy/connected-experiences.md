@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije Office administratorima o povezanim iskustvima za Office, kao što su iskustva koja analiziraju sadržaj ili iskustva koja preuzimaju sadržaj na mreži.
 hideEdit: true
-ms.openlocfilehash: 3b0ac61cf01a588e3af85d1eb83d4b2fd7e8b63e
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 1ae21c76eb0cc4addcc0a26e7ca1330aef99eee1
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701798"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238235"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sistemu Office
 
@@ -27,6 +27,8 @@ ms.locfileid: "34701798"
 > - Office 365 ProPlus i Office 365 Business
 > - Office 365 Personal, Office 365 Home ili druge verzije sistema Office koje su deo pretplate na Office 365.
 > - Project i Visio koji se dobijaju uz neke planove pretplata, kao što je plan za Project Online Professional ili Visio Online Plan 2.
+>
+> Informacije se odnose i na verziju 16.28 ili noviju verziju sledećih Office aplikacija za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
 Office se sastoji od aplikacija klijentskog softvera i povezanih iskustava dizajniranih tako da vam omogućavaju da efikasnije kreirate, komunicirate i sarađujete. Rad sa drugima na dokumentu uskladištenom u OneDrive usluzi ili prevođenje sadržaja Word dokumenta na neki drugi jezik su primeri povezanih iskustava.
 
@@ -129,7 +131,10 @@ Ako ste prijavljeni pomoću Microsoft naloga, otvorite Office aplikaciju, kao š
 
 Ako ste prijavljeni pomoću poslovnog ili školskog naloga, administrator u vašoj organizaciji će odlučiti da li su vam ova povezana iskustva dostupna. Nećete videti izbore za ova povezana iskustva ako odete na **Datoteka** > **Nalog** > **Privatnost naloga** > **Upravljanje postavkama**.
 
-Ako ste administrator za vašu organizaciju, možete da koristite regulatorne postavke da utvrdite da li su ova povezana iskustva dostupna vašim korisnicima. Ako ne koristite ove regulatorne postavke, sva povezana iskustva će biti dostupna vašim korisnicima. Za više informacija o korišćenju ovih regulatornih postavki, pogledajte članak [Koristite regulatorne postavke za upravljanje kontrolama privatnosti za Office 365 ProPlus](manage-privacy-controls.md).
+> [!NOTE]
+> Ako koristite Office za Mac, otvorite bilo koju Office aplikaciju i izaberite meni aplikacije (kao što je Word ili Excel) > **Željene postavke** > **Privatnost**. To će otvoriti dijalog „Postavke privatnosti naloga“ gde možete da vidite opcije privatnosti.
+
+Ako ste administrator za vašu organizaciju, možete da koristite regulatorne postavke da utvrdite da li su ova povezana iskustva dostupna vašim korisnicima. Ako ne koristite ove regulatorne postavke, sva povezana iskustva će biti dostupna vašim korisnicima. Za više informacija o korišćenju ovih regulatornih postavki, pogledajte članak [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md) i [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md).
 
 Ako odlučite da isključite neke vrste povezanih iskustava, traka ili komande na meniju za ta povezana iskustva će biti nedostupna, ili ćete dobiti poruku o grešci kada pokušate da koristite ta povezana iskustva.
 
@@ -141,3 +146,4 @@ Ako odlučite da isključite neke vrste povezanih iskustava, traka ili komande n
 - [Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md)
 - [Neophodni podaci o usluzi za Office](required-service-data.md)
 - [Osnovne usluge za Office](essential-services.md)
+- [Postavke privatnosti naloga](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)

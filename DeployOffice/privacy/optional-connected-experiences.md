@@ -13,19 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: f1d8c16b7e267d49735814ee9d393c578dbf3c28
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: e20a2cd70b8c5fbc47abac7288627cd2783855e7
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701338"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36239149"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
 Ako imate poslovni ili školski nalog, administrator u organizaciji vam je možda omogućio da koristite jednu ili više usluga koje se baziraju na oblaku (takođe se nazivaju i „opcionalna povezana iskustva”) dok koristite Office 365 ProPlus aplikacije. Ove usluge u oblaku su opcionalne. Na vama je da li ih koristite. One se obezbeđuju u skladu sa uslovima [Microsoft ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjave o privatnosti](https://privacy.microsoft.com/). U nekim slučajevima, drugi uslovi se takođe mogu primenjivati. Ovaj članak navodi usluge u oblaku, dodatno objašnjava njihove uslove korišćenja i opisuje kako možete da ih uključite ili isključite u bilo kom trenutku.
 
 > [!NOTE]
-> Ako ste administrator, pogledajte članak [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office 365 ProPlus](manage-privacy-controls.md) da biste saznali kako da date ili ograničite mogućnost korisnika da koriste opcionalna povezana iskustva.
+> Ako ste administrator, pogledajte sledeće članke da biste saznali kako da date ili ograničite mogućnost korisnika da koriste opcionalna povezana iskustva:
+> - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
+> - [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>Ako koristite te usluge, koje uslove korišćenja treba da prihvatite?
 
@@ -50,6 +52,10 @@ Kada koristite Office prodavnicu, vaša upotreba same lokacije prodavnice je lic
 ### <a name="insert-online-video"></a>Umetanje video zapisa na mreži
 
 [Umetanje video zapisa na mreži](https://support.office.com/article/8340EC69-4CEE-4FE1-AB96-4849154BC6DB) vam omogućava da umetnete video datoteke u svoj dokument. Iskustvo umetanja video zapisa na mreži podložno je [Microsoft ugovoru o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjavi o privatnosti](https://privacy.microsoft.com/). Dodatni uslovi korišćenja se mogu primenjivati ako pristupate sadržaju iz nezavisnih izvora. Na primer, kada se povežete na YouTube, primenjivaće se njegovi [uslovi korišćenja](https://www.youtube.com/t/terms) i [izjava o privatnosti](https://policies.google.com/privacy). Microsoft može da doda druge provajdere video materijala u budućnosti.
+
+### <a name="microsoft-error-reporting-program-merp"></a>Program korporacije Microsoft za izveštavanje o greškama (MERP) 
+
+MERP se povezuje sa uslugom Watson.microsoft.com kako bi se poslali dijagnostički podaci kada dođe do pada klijentskih Office aplikacija koje se pokreću na Mac uređajima. On je u vlasništvu korporacije Microsoft i primenjuju se uslovi iz [Ugovora o pružanju Microsoft usluga](https://www.microsoft.com/servicesagreement) i [Izjave o privatnosti korporacije Microsoft](https://privacy.microsoft.com/). MERP se ne odnosi na klijentske Office aplikacije koje se pokreću na operativnom sistemu Windows.
 
 ### <a name="research"></a>Istraživanje
 
@@ -80,9 +86,13 @@ Predlaganje funkcije je iskustvo koje vam omogućava da dostavite svoje ideje u 
 
 Da biste utvrdili da li vam je administrator dao mogućnost da koristite bilo koja opcionalna povezana iskustva u Office 365 ProPlus aplikaciji na uređaju koji koristi Windows, idite na **Datoteka** > **Nalog**  >  **Privatnost naloga** i izaberite **Upravljanje postavkama**. Ako vam administrator nije dao kontrolu, videćete poruku sa obaveštenjem da „administrator u organizaciji upravlja vašim postavkama privatnosti i odlučio je da onemogući opcionalna povezana iskustva”.
 
+Ako koristite Office za Mac, otvorite bilo koju Office aplikaciju i izaberite meni aplikacije (kao što je Word ili Excel) > **Željene postavke** > **Privatnost**. To će otvoriti dijalog „Postavke privatnosti naloga“ gde možete da vidite opcije privatnosti.
+
 ## <a name="your-privacy-settings"></a>Vaše postavke privatnosti
 
 Ako vam je administrator dao mogućnost da koristite opcionalna povezana iskustva u Office 365 ProPlus aplikaciji na uređaju koji koristi Windows, idite na **Datoteku** > **Nalog**  >  **Privatnost naloga** i izaberite **Upravljanje postavkama** da biste bilo kada upravljali svojim postavkama. Kada je to omogućeno, imaćete opciju da koristite usluge opisane u ovom članku kada god želite da ih koristite. Kada je onemogućen, one neće biti dostupne.
+
+Ako koristite Office za Mac, otvorite bilo koju Office aplikaciju i izaberite meni aplikacije (kao što je Word ili Excel) > **Željene postavke** > **Privatnost**. To će otvoriti dijalog „Postavke privatnosti naloga“ gde možete da vidite opcije privatnosti.
 
 ## <a name="diagnostic-data"></a>Dijagnostički podaci
 
@@ -93,3 +103,4 @@ Kada koristite bilo koju od opcionalnih usluga u oblaku koje su opisane u ovom �
 
 - [Pregled kontrola privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Neophodni podaci o usluzi za Office](required-service-data.md)
+- [Postavke privatnosti naloga](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)

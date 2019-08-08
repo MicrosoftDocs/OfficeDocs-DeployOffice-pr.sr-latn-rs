@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža administratorima sistema Office pregled neophodnih podataka o usluzi koji se prikupljaju o povezanim iskustvima u sistemu Office.
 hideEdit: true
-ms.openlocfilehash: 9a276e00f5c852ffda00844c5e1aaa9187f581c3
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 76c30eddecbb84fecc5cb49c9691edcebc7c13b7
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701021"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238494"
 ---
 # <a name="required-service-data-for-office"></a>Neophodni podaci o usluzi za Office 
 
@@ -27,6 +27,8 @@ ms.locfileid: "34701021"
 > - Office 365 ProPlus i Office 365 Business
 > - Office 365 Personal, Office 365 Home ili druge verzije sistema Office koje su deo pretplate na Office 365.
 > - Project i Visio koji se dobijaju uz neke planove pretplata, kao što je plan za Project Online Professional ili Visio Online Plan 2.
+>
+> Informacije se odnose i na verziju 16.28 ili noviju verziju sledećih Office aplikacija za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
 Office se sastoji od aplikacija klijentskog softvera i povezanih iskustava dizajniranih tako da vam omogućavaju da efikasnije kreirate, komunicirate i sarađujete. Rad sa drugima na dokumentu uskladištenom u usluzi OneDrive for Business ili prevođenje sadržaja Word dokumenta na neki drugi jezik su primeri povezanih iskustava.
 
@@ -64,6 +66,7 @@ Ako ste administrator organizacije, možda će vas zanimati i sledeće:
 
 - [Pregled kontrola privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
+- [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 
 ## <a name="examples-of-events-for-service-diagnostic-data"></a>Primeri događaja za uslužne dijagnostičke podatke
 

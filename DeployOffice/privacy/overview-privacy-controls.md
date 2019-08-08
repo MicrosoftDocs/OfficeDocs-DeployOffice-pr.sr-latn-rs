@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža Office administratorima pregled kontrola privatnosti za Office 365 ProPlus, uključujući za dijagnostičke podatake i povezana iskustva.
 hideEdit: true
-ms.openlocfilehash: a65fd2a6b7169c9098d233a926041d9cbc599886
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: a362a50b3d75e0792623745ef32fb93b4e458a41
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701132"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238944"
 ---
 # <a name="overview-of-privacy-controls-for-office-365-proplus"></a>Pregled kontrola privatnosti za Office 365 ProPlus
 
@@ -34,9 +34,11 @@ U sklopu ovih promena, postoje elementi novog i ažuriranog korisničkog interfe
 
 > [!IMPORTANT]
 > - Ove promene se primenjuju na Access, Excel, OneNote, Outlook, PowerPoint, Publisher i Word.
-> - Ove promene se takođe primenjuju na desktop verzije programa Project i Visio koje se dobijaju uz neke planove pretplata, kao što je plan za Project Online Professional ili Visio Online Plan 2.
-> - Očekuje se da će verzija 1904 biti dostupna u polu-godišnjem kanalu (izabrani korisnici) u septembru i polu-godišnjem kanalu u januaru 2020.
-> - Mi ćemo proširiti ove nove i poboljšane kontrole privatnosti na dodatne Office klijente, uključujući timove i Office za Mac i naše aplikacija za mobilne uređaje. Pružićemo dodatne informacije o tim promenama u narednim mesecima. Nastavićemo da pažljivo slušamo vaše povratne informacije i donosimo poboljšanja u svim Office 365 klijentima i uslugama.
+> - Ove promene se primenjuju i na sledeće verzije:
+>   - Verziju 16.28 ili noviju verziju sledećih Office aplikacija za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
+>   - Verziju 1904 ili novije desktop verzije programa Project i Visio koje se dobijaju uz neke planove pretplata, kao što je plan za Project Online Professional ili Visio Online Plan 2.
+> - Očekuje se da će kontrole privatnosti, objavljene u verziji 1904, biti dostupne u polu-godišnjem kanalu (izabrani korisnici) u septembru 2019. i polu-godišnjem kanalu u januaru 2020.
+> - Mi ćemo proširiti ove nove i poboljšane kontrole privatnosti na dodatne Office klijente, uključujući uslugu Teams i naše aplikacije za mobilne uređaje. Pružićemo dodatne informacije o tim promenama u narednim mesecima. Nastavićemo da pažljivo slušamo vaše povratne informacije i donosimo poboljšanja u svim Office 365 klijentima i uslugama.
 
 ## <a name="diagnostic-data-sent-from-office-365-proplus-to-microsoft"></a>Dijagnostički podaci koji se šalju iz Office 365 ProPlus korporaciji Microsoft
 
@@ -63,12 +65,12 @@ Vaši korisnici neće moći da promene nivo dijagnostičkih podataka za njihove 
 Ovi dijagnostički podaci ne uključuju imena korisnika, njihove adrese elektronske pošte ili sadržaj njihovih Office dokumenata. Naš sistem kreira jedinstveni ID koji povezuje sa dijagnostičkim podacima vaših korisnika. Kada primimo dijagnostičke podatke koji prikazuju da se jedna od naših aplikacija srušila 100 puta, ovaj jedinstveni ID omogućava nam da utvrdimo da li se radi o jednom korisniku čiji se program srušio 100 puta ili se radi o 100 različitih korisnika od kojih je svakom program pao po jednom. Ne koristimo ovaj jedinstveni ID za identifikaciju određenog korisnika.
 
 Da biste videli koji dijagnostički podaci se šalju korporaciji Microsoft, možete da koristite besplatan Prikazivač dijagnostičkih podataka koji možete da preuzmete i instalirate iz Microsoft prodavnice.
-
-Dodatne informacije potražite u sledećim člancima:
+7 Za više informacija pogledajte sledeće članke:
 
 - [Obavezni dijagnostički podaci za Office](required-diagnostic-data.md)
 - [Opcionalni dijagnostički podaci za Office](optional-diagnostic-data.md)
-- [Koristite regulatorne postavke za upravljanje kontrolama privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
+- [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 - [Korišćenje Prikazivača dijagnostičkih podataka uz Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="connected-experiences-for-office-365-proplus"></a>Povezana iskustva za Office 365 ProPlus
@@ -92,7 +94,8 @@ Vaši korisnici neće moći da odaberu da li žele da uključe ili isključe ova
 Dodatne informacije potražite u sledećim člancima:
 
 - [Povezana iskustva u sistemu Office](connected-experiences.md)
-- [Koristite regulatorne postavke za upravljanje kontrolama privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+- [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
+- [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 
 ## <a name="optional-connected-experiences-for-office-365-proplus"></a>Opcionalna povezana iskustva za Office 365 ProPlus
 
@@ -102,12 +105,13 @@ Ovo su opcionalna povezana iskustva koja nisu pokrivena komercijalnim ugovorom v
 
 Zato što su ova opcionalna povezana iskustva uređena zasebnim odredbama i uslovima, njima upravljate odvojeno u odnosu na gore navedena povezana iskustva. Kao administrator za organizaciju, moći ćete da koristite regulatorne postavke da biste odabrali da li će ova opcionalna povezana iskustva biti dostupna, kao grupa, vašim korisnicima. Ako ne konfigurišete ovu regulatornu postavku, ova povezana iskustva će biti dostupna vašim korisnicima.
 
-Čak i ako odaberete da ova opcionalna povezana iskustva učinite dostupnim vašim korisnicima, korisnici će imati opciju da isključe te opcionalno povezana iskustva kao grupu tako što će otići na **Datoteka** > **Nalog** > **Privatnost naloga** > **Upravljanje postavkama**. Korisnici će imati ovaj izbor samo ako su prijavljeni u Office pomoću akreditiva organizacije (oni se ponekad nazivaju poslovnim ili školskim nalozima), a ne ako su prijavljeni na ličnu adresu elektronske pošte.
+Čak i ako odaberete da ova opcionalna povezana iskustva učinite dostupnim vašim korisnicima, korisnici će imati opciju da ih isključe kao grupu tako što će otići u [dijalog postavki privatnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Korisnici će imati ovaj izbor samo ako su prijavljeni u Office pomoću akreditiva organizacije (oni se ponekad nazivaju poslovnim ili školskim nalozima), a ne ako su prijavljeni na ličnu adresu elektronske pošte.
 
 Dodatne informacije potražite u sledećim člancima:
 
 - [Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md)
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
+- [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 
 ## <a name="required-service-data-for-connected-experiences"></a>Neophodni podaci o usluzi za povezane utiske pri radu
 
@@ -119,7 +123,7 @@ Neophodni podaci o usluzi jesu podaci koji nam omogućavaju da isporučimo ove p
 
 Da biste lakše razumeli neophodne podatke o usluzi, sledi primer scenarija za Dizajner za PowerPoint, povezani utisak pri radu koji možete da koristite prilikom kreiranja slajdova za prezentaciju. PowerPoint Designer vam pomaže da poboljšate slajdove tako što automatski generiše dizajnerske ideje koje možete da koristite. Dok stavljate sadržaj na slajd, Designer radi u pozadini da bi taj sadržaj preneo na profesionalno dizajnirane rasporede.
 
-Neophodni podaci o usluzi koji se šalju korporaciji Microsoft da bismo omogućili ovaj povezani utisak pri radu mogu da obuhvate sledeće:
+Neophodni podaci o usluzi koji se šalju korporaciji Microsoft kako bismo omogućili ovo povezano iskustvo mogu da obuhvate sledeće:
 
 - *Sadržaj klijenta*, kao što su tekst ili slike koje ste dodali na slajd.
 - *Funkcionalne podatke*, kao što je slajd na kome radite i njegov raspored.

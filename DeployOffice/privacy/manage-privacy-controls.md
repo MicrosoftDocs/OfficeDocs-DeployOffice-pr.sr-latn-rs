@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u sistemu Office 365 ProPlus pomoću regulatornih postavki.
 hideEdit: true
-ms.openlocfilehash: 5d38a944c7fe0c2c17cb6cd50339908b1cb7ae6e
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 55c6c6477d4c03d94048c98c961179686eb29c83
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701254"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238984"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Koristite regulatorne postavke za upravljanje kontrolama privatnosti u programu Office 365 ProPlus
 
@@ -41,6 +41,9 @@ Ovo je pet novih regulatornih postavki:
 - Dozvolite upotrebu povezanih iskustava u sistemu Office
 
 Ove regulatorne postavke mogu da se implementiraju korišćenjem Grupnih pravila ili [Uslugom pravila za Office iz oblaka](https://docs.microsoft.com/DeployOffice/overview-office-client-policy-service). Ako koristite Grupna pravila, potrebno je da preuzmete najnoviju verziju datoteka administrativnih predložaka (ADMX/ADML) sa [Microsoft centra za preuzimanje](https://www.microsoft.com/download/details.aspx?id=49030).
+
+> [!NOTE]
+> Za informacije o tome kako da upravljate kontrolama privatnosti u sistemu Office za Mac, pogledajte članak [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md).
 
 Ako koristite alatku za upravljanje grupnim pravilima, sve ove regulatorne postavke se nalaze u okviru Konfiguracija korisnika\\Politika\\Administrativni predlošci\\Microsoft Office 2016\\Privatnost\\ Centar za pouzdanost.
 
@@ -117,7 +120,7 @@ Ova povezana iskustva su različita, zato što nisu pokrivena komercijalnim ugov
 
 Možete da koristite regulatornu postavku *Dozvoli upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office* da kontrolišete da li su ove vrste povezanih iskustava dostupne vašim korisnicima. Ako ne konfigurišete ovu regulatornu postavku, ova povezana iskustva će biti dostupna vašim korisnicima.
 
-Čak i ako odaberete da ova opcionalna povezana iskustva učinite dostupnim vašim korisnicima, korisnici će imati opciju da ih isključe kao grupu tako što će otići na **Datoteka** > **Nalog** > **Privatnost naloga** > **Upravljanje postavkama**. Vaši korisnici će imati ovaj izbor samo ako su prijavljeni u Office pomoću akreditiva organizacije (oni se ponekad nazivaju poslovnim ili školskim nalozima), a ne ako su prijavljeni na ličnu adresu elektronske pošte.
+Čak i ako odaberete da ova opcionalna povezana iskustva učinite dostupnim vašim korisnicima, korisnici će imati opciju da ih isključe kao grupu tako što će otići u [dijalog postavki privatnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vaši korisnici će imati ovaj izbor samo ako su prijavljeni u Office pomoću akreditiva organizacije (oni se ponekad nazivaju poslovnim ili školskim nalozima), a ne ako su prijavljeni na ličnu adresu elektronske pošte.
 
 Pored toga, neka od ovih opcionalnih povezanih iskustava se takođe smatraju povezanim iskustvima koja analiziraju sadržaj ili preuzimaju sadržaj na mreži. Na primer, Umetanje slika na mreži je opcionalno povezano iskustvo, bazirano na tehnologiji Microsoft Bing, ali se takođe smatra i povezanim iskustvom koje preuzima sadržaj na mreži. Stoga, ako onemogućite regulatornu postavku *Dozvoli upotrebu povezanih iskustava u sistemu Office koja preuzimaju mrežni sadržaj*, Umetanje slika na mreži neće biti dostupno vašim korisnicima. Ono neće biti dostupno čak i ako ste omogućili regulatornu postavku *Dozvoli upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office*. Više informacija o tome koja povezana iskustva analiziraju sadržaj ili preuzimaju sadržaj na mreži potražite u članku [Povezani iskustva u sistemu Office](connected-experiences.md).
 
@@ -174,7 +177,7 @@ Postoje neke promene u korisničkom interfejsu (UI) usluge Office 365 ProPlus u 
 
 ### <a name="dialog-about-optional-connected-experiences"></a>Dijaloški okvir o opcionalnim povezanim iskustvima
 
-Ako ste odabrali da korisnicima omogućite [opcionalna povezana iskustva](optional-connected-experiences.md), po prvi put kada vaši korisnici otvore Office aplikaciju nakon ažuriranja na verziju 1904, pojaviće se informativni dijaloški okvir. Ovaj dijaloški okvir obaveštava vaše korisnike da ste im dali izbor da koriste ova opcionalna povezana iskustva i da mogu otići u **Datoteka** > **Nalog**  >  ** Privatnost naloga** da bi promenili ovu postavku.
+Ako ste odabrali da korisnicima omogućite [opcionalna povezana iskustva](optional-connected-experiences.md), prvi put kada otvore Office aplikaciju nakon ažuriranja na verziju 1904 ili noviju, pojaviće se informativni dijalog. Ovaj dijaloški okvir obaveštava vaše korisnike da ste im dali izbor da koriste ova opcionalna povezana iskustva i da mogu otići u **Datoteka** > **Nalog**  >  ** Privatnost naloga** da bi promenili ovu postavku.
 
 ### <a name="privacy-settings-removed-from-the-office-ui"></a>Postavke privatnosti su uklonjene iz korisničkog interfejsa sistema Office
 

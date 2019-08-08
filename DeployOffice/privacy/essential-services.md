@@ -2395,7 +2395,7 @@ Prikupljaju se sledeća polja:
   - **Data\_targetBuild -** - Verzija koju pokušavamo da nadogradimo na Office
 
 
-## <a name="enhanced-configuration-service-ecs-events"></a>Događaji usluge poboljšane konfiguracije (UPK)
+## <a name="enhanced-configuration-service-ecs-events"></a>Događaji poboljšane usluge konfiguracije (ECS)
 
 ### <a name="officeexperimentationfeaturequerybatched"></a>Office.Experimentation.FeatureQueryBatched
 
@@ -2436,7 +2436,7 @@ Koristi se za određivanje da li se korisnik nalazi u dobrom ili lošem statusu,
 
 Prikupljaju se sledeća polja:
 
-  - **ESID** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
+  - **ACID** – GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran
 
   - **DwEulaId** – Numerički identifikator za tip EULA ugovora koji je korisnik prihvatio
 
@@ -2448,9 +2448,9 @@ Od suštinskog je značaja za određivanje koliko korisnika nailazi na probleme 
 
 Prikupljaju se sledeća polja:
 
-  - **Esid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
+  - **Acid** – GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
 
-  - **ReferralData** - Identifikator za OEM koji je instalirao Office na računaru
+  - **ReferralData** – Identifikator OEM proizvođača koji je instalirao Office na računaru
 
 ### <a name="officelicensingactivationwizard"></a>Office.Licensing.ActivationWizard 
 
@@ -2480,15 +2480,15 @@ Ovo se prikuplja pri svakoj sesiji koja izveštava o statusu licence na računar
 
 Prikupljaju se sledeća polja:
 
-  - **Acid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran  
+  - **Acid** – GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran  
 
   - **IsSessionLicensing** - Da li je trenutno pokrenuta u režimu aktivacije deljenog računara ili nije. 
 
-  - **LicenseCategory** - Kategorija Office licence koju koristi korisnik 
+  - **LicenseCategory** – Kategorija Office licence koju koristi korisnik 
 
-  - **Licenses** - Lista sa imenima svih Office licenci koje se nalaze na računaru 
+  - **Licenses** – Lista sa imenima svih Office licenci koje se nalaze na računaru 
 
-  - **LicenseStatuses** - Status svih Office licenci koje se nalaze na računaru 
+  - **LicenseStatuses** – Status svih Office licenci koje se nalaze na računaru 
 
 ### <a name="officelicensinggetentitlement"></a>Office.Licensing.GetEntitlement 
 
@@ -2498,11 +2498,11 @@ Ovaj događaj ne prikuplja polja.
 
 ### <a name="officelicensingheartbeat"></a>Office.Licensing.Heartbeat 
 
-Prilikom svake sesije proveravamo da li je prošlo 72 sata od poslednje obnove licence i pokušavamo da produžimo rok isteka trenutne licence. Ovaj događaj izveštava o uspešnosti ili neuspešnosti poziva koji smo uputili da bismo proverili da li možemo da produžimo rok isteka licence i da korisnikovu instalaciju sistema Office održimo funkcionalnom. Od suštinske je važnosti pri dijagnostikovanju korisnikovih problema vezanih za pretplatu i uslugu, kao i za otkrivanje regresija kod korisnika koji su već aktivirali pretplatu.
+Prilikom svake sesije proveravamo da li je prošlo 72 sata od poslednje obnove licence i pokušavamo da produžimo rok isteka trenutne licence. Ovaj događaj izveštava o uspešnosti ili neuspešnosti poziva koji smo uputili da bismo proverili da li možemo da produžimo rok isteka licence i da korisnikovu instalaciju sistema Office održimo u funkciji. Od suštinske je važnosti pri dijagnostikovanju korisnikovih problema vezanih za pretplatu i uslugu, kao i za otkrivanje regresija kod korisnika koji su već aktivirali pretplatu.
 
 Prikupljaju se sledeća polja:
 
-  - **Mode** - Numeričko predstavljanje paketa licenci za sistem Office koji se koristi na računaru
+  - **Mode** – Numeričko predstavljanje paketa licenci za sistem Office koji se koristi na računaru
 
 ### <a name="officelicensinginrfm"></a>Office.Licensing.InRFM 
 
@@ -2510,11 +2510,11 @@ Ako uređaj uđe u režim smanjene funkcionalnosti, šaljemo ovaj signal da bism
 
 Prikupljaju se sledeća polja:
 
-  - **ESID** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
+  - **ACID** – GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran
 
-  - **DaysRemaining** - Broj dana koji je preostao do isteka trenutne Office licence
+  - **DaysRemaining** – Broj dana koji je preostao do isteka trenutne Office licence
 
-  - **Mode** - Numeričko predstavljanje paketa licenci za sistem Office koji se koristi na računaru
+  - **Mode** – Numeričko predstavljanje paketa licenci za sistem Office koji se koristi na računaru
 
   - **ProductName** - Ime proizvoda koji korisnik trenutno koristi
 
@@ -2528,7 +2528,7 @@ Prikupljaju se sledeća polja:
 
   - **Prid** - Ime grupe proizvoda za koju se instalira ključ
 
-  - **SkuId** - GUID identifikator koji predstavlja Office proizvod za koji se instalira ključ 
+  - **SkuId** – GUID identifikator koji predstavlja Office proizvod za koji se instalira ključ 
 
 ### <a name="officelicensinginvokelicensewizard"></a>Office.Licensing.InvokeLicenseWizard
 
@@ -2536,9 +2536,9 @@ U slučaju da primetimo probleme sa tokom posla aktivacije, pokrećemo čarobnja
 
 Prikupljaju se sledeća polja:
 
-  - **Esid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
+  - **Acid** – GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
 
-  - **LicenseStatus** - Status Office licence koju korisnik koristi
+  - **LicenseStatus** – Status Office licence koju korisnik koristi
 
   - **MachineKey** - Alfanumerički identifikator ključa licence koji je izdat korisniku
 
@@ -2578,7 +2578,7 @@ Ovo se prikuplja ako smo korisniku prikazali EULA ugovor, a on je izabrao da ga 
 
 Prikupljaju se sledeća polja:
 
-  - **Esid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
+  - **Acid** – GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
 
   - **OptInShown** - Ukazuje na to da li je dijalog za davanje saglasnosti koji se prikazuje pri prvom pokretanju aplikacije već prikazan. 
 
@@ -2602,17 +2602,17 @@ Ovo se prikuplja pri svakoj sesiji uređaja koji je pokrenut na modernom paketu 
 
 Prikupljaju se sledeća polja:
 
-  - **Esid** - GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran  
+  - **Acid** – GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran  
 
   - **AllAcids** - Lista svih GUID proizvoda za koje je korisnik trenutno licenciran 
 
-  - **Kategorija** - Kategorija Office licence koju korisnik koristi 
+  - **Category** – Kategorija Office licence koju korisnik koristi 
 
-  - **DaysRemaining** -Broj dana koji je preostao do isteka trenutne Office licence 
+  - **DaysRemaining** – Broj dana koji je preostao do isteka trenutne Office licence 
 
   - **LicenseId** - Alfanumerički identifikator licence koji je izdat korisniku 
 
-  - **LicenseType** - Tip Office licence koju korisnik koristi 
+  - **LicenseType** – Tip Office licence koju korisnik koristi 
 
 ### <a name="officelicensingofficeclientlicensingdolicensevalidation"></a>Office.Licensing.OfficeClientLicensing.DoLicenseValidation 
 
@@ -2630,13 +2630,13 @@ Prikupljaju se sledeća polja:
 
   - **IsvNext** - Ukazuje na to da li koristimo novi moderni paket licenciranja ili ne 
 
-  - **LicenseCategory** -Kategorija Office licence koju koristi korisnik 
+  - **LicenseCategory** – Kategorija Office licence koju koristi korisnik 
 
-  - **LicenseStatus** - Status Office licence koju korisnik koristi 
+  - **LicenseStatus** – Status Office licence koju korisnik koristi 
 
-  - **LicenseType** - Tip Office licence koju korisnik koristi 
+  - **LicenseType** – Tip Office licence koju korisnik koristi 
 
-  - **LicensingACID** - GUID identifikator koji predstavlja Office proizvode za koje je korisnik licenciran 
+  - **LicensingACID** – GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran 
 
   - **OlsLicenseId** - Alfanumerički identifikator licence koji je izdat korisniku 
 
@@ -2652,7 +2652,7 @@ Ovaj događaj ne prikuplja polja.
 
 ### <a name="officelicensingpurchase"></a>Office.Licensing.Purchase 
 
-Sprovodimo eksperiment koji korisniku pruža mogućnost da isproba i podesi automatsko plaćanje za Office direktno iz aplikacije bez potrebe da napušta kontekst aplikacije. Ovo izveštava o uspešnosti ili neuspešnosti datog eksperimenta, kao i o kôdu greške. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu i ne nedostaje mu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru.
+Sprovodimo eksperiment koji korisniku pruža mogućnost da isproba i podesi automatsko plaćanje za Office direktno iz aplikacije bez potrebe da napušta aplikaciju. Ovo izveštava o uspešnosti ili neuspešnosti datog eksperimenta, kao i o kôdu greške. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu i ne nedostaje mu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru.
 
 Prikupljaju se sledeća polja:
 
@@ -2754,7 +2754,7 @@ Prikupljaju se sledeća polja:
 
   - **IsCeip -** Da li je Office instalacija registrovana u neaktivanom Programu za unapređenje na osnovu korisničkog iskustva
 
-  - **IsDebug -** Da li je ovo debug verzija programa Office.
+  - **IsDebug –** Da li je ovo verzija programa Office u kojoj su otklonjene greške.
 
   - **IsImmersive -** Da li je Office aplikacija jedinstvena za Windows ili je sveobuhvatna.
 
@@ -2866,7 +2866,7 @@ Prikupljaju se sledeća polja:
 
   - **InstallMethod** - Da li je trenutno izdanje sistema Office instalirano nadogradnjom, vraćanjem na prethodnu verziju ili novom instalacijom.
 
-  - **PreviousBuild** - Verzija na koju je Office izdanje nadograđeno ili sa koje je vraćeno.
+  - **PreviousBuild** – Verzija na koju je Office izdanje nadograđeno ili sa koje je vraćeno.
 
   - **State** - Stanje u koje je promenjena sesija.
 
@@ -3438,7 +3438,7 @@ Prikupljaju se sledeća polja:
 
   - **InteractionSessionID** - Identifikator sesije.
 
-  - **PreviousBuild** - Verzija na koju je Office izdanje nadograđeno ili sa koje je vraćeno.
+  - **PreviousBuild** – Verzija na koju je Office izdanje nadograđeno ili sa koje je vraćeno.
 
   - **State** - Stanje u koje je promenjena sesija.
 
