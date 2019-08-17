@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža Office administratorima pregled kontrola privatnosti za Office 365 ProPlus, uključujući za dijagnostičke podatake i povezana iskustva.
 hideEdit: true
-ms.openlocfilehash: a362a50b3d75e0792623745ef32fb93b4e458a41
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: ab024c4ce2eb4d81809880b607e084932658be3c
+ms.sourcegitcommit: 3f2319ff2f8fcde87ae5ffefa3b956a8239c4aed
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36238944"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "36441614"
 ---
 # <a name="overview-of-privacy-controls-for-office-365-proplus"></a>Pregled kontrola privatnosti za Office 365 ProPlus
 
@@ -65,7 +65,8 @@ Vaši korisnici neće moći da promene nivo dijagnostičkih podataka za njihove 
 Ovi dijagnostički podaci ne uključuju imena korisnika, njihove adrese elektronske pošte ili sadržaj njihovih Office dokumenata. Naš sistem kreira jedinstveni ID koji povezuje sa dijagnostičkim podacima vaših korisnika. Kada primimo dijagnostičke podatke koji prikazuju da se jedna od naših aplikacija srušila 100 puta, ovaj jedinstveni ID omogućava nam da utvrdimo da li se radi o jednom korisniku čiji se program srušio 100 puta ili se radi o 100 različitih korisnika od kojih je svakom program pao po jednom. Ne koristimo ovaj jedinstveni ID za identifikaciju određenog korisnika.
 
 Da biste videli koji dijagnostički podaci se šalju korporaciji Microsoft, možete da koristite besplatan Prikazivač dijagnostičkih podataka koji možete da preuzmete i instalirate iz Microsoft prodavnice.
-7 Za više informacija pogledajte sledeće članke:
+
+Dodatne informacije potražite u sledećim člancima:
 
 - [Obavezni dijagnostički podaci za Office](required-diagnostic-data.md)
 - [Opcionalni dijagnostički podaci za Office](optional-diagnostic-data.md)
