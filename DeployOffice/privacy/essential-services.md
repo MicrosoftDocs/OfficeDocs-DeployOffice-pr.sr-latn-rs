@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: 3931f44787008e076807fe59746bccf015452ac3
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: 785cd7f3e881d61be0ee3ee72924efb695e2f5a7
+ms.sourcegitcommit: a47876f7500d1ae0270f35ee79da8ab32e57ae3a
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36239185"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "36656204"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -5279,7 +5279,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="downloadmanifest_downloadcatalogsuccess"></a>downloadmanifest_downloadcatalogsuccess
 
-Ovaj događaj pokazuje da je datoteka uspešno preuzeta. Neuspešno preuzimanje manifesta može da ukazuje na otkazivanje prilikom generisanja pomoćne datoteke verzije, grešku u konfiguraciji sistema CDN, grešku u konfiguraciji klijenta ili grešku na mreži. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj pokazuje da je datoteka uspešno preuzeta. Neuspešno preuzimanje manifesta može da ukazuje na otkazivanje prilikom generisanja pomoćne datoteke verzije, grešku u konfiguraciji sistema CDN, grešku u konfiguraciji klijenta ili grešku na mreži. Ovaj događaj koristimo da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -10504,8 +10504,6 @@ Prikupljaju se sledeća polja:
 
   - **sysVolSizeMB -** Količina prostora koja se nalazi na sistemskom volumenu u megabajtima.
 
-<!-- end list -->
-
   - **WindowsErrorReportingMachineId** - Windows izveštavanje o greškama koje dodeljuje identifikator mašine na uređaju na kome se pokreće Office.
 
   - **WindowsSqmMachineId** - Identifikator mašine koji dodeljuje Windows na uređaju na kome se pokreće Office.
@@ -11163,6 +11161,12 @@ Prikupljaju se sledeća polja:
   - **ErrorMessage** - Poruka o grešci obrade
 
   - **NodeName** - Čvor koji nije uspeo da se obradi
+
+### <a name="officetelemetrydynamicconfigpopulatedrequestignored"></a>Office.Telemetry.DynamicConfig.PopulatedRequestIgnored
+
+Ovaj događaj se generiše kada ne uspemo da postavimo kanal za konfiguraciju telemetrije.
+
+Ovaj događaj ne prikuplja polja.
 
 ### <a name="officetelemetrydynamicconfigpopulatetreecalledagain"></a>Office.Telemetry.DynamicConfig.PopulateTreeCalledAgain
 
