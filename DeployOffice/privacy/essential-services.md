@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: 785cd7f3e881d61be0ee3ee72924efb695e2f5a7
-ms.sourcegitcommit: a47876f7500d1ae0270f35ee79da8ab32e57ae3a
+ms.openlocfilehash: 82068f529e341a71557e65e6b7d060bab878bcbe
+ms.sourcegitcommit: 4abc1462753e6cb5c01642c9711d19b220dadac0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "36656204"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "37386933"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -585,6 +585,27 @@ Prikupljaju se sledeća polja:
   - **Data\_PrereqFailure\_Type-** Neuspeli preduslov na koji smo naišli
 
   - **Data\_ProductReleaseId-** Proizvod koji instaliramo, npr. Office 365 ProPlus
+
+### <a name="officeclicktorunrepomanlogger"></a>Office.ClickToRun.RepomanLogger
+
+Izveštaji o statusu novog „Klikni i pokreni“ kanala ažuriranja („Repoman“) i ako uspešno preuzima i primenjuje Office ispravke.
+
+Prikupljaju se sledeća polja:
+
+  - **ApplySucceeded -** Tačno ako je kanal uspešno primenio ažuriranje za Office, netačno ako nije.
+  
+  - **DownloadSucceeded -** Tačno ako je kanal uspešno preuzeo ažuriranje za Office, netačno ako nije.
+
+  - **ErrorCode -** Kod poslednje greške koja se dogodila u „Klikni i pokreni“ kanalu Repoman.
+
+  - **ErrorDetails -**  Dodatni detalji o poslednjoj grešci koja se dogodila u „Klikni i pokreni“ kanalu Repoman.
+ 
+  - **ErrorMessage -** Poruka o poslednjoj grešci koja se dogodila u „Klikni i pokreni“ kanalu Repoman.
+
+  - **OpenStreamSessionSucceeded -** Tačno ako kanal uspešno kreira sesiju za striming Office ažuriranja, netačno ako je ne kreira.
+
+  - **RepomanErrorMessage -** Poruka o grešci primljena od repoman.dll.
+ 
 
 ### <a name="officeclicktorunscenarioinstalltaskconfigure"></a>Office.ClickToRun.Scenario.InstallTaskConfigure
 
@@ -2658,6 +2679,13 @@ Prikupljaju se sledeća polja:
 
   - **UnmergedConfigs** - Lista konfiguracija koje nisu objedinjene
 
+### <a name="officeexperimentationtriggeranalysis"></a>Office.Experimentation.TriggerAnalysis
+
+Ovaj događaj pomaže u analizi opsega korištenja proizvoda i metrika performansi (kao što su padovi, prekidi, itd.) podskupa korisnika ili uređaja koji imaju pravo na korišćenje funkcije, i na taj način pomažu u osiguravanju ispravnog rada proizvoda.
+
+Prikupljaju se sledeća polja:
+
+  - **FeatureGate -** Identifikuje skup funkcija za koje je primenjiva analiza okidača.
 
 ## <a name="licensing-events"></a>Događaji licenciranja
 
@@ -10920,7 +10948,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officesystemsystemhealthungracefulapplicationexitwin32"></a>Office.System.SystemHealthUngracefulApplicationExitWin32
 
-Koristi se za snimanje metrike pada.
+Događaj pokreće neočekivani prekid aplikacije (na primer, uklanjanje u upravljaču zadacima, prekid aplikacije, itd.) za Office klijentske aplikacije kao što su, ali ne ograničavajući se na, Word, Excel, PowerPoint i Outlook. Metrike neočekivanog izlaska iz aplikacija koristimo za merenje ispravnosti proizvoda klijenata sistema Office. To je signal, ključan za posao, koji koriste Office inženjeri da bi postigli stabilnost proizvoda.
 
 Prikupljaju se sledeća polja:
 
@@ -10932,11 +10960,7 @@ Prikupljaju se sledeća polja:
 
   - **CrashedAppRevision -** Identifikator izdanja verzije ugroženog procesa.
 
-  - **CrashedConfigIds -** Konfiguracija dodeljena palom procesu.
-
   - **CrashedEcsETag -** Identifikator eksperimenta palog procesa.
-
-  - **CrashedImpressionId -** Identifikator prikaza palog procesa.
 
   - **CrashedModuleName -** Ime neispravnog modula.
 
@@ -10951,6 +10975,8 @@ Prikupljaju se sledeća polja:
   - **ExceptionAddress -** Adresa u aplikaciji u kojoj je došlo je do greške.
 
   - **ExceptionCode -** Identifikator grupe za izuzetak.
+
+  - **HexCrashTag -** Jedinstveni identifikator za kôd pada.
 
   - **HexExceptionAddress -** Adresa u heksadecimalnom zapisu u aplikaciji u kojoj je došlo do greške.
 
@@ -10977,6 +11003,8 @@ Prikupljaju se sledeća polja:
   - **PreviousBuild -** Izdanje prethodno instalirane verzije
 
   - **UAEOSEnvironment -** Identifikator okruženja operativnog sistema.
+
+  - **UninitLibletId –** Jedinstveni identifikator za neispravnu komponentu pada.
 
   - **VerifyElseCrashTag -** Jedinstveni identifikator mesta na kom je aplikacija pala.
 
