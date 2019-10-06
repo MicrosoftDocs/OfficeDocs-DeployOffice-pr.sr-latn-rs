@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: 6a03f23d77aef8f2c8f6548cf462a33194d8a4aa
-ms.sourcegitcommit: a47876f7500d1ae0270f35ee79da8ab32e57ae3a
+ms.openlocfilehash: a5770d3ed30f86dfbf1cb1dfc4a45bbb15179da8
+ms.sourcegitcommit: 4abc1462753e6cb5c01642c9711d19b220dadac0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "36656132"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "37386979"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -124,31 +124,31 @@ Ova kategorija sadrži sledeća polja:
 
   - **Izvorna lokacija nivoa pristanka za prikupljanje dijagnostičkih podataka** – ukazuje na to kako je korisnik obezbedio pristanak za prikupljanje dijagnostičkih podataka.
 
-  - **Vreme pristanka za prikupljanje dijagnostičkih podataka** – ukazuje na to kada je korisnik obezbedio pristanak za prikupljanje dijagnostičkih podataka.
+  - **Vreme pristanka za prikupljanje dijagnostičkih podataka** – ukazuje na to kada je korisnik obezbedio pristanak za prikupljanje dijagnostičkih podataka. Datum će se pojaviti kao tip datuma koji ljudi mogu da pročitaju ili kao računarski kodirani datum koji izgleda kao veliki broj.
 
   - **Status povezanih usluga** – ukazuje na to da li je korisnik odabrao da koristi ili ne koristi sva povezana iskustva
 
   - **Izvorna lokacija statusa povezanih usluga** – ukazuje na to kako je korisnik napravio izbor da li želi da koristi sva povezane iskustva
 
-  - **Vreme pristanka za prikupljanje podataka o statusu povezanih usluga** – ukazuje na to kada je korisnik odabrao da li da koristi sva povezana iskustva
+  - **Vreme pristanka za prikupljanje podataka o statusu povezanih usluga** – Ukazuje na to kada je korisnik odabrao da li da koristi sva povezana iskustva. Datum će se pojaviti kao tip datuma koji ljudi mogu da pročitaju ili kao računarski kodirani datum koji izgleda kao veliki broj.
 
   - **Kontroler statusa povezanih usluga** – ukazuje na to da li korisnik ima pristup opcionalnim povezanim iskustvima
 
   - **Izvorna lokacija za kontroler statusa povezanih usluga** – ukazuje na to kako je izvršen izbor korisnika za opcionalna povezana iskustva
 
-  - **Vreme pristanka za prikupljanje podataka o kontroleru statusa povezanih usluga** – ukazuje na to kada je korisnik odabrao status opcionalnih povezanih iskustava
+  - **Vreme pristanka za prikupljanje podataka o kontroleru statusa povezanih usluga** – Ukazuje na to kada je korisnik odabrao status opcionalnih povezanih iskustava. Datum će se pojaviti kao tip datuma koji ljudi mogu da pročitaju ili kao računarski kodirani datum koji izgleda kao veliki broj.
 
   - **Status analize sadržaja povezanih iskustava korisnika** – ukazuje na to da li je korisnik odabrao da omogući ili onemogući povezana iskustva koja analiziraju sadržaj
 
   - **Izvorna lokacija statusa analize sadržaja povezanih iskustava korisnika** – ukazuje na to kako je korisnik napravio izbor da omogući ili onemogući povezana iskustva koja analiziraju sadržaj
 
-  - **Vreme pristanka za prikupljanje podataka o statusu analize sadržaja povezanih iskustava korisnika** – ukazuje na kada je korisnik napravio izbor da omogući ili onemogući povezana iskustva koja analiziraju sadržaj
+  - **Vreme pristanka za prikupljanje podataka o statusu analize sadržaja povezanih iskustava korisnika** – Ukazuje na kada je korisnik napravio izbor da omogući ili onemogući povezana iskustva koja analiziraju sadržaj. Datum će se pojaviti kao tip datuma koji ljudi mogu da pročitaju ili kao računarski kodirani datum koji izgleda kao veliki broj.
 
   - **Status preuzetog sadržaja** – ukazuje na to da li je korisnik odabrao da omogući ili onemogući povezana iskustva koja preuzimaju sadržaj na mreži
 
   - **Izvorna lokacija statusa preuzetog sadržaja** – ukazuje na to kako je korisnik napravio izbor da omogući ili onemogući povezana iskustva koja preuzimaju sadržaj na mreži
 
-  - **Vreme pristanka na prikupljanje podataka o statusu preuzetog sadržaja** – ukazuje na to kada je korisnik napravio izbor da omogući ili onemogući povezana iskustva koja preuzimaju sadržaj na mreži
+  - **Vreme pristanka na prikupljanje podataka o statusu preuzetog sadržaja** – ukazuje na to kada je korisnik napravio izbor da omogući ili onemogući povezana iskustva koja preuzimaju sadržaj na mreži Datum će se pojaviti kao tip datuma koji ljudi mogu da pročitaju ili kao računarski kodirani datum koji izgleda kao veliki broj.
 
 #### <a name="device"></a>Uređaj 
 
@@ -305,6 +305,10 @@ Ova kategorija sadrži sledeća polja:
   - **UUIDHash matične ploče** - heš jedinstvenog identifikatora matične ploče. Omogućava nam da klasifikujemo podatke na osnovu okretanja uređaja.
 
   - **Ime** - Ime uređaja. Omogućava nam da klasifikujemo podatke na osnovu okretanja uređaja.
+  
+  - **NetworkCost** - Ukazuje na tip mreže/vrstu troška, kao što je ograničena ili ograničena iznad granice.
+  
+  - **NetworkCountry** - Poštanski broj zemlje pošiljaoca, na osnovu nepročišćene IP adrese klijenta.
 
   - **Broj fizičkih jezgara procesora** Broj fizičkih jezgara procesora računara. Omogućava nam da klasifikujemo podatke na osnovu okretanja uređaja.
 
@@ -614,6 +618,65 @@ Prikupljaju se sledeća polja:
 - **ID sesije** – nasumično generisan guid za identifikovanje sesije aplikacije
 
 - **UTCReplace_AppSessionGuid** - Nepromenjiva logička vrednost. Uvek ima vrednost TRUE.
+
+#### <a name="officeonenotefirstrunfirstrun"></a>Office.OneNote.FirstRun.FirstRun
+
+Kritičan signal koji se koristi da omogući da novi korisnici mogu uspešno da pokrenu i koriste OneNote po prvi put.  Telemetrija se prikuplja da obezbedi otkrivanje kritičnih regresija za OneNote aplikaciju i ispravnost usluge. Ako korisnici ne mogu da pokrenu aplikaciju po prvi put, to bi izazvalo incident velike ozbiljnosti.
+
+- **AfterOneDriveFrozenAccountError** - Ukazuje na grešku koja se javlja u OneDrive aplikaciji kada je nalog zamrznut.
+
+- **Attempt** - Koliko puta treba ponovo pokušati pokretanje prvog utiska.
+
+- **IsDefaultNotebookCreated** - Ukazuje na to da li je aplikacija OneNote kreirala podrazumevanu beležnicu za korisnika ili ne.
+
+- **IsDelayedSignIn** – Ukazuje na to da li se prvo pokretanje vrši u odloženim režimu prijavljivanja u kojem korisnik nije dužan da se prijavi.
+
+- **IsMSA** – Ukazuje na to da li se radi o Microsoft nalogu ili ne.
+
+#### <a name="officeonenotefirstrunfirstrunformsa"></a>Office.OneNote.FirstRun.FirstRunForMSA
+
+Kritičan signal koji se koristi da omogući da novi pojedinačni korisnici (Microsoft nalog) mogu uspešno da pokrenu i koriste OneNote po prvi put.
+Kako se telemetrija koristi da obezbedi otkrivanje kritičnih regresija za OneNote aplikaciju i ispravnost usluge. Ako korisnici ne mogu da pokrenu aplikaciju po prvi put, to bi izazvalo incident velike ozbiljnosti.
+
+Prikupljaju se sledeća polja:
+
+- **Attempt** - Koliko puta treba ponovo pokušati pokretanje prvog utiska.
+
+- **Error A** - OneNote objekat greške ukazuje na bilo koju grešku tokom prvog pokretanja.
+
+- **FAllowAddingGuide** - Ukazuje na to da li će OneNote dozvoliti kreiranje beležnice sa vodičem ili ne.
+
+- **FrozenOneDriveAccount** - Ukazuje na to da li je OneDrive nalog zamrznut ili ne.
+
+- **IsDefaultNotebookCreated** - Ukazuje na to da li je aplikacija OneNote kreirala podrazumevanu beležnicu za korisnika ili ne.
+
+- **NoInternetConnection** - Ukazuje na to da li uređaj ima ili nema internet vezu.
+
+- **ProvisioningFailure** - OneNote objekat greške ukazuje na postojanje ili nepostojanje greške pri dodeljivanju privilegija.
+
+- **ProvisioningFinishedTime** - Označava vreme kada će OneNote završiti dodelu privilegija za beležnicu prilikom pokretanja prvog utiska.
+
+- **ProvisioningStartedTime** - Označava vreme kada će OneNote početi dodelu privilegija za beležnicu prilikom pokretanja prvog utiska.
+
+- **ShowSuggestedNotebooks** - Ukazuje na to da li će OneNote prikazati funkciju predložene beležnice ili ne.
+
+#### <a name="officeonenotefirstrunfirstrunfororgid"></a>Office.OneNote.FirstRun.FirstRunForOrgId
+
+Kritičan signal koji se koristi da omogući da novi korisnici u velikim preduzećima mogu uspešno da pokrenu i koriste OneNote po prvi put.  Kako se telemetrija koristi da obezbedi otkrivanje kritičnih regresija za OneNote aplikaciju i ispravnost usluge. Ako korisnici ne mogu da pokrenu aplikaciju po prvi put, to bi izazvalo incident velike ozbiljnosti.
+
+- **Attempt** - Koliko puta treba ponovo pokušati pokretanje prvog utiska.
+
+- **Error** - OneNote objekat greške ukazuje na bilo koju grešku tokom prvog pokretanja.
+
+- **FAllowAddingGuide** - Ukazuje na to da li će OneNote dozvoliti kreiranje beležnice sa vodičem ili ne.
+
+- **IsDefaultNotebookCreated** - Ukazuje na to da li je aplikacija OneNote kreirala podrazumevanu beležnicu za korisnika ili ne.
+
+- **ProvisioningFailure** - OneNote objekat greške ukazuje na postojanje bilo kakve greške pri dodeljivanju privilegija.
+
+- **ProvisioningFinishedTime** - Označava vreme kada će OneNote završiti dodelu privilegija za beležnicu prilikom pokretanja prvog utiska.
+
+- **ProvisioningStartedTime** - Označava vreme kada će OneNote početi dodelu privilegija za beležnicu prilikom pokretanja prvog utiska.
 
 #### <a name="officetargetedmessagingensurecached"></a>Office.TargetedMessaging.EnsureCached 
 
@@ -1173,6 +1236,489 @@ Podtipovi podataka koji spadaju u ovu kategoriji su:
 
 Uspešnost funkcionalnosti aplikacije. Ograničena na otvaranje i zatvaranje aplikacije i dokumenata, uređivanje i deljenje (saradnju) datoteka.
 
+#### <a name="ipccreaterepublishinglicense"></a>IpcCreateRepublishingLicense
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcCreateRepublishingLicense API poziva.
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje API poziva
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kod bilo koje greške vraćen kao rezultat API poziva
+
+- **RMS.HttpCall** - označava postojanje HTTP operacije
+
+- **RMS.Result** - Uspešan ili neuspešan API poziv
+
+- **RMS.ScenarioId** - Id scenarija definisan API-jem
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.StatusCode** - Kod statusa vraćenog rezultata
+
+#### <a name="ipcgetlicenseproperty"></a>IpcGetLicenseProperty
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcGetLicenseProperty API poziva.
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje API poziva
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kod bilo koje greške vraćen kao rezultat API poziva
+
+- **RMS.HttpCall** - Označava postojanje HTTP operacije
+
+- **RMS.LicensePropertyType** - tip svojstva licence
+
+- **RMS.Result** - Uspešan ili neuspešan API poziv
+
+- **RMS.ScenarioId** - Id scenarija definisan API-jem
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.StatusCode** - Kod statusa vraćenog rezultata
+
+#### <a name="ipcgetserializedlicenseproperty"></a>IpcGetSerializedLicenseProperty
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcGetSerializedLicenseProperty API poziva.
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey**- Id servera usluge vođenja evidencije
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje API poziva
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kod bilo koje greške vraćen kao rezultat API poziva
+
+- **RMS.HttpCall** - Označava postojanje HTTP operacije
+
+- **RMS.LicensePropertyType** - Tip svojstva licence
+
+- **RMS.Result** - Uspešan ili neuspešan API poziv
+
+- **RMS.ScenarioId** - Id scenarija definisan API-jem
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.StatusCode** - Kod statusa vraćenog rezultata
+
+#### <a name="ipcgettemplateissuerlist"></a>IpcGetTemplateIssuerList
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcGetTemplateIssuerList API poziva.
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.AuthCallbackProvided** - Ukazuje na to da li pruža povratni poziv potvrde identiteta kao unos API poziva ili ne
+
+- **RMS.ConnectionInfo.ExtranetUrl** - Informacije o URL adresi veze spoljne mreže
+
+- **RMS.ConnectionInfo.IntranetUrl** - Informacije o URL adresi veze intranet mreže
+
+- **RMS.ConnectionMode** - Režim veze između klijenta usluge Rights Management Service i servera: na mreži ili van mreže
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje API poziva
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kod bilo koje greške vraćen kao rezultat API poziva
+
+- **RMS.GuestTenant** - Id privremenog zakupca za korisnika
+
+- **RMS.HomeTenant** - Id stalnog zakupca za korisnika
+
+- **RMS.HttpCall** - označava postojanje HTTP operacije
+
+- **RMS.Identity.ExtranetUrl** - URL adresa spoljašnje mreže servera Usluge za upravljanje pravima za korisnika, koja se prikuplja dok se od servera preuzima novi Certifikat o pravima naloga
+ 
+- **RMS.Identity.IntranetUrl** - Intranet URL adresa servera Usluge za upravljanje pravima za korisnika, koja se prikuplja dok se od servera pribavlja novi Certifikat o pravima naloga
+
+- **RMS.Identity.Status** - Vreme prvog ili ponovnog pribavljanja Certifikata o pravima naloga od servera 
+
+- **RMS.Identity.Type** - Tip korisničkog naloga kao što je Windows nalog ili live nalog
+
+- **RMS.Identity.UserProvided** - Ukazuje na to da li jeste ili nije obezbeđena korisnička adresa e-pošte dok se od servera pribavlja novi Certifikat o pravima naloga
+
+- **RMS.IssuerId** - Id servera Usluge upravljanja pravima koji izdaje Certifikat o pravima naloga 
+
+- **RMS.LicenseFormat** - Format licence: Xrml ili Json
+
+- **RMS.RACType** - Tip Certifikata o pravima naloga
+
+- **RMS.Result** - Uspešan ili neuspešan API poziv
+
+- **RMS.ScenarioId** - Id scenarija definisan API-jem
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.ServerType** - Tip servera Usluge upravljanja pravima
+
+- **RMS.StatusCode** - Kod statusa vraćenog rezultata
+
+- **UserInfo.UserObjectId** - Id korisničkog objekta
+
+#### <a name="ipcgettemplatelist"></a>IpcGetTemplateList
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcGetTemplateList API poziva.
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.AuthCallbackProvided** - Ukazuje na to da li pruža povratni poziv potvrde identiteta kao unos API poziva ili ne
+
+- **RMS.ConnectionInfo.ExtranetUrl** - Informacije o URL adresi veze spoljne mreže
+
+- **RMS.ConnectionInfo.IntranetUrl** - Informacije o URL adresi veze intranet mreže
+
+- **RMS.ConnectionMode** - Režim veze između klijenta usluge Rights Management Service i servera: na mreži ili van mreže
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje API poziva
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kod bilo koje greške vraćen kao rezultat API poziva
+
+- **RMS.GuestTenant** - Id privremenog zakupca za korisnika
+
+- **RMS.HomeTenant** - Id stalnog zakupca za korisnika
+
+- **RMS.HttpCall** - označava postojanje http operacije
+
+- **RMS.Identity.ExtranetUrl** - URL adresa spoljašnje mreže servera Usluge za upravljanje pravima za korisnika, koja se prikuplja dok se od servera preuzima novi Certifikat o pravima naloga
+ 
+- **RMS.Identity.IntranetUrl** - Intranet URL adresa servera Usluge za upravljanje pravima za korisnika, koja se prikuplja dok se od servera pribavlja novi Certifikat o pravima naloga
+
+- **RMS.Identity.Status** - Vreme prvog ili ponovnog pribavljanja Certifikata o pravima naloga od servera 
+
+- **RMS.Identity.Type** - Tip korisničkog naloga kao što je Windows nalog ili live nalog
+
+- **RMS.Identity.UserProvided** - Ukazuje na to da li jeste ili nije obezbeđena korisnička adresa e-pošte dok se od servera pribavlja novi Certifikat o pravima naloga
+
+- **RMS.IssuerId** - Id servera Usluge upravljanja pravima koji izdaje Certifikat o pravima naloga 
+
+- **RMS.LicenseFormat** - Format licence: Xrml ili Json
+
+- **RMS.RACType** - Tip Certifikata o pravima naloga
+
+- **RMS.Result** - Uspešan ili neuspešan API poziv
+
+- **RMS.ScenarioId** - Id scenarija definisan API-jem
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.ServerType** - Tip servera Usluge upravljanja pravima
+
+- **RMS.StatusCode** - Kod statusa vraćenog rezultata
+
+- **RMS.TemplatesCount** - Broj predložaka
+
+- **UserInfo.UserObjectId** - Id korisničkog objekta
+
+#### <a name="ipcpcreatelicensefromscratch"></a>IpcpCreateLicenseFromScratch
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcpCreateLicenseFromScratch API poziva.
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje API poziva
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kod bilo koje greške vraćen kao rezultat API poziva
+
+- **RMS.GuestTenant** - Id privremenog zakupca za korisnika
+
+- **RMS.HomeTenant** - Id stalnog zakupca za korisnika
+
+- **RMS.HttpCall** - označava postojanje HTTP operacije
+
+- **RMS.Identity.ExtranetUrl** - URL adresa spoljašnje mreže servera Usluge za upravljanje pravima za korisnika, koja se prikuplja dok se od servera preuzima novi Certifikat o pravima naloga
+
+- **RMS.Identity.IntranetUrl** - Intranet URL adresa servera Usluge za upravljanje pravima za korisnika, koja se prikuplja dok se od servera pribavlja novi Certifikat o pravima naloga
+
+- **RMS.Identity.UserProvided** - Ukazuje na to da li jeste ili nije obezbeđena korisnička adresa e-pošte dok se od servera pribavlja novi Certifikat o pravima naloga
+
+- **RMS.IssuerId** - Id servera Usluge upravljanja pravima koji izdaje Certifikat o pravima naloga 
+
+- **RMS.LicenseFormat** - Format licence: Xrml ili Json
+
+- **RMS.RACType** - Tip Certifikata o pravima naloga
+
+- **RMS.Result** - Uspešan ili neuspešan API poziv
+
+- **RMS.ScenarioId** - Id scenarija definisan API-jem
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.ServerType** - Tip servera Usluge upravljanja pravima
+
+- **RMS.StatusCode** - Kod statusa vraćenog rezultata
+
+- **RMS.TokenProvided** - Označava da li obezbeđuje token kao unos API poziva ili ne 
+
+- **RMS.TokenProvided** - Označava da li obezbeđuje korisnika kao unos API poziva ili ne 
+
+- **UserInfo.UserObjectId** - Id korisničkog objekta 
+
+#### <a name="ipcpcreatelicensefromtemplate"></a>IpcpCreateLicenseFromTemplate
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcpCreateLicenseFromTemplate API poziva. 
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.AuthCallbackProvided** - Ukazuje na to da li pruža povratni poziv potvrde identiteta kao unos API poziva ili ne
+
+- **RMS.ConnectionMode** - Režim veze između klijenta usluge Rights Management Service i servera: na mreži ili van mreže
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje API poziva
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kod bilo koje greške vraćen kao rezultat API poziva
+
+- **RMS.HttpCall** - označava postojanje http operacije
+
+- **RMS.Result** - Uspešan ili neuspešan API poziv
+
+- **RMS.ScenarioId** - Id scenarija definisan API-jem
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.StatusCode** - Kod statusa vraćenog rezultata
+
+- **RMS.TokenProvided** - Označava da li obezbeđuje token kao unos API poziva ili ne 
+
+- **RMS.TokenProvided** - Označava da li obezbeđuje korisnika kao unos API poziva ili ne 
+
+#### <a name="ipcpgettemplatelistforuser"></a>IpcpGetTemplateListForUser
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcpGetTemplateListForUser API poziva. 
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.ApplicationScenarioId** - Id scenarija koji obezbeđuje aplikacija
+
+- **RMS.AuthCallbackProvided** - Ukazuje na to da li pruža povratni poziv potvrde identiteta kao unos API poziva ili ne
+
+- **RMS.ConnectionInfo.ExtranetUrl** - Informacije o URL adresi veze spoljne mreže
+
+- **RMS.ConnectionInfo.IntranetUrl** - Informacije o URL adresi veze intranet mreže
+
+- **RMS.ConnectionMode** - Režim veze između klijenta usluge Rights Management Service i servera: na mreži ili van mreže
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje API poziva
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kod bilo koje greške vraćen kao rezultat API poziva
+
+- **RMS.GuestTenant** - Id privremenog zakupca za korisnika
+
+- **RMS.HomeTenant** - Id stalnog zakupca za korisnika
+
+- **RMS.HttpCall** - Označava postojanje HTTP operacije
+
+- **RMS.Identity.ExtranetUrl** - URL adresa spoljašnje mreže servera Usluge za upravljanje pravima za korisnika, koja se prikuplja dok se od servera preuzima novi Certifikat o pravima naloga
+
+- **RMS.Identity.IntranetUrl** - Intranet URL adresa servera Usluge za upravljanje pravima za korisnika, koja se prikuplja dok se od servera pribavlja novi Certifikat o pravima naloga
+
+- **RMS.Identity.Status** - Vreme prvog ili ponovnog pribavljanja Certifikata o pravima naloga od servera 
+
+- **RMS.Identity.Type** - Tip korisničkog naloga kao što je Windows nalog ili live nalog
+
+- **RMS.Identity.UserProvided** - Ukazuje na to da li jeste ili nije obezbeđena korisnička adresa e-pošte dok se od servera pribavlja novi Certifikat o pravima naloga
+
+- **RMS.IssuerId** - Id servera Usluge upravljanja pravima koji izdaje Certifikat o pravima naloga 
+
+- **RMS.LicenseFormat** - Format licence: Xrml ili Json
+
+- **RMS.RACType** - Tip Certifikata o pravima naloga
+
+- **RMS.Result** - Uspešan ili neuspešan API poziv
+
+- **RMS.ScenarioId** - Id scenarija definisan API-jem
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.ServerType** - Tip servera Usluge upravljanja pravima
+
+- **RMS.StatusCode** - Kod statusa vraćenog rezultata
+
+- **RMS.TemplatesCount** - Broj predložaka
+
+- **RMS.TokenProvided** - Označava da li obezbeđuje token kao unos API poziva ili ne 
+    
+- **RMS.TokenProvided** - Označava da li obezbeđuje korisnika kao unos API poziva ili ne 
+
+- **UserInfo.UserObjectId** - Id korisničkog objekta 
+
+#### <a name="ipcpserializelicense"></a>IpcpSerializeLicense
+
+Sakuplja se kada korisnik pokuša da primeni IRM zaštitu na dokument. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcpSerializeLicense API poziva.
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.ApplicationScenarioId** - Id scenarija koji obezbeđuje aplikacija
+
+- **RMS.AuthCallbackProvided** - Ukazuje na to da li pruža povratni poziv potvrde identiteta kao unos API poziva ili ne
+
+- **RMS.ConnectionMode** - Režim veze između klijenta usluge Rights Management Service i servera: na mreži ili van mreže
+
+- **RMS.ContentId** - Id sadržaja dokumenta
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje API poziva
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kod bilo koje greške vraćen kao rezultat API poziva
+
+- **RMS.GuestTenant** - Id privremenog zakupca za korisnika
+
+- **RMS.HomeTenant** - Id stalnog zakupca za korisnika
+
+- **RMS.HttpCall** - označava postojanje http operacije
+
+- **RMS.Identity.ExtranetUrl** - URL adresa spoljašnje mreže servera Usluge za upravljanje pravima za korisnika, koja se prikuplja dok se od servera preuzima novi Certifikat o pravima naloga
+
+- **RMS.Identity.IntranetUrl** - Intranet URL adresa servera Usluge za upravljanje pravima za korisnika, koja se prikuplja dok se od servera pribavlja novi Certifikat o pravima naloga
+
+- **RMS.Identity.Status** - Vreme prvog ili ponovnog pribavljanja Certifikata o pravima naloga od servera 
+
+- **RMS.Identity.Type** - Tip korisničkog naloga kao što je Windows nalog ili live nalog
+
+- **RMS.Identity.UserProvided** - Ukazuje na to da li jeste ili nije obezbeđena korisnička adresa e-pošte dok se od servera pribavlja novi Certifikat o pravima naloga
+
+- **RMS.IssuerId** - Id servera Usluge upravljanja pravima koji izdaje Certifikat o pravima naloga 
+
+- **RMS.KeyHandle** - Memorijska adresa pokazivača ključa
+
+- **RMS.LicenseFormat** - Format licence: Xrml ili Json
+
+- **RMS.RACType** - Tip Certifikata o pravima naloga
+
+- **RMS.Result** - Uspešan ili neuspešan API poziv
+
+- **RMS.ScenarioId** - Id scenarija definisan API-jem
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.ServerType** - Tip servera Usluge upravljanja pravima
+
+- **RMS.StatusCode** - Kod statusa vraćenog rezultata
+
+- **RMS.TokenProvided** - Označava da li obezbeđuje token kao unos API poziva ili ne 
+
+- **RMS.TokenProvided** - Označava da li obezbeđuje korisnika kao unos API poziva ili ne 
+
+- **UserInfo.UserObjectId** - Id korisničkog objekta 
+
+#### <a name="ipcsetlicenseproperty"></a>IpcSetLicenseProperty
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcSetLicenseProperty API poziva. 
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje API poziva
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kod bilo koje greške vraćen kao rezultat API poziva 
+
+- **RMS.HttpCall** - označava postojanje http operacije
+
+- **RMS.LicensePropertyType** - tip svojstva licence
+
+- **RMS.Result** - Uspešan ili neuspešan API poziv
+
+- **RMS.ScenarioId** - Id scenarija definisan API-jem
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.StatusCode** - Id scenarija definisan API-jem
+
+
 #### <a name="officeappcompatappcompatagentupload"></a>Office.AppCompat.AppCompat.AgentUpload
 
 Generisano prilikom pokretanja klijenta kada krajnji korisnik omogući Kontrolnu tablu Office telemetrije.  Prikuplja informacije o tome kada je Office Telemetry agent učitao podatke u fasciklu „Deljenje“. Primarno korišćenje ovog događaja jeste nadgledanje zdravlja usluge Office Telemetrije, a sekundarno korišćenje događaja jeste da proceni korišćenje kontrolne table Office telemetrije.
@@ -1201,6 +1747,20 @@ Prikuplja se samo kada krajni korisnik (najverovatnije administrator) omogući K
 Prikupljaju se sledeća polja:
 
   - **Vreme prikupljanja podataka** - Vremenska oznaka koja označava kada je evidentiran događaj pada
+
+#### <a name="office_apple_cisauthticketwithidentity"></a>Office_Apple_CISAuthTicketWithIdentity
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za hvatanje neuspeha automatskog dodavanja tokena za potvrdu identiteta tokom kupovine unutar aplikacije na Mac računarima (događaj evidentira primljeni kôd greške).  Ovaj događaj se koristi za otkrivanje i rešavanja neuspešnog dodavanja tokena za potvrdu identiteta
+
+Prikupljaju se sledeća polja:
+
+- **Data_EmptyAuthToken** - Sakupljamo nisku koja obeležava mesto gde je došlo do neuspeha pri procesu aktivacije stalne licence.
+
+- **Data_TicketAuthError** - Kôd greške koji ukazuje na uzrok neuspeha
+
+- **Data_ValidIdentity** – Da li klijent ima važeći identitet
+
+
 
 #### <a name="officeconnectdeviceactivitystart"></a>Office.ConnectDevice.Activity.Start
 
@@ -1310,6 +1870,8 @@ Prikupljaju se sledeća polja:
 
   - **Data.Doc.AssistedReadingReasons -** Aktivirano ako dokument ima primenjenu elektronsku zaštitu podataka
 
+  - **Data.Doc.AsyncOpenKind –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
   - **Data.Doc.ChunkingType -** Jedinice koje se koriste za postepeno otvaranje dokumenta
 
   - **Data.Doc.EdpState -** Postavke elektronske zaštite podataka za dokument
@@ -1416,7 +1978,7 @@ Prikupljaju se sledeća polja:
 
   - **Data.FullyQualifiedDomainName -** Zastareo, zamenjeno sa Podaci\_Doc\_Fqdn
 
-  - **Data.Input.FileOpenState -** Status koji zahteva aplikacija (čitanje/ReadWrite, itd.) **-**
+  - **Data.Input.FileOpenState -** Status koji zahteva aplikacija (Čitanje/ČitanjePisanje, itd.)
 
   - **Data.Input.OpenAsync -** asinhrono otvaranje na zahtev aplikacije
 
@@ -1561,6 +2123,8 @@ Prikupljaju se sledeća polja:
   - **Data.Doc.AccessMode -** Dokument je samo za čitanje
 
   - **Data.Doc.AssistedReadingReasons -** Aktivirano ako dokument ima primenjenu elektronsku zaštitu podataka
+
+  - **Data.Doc.AsyncOpenKind –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
 
   - **Data.Doc.ChunkingType -** Jedinice koje se koriste za postepeno otvaranje dokumenta
 
@@ -1817,6 +2381,84 @@ Prikupljaju se sledeća polja:
 
 - **ImeDogađaja** - Ime događaja koji se evidentira
 
+#### <a name="officelivepersonacarduseractionsopenedpersonacard"></a>Office.LivePersonaCard.UserActions.OpenedPersonaCard
+
+Evidentira se kada korisnik otvori Karticu „Personalnost“. Koristi se za posmatranje kritičnih anomalija u stopama neuspešnih pokretanja Aktivne kartice „Personalnost“.
+
+Prikupljaju se sledeća polja:
+
+- **Data.appContextId** – Slučajno generisani id koji se koristi za identifikovanje različitih naloga u istoj aplikaciji
+
+- **Data.AppInfo.Name** - Ime upotrebljene usluge (Kartica profila)
+
+- **Data.cardCorrelationId** - Globalni jedinstveni identifikator za Karticu „Personalnost“
+
+- **Data.cardPersonaCorrelationId** – Globalni jedinstveni identifikator za određenu personalnost prikazanu na kartici
+
+- **SessionCorrelationId** - Globalni jedinstveni identifikator za sesiju aplikacije.
+
+- **Data.clientType** – Tip uređaja na kom se pokreće aplikacija.
+
+- **Data.eventId** - Identifikator imena događaja, npr. "LivePersonaCardRenderedAction"
+
+- **Data.exportName** - Ime događaja korisničkog postupka koje ljudi mogu da pročitaju, npr. "OpenedPersonaCard"
+
+- **Data.exportType** - Kategorija događaja za izvoz GDPR zahteva
+
+- **Data.feature** - Koristi se za grupisanje različitih događaja iste funkcije (Kartica profila)
+
+- **Data.hostAppRing** – Prsten pomoću kojeg je aplikacija distribuirana
+
+- **Data.OTelJS.Version** - Verzija OTel sistema za evidenciju
+
+- **Data.region** – Geografska oblast pozadinska usluga kartice profila na koji se korisnik povezuje
+
+- **Data.tenantAadObjectId** – Zakupac sa kojim je pretplata korisnika povezana. Omogućava nam da klasifikujemo probleme i otkrijemo da li je problem široko rasprostranjen ili je ograničen na skup korisnika ili određenog zakupca.
+
+- **Data.type** - Tip evidentiranih događaja, npr. praćenje, greška, događaj
+
+- **Data.userAadObjectId** – Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog (duplikat broja Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** – Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog 
+
+- **Data.UserInfo.MsaId** – Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog
+
+- **Data.UserInfo.OMSTenantId** - Zakupac sa kojim je povezana pretplata korisnika. Omogućava nam da klasifikujemo probleme i otkrijemo da li je problem široko rasprostranjen ili je ograničen na skup korisnika ili određenog zakupca.
+
+- **Data.userPuid** – Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog (duplikat od Data.UserInfo.MsaId)
+
+- **Data.version** – Verzija usluge (Kartica profila)
+
+- **Data.viewType** – Definiše tip prikazane Kartice profila
+
+- **NetworkCost** - Označava tip mreže/vrstu troška (ograničena, ograničena iznad granice, itd.)
+
+- **NetworkCountry** - Poštanski broj zemlje pošiljaoca, na osnovu nepročišćene IP adrese klijenta.
+
+- **Data.properties** – Dodatni metapodaci sakupljeni za svaki događaj na sledeći način.
+
+    - **bandwidthEstimateMbps** - Procena efektivnog propusnog opsega merena u MB/s
+
+    - **cardCorrelationId** - Duplikat gore navedenog Data.appContextId 
+
+    - **cardPersonaCorrelationId** - Duplikat gore navedenog Data.cardCorrelationId
+
+    - **consumerCorrelationId** - Duplikat gore navedenog Data.clientCorrelationId 
+
+    - **externalAppSessionCorrelationId** – Globalni jedinstveni identifikator za aplikaciju za identifikovanje svih Kartica „Personalnost“ otvorenih u istoj podsesiji
+
+    - **immersiveProfileCorrelationId** – Globalni jedinstveni identifikator za sesiju prikaza proširenog profila
+
+    - **networkEffectiveType** – Efektivan tip mrežne veze, npr. "Slow-2g online" da bi se identifikovalo da li je korisnik povezan sa Internetom u vreme prikazivanja Kartice „Personalnost“
+
+    - **networkType** – Tip mrežnog povezivanja uređaja koji se koristi
+
+    - **personaCorrelationId** – Globalni jedinstveni identifikator za jedinstvene „Personalnosti“ u sesiji
+
+    - **roundTripEstimateMs** - Procenjeni efektivni povratni put trenutne veze izražen u milisekundama
+
+    - **wasOpenedAsCompactCard** – Koristi se za identifikovanje toga da li je kartica prvobitno otvorena kao sažeti prikaz
+
 
 #### <a name="officemanageabilityclient-fetchpolicyprechecks"></a>Office.Manageability.Client Fetch.PolicyPreChecks
 
@@ -1957,6 +2599,34 @@ Prikupljaju se sledeća polja:
 -  **TimeToMedianResultInMs** – označava vreme koje potrebno da bi OneNote pronašao sva podudaranja.
 
 
+#### <a name="officeonenotestickynotesnotecreated"></a>Office.OneNote.StickyNotes.NoteCreated
+
+Ovo je kritičan signal koji se koristi da prati da li korisnici Lepljivih beležaka mogu da kreiraju beleške u aplikaciji.  Telemetrija se koristi za obezbeđivanje otkrivanja kritične regresivne OneNote aplikacije i ispravnost usluge. Ako korisnici ne mogu da naprave belešku, to bi izazvalo incident krajnje ozbiljnosti.
+
+Prikupljaju se sledeća polja:
+
+- **NoteLocalId** - Jedinstveni identifikator koji se jasno razlikuje od drugih dodeljuje se belešci kada korisnik kreira belešku unutar aplikacije.
+
+- **IsExportable** - Zastavica koja ukazuje na to da li je ovaj događaj bio rezultat delovanja korisnika ili ne. Treba da bude postavljeno na vrednost "ispravno" pošto je NoteCreated radnja koju aktivira korisnik.
+
+- **StickyNotes-SDKVersion** - Broj verzije koji označava verziju aplikacije Lepljive beleške koje korisnik koristi. Omogućava nam da utvrdimo koje verzije proizvoda ispoljavaju problem tako da možemo ispravno da damo prioritet rešavanju tog problema.
+
+
+#### <a name="officeonenotestickynotesnoteviewed"></a>Office.OneNote.StickyNotes.NoteViewed
+
+Ovo je kritičan signal koji se koristi da prati da li korisnici Lepljivih beležaka mogu da kreiraju beleške u aplikaciji.  Telemetrija se koristi za obezbeđivanje otkrivanja kritične regresivne OneNote aplikacije i ispravnost usluge. Ako korisnici ne mogu da naprave belešku, to bi izazvalo incident krajnje ozbiljnosti.
+
+Prikupljaju se sledeća polja:
+
+- **HasImages** - Zastavica koja ukazuje na to da li prikazana beleška sadrži uskladištene slike.
+
+- **IsExportable** - Zastavica koja ukazuje na to da li je ovaj događaj bio rezultat delovanja korisnika ili ne. Treba da bude postavljeno na vrednost "ispravno" pošto je NoteViewed radnja koju aktivira korisnik.
+
+- **NoteLocalId** - Jedinstveni identifikator koji se jasno razlikuje od drugih dodeljuje se belešci kada korisnik kreira belešku unutar aplikacije.
+
+- **StickyNotes-SDKVersion** - Broj verzije koji označava verziju aplikacije Lepljive beleške koje korisnik koristi. Omogućava nam da utvrdimo koje verzije proizvoda ispoljavaju problem tako da možemo ispravno da damo prioritet rešavanju tog problema.
+
+
 #### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
  
 Ovaj događaj evidentira rezultat sinhronizacije beležnice. Koristi se za otkrivanje broja jedinstvenih ciljeva sinhronizacije kada se izračunava rezultat sinhronizacije programa OneNote.
@@ -2040,8 +2710,7 @@ Prikupljaju se sledeća polja
 
 #### <a name="officeonenotesystemapplifecycleapplaunch"></a>Office.OneNote.System.AppLifeCycle.AppLaunch
 
-Zatim se kritični signal koristi da bi se osiguralo da korisnici usluge OneNote mogu uspešno pokrenuti aplikaciju.
-Telemetrija se koristi za obezbeđivanje kritične regresivne ispravnosti za OneNote aplikacije i ispravnost usluge. Ako korisnici ne mogu da pokrenu aplikaciju u prozoru performansi, to bi izazvalo incident velike ozbiljnosti.
+Kritični signal koji se koristi da bi se osiguralo da korisnici usluge OneNote mogu uspešno pokrenuti aplikaciju. Telemetrija se koristi za obezbeđivanje kritične regresivne ispravnosti za OneNote aplikacije i ispravnost usluge. Ako korisnici ne mogu da pokrenu aplikaciju u prozoru performansi, to bi izazvalo incident velike ozbiljnosti.
 
 Prikupljena su sledeća polja:   Nijedno
 
@@ -2091,13 +2760,6 @@ Prikupljaju se sledeća polja:
 
   - **Rezultat** - rezultat pokušaja ažuriranja lozinke. Na primer: „Uspeh“ ili „Neuspeh\_Deaktivirana opcija za omogućavanje manje bezbednih aplikacija“
 
-#### <a name="officeoutlookdesktopprovidersloadproviderlibrary"></a>Office.Outlook.Desktop.Providers.LoadProviderLibrary
-
-Ovaj događaj prati uspeh ili neuspeh MAPI pokušaja da se učita DLL dobavljača (npr. contab32.dll, emsmdb32.dll, DLL koji programski dodatak koristi). MAPI operacija odgovorna za učitavanje DLL-ova dobavljača je od suštinske važnosti za „Potrebnu operaciju“ programa Outlook, kao i za proširivost (putem programskih dodataka ili prilagođenih pružatelja usluga Skladištenja/ Transporta/Adresara). Aktivno pratimo uspešan ili neuspešan rezultat ove operacije da bismo bili sigurni da je osnovne MAPI funkcije nastave da rade kao što je očekivano.
-
-Prikupljaju se sledeća polja:
-
-  - **Standardna HVA aktivnost** bez prilagođenih korisnih podataka
 
 #### <a name="officeoutlookdesktopstorescreatenewstore"></a>Office.Outlook.Desktop.Stores.CreateNewStore
 
@@ -2193,6 +2855,8 @@ Prikupljaju se sledeća polja:
 
   - **Data\_Doc\_AssistedReadingReasons:long -** Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
 
+  - **Data_Doc_AsyncOpenKind:long –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
   - **Data\_Doc\_ChunkingType:long -** Kako je dokument uskladišten u sistemu SharePoint
 
   - **Data\_Doc\_EdpState:long -** Status dokumenta u vezi sa zaštitom podataka preduzeća
@@ -2223,8 +2887,6 @@ Prikupljaju se sledeća polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool -** Proverava da li se dokument otvara iz lokalnog keša
 
-  - **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen taj fajl.
-
   - **Data\_Doc\_IsSyncBacked:bool -** Proverava da li je dokument otvoren iz fascikle koja koristi aplikaciju OneDrive za ponovnu sinhronizaciju
 
   - **Data\_Doc\_Location:long -** Unapred definisani skup vrednosti za mesto gde je dokument uskladišten (lokalno, u usluzi SharePoint, na WOPI serveru, na mreži, itd.) 
@@ -2238,6 +2900,8 @@ Prikupljaju se sledeća polja:
   - **Data\_Doc\_ReadOnlyReasons:long –-** Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument označen samo za čitanje (zaključan na serveru, konačni dokument, zaštićen lozinkom za uređivanje, itd.)
 
   - **Data\_Doc\_ResourceIdHash:string -** Heš identifikatora resursa za dokumente koji su uskladišteni na oblaku
+
+  - **Data_Doc_RtcType -**  Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
   - **Data\_Doc\_ServerDocId:string -** nepromenljivi identifikator za dokumente koji su uskladišteni na oblaku
 
@@ -2327,6 +2991,8 @@ Prikupljaju se sledeća polja:
 
   - **Data\_Doc\_AssistedReadingReasons:long -** Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
 
+  - **Data_Doc_AsyncOpenKind:long –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
   - **Data\_Doc\_ChunkingType:long -** Kako je dokument uskladišten u sistemu SharePoint
 
   - **Data\_Doc\_EdpState:long -** Status dokumenta u vezi sa zaštitom podataka preduzeća
@@ -2357,8 +3023,6 @@ Prikupljaju se sledeća polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool -** Da li se dokument otvara iz lokalnog keša?
 
-  - **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen tu datoteku.
-
   - **Data\_Doc\_IsSyncBacked:bool -** Da li je dokument otvoren iz fascikle koja koristi aplikaciju OneDrive za ponovnu sinhronizaciju
 
   - **Data\_Doc\_Location:long -** Unapred definisani skup vrednosti za mesto gde je dokument uskladišten (lokalno, u usluzi SharePoint, na WOPI serveru, na mreži, itd.) 
@@ -2372,6 +3036,8 @@ Prikupljaju se sledeća polja:
   - **Data\_Doc\_ReadOnlyReasons:long –-** Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument označen samo za čitanje (zaključan na serveru, konačni dokument, zaštićen lozinkom za uređivanje, itd.)
 
   - **Data\_Doc\_ResourceIdHash:string -** Heš identifikatora resursa za dokumente koji su uskladišteni na oblaku
+
+  - **Data_Doc_RtcType -**  Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
   - **Data\_Doc\_ServerDocId:string -** nepromenljivi identifikator za dokumente koji su uskladišteni na oblaku
 
@@ -2449,6 +3115,8 @@ Prikupljaju se sledeća polja:
 
   - **Data\_Doc\_AssistedReadingReasons:long -** Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
 
+  - **Data_Doc_AsyncOpenKind:long –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
   - **Data\_Doc\_ChunkingType:long -** Kako je dokument uskladišten u sistemu SharePoint
 
   - **Data\_Doc\_EdpState:long -** Status dokumenta u vezi sa zaštitom podataka preduzeća
@@ -2479,8 +3147,6 @@ Prikupljaju se sledeća polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool -** Proverava da li se dokument otvara iz lokalnog keša
 
-  - **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen tu datoteku.
-
   - **Data\_Doc\_IsSyncBacked:bool -** Da li je dokument otvoren iz fascikle koja koristi aplikaciju OneDrive za ponovnu sinhronizaciju
 
   - **Data\_Doc\_Location:long -** Unapred definisani skup vrednosti za mesto gde je dokument uskladišten (lokalno, u usluzi SharePoint, na WOPI serveru, na mreži, itd.) 
@@ -2494,6 +3160,8 @@ Prikupljaju se sledeća polja:
   - **Data\_Doc\_ReadOnlyReasons:long –-** Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument označen samo za čitanje (zaključan na serveru, konačni dokument, zaštićen lozinkom za uređivanje, itd.)
 
   - **Data\_Doc\_ResourceIdHash:string -** Heš identifikatora resursa za dokumente koji su uskladišteni na oblaku
+
+  - **Data_Doc_RtcType -**  Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
   - **Data\_Doc\_ServerDocId:string -** nepromenljivi identifikator za dokumente koji su uskladišteni na oblaku
 
@@ -2591,6 +3259,8 @@ Prikupljaju se sledeća polja:
 
 - **Data_DstDoc_AssistedReadingReasons:long** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
 
+- **Data_DstDoc_AsyncOpenKind:long –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
 - **Data_DstDoc_ChunkingType:long** - Kako je dokument uskladišten u sistemu SharePoint
 
 - **Data_DstDoc_EdpState:long** - Status dokumenta u vezi sa zaštitom podataka preduzeća
@@ -2674,6 +3344,8 @@ Prikupljaju se sledeća polja:
 - **Data_SrcDoc_AccessMode:long** - Kako je dokument otvoren (samo za čitanje/čitanje i pisanje)
 
 - **Data_SrcDoc_AssistedReadingReasons:long** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
+
+- **Data_SrcDoc_AsyncOpenKind:long –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
 
 - **Data_SrcDoc_ChunkingType:long** - Kako je dokument uskladišten u sistemu SharePoint 
 
@@ -2768,6 +3440,8 @@ Prikupljaju se sledeća polja:
 
 - **Data_Doc_AssistedReadingReasons:long** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
 
+- **Data_Doc_AsyncOpenKind:long –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
 - **Data_Doc_ChunkingType:long** - Kako je dokument uskladišten u sistemu SharePoint
 
 - **Data_Doc_EdpState:long** - Status dokumenta u vezi sa zaštitom podataka preduzeća
@@ -2798,8 +3472,6 @@ Prikupljaju se sledeća polja:
 
 - **Data_Doc_IsOpeningOfflineCopy:bool** - Proverava da li se dokument otvara iz lokalnog keša
 
-- **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen u tu datoteku.
-
 - **Data_Doc_IsSyncBacked:bool** - Da li je dokument otvoren iz fascikle koja koristi aplikaciju OneDrive za ponovnu sinhronizaciju
 
 - **Data_Doc_Location:long** - Unapred definisani skup vrednosti za mesto gde je dokument uskladišten (lokalno, u usluzi SharePoint, na WOPI serveru, na mreži, itd.) 
@@ -2813,6 +3485,8 @@ Prikupljaju se sledeća polja:
 - **Data_Doc_ReadOnlyReasons:long** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument označen samo za čitanje (zaključan na serveru, konačni dokument, zaštićen lozinkom za uređivanje, itd.)
 
 - **Data_Doc_ResourceIdHash:string** - Heš identifikatora resursa za dokumente koji su uskladišteni na oblaku
+
+- **Data_Doc_RtcType** - Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
 - **Data_Doc_ServerDocId:string** - nepromenljivi identifikator za dokumente koji su uskladišteni na oblaku
 
@@ -2843,6 +3517,8 @@ Prikupljaju se sledeća polja:
 - **Data_DstDoc_AccessMode:long**- Kako je dokument otvoren (samo za čitanje/čitanje i pisanje)
 
 - **Data_DstDoc_AssistedReadingReasons:long** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
+
+- **Data_DstDoc_AsyncOpenKind:long –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
 
 - **Data_DstDoc_ChunkingType:long** - Kako je dokument uskladišten u sistemu SharePoint
 
@@ -2925,6 +3601,8 @@ Prikupljaju se sledeća polja:
 - **Data_SrcDoc_AccessMode:long** - Kako je dokument otvoren (samo za čitanje/čitanje i pisanje)
 
 - **Data_SrcDoc_AssistedReadingReasons:long** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
+
+- **Data_SrcDoc_AsyncOpenKind:long –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
 
 - **Data_SrcDoc_ChunkingType:long** - Kako je dokument uskladišten u sistemu SharePoint
 
@@ -3283,7 +3961,7 @@ Prikupljaju se sledeća polja:
 
 - **Data.sourceTextLength**- Dužina teksta koji treba da se prevede
 
-- **Data.sourceTextWords**- Broj reči u tekstu koji treba da se prevede
+- **Data.sourceTextWords** – Broj reči u tekstu koji treba da se prevede
 
 - **Data.warningMessage**- Poruka upozorenja koju je prijavila usluga
 
@@ -3398,6 +4076,68 @@ Prikupljaju se sledeća polja:
 
 - **Data.warningMessage**- Poruka upozorenja koju je prijavila usluga
 
+
+#### <a name="officevisiosharedfeatureexperimentation"></a>Office.Visio.Shared.FeatureExperimentation
+
+Prati funkciju letova za korisnike. Ovaj događaj nam pomaže da odredimo uspešnost ili neuspešnost funkcije letova.
+
+Prikupljaju se sledeća polja:
+
+  - **Data\_Enable:bool**- tačno ukazuje na to da je funkcija omogućena za trenutnog korisnika
+
+  - **Data\_Feature:string** - ime funkcije
+
+  - **Data\_Flighted:bool** - tačno ukazuje na to da je funkcija omogućena
+
+  - **Data\_Licensed:bool** - tačno ukazuje na to da se funkcija nalazi u okviru provere licenciranja
+
+  - **Data\_Subscriber:bool** - tačno ukazuje na to da korisnik ima licencu za pretplatu
+
+#### <a name="officevisiosharedrefreshsmartdiagram"></a>Office.Visio.Shared.RefreshSmartDiagram
+
+Hvata greške u osvežavanju dijagrama kada se datoteka kreira pomoću funkcije VP. To nam pomaže da otklonimo greške i probleme u osvežavanju podataka u dijagramu VP.
+
+Prikupljaju se sledeća polja:
+
+  - **Data\_ConnectorsBasedOnSequence:bool** - tačno ako je osveženi dijagram prvobitno keiran pomoću konektora koji se zasniva na opciji „sekvence“
+
+  - **Data\_DialogError**:**string** - greška tokom osvežavanja pametnog dijagrama
+
+  - **Data\_FileError:string** - greška niske kada je povezana Excel datoteka nevažeća
+
+  - **Data\_OverwriteSelected**:**bool** - tačno ako je korisnik izabrao opciju zamene dijagrama tokom osvežavanja
+
+  - **Data\_WarningShown**:**bool** - tačno ako je korisniku prikazano upozorenje tokom osvežavanja podataka
+
+#### <a name="officevisiosharedwritebacktoexcel"></a>Office.Visio.Shared.WritebackToExcel
+
+Hvata greške povratnog upisivanja u programu Excel kada se datoteka kreira pomoću funkcije VP. To nam pomaže da otklonimo greške i probleme ponovnog upisivanja podataka u program Excel u dijagramu VP.
+
+Prikupljaju se sledeća polja:
+
+  - **Data\_ConnectorsBasedOnSequence:bool** - tačno znači da su konektori kreirani na osnovu postavki sekvence
+
+  - **Data\_DataSourceType:string** - Polje koje ukazuje na to da li je dijagram kreiran iz „tabele“ ili „prilagođenog opsega“
+
+  - **Data\_DialogError:string** - tip česte greške koja se javlja tokom kreiranja pametnog dijagrama u programu Excel
+
+  - **Data\_NoOfShapesAdded:int** - Broj oblika koji su dodati tokom funkcije ponovnog upisivanja u program Excel
+
+  - **Data\_NoOfShapesAdded:int** - Broj oblika koji su obrisani tokom funkcije ponovnog upisivanja u program Excel
+
+  - **Data\_OverwriteSelected:bool** - tačno ukazuje na to da je korisnik izabrao opciju zamene podataka
+
+  - **Data\_SourceDataModified:bool** - tačno ukazuje na to da su izvorni podaci izmenjeni
+
+  - **Data\_WarningShown:bool** - tačno znači da je korisniku prikazano upozorenje o ažuriranju podataka
+
+  - **Data\_WarningShownBecauseOfPresenceOfFormula:bool** - tačno ukazuje na to da je korisniku prikazano upozorenje zbog formule koja je prisutna u programu Excel
+
+  - **Data\_WarningShownToAddNextStepID:bool** - tačno ukazuje na to da je korisniku prikazano upozorenje zato što u programu Excel nedostaje identifikator sledećeg koraka
+
+  - **Data\_WarningShownToConvertToTable:bool** - tačno ukazuje na to da je korisniku prikazano upozorenje da konvertuje Excel podatke u format tabele
+
+
 #### <a name="officewordexperimentationdocumentstatsoncloseandsuspend"></a>Office.Word.Experimentation.DocumentStatsOnCloseAndSuspend
 
 Ovaj događaj evidentira statističke podatke za svaki dokument kada je program Office Word zatvoren ili obustavljen.  Događaj se koristi za označavanje uzajamne veze između uređivanja dokumenta, veličine itd. i čuvanja dokumenta, deljenja dokumenta i grešaka prilikom saradnje na uređivanju dokumenta na mreži.
@@ -3474,6 +4214,130 @@ Prikupljaju se sledeća polja:
 
   - **Podaci\_KoristiPrilagođeniPredložak** - ukazuje na to da li je dokument kreiran na osnovu prilagođenog predloška
 
+#### <a name="officewordfileopenuserinitiatedopen"></a>Office.Word.FileOpen.UserInitiatedOpen 
+
+Ovaj događaj ukazuje na to da Office Word otvara dokument na zahtev korisnika umesto programski. Sadrži i bitne podatke o performansama otvaranja datoteke i o tome da li je u pitanju događaj pokretanja aplikacije iz perspektive korisnika.  Događaj prati da li otvaranje datoteke radi kao što je očekivano. Takođe se koristi i za izračunavanje mesečno aktivnih korisnika/uređaja i metrike pouzdanosti oblaka.  
+ 
+Prikupljaju se sledeća polja:
+
+- **Data_AddDocTelemRes** - Izveštava da li smo u događaju mogli ispravno da unesemo druge vrednosti koje se tiču telemetrije dokumenta. Koristi se za dijagnostiku kvaliteta podataka. 
+
+- **Data_BytesAsynchronous** - Broj bajtova (komprimovanih) bez kojeg možemo da otvorimo datoteku ako ih preuzmemo pre nego što korisnik započne uređivanje ili čuvanje. 
+
+- **Data_BytesAsynchronousWithWork** - Broj bajtova (komprimovanih) bez kojeg možda možemo da otvorimo dokument, ali potrebno je značajno investiranje u kôd da bi se to omogućilo 
+
+- **Data_BytesSynchronous** - Broj bajtova (komprimovanih) koji moramo da imamo da bismo započeli otvaranje datoteke 
+
+- **Data_BytesUnknown** - Broj bajtova u segmentima dokumenta koji ne očekujemo da nađemo. 
+
+- **Data_Doc_AccessMode** -Dokument je samo za čitanje/ili može da se uređuje 
+
+- **Data_Doc_AssistedReadingReasons** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje 
+
+- **Data_Doc_ChunkingType** - Jedinice koje se koriste za postepeno otvaranje dokumenta 
+
+- **Data_Doc_EdpState** - Postavke elektronske zaštite podataka za dokument 
+
+- **Data_Doc_Ext** - Oznaka tipa dokumenta (docx/xlsb/pptx, itd.) 
+
+- **Data_Doc_FileFormat** - Verzija protokola za format datoteke 
+
+- **Data_Doc_Fqdn** - Ime domena za OneDrive ili SharePoint Online 
+
+- **Data_Doc_FqdnHash** - Jednosmerni heš imena domena koji se može identifikovati 
+
+- **Data_Doc_IdentityTelemetryId** - Jednosmerni heš za identitet korisnika koji se koristi za izvršavanje otvaranja 
+
+- **Data_Doc_InitializationScenario** - Beleži način na koji je otvoren dokument 
+
+- **Data_Doc_IOFlags** - Izveštava o keširanim zastavicama koje su korišćene za podešavanje postavki zahteva za otvaranje 
+
+- **Data_Doc_IrmRights** - Radnje koje su dozvoljene putem smernica za elektronskih zaštitu podataka koje su primenjene na dokument/korisnika 
+
+- **Data_Doc_IsIncrementalOpen** - Zastavica koja označava da je dokument postepeno otvoren 
+
+- **Data_Doc_IsOcsSupported** - Zastavica koja ukazuje na to da je dokument podržan u usluzi saradnje 
+
+- **Data_Doc_IsOpeningOfflineCopy** - Zastavica koja ukazuje na to je otvorena vanmrežna kopija dokumenta 
+
+- **Data_Doc_IsSyncBacked** -Zastavica koja ukazuje na to da na računaru postoji kopija koja se automatski sinhronizuje 
+
+- **Data_Doc_Location** - Označava uslugu koja je obezbedila dokument (OneDrive, File Server, SharePoint, itd.) 
+
+- **Data_Doc_LocationDetails** - Ukazuje na to koja „Poznata fascikla“ je obezbedila lokalno uskladišteni dokument 
+
+- **Data_Doc_NumberCoAuthors** - Izračunavanje broja drugih korisnika u sesiji zajedničkog uređivanja 
+
+- **Data_Doc_PasswordFlags** - Ukazuje na to da je postavljena zastavica za lozinku za čitanje ili čitanje/pisanje 
+
+- **Data_Doc_ReadOnlyReasons** - Razlozi zbog kojih je dokument otvoren samo za čitanje 
+
+- **Data_Doc_ResourceIdHash** - Anonimni Identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi 
+
+- **Data_Doc_ServerDocId** - Nepromenljivi anonimni Identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi 
+
+- **Data_Doc_ServerProtocol** - verzija protokola koji se koristi za komunikaciju sa uslugom 
+
+- **Data_Doc_ServerType** - tip servera koji nudi uslugu (SharePoint, OneDrive, WOPI itd.) 
+
+- **Data_Doc_ServerVersion** - verzija servera koji nudi uslugu 
+
+- **Data_Doc_SessionId** - Verzija servera koji nudi uslugu 
+
+- **Data_Doc_SharePointServiceContext** - Informacije o dijagnostici iz zahteva usluge SharePoint Online 
+
+- **Data_Doc_SizeInBytes** - Indikator veličine dokumenta 
+
+- **Data_Doc_SpecialChars** - Indikator specijalnih znakova u URL adresi ili putanji dokumenta 
+
+- **Data_Doc_StreamAvailability** - Indikator koji ukazuje na to da li je protok dokumenta omogućen/onemogućen 
+
+- **Data_Doc_SyncBackedType** - Indikator tipa dokumenta (lokalni ili iz usluge) 
+
+- **Data_Doc_UrlHash** - Jednosmerni heš za kreiranje identifikatora jednostavnog dokumenta 
+
+- **Data_Doc_WopiServiceId** - Sadrži jedinstveni identifikator WOPI dobavljača usluge 
+
+- **Data_EditorDisablingRename** -Identifikator prvog urednika zbog kojeg je onemogućeno preimenovanje 
+
+- **Data_EditorsCount** - Broj urednika dokumenta 
+
+- **Data_ForceReadWriteReason** -Vrednost celog broja koja predstavlja razlog zbog kog je datoteka primorana da se otvori u režimu za čitanje/pisanje 
+
+- **Data_FSucceededAfterRecoverableFailure** - Ukazuje na to da je otvaranje uspelo nakon popravke greške prilikom otvaranja dokumenta 
+
+- **Data_LastLoggedTag** - Jedinstvena oznaka za lokaciju poziva koda koja se koristi za identifikovanje kada otvaranje dva puta ne uspe (koristi se za dijagnostiku kvaliteta podataka) 
+
+- **Data_LinkStyles** - Ukazuje na to da li se povezujemo sa stilovima predložaka 
+
+- **Data_MainPdod** - Identifikator dokumenta koji se obrađuje u programu Office Word 
+
+- **Data_Measurements** - Šifrovana niska koja sadrži analizu vremena otvaranja različitih segmenata Koristi se za dijagnostikovanje performanse otvaranja. 
+
+- **Data_MoveDisabledReason** - Greška koja onemogućava premeštanje dokumenta 
+
+- **Data_MoveFlightEnabled** - Da li je omogućena putanja za funkciju premeštanja 
+
+- **Data_OpenInitiateKind** – Tip scenarija u kome su korisnici pokrenuli otvaranje datoteke. 
+
+- **Data_PartsUnknown** - Broj segmenata dokumenta za koji nismo mogli da dobijemo podatke 
+
+- **Data_RecoverableFailureInitiationLocationTag** - Jedinstvena oznaka za lokaciju poziva koda koja se koristi da bi se identifikovalo mesto u kodu na kom pokušavamo da popravimo datoteku pre nego što je otvorimo 
+
+- **Data_RenameDisabledReason** - Greška koja uzrokuje da preimenovanje ovog dokumenta bude onemogućeno 
+
+- **Data_RenameFlightEnabled** - Da li je omogućena putanja za funkciju preimenovanja 
+
+- **Data_SecondaryTag** - Jedinstvena oznaka za lokaciju poziva koda koja se koristi za dodavanje dodatnih podataka o grešci otvaranja. 
+
+- **Data_TemplateFormat** - Format datoteke predloška na kome je zasnovan dokument. 
+
+- **Data_UsesNormal** - Ukazuje na to da li je otvoreni dokument zasnovan na normalnom predlošku. 
+
+- **Data_VerboseMeasurements** - Šifrovana niska koja sadrži analizu vremena otvaranja različitih segmenata.  Koristi se za merenje performansi, omogućenog samo za unutrašnje prstenove. 
+
+
+
 #### <a name="officewordfilesaveactcmdgosubsaveas"></a>Office.Word.FileSave.ActCmdGosubSaveAs
 
 Ovaj događaj ukazuje na to da korisnik čuva promene u novom dokumentu. Događaj prati da li operacija čuvanja u novom dokumentu radi kao što je očekivano. Takođe se koristi i za izračunavanje mesečno aktivnih korisnika/uređaja i metrike pouzdanosti oblaka.
@@ -3487,7 +4351,9 @@ Prikupljaju se sledeća polja:
 - **Data_Doc_AccessMode** -Dokument je samo za čitanje/ili može da se uređuje
 
 - **Data_Doc_AssistedReadingReasons** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
-    
+
+- **Data_Doc_AsyncOpenKind –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
 - **Data_Doc_ChunkingType** - Jedinice koje se koriste za postepeno otvaranje dokumenta
 
 - **Data_Doc_EdpState** - Postavke elektronske zaštite podataka za dokument
@@ -3514,8 +4380,6 @@ Prikupljaju se sledeća polja:
     
 - **Data_Doc_IsOpeningOfflineCopy** - Zastavica koja ukazuje na to je otvorena vanmrežna kopija dokumenta
 
-- **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen u tu datoteku.
-
 - **Data_Doc_IsSyncBacked** -Zastavica koja ukazuje na to da na računaru postoji kopija koja se automatski sinhronizuje
 
 - **Data_Doc_Location** - Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
@@ -3529,6 +4393,8 @@ Prikupljaju se sledeća polja:
 - **Data_Doc_ReadOnlyReasons** - Razlozi zbog kojih je dokument otvoren samo za čitanje
 
 - **Data_Doc_ResourceIdHash** - Anonimni identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
+
+- **Data_Doc_RtcType** - Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
 - **Data_Doc_ServerDocId** - Nepromenljivi anonimni identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
 
@@ -3578,6 +4444,8 @@ Prikupljaju se sledeća polja:
 - **Data_Doc_AccessMode** -Dokument je samo za čitanje/ili može da se uređuje
 
 - **Data_Doc_AssistedReadingReasons** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
+
+- **Data_Doc_AsyncOpenKind –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
     
 - **Data_Doc_ChunkingType** - Jedinice koje se koriste za postepeno otvaranje dokumenta
 
@@ -3605,8 +4473,6 @@ Prikupljaju se sledeća polja:
     
 - **Data_Doc_IsOpeningOfflineCopy** - Zastavica koja ukazuje na to je otvorena vanmrežna kopija dokumenta
 
-- **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen u tu datoteku.
-
 - **Data_Doc_IsSyncBacked** -Zastavica koja ukazuje na to da na računaru postoji kopija koja se automatski sinhronizuje
 
 - **Data_Doc_Location** - Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
@@ -3620,6 +4486,8 @@ Prikupljaju se sledeća polja:
 - **Data_Doc_ReadOnlyReasons** - Razlozi zbog kojih je dokument otvoren samo za čitanje
 
 - **Data_Doc_ResourceIdHash** - Anonimni identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
+
+- **Data_Doc_RtcType** - Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
 - **Data_Doc_ServerDocId** - Nepromenljivi anonimni identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
 
@@ -3676,6 +4544,8 @@ Prikupljaju se sledeća polja:
 
 - **Data_Doc_AssistedReadingReasons** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
 
+- **Data_Doc_AsyncOpenKind –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
 - **Data_Doc_ChunkingType** - Jedinice koje se koriste za postepeno otvaranje dokumenta
 
 - **Data_Doc_EdpState** - Postavke elektronske zaštite podataka za dokument
@@ -3702,8 +4572,6 @@ Prikupljaju se sledeća polja:
     
 - **Data_Doc_IsOpeningOfflineCopy** - Zastavica koja ukazuje na to je otvorena vanmrežna kopija dokumenta
 
-- **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen u tu datoteku.
-
 - **Data_Doc_IsSyncBacked** -Zastavica koja ukazuje na to da na računaru postoji kopija koja se automatski sinhronizuje
 
 - **Data_Doc_Location** - Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
@@ -3717,6 +4585,8 @@ Prikupljaju se sledeća polja:
 - **Data_Doc_ReadOnlyReasons** - Razlozi zbog kojih je dokument otvoren samo za čitanje
 
 - **Data_Doc_ResourceIdHash** - Anonimni identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
+
+- **Data_Doc_RtcType** - Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
 - **Data_Doc_ServerDocId** - Nepromenljivi anonimni identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
 
@@ -3795,6 +4665,8 @@ Prikupljaju se sledeća polja:
 
 - **Data_Doc_AssistedReadingReasons** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
 
+- **Data_Doc_AsyncOpenKind –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
 - **Data_Doc_ChunkingType** - Jedinice koje se koriste za postepeno otvaranje dokumenta
 
 - **Data_Doc_EdpState** - Postavke elektronske zaštite podataka za dokument
@@ -3819,8 +4691,6 @@ Prikupljaju se sledeća polja:
 
 - **Data_Doc_IsOpeningOfflineCopy** - Zastavica koja ukazuje na to je otvorena vanmrežna kopija dokumenta
 
-- **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen u tu datoteku.
-
 - **Data_Doc_IsSyncBacked** -Zastavica koja ukazuje na to da na računaru postoji kopija koja se automatski sinhronizuje
 
 - **Data_Doc_Location** - Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
@@ -3832,6 +4702,8 @@ Prikupljaju se sledeća polja:
 - **Data_Doc_ReadOnlyReasons** - Razlozi zbog kojih je dokument otvoren samo za čitanje
 
 - **Data_Doc_ResourceIdHash** - Anonimni identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
+
+- **Data_Doc_RtcType** - Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
 - **Data_Doc_ServerDocId** - Nepromenljivi anonimni identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
 
@@ -3856,6 +4728,8 @@ Prikupljaju se sledeća polja:
 - **Data_DstDoc_AccessMode** - Odredišni dokument je samo za čitanje/ili može da se uređuje
 
 - **Data_DstDoc_AssistedReadingReasons** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je odredišni dokument otvoren u režimu za čitanje
+
+- **Data_DstDoc_AsyncOpenKind –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
     
 - **Data_DstDoc_ChunkingType** - Jedinice koje se koriste za postepeno otvaranje dokumenta
 
@@ -3943,6 +4817,8 @@ Prikupljaju se sledeća polja:
 
 - **Data_SrcDoc_AssistedReadingReasons** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
 
+- **Data_SrcDoc_AsyncOpenKind –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
 - **Data_SrcDoc_ChunkingType** - Jedinice koje se koriste za postepeno otvaranje dokumenta
 
 - **Data_SrcDoc_EdpState** - Postavke za zaštitu elektronskih podataka izvornog dokumenta
@@ -4010,66 +4886,6 @@ Prikupljaju se sledeća polja:
 - **Data_SrcDocIsUnnamedOrNew** - Ukazuje na to da li je dokument koji čuvamo nov
 
 
-#### <a name="officevisiosharedfeatureexperimentation"></a>Office.Visio.Shared.FeatureExperimentation
-
-Prati funkciju letova za korisnike. Ovaj događaj nam pomaže da odredimo uspešnost ili neuspešnost funkcije letova.
-
-Prikupljaju se sledeća polja:
-
-  - **Data\_Enable:bool**- tačno ukazuje na to da je funkcija omogućena za trenutnog korisnika
-
-  - **Data\_Feature:string** - ime funkcije
-
-  - **Data\_Flighted:bool** - tačno ukazuje na to da je funkcija omogućena
-
-  - **Data\_Licensed:bool** - tačno ukazuje na to da se funkcija nalazi u okviru provere licenciranja
-
-  - **Data\_Subscriber:bool** - tačno ukazuje na to da korisnik ima licencu za pretplatu
-
-#### <a name="officevisiosharedrefreshsmartdiagram"></a>Office.Visio.Shared.RefreshSmartDiagram
-
-Hvata greške u osvežavanju dijagrama kada se datoteka kreira pomoću funkcije VP. To nam pomaže da otklonimo greške i probleme u osvežavanju podataka u dijagramu VP.
-
-Prikupljaju se sledeća polja:
-
-  - **Data\_ConnectorsBasedOnSequence:bool** - tačno ako je osveženi dijagram prvobitno keiran pomoću konektora koji se zasniva na opciji „sekvence“
-
-  - **Data\_DialogError**:**string** - greška tokom osvežavanja pametnog dijagrama
-
-  - **Data\_FileError:string** - greška niske kada je povezana Excel datoteka nevažeća
-
-  - **Data\_OverwriteSelected**:**bool** - tačno ako je korisnik izabrao opciju zamene dijagrama tokom osvežavanja
-
-  - **Data\_WarningShown**:**bool** - tačno ako je korisniku prikazano upozorenje tokom osvežavanja podataka
-
-#### <a name="officevisiosharedwritebacktoexcel"></a>Office.Visio.Shared.WritebackToExcel
-
-Hvata greške povratnog upisivanja u programu Excel kada se datoteka kreira pomoću funkcije VP. To nam pomaže da otklonimo greške i probleme ponovnog upisivanja podataka u program Excel u dijagramu VP.
-
-Prikupljaju se sledeća polja:
-
-  - **Data\_ConnectorsBasedOnSequence:bool** - tačno znači da su konektori kreirani na osnovu postavki sekvence
-
-  - **Data\_DataSourceType:string** - Polje koje ukazuje na to da li je dijagram kreiran iz „tabele“ ili „prilagođenog opsega“
-
-  - **Data\_DialogError:string** - tip česte greške koja se javlja tokom kreiranja pametnog dijagrama u programu Excel
-
-  - **Data\_NoOfShapesAdded:int** - Broj oblika koji su dodati tokom funkcije ponovnog upisivanja u program Excel
-
-  - **Data\_NoOfShapesAdded:int** - Broj oblika koji su obrisani tokom funkcije ponovnog upisivanja u program Excel
-
-  - **Data\_OverwriteSelected:bool** - tačno ukazuje na to da je korisnik izabrao opciju zamene podataka
-
-  - **Data\_SourceDataModified:bool** - tačno ukazuje na to da su izvorni podaci izmenjeni
-
-  - **Data\_WarningShown:bool** - tačno znači da je korisniku prikazano upozorenje o ažuriranju podataka
-
-  - **Data\_WarningShownBecauseOfPresenceOfFormula:bool** - tačno ukazuje na to da je korisniku prikazano upozorenje zbog formule koja je prisutna u programu Excel
-
-  - **Data\_WarningShownToAddNextStepID:bool** - tačno ukazuje na to da je korisniku prikazano upozorenje zato što u programu Excel nedostaje identifikator sledećeg koraka
-
-  - **Data\_WarningShownToConvertToTable:bool** - tačno ukazuje na to da je korisniku prikazano upozorenje da konvertuje Excel podatke u format tabele
-
 #### <a name="officewordworddocumentdirtyflagchanged"></a>Office.Word.Word.DocumentDirtyFlagChanged
 
 Ovaj događaj ukazuje na to da program Office Word uređuje dokument, što menja unutrašnji status dokumenta u „nesređeno“. To omogućava korporaciji Microsoft da proceni ispravnost funkcije uređivanja dokumenta. Događaj predstavlja otkucaj korisnikovih izmena. Takođe se koristi i za izračunavanje mesečno aktivnih korisnika/uređaja. 
@@ -4095,9 +4911,254 @@ Prikupljaju se sledeća polja:
   - **Data\_UrlHash-** Heš putanje dokumenta
 
   - **Data\_ViewKind-** Tip prikaza u programu Word
+
+
+#### <a name="parselicenseop"></a>ParseLicenseOp
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu.  Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom izvršavanja operacije raščlanjivanja licenci. 
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera sistema za evidenciju
+
+- **RMS.ApplicationScenarioId** - Id scenarija koji obezbeđuje aplikacija
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje operacije
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kôd bilo koje greške vraćen kao rezultat operacije
+
+- **RMS.HttpCall** - označava postojanje HTTP operacije
+
+- **RMS.LicenseFormat** - Format licence: Xrml ili Json
+
+- **RMS.Result** - Uspešna ili neuspešna operacija
+
+- **RMS.ScenarioId** - ID scenarija definisan klijentom Usluge upravljanja pravima
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.ServerType** - Tip servera Usluge upravljanja pravima 
+
+- **RMS.StatusCode** - Kod statusa rezultata operacije
+
+- **RMS.VerifyCertChainDuration** - Trajanje verifikacije niza certifikata
+
+- **RMS.VerifySignatureDuration** - Trajanje verifikacije potpisa
+
+#### <a name="storeop"></a>StoreOp
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu.  Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom izvršavanja operacije skladištenja licence Usluge upravljanja pravima. 
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.ApplicationScenarioId** - Id scenarija koji obezbeđuje aplikacija
+
+- **RMS.ContentId** - Id sadržaja u licenci krajnjeg korisnika
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje API poziva
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kôd bilo koje greške vraćen kao rezultat operacije
+
+- **RMS.HttpCall** - označava postojanje HTTP operacije
+
+- **RMS.LicenseFormat** - Format licence: Xrml ili Json
+
+- **RMS.OperationName** – Ime operacije
+
+- **RMS.Result** - Uspešna ili neuspešna operacija
+
+- **RMS.ScenarioId** - ID scenarija definisan klijentom Usluge upravljanja pravima
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.ServerType** - Tip servera Usluge upravljanja pravima 
+
+- **RMS.StatusCode** - Kod statusa rezultata operacije
+
+- **RMS.Url** – URL adresa servera Usluge upravljanja pravima
+
+
 ### <a name="application-status-and-boot-subtype"></a>*Status aplikacije i podtip pokretanja*
 
 Utvrđivanje da li su se određene funkcije događaja odigrale, kao što su pokretanje ili zaustavljanje i da li funkcija radi.
+
+#### <a name="dnslookupop"></a>DnsLookupOp
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu.  Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom izvršavanja operacije pronalaženja DNS informacija. 
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.ApplicationScenarioId** - Id scenarija koji obezbeđuje aplikacija
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje operacije
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kôd bilo koje greške vraćen kao rezultat operacije
+
+- **RMS.HttpCall** - označava postojanje http operacije
+
+- **RMS.LicenseFormat** - Format licence: Xrml ili Json
+
+- **RMS.NoOfDomainsSearched** - Broj pretraženih domena  
+
+- **RMS.NoOfDomainsSearched** - Broj preskočenih domena 
+
+- **RMS.Result** - Uspešna ili neuspešna operacija
+
+- **RMS.ScenarioId** - ID scenarija definisan klijentom Usluge upravljanja pravima
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.ServerType** - Tip servera Usluge upravljanja pravima 
+
+- **RMS.StatusCode** - Kod statusa rezultata operacije
+
+#### <a name="getuserop"></a>GetUserOp
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu.  Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom izvršavanja operacije preuzimanja korisničkih certifikata. 
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.ApplicationScenarioId** - Id scenarija koji obezbeđuje aplikacija
+
+- **RMS.ContentId** - Id sadržaja
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje operacije
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kôd greške vraćen kao rezultat operacije
+
+- **RMS.HttpCall** - označava postojanje HTTP operacije
+
+- **RMS.LicenseFormat** - Format licence: Xrml ili Json
+
+- **RMS.Result** - Uspešna ili neuspešna operacija
+
+- **RMS.ScenarioId** - ID scenarija definisan klijentom Usluge upravljanja pravima
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.ServerType** - Tip servera Usluge upravljanja pravima 
+
+- **RMS.StatusCode** - Kod statusa rezultata operacije
+
+- **RMS.Type** - Tip informacija o korisniku
+
+#### <a name="httpop"></a>HttpOp
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu.  Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom izvršavanja http zahteva.
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+    
+- **AppInfo.Name** – Ime aplikacije
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.ApplicationScenarioId** - Id scenarija koji obezbeđuje aplikacija
+
+- **RMS.CallBackStatus** - Status vraćenog rezultata povratnog poziva potvrde identiteta
+
+- **RMS.CallbackTime** – Vreme koje je potrošeno na povratni poziv za potvrdu identiteta 
+
+- **RMS.CorrelationId** - Id korelacije http zahteva
+
+- **RMS.DataSize** - Veličina podataka http zahteva
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje operacije
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kôd bilo koje greške vraćen kao rezultat operacije
+
+- **RMS.HttpCall** - Ukazuje na to da li postoji ugnežđena http operacija 
+
+- **RMS.LicenseFormat** - Format licence: Xrml ili Json
+
+- **RMS.OperationName** – ime operacije
+
+- **RMS.Result** - Uspešna ili neuspešna operacija
+
+- **RMS.ScenarioId** - ID scenarija definisan klijentom Usluge upravljanja pravima
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.ServerType** - Tip servera Usluge upravljanja pravima 
+
+- **RMS.StatusCode** - Kod statusa rezultata operacije
+
+- **RMS.Url** – URL adresa servera Usluge upravljanja pravima
+
+- **RMS.WinhttpCallbackStatus** – Status rezultata winhttp povratnog poziva
+
+#### <a name="ipccreateoauth2token"></a>IpcCreateOauth2Token
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcCreateOauth2Token API poziva.
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+    
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje API poziva
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kod bilo koje greške vraćen kao rezultat API poziva
+
+- **RMS.HttpCall** - označava postojanje HTTP operacije
+
+- **RMS.Result** - Uspešan ili neuspešan API poziv
+
+- **RMS.ScenarioId** - Id scenarija definisan API-jem
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.StatusCode** - Kod statusa vraćenog rezultata
 
 #### <a name="officeextensibilityofficejsappactivated"></a>Office.Extensibility.OfficeJS.Appactivated
 
@@ -4116,6 +5177,8 @@ Prikupljaju se sledeća polja:
   - **Data\_AppSizeWidth –** Širina**-** prozora programskog dodatka
 
   - **Data\_AppURL -** URL adresa programskog dodatka; Evidentira punu URL adresu programskih dodataka iz prodavnice i URL domen programskih dodataka koji nisu iz prodavnice
+
+  - **Data_Doc_AsyncOpenKind:long –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
 
   - **Data\_AuthorsCount:integer -** broj koautora koji su izmenili dokument tokom sesije
 
@@ -4149,8 +5212,6 @@ Prikupljaju se sledeća polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool -** Da li se dokument otvara iz lokalnog keša?
 
-  - **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen tu datoteku.
-
   - **Data\_Doc\_IsSyncBacked:bool-** tačno kada je u pitanju dokument servera koji postoji lokalno i koji se sinhronizuje sa serverom (npr. putem klijentskih aplikacija OneDrive ili ODB)
 
   - **Data\_Doc\_Location:long-** : Unapred definisani skup vrednosti za mesto gde je dokument uskladišten (lokalno, u usluzi SharePoint, na WOPI serveru, na mreži, itd.) 
@@ -4158,6 +5219,8 @@ Prikupljaju se sledeća polja:
   - **Data\_Doc\_LocationDetails:long -** Unapred definisani skup vrednosti za detaljnije informacije o lokaciji („privremena“ fascikla, fascikla „preuzimanja“, usluga One Drive za dokumente i slike)
 
   - **Data\_Doc\_ResourceIdHash:string -** Heš identifikatora resursa za dokumente koji su uskladišteni na oblaku
+
+  - **Data_Doc_RtcType -**  Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
   - **Data\_Doc\_ServerDocId:string -** nepromenljivi identifikator za dokumente koji su uskladišteni na oblaku
 
@@ -4495,6 +5558,8 @@ Prikupljaju se sledeća polja:
 
   - **Data\_Doc\_AssistedReadingReasons:long -** Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu za čitanje
 
+  - **Data_Doc_AsyncOpenKind:long –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
   - **Data\_Doc\_ChunkingType:long -** Kako je dokument uskladišten u sistemu SharePoint
 
   - **Data\_Doc\_EdpState:long -** Stanje dokumenta u vezi sa „Zaštitom podataka preduzeća“
@@ -4525,8 +5590,6 @@ Prikupljaju se sledeća polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool -** Da li se dokument otvara iz lokalnog keša?
 
-  - **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen tu datoteku.
-
   - **Data\_Doc\_IsSyncBacked:bool -** Da li je dokument otvoren iz fascikle koja koristi aplikaciju OneDrive za ponovnu sinhronizaciju
 
   - **Data\_Doc\_Location:long -** Unapred definisani skup vrednosti za mesto gde je dokument uskladišten (lokalno, u usluzi SharePoint, na WOPI serveru, na mreži, itd.) 
@@ -4540,6 +5603,8 @@ Prikupljaju se sledeća polja:
   - **Data\_Doc\_ReadOnlyReasons:long –-** Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument označen samo za čitanje (zaključan na serveru, konačni dokument, zaštićen lozinkom za uređivanje, itd.)
 
   - **Data\_Doc\_ResourceIdHash:string -** Heš identifikatora resursa za dokumente koji su uskladišteni na oblaku
+
+  - **Data_Doc_RtcType -**  Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
   - **Data\_Doc\_ServerDocId:string -** nepromenljivi identifikator za dokumente koji su uskladišteni na oblaku
 
@@ -4959,6 +6024,8 @@ Prikupljaju se sledeća polja:
 
 - **Data_Doc_AssistedReadingReasons** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
 
+- **Data_Doc_AsyncOpenKind –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
 - **Data_Doc_ChunkingType** - Jedinice koje se koriste za postepeno otvaranje dokumenta
 
 - **Data_Doc_EdpState** - Postavke elektronske zaštite podataka za dokument
@@ -4985,8 +6052,6 @@ Prikupljaju se sledeća polja:
 
 - **Data_Doc_IsOpeningOfflineCopy** - Zastavica koja ukazuje na to je otvorena vanmrežna kopija dokumenta
 
-- **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen u tu datoteku.
-
 - **Data_Doc_IsSyncBacked** - Zastavica koja ukazuje na to da na računaru postoji kopija koja se automatski sinhronizuje
 
 - **Data_Doc_Location** - Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
@@ -5000,6 +6065,8 @@ Prikupljaju se sledeća polja:
 - **Data_Doc_ReadOnlyReasons** - Razlozi zbog kojih je dokument otvoren samo za čitanje
 
 - **Data_Doc_ResourceIdHash** - Anonimni Identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
+
+- **Data_Doc_RtcType** - Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
 - **Data_Doc_ServerDocId** - Nepromenljivi anonimni Identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi 
 
@@ -5082,6 +6149,8 @@ Prikupljaju se sledeća polja:
 
 - **Data_Doc_AssistedReadingReasons** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
 
+- **Data_Doc_AsyncOpenKind –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
 - **Data_Doc_ChunkingType** - Jedinice koje se koriste za postepeno otvaranje dokumenta
 
 - **Data_Doc_EdpState** - Postavke elektronske zaštite podataka za dokument
@@ -5108,8 +6177,6 @@ Prikupljaju se sledeća polja:
     
 - **Data_Doc_IsOpeningOfflineCopy** - Zastavica koja ukazuje na to je otvorena vanmrežna kopija dokumenta
 
-- **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen u tu datoteku.
-
 - **Data_Doc_IsSyncBacked** -Zastavica koja ukazuje na to da na računaru postoji kopija koja se automatski sinhronizuje
 
 - **Data_Doc_Location** - Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
@@ -5123,6 +6190,8 @@ Prikupljaju se sledeća polja:
 - **Data_Doc_ReadOnlyReasons** - Razlozi zbog kojih je dokument otvoren samo za čitanje
 
 - **Data_Doc_ResourceIdHash** - Anonimni Identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
+
+- **Data_Doc_RtcType** - Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
 - **Data_Doc_ServerDocId** - Nepromenljivi anonimni Identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
 
@@ -5203,6 +6272,8 @@ Prikupljaju se sledeća polja:
 
   - **Data\_Doc\_AssistedReadingReasons -** Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu za čitanje
 
+  - **Data_Doc_AsyncOpenKind –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
   - **Data\_Doc\_ChunkingType -** Jedinice koje se koriste za postepeno otvaranje dokumenta
 
   - **Data\_Doc\_EdpState -** Postavke za zaštitu elektronskih podataka dokumenta
@@ -5229,8 +6300,6 @@ Prikupljaju se sledeća polja:
 
   - **Data\_Doc\_IsOpeningOfflineCopy -** Zastavica koja ukazuje na to da je otvorena vanmrežna kopija dokumenta
 
-  - **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen tu datoteku.
-
   - **Data\_Doc\_IsSyncBacked -** Zastavica koja ukazuje na to da na računaru postoji kopija dokumenta koja se automatski sinhronizuje
 
   - **Data\_Doc\_Location -** Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint)
@@ -5244,6 +6313,8 @@ Prikupljaju se sledeća polja:
   - **Data\_Doc\_ReadOnlyReasons -** Razlozi zbog kojih je dokument otvoren samo za čitanje
 
   - **Data\_Doc\_ResourceIdHash -** Anonimni identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
+
+  - **Data_Doc_RtcType -**  Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
   - **Data\_Doc\_ServerDocId -** Nepromenljivi anonimni identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
 
@@ -5326,6 +6397,8 @@ Prikupljaju se sledeća polja:
 
 - **Data_Doc_AssistedReadingReasons** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
 
+- **Data_Doc_AsyncOpenKind –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
+
 - **Data_Doc_ChunkingType** - Jedinice koje se koriste za postepeno otvaranje dokumenta
 
 - **Data_Doc_EdpState** - Postavke elektronske zaštite podataka za dokument
@@ -5352,8 +6425,6 @@ Prikupljaju se sledeća polja:
 
 - **Data_Doc_IsOpeningOfflineCopy** - Zastavica koja ukazuje na to je otvorena vanmrežna kopija dokumenta
 
-- **Data_Doc_IsRtcAlwaysOn –** istina ako je kanal u stvarnom vremenu (RTC) uvek uključen u tu datoteku.
-
 - **Data_Doc_IsSyncBacked** -Zastavica koja ukazuje na to da na računaru postoji kopija koja se automatski sinhronizuje
 
 - **Data_Doc_Location** - Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
@@ -5367,6 +6438,8 @@ Prikupljaju se sledeća polja:
 - **Data_Doc_ReadOnlyReasons** - Razlozi zbog kojih je dokument otvoren samo za čitanje
 
 - **Data_Doc_ResourceIdHash** - Anonimni Identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
+
+- **Data_Doc_RtcType** - Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
 
 - **Data_Doc_ServerDocId** - Nepromenljivi anonimni Identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi 
 
@@ -5423,6 +6496,83 @@ Prikupljaju se sledeća polja:
 - **Data_TemplateFormat** - Format datoteke predloška na kome je zasnovan dokument
 
 - **Data_UsesNormal** - Ukazuje na to da li je otvoreni dokument zasnovan na normalnom predlošku
+
+
+#### <a name="renewuserop"></a>RenewUserOp
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu.  Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom izvršavanja operacije obnavljanja korisničkih certifikata. 
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera sistema za evidenciju
+
+- **RMS.ApplicationScenarioId** - Id scenarija koji obezbeđuje aplikacija
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje operacije
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kôd bilo koje greške vraćen kao rezultat operacije
+
+- **RMS.HttpCall** - Ukazuje na to da li postoji HTTP operacija
+
+- **RMS.LicenseFormat** - Format licence: Xrml ili Json
+
+- **RMS.Result** - Uspešna ili neuspešna operacija
+
+- **RMS.ScenarioId** - ID scenarija definisan klijentom Usluge upravljanja pravima
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.ServerType** - Tip servera Usluge upravljanja pravima 
+
+- **RMS.StatusCode** - Kod statusa rezultata operacije
+
+- **RMS.Type** - Tip informacija o korisniku
+
+#### <a name="servicediscoveryop"></a>ServiceDiscoveryOp
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu.  Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom izvršavanja operacije pronalaženja usluge. 
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.ApplicationScenarioId** - Id scenarija koji obezbeđuje aplikacija
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje operacije
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kôd bilo koje greške vraćen kao rezultat operacije
+
+- **RMS.HttpCall** - Ukazuje na to da li postoji http operacija
+
+- **RMS.LicenseFormat** - Format licence: Xrml ili Json
+
+- **RMS.OperationName** – Ime operacije
+
+- **RMS.Result** - Uspešna ili neuspešna operacija
+
+- **RMS.ScenarioId** - ID scenarija definisan klijentom Usluge upravljanja pravima
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.ServerType** - Tip servera Usluge upravljanja pravima 
+
+- **RMS.StatusCode** - Kod statusa rezultata operacije
 
 
 ### <a name="office-accessibility-configuration-subtype"></a>*Podtip konfiguracije pristupačnosti sistema Office*
@@ -5737,7 +6887,7 @@ Prikupljaju se sledeća polja:
 
   - **ElapsedHanging** - vreme trajanja prekida poziva
 
-#### <a name="officepowerpointsession"></a>**Office.PowerPoint.Session**
+#### <a name="officepowerpointsession"></a>Office.PowerPoint.Session
 
 Prikuplja podatke o upotrebi funkcije pri svakoj PowerPoint sesiji. Ti podaci se koriste za izračunavanje stope nasilnih izlaza iz programa PowerPoint prilikom upotrebe funkcije. Stopa nasilnih izlaza iz programa PowerPoint predstavlja ključni pokazatelj koji garantuje da se program izvršava kao što je očekivano.
 
@@ -5889,6 +7039,12 @@ Prikupljaju se sledeća polja:
 
   - **ProgID** - Prog identifikator programskog dodatka
 
+#### <a name="officeprogrammabilitytelemetrymacrofileopened"></a>Office.Programmability.Telemetry.MacroFileOpened 
+
+Pokrenut pri otvaranju datoteke koja sadrži makro (VBA) na uređaju koji je IT administrator uveo u sistem korišćenja Office aplikacija kao usluge (OAAS) i gde je Office 365 ProPlus aktiviran pomoću licence za velika preduzeća. Događaj se koristi za razumevanje ispravnosti datoteka koje sadrže makro (VBA) u zakupcu i upoređuje se sa Office.Programmability.Telemetry.VbaTelemetryBreak koji prati greške na datotekama koje sadrže VBA. 
+
+Ne prikuplja se ni jedno polje.
+
 #### <a name="officesystemsystemhealthungracefulappexitmacandios"></a>Office.System.SystemHealthUngracefulAppExitMacAndiOS
 
 Na festivalu pokretanja koji obuhvata negraciozne izlaze iz aplikacije radi dalje istrage.
@@ -5950,6 +7106,75 @@ Prikupljaju se sledeća polja:
 
 Loše vreme odziva ili performansi u scenarijima kao što su pokretanje aplikacije ili otvaranje datoteke.
 
+#### <a name="ipcpbootstrapuser"></a>IpcpBootstrapUser
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcpBootstrapUser API poziva.
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.ApplicationScenarioId** - Id scenarija koji obezbeđuje aplikacija
+
+- **RMS.AuthCallbackProvided** - Ukazuje na to da li pruža povratni poziv potvrde identiteta kao unos API poziva ili ne
+
+- **RMS.ConnectionInfo.ExtranetUrl** - Informacije o URL adresi veze spoljne mreže
+
+- **RMS.ConnectionInfo.IntranetUrl** - Informacije u URL adresi veze intranet mreže
+
+- **RMS.ConnectionMode** - Režim veze između klijenta usluge Rights Management Service i servera: na mreži ili van mreže
+
+- **RMS.Duration** - Ukupno vreme za dovršavanje API poziva
+
+- **RMS.DurationWithoutExternalOps** – Ukupno vreme umanjeno za spoljne operacije, kao što je mrežno vreme kašnjenja.
+
+- **RMS.ErrorCode** - Kod bilo koje greške vraćen kao rezultat API poziva
+
+- **RMS.GuestTenant** - Id privremenog zakupca za korisnika
+
+- **RMS.HomeTenant** - Id stalnog zakupca za korisnika
+
+- **RMS.HttpCall** - označava postojanje HTTP operacije
+
+- **RMS.Identity.ExtranetUrl** - URL adresa spoljašnje mreže servera Usluge za upravljanje pravima za korisnika, koja se prikuplja dok se od servera preuzima novi Certifikat o pravima naloga
+
+- **RMS.Identity.IntranetUrl** - Intranet URL adresa servera Usluge za upravljanje pravima za korisnika, koja se prikuplja dok se od servera pribavlja novi Certifikat o pravima naloga
+
+- **RMS.Identity.Status** - Vreme prvog ili ponovnog pribavljanja Certifikata o pravima naloga od servera 
+
+- **RMS.Identity.Type** - Tip korisničkog naloga kao što je Windows nalog ili live nalog
+
+- **RMS.Identity.UserProvided** - Ukazuje na to da li jeste ili nije obezbeđena korisnička adresa e-pošte dok se od servera pribavlja novi Certifikat o pravima naloga
+
+- **RMS.IssuerId** - Id servera Usluge upravljanja pravima koji izdaje Certifikat o pravima naloga  
+
+- **RMS.LicenseFormat** - Format licence: Xrml ili Json
+
+- **RMS.RACType** - Tip Certifikata o pravima naloga
+
+- **RMS.Result** - Uspešan ili neuspešan API poziv
+
+- **RMS.ScenarioId** - Id scenarija definisan API-jem
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
+- **RMS.ServerType** - Tip servera Usluge upravljanja pravima 
+
+- **RMS.StatusCode** - Kod statusa vraćenog rezultata
+
+- **RMS.TemplatesCount** - Broj predložaka
+
+- **RMS.TokenProvided** - Označava da li obezbeđuje token kao unos API poziva ili ne 
+
+- **RMS.TokenProvided** - Označava da li obezbeđuje korisnika kao unos API poziva ili ne 
+
+- **UserInfo.UserObjectId** - Id korisničkog objekta
 #### <a name="officeextensibilityrichapimethodinvocation"></a>Office.Extensibility.RichApiMethodInvocation
 
 Kada klijent koristi programski dodatak za Office i telefonira obogaćeni API za pružanje usluge, ovaj događaj će biti aktiviran. Koristi se za merenje pouzdanosti usluge, performansi i upotrebe za pozivanje metoda Rich API.
@@ -6493,6 +7718,35 @@ Prikupljaju se sledeća polja:
   - **PrvaVremenskaOznaka** - Kada je prvi put došlo do greške
 
   - **PraćenjeUnazad** - Jedinstveni identifikator određene greške
+
+#### <a name="renewidentityfailure"></a>RenewIdentityFailure
+
+Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom neuspešnog obnavljanja korisničkih certifikata.
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo.ClientHierarchy** - Hijerarhija klijenata koja označava da aplikacija radi u proizvodnom okruženju ili razvojnom okruženju
+
+- **AppInfo.Name** – Ime aplikacije.
+
+- **AppInfo.Version** - Verzija aplikacije
+
+- **Failure.Category** – Kategorija greške „UnhandledError”
+
+- **Failure.Detail** - Detaljne informacije o grešci
+
+- **Failure.Id** - Id greške
+
+- **Failure.Signature** - Potpis greške, koji je isti kao ime događaja
+
+- **iKey** - Id servera usluge vođenja evidencije
+
+- **RMS.HRESULT** – Rezultat obnavljanja korisničkog certifikata
+
+- **RMS.ScenarioId** - ID scenarija definisan klijentom Usluge upravljanja pravima
+
+- **RMS.SDKVersion** - Verzija klijenta usluge Rights Management
+
 
 ## <a name="device-connectivity-and-configuration-data-events"></a>Podaci dobijeni iz povezivanja uređaja i konfiguracije
 
