@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u sistemu Office 365 ProPlus pomoću regulatornih postavki.
 hideEdit: true
-ms.openlocfilehash: 55c6c6477d4c03d94048c98c961179686eb29c83
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: 041e7c5df5bb046843b07bedc4a8ee9b3848903d
+ms.sourcegitcommit: aed9a0908021ffc80baa7159a66b63dd4f9f28e4
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36238984"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "37417347"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Koristite regulatorne postavke za upravljanje kontrolama privatnosti u programu Office 365 ProPlus
 
@@ -119,6 +119,16 @@ Pored povezanih iskustava spomenutih iznad koja su uključena u Office 365 ProPl
 Ova povezana iskustva su različita, zato što nisu pokrivena komercijalnim ugovorom vaše organizacije sa korporacijom Microsoft. Opcionalna povezana iskustva koja Microsoft nudi direktno na raspolaganje vašim korisnicima uređena su dokumentom[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement), a ne [Uslovima korišćenja usluga na mreži](https://www.microsoft.com/licensing/product-licensing/products). U nekim slučajevima, sadržaj trećih strana ili funkcionalnost se pružaju putem ovih opcionalnih povezanih iskustva, a mogu se primenjivati i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md).
 
 Možete da koristite regulatornu postavku *Dozvoli upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office* da kontrolišete da li su ove vrste povezanih iskustava dostupne vašim korisnicima. Ako ne konfigurišete ovu regulatornu postavku, ova povezana iskustva će biti dostupna vašim korisnicima.
+
+> [!NOTE]
+> Postavke smernice *Dozvolite upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office* takođe može da se konfiguriše za primenu na sledećim aplikacijama programa Office za veb:
+> - Excel za veb
+> - OneNote za veb
+> - PowerPoint za veb
+> - Visio za veb
+> - Word za veb
+>
+> Plan je da većina aplikacija programa Office za veb počne da koristi nove kontrole privatnosti za opcionalna povezana iskustva sredinom oktobra 2019, ali postavke smernica možete već sada da konfigurišete. Da biste konfigurisali ovu postavku smernica za ove aplikacije programa Office za veb, morate da koristite [uslugu smernica oblaka za Office](../overview-office-cloud-policy-service.md).
 
 Čak i ako odaberete da ova opcionalna povezana iskustva učinite dostupnim vašim korisnicima, korisnici će imati opciju da ih isključe kao grupu tako što će otići u [dijalog postavki privatnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vaši korisnici će imati ovaj izbor samo ako su prijavljeni u Office pomoću akreditiva organizacije (oni se ponekad nazivaju poslovnim ili školskim nalozima), a ne ako su prijavljeni na ličnu adresu elektronske pošte.
 
