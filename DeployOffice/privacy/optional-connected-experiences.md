@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: e20a2cd70b8c5fbc47abac7288627cd2783855e7
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: c3d6489603ff5cdc5f7a0ea4f187fb24438aeb35
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36239149"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510087"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
@@ -27,7 +27,8 @@ Ako imate poslovni ili školski nalog, administrator u organizaciji vam je možd
 > [!NOTE]
 > Ako ste administrator, pogledajte sledeće članke da biste saznali kako da date ili ograničite mogućnost korisnika da koriste opcionalna povezana iskustva:
 > - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
-> - [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
+> - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
+> - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>Ako koristite te usluge, koje uslove korišćenja treba da prihvatite?
 

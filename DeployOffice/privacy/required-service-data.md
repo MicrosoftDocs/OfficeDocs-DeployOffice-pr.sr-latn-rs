@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža administratorima sistema Office pregled neophodnih podataka o usluzi koji se prikupljaju o povezanim iskustvima u sistemu Office.
 hideEdit: true
-ms.openlocfilehash: 76c30eddecbb84fecc5cb49c9691edcebc7c13b7
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: eaa659e375d3d5c29d5410ab53db7ae583df6e9d
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36238494"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510635"
 ---
 # <a name="required-service-data-for-office"></a>Neophodni podaci o usluzi za Office 
 
@@ -66,7 +66,8 @@ Ako ste administrator organizacije, možda će vas zanimati i sledeće:
 
 - [Pregled kontrola privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
-- [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
+- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
+- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
 
 ## <a name="examples-of-events-for-service-diagnostic-data"></a>Primeri događaja za uslužne dijagnostičke podatke
 

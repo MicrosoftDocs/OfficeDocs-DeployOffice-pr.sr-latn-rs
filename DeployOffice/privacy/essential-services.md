@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: 82068f529e341a71557e65e6b7d060bab878bcbe
-ms.sourcegitcommit: 4abc1462753e6cb5c01642c9711d19b220dadac0
+ms.openlocfilehash: a482854210e5f609a41e6a810c3c3338a19586e7
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "37386933"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510479"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -43,6 +43,7 @@ Ako ste administrator organizacije, možda će vas zanimati i sledeće:
 - [Pregled kontrola privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
+- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
 
 ## <a name="list-of-essential-services-for-office"></a>Lista osnovnih usluga za Office 
 

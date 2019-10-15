@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u sistemu Office 365 ProPlus pomoću regulatornih postavki.
 hideEdit: true
-ms.openlocfilehash: 041e7c5df5bb046843b07bedc4a8ee9b3848903d
-ms.sourcegitcommit: aed9a0908021ffc80baa7159a66b63dd4f9f28e4
+ms.openlocfilehash: 5f3b63c65d43827befe58ba600c7957410f2d3c0
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "37417347"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510303"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Koristite regulatorne postavke za upravljanje kontrolama privatnosti u programu Office 365 ProPlus
 
@@ -43,7 +43,9 @@ Ovo je pet novih regulatornih postavki:
 Ove regulatorne postavke mogu da se implementiraju korišćenjem Grupnih pravila ili [Uslugom pravila za Office iz oblaka](https://docs.microsoft.com/DeployOffice/overview-office-client-policy-service). Ako koristite Grupna pravila, potrebno je da preuzmete najnoviju verziju datoteka administrativnih predložaka (ADMX/ADML) sa [Microsoft centra za preuzimanje](https://www.microsoft.com/download/details.aspx?id=49030).
 
 > [!NOTE]
-> Za informacije o tome kako da upravljate kontrolama privatnosti u sistemu Office za Mac, pogledajte članak [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md).
+> - Za informacije o tome kako da upravljate kontrolama privatnosti u sistemu Office za Mac, pogledajte članak [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md).
+> - Za više informacija o sličnim postavkama za Office na uređajima koji koriste iOS pogledajte članak [Koristite regulatorne postavke za upravljanje kontrolama privatnosti za Office na iOS uređajima](ios-privacy-preferences.md).
+
 
 Ako koristite alatku za upravljanje grupnim pravilima, sve ove regulatorne postavke se nalaze u okviru Konfiguracija korisnika\\Politika\\Administrativni predlošci\\Microsoft Office 2016\\Privatnost\\ Centar za pouzdanost.
 

@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije Office administratorima o povezanim iskustvima za Office, kao što su iskustva koja analiziraju sadržaj ili iskustva koja preuzimaju sadržaj na mreži.
 hideEdit: true
-ms.openlocfilehash: 04d71fcd601f76d2613dda9bd00dccd24ab8e950
-ms.sourcegitcommit: 27db488cae3bd23342bc0d902c53b5bf89ae30a7
+ms.openlocfilehash: 8b9038bdff83c786616ae87565e6ae66ac85516a
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "37379777"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510429"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sistemu Office
 
@@ -135,7 +135,11 @@ Ako ste prijavljeni pomoću poslovnog ili školskog naloga, administrator u vaš
 > [!NOTE]
 > Ako koristite Office za Mac, otvorite bilo koju Office aplikaciju i izaberite meni aplikacije (kao što je Word ili Excel) > **Željene postavke** > **Privatnost**. To će otvoriti dijalog „Postavke privatnosti naloga“ gde možete da vidite opcije privatnosti.
 
-Ako ste administrator za vašu organizaciju, možete da koristite regulatorne postavke da utvrdite da li su ova povezana iskustva dostupna vašim korisnicima. Ako ne koristite ove regulatorne postavke, sva povezana iskustva će biti dostupna vašim korisnicima. Za više informacija o korišćenju ovih regulatornih postavki, pogledajte članak [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md) i [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md).
+Ako ste administrator za vašu organizaciju, možete da koristite regulatorne postavke da utvrdite da li su ova povezana iskustva dostupna vašim korisnicima. Ako ne koristite ove regulatorne postavke, sva povezana iskustva će biti dostupna vašim korisnicima. Za više informacija o korišćenju ovih postavki smernica pogledajte sledeće članke: 
+
+- [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
+- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md).
+- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md).
 
 Ako odlučite da isključite neke vrste povezanih iskustava, traka ili komande na meniju za ta povezana iskustva će biti nedostupna, ili ćete dobiti poruku o grešci kada pokušate da koristite ta povezana iskustva.
 

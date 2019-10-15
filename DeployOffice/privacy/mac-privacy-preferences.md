@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u sistemu Office za Mac.
 hideEdit: true
-ms.openlocfilehash: 01bb31f3b6c307ec1dc4762b54fea17185dcf27d
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: a1fdd9f7d0fe2095b3a32f61f885f724f2259188
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36246318"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510227"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-for-mac"></a>Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac
 
@@ -34,7 +34,8 @@ Pored toga, postoji nova željena postavka koja se odnosi na dijalog **Obavešte
 Više informacija o dijagnostičkim podacima i povezanim iskustvima potražite u članku [Pregled kontrola privatnosti](overview-privacy-controls.md).
 
 > [!NOTE]
-> Za više informacija o sličnim postavkama za Office na računaru koji koristi Windows pogledajte članak [Koristite regulatorne postavke za upravljanje kontrolama privatnosti za Office 365 ProPlus](manage-privacy-controls.md)
+> - Za više informacija o sličnim postavkama za Office na računaru koji koristi Windows pogledajte članak [Koristite regulatorne postavke za upravljanje kontrolama privatnosti za Office 365 ProPlus](manage-privacy-controls.md).
+> - Za više informacija o sličnim postavkama za Office na računaru koji koristi uređajima koji koriste iOS pogledajte članak [Koristite regulatorne postavke za upravljanje kontrolama privatnosti za Office na iOS uređajima](ios-privacy-preferences.md).
 
 ## <a name="setting-preferences"></a>Postavljanje željenih postavki
 
@@ -52,14 +53,13 @@ Dijagnostički podaci se koriste da bi Office bio bezbedan i ažuriran, da bi se
 |**Moguće vrednosti**  | `BasicDiagnosticData` *(ovo postavlja nivo na Obavezno)* <br/> `FullDiagnosticData` *(ovo postavlja nivo na Opcionalno)* <br/> `ZeroDiagnosticData` *(ovo postavlja nivo na Nijedno)* |
 |**Dostupnost** |16.28 i novije verzije |
 
+Počevši od novijih instalacija verzije 16.30, ako ne postavite ovu željenu postavku, samo se obavezni dijagnostički podaci šalju korporaciji Microsoft ako se korisnici sa pretplatom na Office 365 prijave pomoću poslovnog ili školskog naloga ili ako korisnici imaju količinsku licenciranu verziju sistema Office 2019 za Mac. Osim toga, ti korisnici ne mogu da promene nivo dijagnostičkih podataka bez obzira na to kako ste postavili ove željene postavke.
+
 > [!NOTE]
-> Ako podesite ovu željenu opciju, ona će se primeniti i na sledeće proizvode:
-> - Verzija 1.00.217856 i novije verzije aplikacije Teams za Mac
-> - Verzija 16.28 i novije verzije programa Skype za posao za Mac
+> - Ako instalirate verziju 16.28 ili 16.29 i ne postavite ovu željenu postavku, i opcionalni i neophodni dijagnostički podaci šalju se korporaciji Microsoft. Ako se potom nadogradite na verziju 16.30 ili neku noviju verziju, i opcionalni i obavezni dijagnostički podaci se svakako šalju korporaciji Microsoft, osim ako ovu željenu postavku ne postavite na drugačiju vrednost.
+> - Ako postavite ovu željenu postavku, ona će se takođe primenjivati na verziju 1.00.217856 i novije verzije aplikacije Teams za Mac i na verziju 16.28 i novije verzije programa Skype za posao za Mac.
 
-Ako ne postavite ovu željenu postavku, i opcionalni i obavezni dijagnostički podaci šalju se korporaciji Microsoft ako se korisnici sa pretplatom na Office 365 prijave pomoću poslovnog ili školskog naloga ili ako korisnici imaju količinsku licenciranu verziju sistema Office 2019 za Mac. Osim toga, ti korisnici ne mogu da promene nivo dijagnostičkih podataka bez obzira na to kako ste postavili ove željene opcije.
-
-Za druge korisnike, kao što su kućni korisnici sa Office 365 pretplatom, šalju se samo neophodni dijagnostički podaci, osim ako korisnik odabere da pošalje i opcionalne dijagnostičke podatke tako što će posetiti **Željene opcije** > **Privatnost**.
+Za druge korisnike, kao što su kućni korisnici sa Office 365 pretplatom, šalju se samo obavezni dijagnostički podaci, osim ako korisnik odabere da pošalje i opcionalne dijagnostičke podatke tako što će posetiti **Željene opcije** > **Privatnost**.
 
 ## <a name="preference-setting-for-connected-experiences-that-analyze-your-content"></a>Postavka željenih opcija za povezana iskustva koja analiziraju vaš sadržaj
 
