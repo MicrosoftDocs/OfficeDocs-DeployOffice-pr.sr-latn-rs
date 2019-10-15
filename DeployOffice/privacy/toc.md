@@ -2,6 +2,7 @@
 ## [Pregled kontrola privatnosti](overview-privacy-controls.md)
 ## [Upravljanje kontrolama privatnosti uz pomoć postavki smernica](manage-privacy-controls.md)
 ## [Upravljanje kontrolama privatnosti uz pomoć željenih postavki (Mac)](mac-privacy-preferences.md)
+## [Upravljanje kontrolama privatnosti uz pomoć željenih postavki (iOS)](ios-privacy-preferences.md)
 
 ## Dijagnostički podaci
 ### [Obavezni dijagnostički podaci](required-diagnostic-data.md)
