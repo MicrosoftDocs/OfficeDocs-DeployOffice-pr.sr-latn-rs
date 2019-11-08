@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije Office administratorima o opcionalno dijagnostičkim podacima u sistemu Office, uključujući neke primere događaja.
 hideEdit: true
-ms.openlocfilehash: d772a649a78a88112a270e839834cbe48141217f
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: ab40e68df1ed91b1aff7510383d47967e8f13ccb
+ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510177"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38067109"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Opcionalni dijagnostički podaci za Office
 
@@ -51,6 +51,7 @@ Ako ste administrator organizacije, možda će vas zanimati i sledeće:
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
+- [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office na Android uređajima](android-privacy-controls.md)
 
 ## <a name="categories-of-optional-diagnostic-data"></a>Kategorije opcionalnih dijagnostičkih podataka
 

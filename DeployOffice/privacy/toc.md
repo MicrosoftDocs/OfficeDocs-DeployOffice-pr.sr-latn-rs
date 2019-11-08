@@ -3,6 +3,7 @@
 ## [Upravljanje kontrolama privatnosti uz pomoć postavki smernica](manage-privacy-controls.md)
 ## [Upravljanje kontrolama privatnosti uz pomoć željenih postavki (Mac)](mac-privacy-preferences.md)
 ## [Upravljanje kontrolama privatnosti uz pomoć željenih postavki (iOS)](ios-privacy-preferences.md)
+## [Upravljanje kontrolama privatnosti uz pomoć postavki smernica (Android)](android-privacy-controls.md)
 
 ## Dijagnostički podaci
 ### [Obavezni dijagnostički podaci](required-diagnostic-data.md)
