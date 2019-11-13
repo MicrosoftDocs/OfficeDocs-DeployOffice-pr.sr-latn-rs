@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: f59c737a41c3075f9c29c49f623d88f9876bf32d
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: 7e9207148c9f294e9a1e41d353fa3cdd8878f88c
+ms.sourcegitcommit: 5be570c4403e82352142b3297507cf314815bdea
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067290"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "38276504"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
@@ -47,9 +47,9 @@ Napomena: Postavka za privatnost opisana ispod ne kontroliše iskustva koja zaht
 
 ## <a name="experiences-that-rely-on-other-microsoft-owned-online-services-andor-services-owned-by-third-parties"></a>Iskustva koje se oslanjaju na druge usluge na mreži koje poseduje Microsoft i/ili usluge čiji su vlasnici treće strane
 
-### <a name="office-store"></a>Office prodavnica 
+### <a name="help--suggest-a-feature"></a>Pomoć > Predlaganje funkcije
 
-Kada koristite Office prodavnicu, vaša upotreba same lokacije prodavnice je licencirana [Microsoft ugovorom o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjavom o privatnosti](https://privacy.microsoft.com/). Međutim, svi [programski dodaci za Office](https://support.office.com/article/16278816-1948-4028-91E5-76DCA5380F8D) koje preuzimate preko Office prodavnice su pokriveni uslovima korišćenja provajdera programskog dodatka. To mogu da budu različite organizacije ili preduzeća, a neke mogu da naplate njihovo korišćenje. Morate da proverite dozvole, izjavu o privatnosti i uslove licenciranja za svaki programski dodatak da znate koji uslovi važe i odlučite da li želite da prihvatite uslove korišćenja koje nudi organizacija.
+Predlaganje funkcije je iskustvo koje vam omogućava da dostavite svoje ideje u vezi vašeg korišćenja programa Outlook. Vaši predlozi se dostavljaju direktno nezavisnoj usluzi koja se zove UserVoice. Ako dostavite ideje pomoću Predlaganja funkcije, primenjuju se [uslovi korišćenja usluga i politika privatnosti usluge UserVoice](https://outlook.uservoice.com/tos).
 
 ### <a name="insert-online-video"></a>Umetanje video zapisa na mreži
 
@@ -58,6 +58,10 @@ Kada koristite Office prodavnicu, vaša upotreba same lokacije prodavnice je lic
 ### <a name="microsoft-error-reporting-program-merp"></a>Program korporacije Microsoft za izveštavanje o greškama (MERP) 
 
 MERP se povezuje sa uslugom Watson.microsoft.com kako bi se poslali dijagnostički podaci kada dođe do pada klijentskih Office aplikacija koje se pokreću na Mac uređajima. On je u vlasništvu korporacije Microsoft i primenjuju se uslovi iz [Ugovora o pružanju Microsoft usluga](https://www.microsoft.com/servicesagreement) i [Izjave o privatnosti korporacije Microsoft](https://privacy.microsoft.com/). MERP se ne odnosi na klijentske Office aplikacije koje se pokreću na operativnom sistemu Windows.
+
+### <a name="office-store"></a>Office prodavnica 
+
+Kada koristite Office prodavnicu, vaša upotreba same lokacije prodavnice je licencirana [Microsoft ugovorom o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjavom o privatnosti](https://privacy.microsoft.com/). Međutim, svi [programski dodaci za Office](https://support.office.com/article/16278816-1948-4028-91E5-76DCA5380F8D) koje preuzimate preko Office prodavnice su pokriveni uslovima korišćenja provajdera programskog dodatka. To mogu da budu različite organizacije ili preduzeća, a neke mogu da naplate njihovo korišćenje. Morate da proverite dozvole, izjavu o privatnosti i uslove licenciranja za svaki programski dodatak da znate koji uslovi važe i odlučite da li želite da prihvatite uslove korišćenja koje nudi organizacija.
 
 ### <a name="research"></a>Istraživanje
 
@@ -70,19 +74,6 @@ MERP se povezuje sa uslugom Watson.microsoft.com kako bi se poslali dijagnostič
 
 [Traka vremenske prognoze](https://support.office.com/article/d11b7532-7c58-489e-8103-5cc5d727b06b) u programu Outlook prikazuje vremensku prognozu za geografske lokacije koje odaberete. Tokom korišćenja, traka vremenske prognoze u programu Outlook se podrazumevano povezuje sa MSN vremenskom prognozom. MSN je u vlasništvu korporacije Microsoft i primenjuju se uslovi iz [Microsoft ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjave o privatnosti korporacije Microsoft](https://privacy.microsoft.com/). Kada koristite traku vremenske prognoze sa MSN vremenskom prognozom, Microsoft ne otkriva vašu lokaciju i gradovi koje odaberete da prikažete se ne povezuju sa vama. Možete da [promenite ovu podrazumevanu postavku](https://docs.microsoft.com/office/client-developer/outlook/weather/extending-the-weather-bar-in-outlook) da se povežete sa drugim provajderima usluga vremenske prognoze. Ako odlučite da koristite drugog provajdera usluga vremenske prognoze, moraćete da proverite izjavu o privatnosti i uslove korišćenja tog provajdera da biste znali koji uslovi se primenjuju.
 
-## <a name="experiences-that-allow-you-to-submit-feedback"></a>Iskustva koja vam omogućavaju da dostavite povratne informacije
-
-### <a name="help--feedback"></a>Pomoć > Povratne informacije
-
-Kada odete na **Pomoć** > **Povratne informacije** i ostavite povratne informacije ili izaberete da odgovorite na neku od naših anketa u kojoj „Želimo povratne informacije” kada koristite Office 365 ProPlus aplikaciju, informacije koje pružite se šalju korporaciji Microsoft i primenjuju se uslovi [Microsoft ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjava o privatnosti](https://privacy.microsoft.com/). Kada dostavite povratne informacije pomoću dugmeta "Povratne informacije", možete opcionalno da dostavite svoju adresu elektronske pošte i/ili snimak ekrana. Ovo nije neophodna informacija.  
-
-#### <a name="outlook-is-an-exception"></a>Outlook je izuzetak
-
-**Pomoć** > **Povratne informacije** u programu Outlook razlikuju se od **Pomoći** > **Povratnih informacija** u drugim Office 365 ProPlus aplikacijama. Kada dostavite povratne informacije pomoću opcije **Pomoć** > **Povratne informacije** u programu Outlook, dozvoljavate korporaciji Microsoft da prikuplja Outlook evidencije da bi odgovorila na potencijalne probleme sa performansama. Te evidencije mogu da sadrže lične informacije kao što su vaše ime, adresa elektronske pošte, sadržaji vaših poruka elektronske pošte ili pretraga. Ova usluga se vama obezbeđuje putem licence vaše organizacije sa korporacijom Microsoft. Kao rezultat toga, ako odlučite da dostavite povratne informacije putem dugmeta "Povratne informacije" u programu Outlook, ne morate da uđete u poseban ugovor sa korporacijom Microsoft i postavka za privatnost opisana u ovom članku se ne primenjuje.
-
-### <a name="help--suggest-a-feature"></a>Pomoć > Predlaganje funkcije
-
-Predlaganje funkcije je iskustvo koje vam omogućava da dostavite svoje ideje u vezi vašeg korišćenja programa Outlook. Vaši predlozi se dostavljaju direktno nezavisnoj usluzi koja se zove UserVoice. Ako dostavite ideje pomoću Predlaganja funkcije, primenjuju se [uslovi korišćenja usluga i politika privatnosti usluge UserVoice](https://outlook.uservoice.com/tos).
 
 ## <a name="how-to-determine-if-your-admin-has-given-you-the-ability-to-use-optional-connected-experiences"></a>Kako da odredite da li vam je administrator dao mogućnost korišćenja opcionalnih povezanih iskustava
 
