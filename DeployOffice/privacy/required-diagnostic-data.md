@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: 71b05ab46c7aa6aee2c7dbc2aa88201f50fc8b99
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: 0437779d269d4de7132961ce2edc37363d10b309
+ms.sourcegitcommit: ff396a54d8e36d71ebc4cade5014eb502952dc65
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510011"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "38639394"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -49,6 +49,7 @@ Ako ste administrator organizacije, možda će vas zanimati i sledeće:
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
+- [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office na Android uređajima](android-privacy-controls.md)
 
 ## <a name="categories-data-subtypes-events-and-data-fields-for-required-diagnostic-data"></a>Kategorije, podtipovi podataka, događaji i polja podataka za obavezne dijagnostičke podatke
 
@@ -1237,6 +1238,7 @@ Podtipovi podataka koji spadaju u ovu kategoriji su:
 
 Uspešnost funkcionalnosti aplikacije. Ograničena na otvaranje i zatvaranje aplikacije i dokumenata, uređivanje i deljenje (saradnju) datoteka.
 
+
 #### <a name="ipccreaterepublishinglicense"></a>IpcCreateRepublishingLicense
 
 Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcCreateRepublishingLicense API poziva.
@@ -1749,6 +1751,24 @@ Prikupljaju se sledeća polja:
 
   - **Vreme prikupljanja podataka** - Vremenska oznaka koja označava kada je evidentiran događaj pada
 
+#### <a name="office_apple_activateperpetual"></a>Office_Apple_ActivatePerpetual
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja neprekidnog toka aktivacije kao i za istraživanje uzroka greški pregledom vrednosti FailedAt.
+
+Prikupljaju se sledeća polja:
+
+- **Data_FailedAt** - Sakupljamo nisku koja obeležava mesto gde je došlo do neuspeha pri procesu aktivacije stalne licence.
+
+#### <a name="office_apple_activatesubscription"></a>Office_Apple_ActivateSubscription
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Prikupljamo informacije vezane za migraciju iz zastarelog steka koda za licenciranje na vNext klin koda za licenciranje. Ovo se koristi za nadgledanje stanja aktiviranja pretplate, kao i za praćenje da li je ovo migracija na licencu vNext i da li je korišten primarni identitet.
+
+Prikupljaju se sledeća polja:
+
+- **Data_ActivatingPrimaryIdentity** - Vrednost true/false koja označava da li je korišten primarni identitet. 
+
+- **Data_NULSubscriptionLicensed** - Vrednost true/false koja označava stanje pretplate
+
 #### <a name="office_apple_cisauthticketwithidentity"></a>Office_Apple_CISAuthTicketWithIdentity
 
 Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za hvatanje neuspeha automatskog dodavanja tokena za potvrdu identiteta tokom kupovine unutar aplikacije na Mac računarima (događaj evidentira primljeni kôd greške).  Ovaj događaj se koristi za otkrivanje i rešavanja neuspešnog dodavanja tokena za potvrdu identiteta
@@ -1761,7 +1781,52 @@ Prikupljaju se sledeća polja:
 
 - **Data_ValidIdentity** – Da li klijent ima važeći identitet
 
+#### <a name="office_apple_inappassociationactivity"></a>Office_Apple_InAppAssociationActivity
 
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Prikupljamo informacije povezane sa povezivanjem proizvoda nakon kupovine iz aplikacije. Evidentiramo koji SKU pretplate povezujemo.  Ovo se koristi za nadgledanje stanja povezanih proizvoda kupljenih iz aplikacije.
+
+Prikupljaju se sledeća polja:
+
+- **Data_ProductID** - SKU pretplate kojem pokušavamo da pridružimo proizvod.
+
+#### <a name="office_apple_inapppurchaseactivity"></a>Office_Apple_InAppPurchaseActivity
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. 
+
+Informacije povezane sa kupovinom proizvoda prikupljamo u usluzi AppStore. Pratimo rezultat kupovine (neuspeh, uspeh, problem sa plaćanjem, itd.), tip zahteva za kupovinu (vraćanje, kupovina) i SKU/proizvod koji se kupuje (Office 365 Home, itd.).  Ovi podaci se koriste za nadgledanje stanja tokova kupovine iz aplikacije.
+
+
+Prikupljaju se sledeća polja:
+
+- **Data_ Data_PurchaseResult** - rezultat operacije kupovine
+
+- **Data_ProductID** - proizvod koji se kupuje
+
+- **Data_PurchaseRequestType** - tip zahteva za kupovinu
+
+#### <a name="office_apple_intune"></a>Office_Apple_InTune
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Prikupljamo informaciju da li trenutnu sesiju kontroliše Intune. Koristi se za izvođenje/filtriranje sesija koje kontroliše InTune i omogućava nam da istražimo potencijalne probleme vezane za to da se Office pokreće kao aplikacija koju kontroliše InTune.
+
+Prikupljaju se sledeća polja:
+
+- **Data_EventID** - prikupljamo nisku koja predstavlja kôd koji označava da li sesiju kontroliše Intune.
+
+#### <a name="office_apple_licensing_mac_licensingstate"></a>Office_Apple_Licensing_Mac_LicensingState
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj snima trenutno stanje licence za sesiju na računaru (id OLS licence, SKU koji se koristi, grejs period ili ne, RFM, itd.). Prikupljeni podaci koriste se za otkrivanje grešaka i istraživanje uzroka neuspeha. 
+
+Prikupljaju se sledeća polja:
+
+- **Data_DidRunPreview** - niska koja pokazuje da li se ova sesija pokreće u pregledu
+
+- **Data_LicensingACID** - niska koja predstavlja interni identifikator sistema licenciranja
+
+- **Data_LicensingType** - niska koja predstavlja tip licence
+
+- **Data_OLSLicenseId** - niska koja predstavlja identifikator licence
+
+- **Data_State** - niska koja predstavlja trenutno stanje licence
 
 #### <a name="officeconnectdeviceactivitystart"></a>Office.ConnectDevice.Activity.Start
 
@@ -1798,6 +1863,260 @@ Prikupljaju se sledeća polja:
 - **Activity_StartStopType** - Zaustavljanje
 
 - **Activity_DateTimeTicks** - Vreme podataka za aktivnost
+
+#### <a name="office_docs_apple_docsuxiossaveasthroughfilemenu"></a>Office_Docs_Apple_DocsUXiOSSaveAsThroughFileMenu 
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se snima kad se izvršava operacija „Sačuvaj kao“ i koristi se za razumevanje korisnika i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji datoteka, kao što su kategorije lokacije.  Operacija „Sačuvaj kao“ pojavljuje se svaki put kada korisnik napravi novu datoteku i prvi put je sačuva ili sačuva kopiju postojeće datoteke na novu lokaciju.
+
+Prikupljaju se sledeća polja:
+
+- **Data_OriginServiceType** - apstraktna kategorizacija originalne lokacije datoteke kao što je „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a eksplicitno nije stvarna lokacija datoteke.
+
+- **Data_ServiceType** - apstraktna kategorizacija nove lokacije datoteke nakon što se dovrši čuvanje kao što je „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a eksplicitno nije stvarna lokacija datoteke.
+
+#### <a name="office_docs_apple_docsuxmacatmentioninsertedatmention"></a>Office_Docs_Apple_DocsUXMacAtMentionInsertedAtMention 
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Ovaj događaj se snima kada korisnik „@“ pominje drugog korisnika i koristi se za razumevanje i određivanje prioriteta korisničkog iskustva na osnovu načina na koji korisnici sarađuju sa drugim korisnicima.
+
+Prikupljaju se sledeća polja:
+
+- **Data_CharactersTyped** - numerička vrednost koja označava ukupan broj znakova otkucanih u tekstu pominjanja „@“.
+
+#### <a name="office_docs_apple_docsuxmacodspsharingwebviewsharingcompleted"></a>Office_Docs_Apple_DocsUXMacODSPSharingWebViewSharingCompleted 
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Ovaj događaj se beleži kada korisnik odluči da deli dokument u oblaku koristeći iskustvo deljenja usluge OneDrive i koristi se za bolje razumevanje i određivanje prioriteta kod korisnika na osnovu deljenja dokumenata.
+
+Prikupljaju se sledeća polja:
+
+- **Data_ShareType** - fiksno kodirana niska koja pokazuje kakva je operacija deljenja završena uključujući, ali ne ograničavajući se na „Kopiraj vezu“, „Više aplikacija“, „Teams“.
+
+- **Data_ShareWebViewMode** - fiksno kodirana niska koja pokazuje kakav je režim deljenja bio aktivan kada je deljenje dovršeno, uključujući, ali ne ograničavajući se na „Upravljanje pristupom“, „AtMentions“, „Deljenje“.
+
+#### <a name="office_docsui_collaboration_coauthorgalleryrowtapped"></a>Office_DocsUI_Collaboration_CoauthorGalleryRowTapped 
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Ovaj događaj se beleži kada korisnik odabere da pogleda spisak trenutnih koautora.  Ovi podaci se koriste za bolje razumevanje i određivanje prioriteta korisničkog iskustva koji se odnose na koautorstvo dokumenta u isto vreme.
+
+Prikupljaju se sledeća polja:
+
+- **Data_CoauthorCount** - numerička vrednost koja predstavlja ukupan broj osoba koji trenutno uređuju isti dokument kao i korisnik.
+
+#### <a name="office_docsui_collaboration_collabcornerpeoplegallerycoauthorsupdated"></a>Office_DocsUI_Collaboration_CollabCornerPeopleGalleryCoauthorsUpdated 
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se snima kada se promeni broj aktivnih koautora u dokumentu u oblaku.  Ovi podaci se koriste za bolje razumevanje i određivanje prioriteta korisničkog iskustva koji se odnose na koautorstvo dokumenta u isto vreme.
+
+Prikupljaju se sledeća polja:
+
+- **Data_CoauthorsJoined** - Broj koautora koji su se pridružili dokumentu.
+
+- **Data_CoauthorsLeft** - Broj koautora koji su napustili dokument.
+
+- **Data_NewCoauthorCount** - novi broj aktivnih koautora u dokumentu. 
+
+- **Data_OldCoauthorCount** - prethodni broj aktivnih koautora pre ažuriranja.
+
+- **Data_ServiceType** - apstraktna kategorizacija originalne lokacije datoteke kao što je „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a eksplicitno nije stvarna lokacija datoteke.
+
+#### <a name="office_docsui_docstage_docstagecreatenewfromtemplate"></a>Office_DocsUI_DocStage_DocStageCreateNewFromTemplate 
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se snima kada se nova datoteka kreira iz iskustva „Novo iz predloška“ i koristi se za bolje razumevanje i određivanje prioriteta korisničkog iskustva na osnovu informacija o kreiranju dokumenata.
+
+Prikupljaju se sledeća polja:
+
+- **Data_InHomeTab** - Bulova vrednost koja označava da li je nova datoteka iz predloška kreirana na kartici „Početak“ novog iskustva datoteke.
+
+- **Data_InSearch** - Bulova vrednost koja označava da li je datoteka kreirana kada je korisnik tražio predložak.
+
+- **Data_IsHomeTabEnabled** - Bulova vrednost koja označava da li je korisniku trenutno dostupna kartica „Početak“.
+
+- **Data_IsRecommendedEnabled** - Bulova vrednost koja označava da li je korisniku trenutno dostupno iskustvo „Preporučeno“.
+
+- **Data_TemplateIndex** - Numerički indeks datoteke predloška dok se vizuelno prikazuje korisniku.
+
+- **Data_TemplateType** - Klasifikacija koja će vam pomoći da razlikujete tip predloška, uključujući, ali ne ograničavajući se na predložak „Na mreži“, predložak „Pretraži na mreži“, predloške „Lokalno“.
+
+#### <a name="office_docsui_docstage_recommendedopen"></a>Office_DocsUI_DocStage_RecommendedOpen
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se snima kad se izvršava operacija otvaranja datoteke iz odeljka preporučenih datoteka u galeriji dokumenata i koristi se za razumevanje korisnika i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji otvaranja datoteke.
+
+Prikupljaju se sledeća polja:
+
+- **Data_Success** - Bulova vrednost koja pokazuje da li je operacija uspela.
+
+#### <a name="office_docsui_fileoperations_docsuifileopenmacrequired"></a>Office_DocsUI_FileOperations_DocsUIFileOpenMacRequired
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se snima kad se izvršava operacija otvaranja datoteke i koristi se za razumevanje korisnika i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji otvaranja datoteke kao što su kategorija lokacije „Tip usluge“ i prva četiri znaka oznake tipa datoteke.
+
+Prikupljaju se sledeća polja:
+
+- **Data_Ext** - Oznaka tipa datoteke ograničena je na prva četiri znaka oznake ili manje.
+
+- **Data_ServiceType** - apstraktna kategorizacija lokacije datoteke kao što je „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd.
+
+#### <a name="office_docsui_fileoperations_openfilewithreason"></a>Office_DocsUI_FileOperations_OpenFileWithReason 
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se snima kad se izvršava operacija otvaranja datoteke i koristi se za razumevanje korisnika i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji otvaranja datoteke kao što su kategorija lokacije „Tip usluge“ i odakle je u okviru aplikacije korisnik zatražio da otvori datoteku.
+
+Prikupljaju se sledeća polja:
+
+- **Data_IsCandidateDropboxFile** - ovo je Bulova vrednost koja se evidentira ako pregledajući putanju datoteke smatramo da je to možda iz fascikle koju sinhronizuju DropBox.
+
+- **Data_IsSignedIn** - bez obzira na to da li je korisnik prijavljen kada se čuva datoteka.
+
+- **Data_OpenReason** - otvoreni razlog je numerička vrednost koja označava mesto u okviru aplikacije sa kojeg je korisnik otvorio datoteku.
+
+- **Data_ServiceType** - apstraktna numerička kategorizacija lokacije datoteke kao što je „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a eksplicitno nije stvarna lokacija datoteke.
+
+#### <a name="office_docsui_fileoperations_savetourl"></a>Office_DocsUI_FileOperations_SaveToURL
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se snima kad se izvršava operacija „Sačuvaj kao“ i koristi se za razumevanje korisnika i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji datoteka, kao što su kategorije lokacije i prva četiri znaka oznake tipa datoteke.  Operacija „Sačuvaj kao“ pojavljuje se svaki put kada korisnik napravi novu datoteku i prvi put je sačuva ili sačuva kopiju postojeće datoteke na novu lokaciju.
+
+Prikupljaju se sledeća polja:
+
+- **Data_FileExtension** - prva četiri znaka oznake tipa nove datoteke.
+
+- **Data_IsNewFileCreation** - označava da li je operacija čuvanja za novu datoteku ili kopiju postojeće datoteke.
+
+
+- **Data_IsSignedIn** - bez obzira na to da li je korisnik prijavljen kada se čuva datoteka.
+
+- **Data_SaveErrorCode** - numerička vrednost koja se postavlja ako postoji greška koja će vam pomoći u prepoznavanju vrste greške.
+
+- **Data_SaveErrorDomain** - precizira domen SaveErrorCode kako je definisan od strane Apple SaveErrorDomains „to su proizvoljne niske koje se koriste za razlikovanje kodova“.
+
+- **Data_SaveLocation** - apstraktna kategorizacija originalne lokacije datoteke kao što je „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a eksplicitno nije stvarna lokacija datoteke.
+
+- **Data_SaveOperationType** - numerička vrednost definisana NSSaveOperationType grupom vrednosti kompanije Apple.
+
+#### <a name="office_docsui_sharingui_cloudupsellshown"></a>Office_DocsUI_SharingUI_CloudUpsellShown 
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Ovaj događaj se snima kada korisnik prođe kroz nadogradnju dokumenata u tok oblaka.  Ovi podaci se koriste za bolje razumevanje i određivanje prioriteta korisničkog iskustva koji se odnose na premeštanje dokumenata na lokacije u oblaku.
+
+Prikupljaju se sledeća polja:
+
+- **Data_FileStyle** - numerička vrednost koja pokazuje iz kojeg scenarija je prikazano iskustvo nadogradnje kao što je preklopnik za automatsko čuvanje ili dugme za deljenje.
+
+- **Data_FileType** - prva četiri znaka oznake tipa nove datoteke.
+
+- **Data_InDocStage** - Bulova vrednost koja pokazuje da li je iskustvo nadogradnje prikazano iz galerije dokumenata ili iz prozora dokumenta.
+
+- **Data_IsDocumentOpened** - Bulova vrednost koja pokazuje da li je trenutni dokument za koji se prikazuje iskustvo nadogradnje takođe otvoren.
+
+- **Data_IsDraft** - Bulova vrednost koja pokazuje da li je trenutna datoteka ikada sačuvana.
+
+- **Data_IsSheetModal** - Bulova vrednost koja označava da li je iskustvo nadogradnje predstavljeno modalno ili ne.
+
+#### <a name="office_docsui_sharingui_cloudupsellupload"></a>Office_DocsUI_SharingUI_CloudUpsellUpload 
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Ovaj događaj se snima kada korisnik odluči da otpremi novu ili lokalnu datoteku u oblak i rezultat te operacije.  Ovi podaci se koriste za bolje razumevanje i određivanje prioriteta korisničkog iskustva koji se odnose na premeštanje dokumenata na lokacije u oblaku.
+
+Prikupljaju se sledeća polja:
+
+- **Data_FileStyle** - numerička vrednost koja pokazuje iz kojeg scenarija je prikazano iskustvo nadogradnje kao što je preklopnik za automatsko čuvanje ili dugme za deljenje.
+
+- **Data_FileType** - prva četiri znaka oznake tipa nove datoteke.
+
+- **Data_InDocStage** - Bulova vrednost koja pokazuje da li je iskustvo nadogradnje prikazano iz galerije dokumenata ili iz prozora dokumenta.
+
+- **Data_IsDefaultServiceLocation** - Bulova vrednost koja označava da li je izabrana lokacija za otpremu dokumenta podrazumevana lokacija.
+
+- **Data_IsDocumentOpened** - Bulova vrednost koja pokazuje da li je trenutni dokument za koji se prikazuje iskustvo nadogradnje takođe otvoren.
+
+- **Data_IsDraft** - Bulova vrednost koja pokazuje da li je trenutna datoteka ikada sačuvana.
+
+- **Data_IsSheetModal** - Bulova vrednost koja označava da li je iskustvo nadogradnje predstavljeno modalno ili ne.
+
+- **Data_LocationServiceType** - apstraktna kategorizacija lokacije datoteke kao što je „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a eksplicitno nije stvarna lokacija datoteke.
+
+- **Data_UploadAction** - fiksno kodirana niska koja pokazuje da li je otprema bila operacija premeštanja ili kopiranja.
+
+- **Data_UploadResult** - fiksno kodirana niska koja pokazuje rezultat pokušaja otpremanja, uključujući, ali ne ograničavajući se na, „Uspeh“, „UserCancelledUpload“ i „PreAuthFailed“.
+
+#### <a name="office_docsui_sharingui_copylinkoperation"></a>Office_DocsUI_SharingUI_CopyLinkOperation
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Ovaj događaj se snima kada korisnik odluči da deli dokument u oblaku generisanjem veze na dokument u oblaku i koristi se za bolje razumevanje i određivanje prioriteta kod korisnika na osnovu deljenja dokumenata.
+
+Prikupljaju se sledeća polja:
+
+- **Data_ ServiceType** - apstraktna kategorizacija originalne lokacije datoteke kao što je „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a eksplicitno nije stvarna lokacija datoteke.
+
+- **Data_LinkType** - Fiksno kodirana niska koja opisuje vrstu izvršenog poziva kao što su „Samo za prikaz“ i „Prikaz i uređivanje“.
+
+- **Data_ShareScenario** - Fiksno kodirana niska opisa gde se u korisničkom interfejsu aplikacije deli datoteka, uključujući, ali ne ograničavajući se na, „Meni datoteka“, „OpenTabShareActionMenu“, „RecentTabShareActionMenu“.
+
+#### <a name="office_docsui_sharingui_docsuionedriveshare"></a>Office_DocsUI_SharingUI_DocsUIOneDriveShare 
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Ovaj događaj se beleži kada korisnik odluči da deli dokument u oblaku koristeći iskustvo deljenja usluge OneDrive i koristi se za bolje razumevanje i određivanje prioriteta kod korisnika na osnovu deljenja dokumenata.
+
+Prikupljaju se sledeća polja:
+
+- **Data_ODSPShareWebviewShareError** - ako iskustvo deljenja doživi grešku, ovo je numerička vrednost koja će vam pomoći da identifikujete razlog neuspeha.
+
+- **Data_ODSPShareWebviewShareGrantAccessResult** - Bulova vrednost koja kad je vrednost „true“ ukazuje da je lagana operacija deljenja uspešno završena.
+
+- **Data_ODSPShareWebviewShareSuccessType** - kada se operacija deljenja uspešno dovrši, ovo je numerička vrednost koja se koristi da se odredi koja operacija deljenja je dovršena.
+
+- **Data_WebViewInfoResult** - ako se korisnički interfejs ne učita, ovo je numerička vrednost koja će vam pomoći da identifikujete razlog neuspeha. 
+
+- **Data_WebViewLoadTimeInMs** - numerička vrednost koja snima koliko je vremena potrebno da se veb korisnički interfejs učita.
+
+
+#### <a name="office_docsui_sharingui_invitepeople"></a>Office_DocsUI_SharingUI_InvitePeople 
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Ovaj događaj se snima kada korisnik odluči da pozove osobe dokument u oblaku i koristi se za bolje razumevanje i određivanje prioriteta kod korisnika na osnovu deljenja dokumenata.
+
+Prikupljaju se sledeća polja:
+
+- **Data_ ServiceType** - apstraktna kategorizacija originalne lokacije datoteke kao što je „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a eksplicitno nije stvarna lokacija datoteke.
+
+- **Data_InviteeCount** - ukupan broj kontakata pozvanih u dokument u jednoj akciji poziva.
+
+- **Data_LinkType** - fiksno kodirana niska koja opisuje vrstu izvršenog poziva kao što su „Samo za prikaz“ i „Prikaz i uređivanje“.
+
+- **Data_MessageLength** - numerički broj ukupnog broja znakova poslatih u poruci poziva.
+
+- **Data_ShareScenario** - fiksno kodirana niska opisa gde se u korisničkom interfejsu aplikacije deli datoteka, uključujući, ali ne ograničavajući se na, „Meni datoteka“, „OpenTabShareActionMenu“, „RecentTabShareActionMenu“.
+
+#### <a name="office_docsui_sharingui_sendacopyoperation"></a>Office_DocsUI_SharingUI_SendACopyOperation
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Ovaj događaj se snima kada korisnik odluči da pošalje kopiju dokumenta i koristi se za bolje razumevanje i određivanje prioriteta kod korisnika na osnovu deljenja dokumenata.
+
+Prikupljaju se sledeća polja:
+
+- **Data_IsHomeTabEnabled** - Bulova vrednost koja označava da li je korisniku trenutno dostupna kartica „Početak“.
+
+- **Data_IsRecommendedEnabled** - Bulova vrednost koja označava da li je korisniku trenutno dostupno iskustvo „Preporučeno“.
+
+- **Data_OperationType** - numerička vrednost koja označava koja vrsta slanja operacije kopiranja se izvršava kao što je slanje kopije e-poštom ili slanje kopije putem Apple kontrole deljenja.
+
+- **Data_ServiceType** - apstraktna kategorizacija originalne lokacije datoteke kao što je „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a eksplicitno nije stvarna lokacija datoteke.
+
+- **Data_ShareFileType** - fiksno kodirana niska opisa tipa objekta koji se deli, uključujući, ali ne ograničavajući se na: „Dokument“, „PDF”, „Slika“.
+
+- **Data_ShareScenario** - fiksno kodirana niska opisa gde se u korisničkom interfejsu aplikacije deli datoteka, uključujući, ali ne ograničavajući se na, „Meni datoteka“, „OpenTabShareActionMenu“, „RecentTabShareActionMenu“.
+
+- **Data_SharingService** - Bulova vrednost koja označava da li je datoteka kreirana kada je korisnik tražio predložak.
+
+#### <a name="office_docsui_sharingui_upsellshare"></a>Office_DocsUI_SharingUI_UpsellShare 
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Ovaj događaj se snima kada korisnik prođe kroz nadogradnju dokumenata u tok oblaka kada pokušava da podeli dokument.  Ovi podaci se koriste za bolje razumevanje i određivanje prioriteta korisničkog iskustva koji se odnose na premeštanje dokumenata na lokacije u oblaku.
+
+Prikupljaju se sledeća polja:
+
+- **Data_FileOperationResult** - numerička vrednost koja pokazuje da li je operacija uspela.
+
+- **Data_HostedFromDocStage** - Bulova vrednost koja označava da li korisnik prolazi kroz nadogradnju do protoka oblaka iz DocStage iskustva ili iz otvorenog dokumenta.
+
+- **Data_isLocalCopyOn** - Bulova vrednost koja označava da li je korisnik odlučio da zadrži lokalnu kopiju dokumenta otpremom na lokaciju u oblaku ili da premesti postojeći dokument na lokaciju u oblaku.
+
+- **Data_NewFileType** - apstraktna kategorizacija lokacije nove lokacije datoteke kao što je „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a eksplicitno nije stvarna lokacija datoteke.
+
+- **Data_OriginalFileType** - apstraktna kategorizacija lokacije datoteke kao što je „SharePoint“, „OneDrive“, „Lokalno“, „WOPI“, itd., a eksplicitno nije stvarna lokacija datoteke.
+
+- **Data_UploadButtonPressed** - Bulova vrednost koja označava da li je korisnik odlučio da otpremi trenutni dokument na lokaciju u oblaku.
+
+- **Data_UploadError** - numerička vrednost koja ukazuje na vrstu greške do koje je došlo ako operacija slanja ne uspe.
+
+- **Data_UpsellAppearsFromDelegate** - Bulova vrednost koja označava da li je prikaz prikazan iz menija deljenja.
 
 #### <a name="officeextensibilitycatalogexchangeprocessentitlement"></a>Office.Extensibility.Catalog.ExchangeProcessEntitlement
 
@@ -1856,7 +2175,11 @@ Prikupljaju se sledeća polja:
   - **Data.AsyncOpen -** zastavica koja označava da je otvoreno imalo sadržaj koji je stigao posle otvaranja glavnog tela
 
   - **Data.CacheFileId -** se povezuje sa telemetrijom keša Office dokumenata da omogući analizu uticaja problema sa kešom na korisničko iskustvo
+ 
+  - **Data.CFREnabled** - ukazuje da je za sesiju omogućen CacheFileRuntime.
 
+  - **Data.CFRFailure** - ukazuje da je CacheFileRuntime naišao na grešku.
+  
   - **Data.CoauthStatus -** saopštava status saradnje na dokumentu prilikom otvaranja
 
   - **Data.CountOfMultiRoundTripsDownload -** Broj povratnih putovanja ka serveru koji se koristi za rešavanje problema sa performansama i mrežnih problema
@@ -2083,6 +2406,8 @@ Prikupljaju se sledeća polja:
 
   - **Data.UseClientIdAsSchemaLockId -** korišćenje zastavice za kontrolu nad načinom zaključavanja dokumenta u usluzi
 
+  - **Data.VersionType** - ukazuje na tip verzije trenutno otvorene operacije.
+
   - **Data.WopiServiceId -** Zastarelo, zamenjeno sa Podaci\_Doc\_WopiServiceId
 
 #### <a name="officefileiocsiccachedfilecsisavefilebasic"></a>Office.FileIO.CSI.CCachedFileCsiSaveFileBasic
@@ -2114,6 +2439,10 @@ Prikupljaju se sledeća polja:
   - **Data.CountOfMultiRoundTripsDownload -** Broj povratnih putovanja ka serveru koji se koristi za rešavanje problema sa performansama i mrežnih problema
 
   - **Data.CountOfMultiRoundTripsUpload -** Broj povratnih putovanja ka serveru koji se koristi za rešavanje problema sa performansama i mrežnih problema
+  
+  - **Data.CFREnabled** - ukazuje da je za sesiju omogućen CacheFileRuntime.
+
+  - **Data.CFRFailure** - ukazuje da je CacheFileRuntime naišao na grešku.
 
   - **Data.DialogChoice -** Beleži izbor u dijalozima grešaka
 
@@ -2381,6 +2710,198 @@ Prikupljaju se sledeća polja:
 - **Datum i vreme** - Vremenska oznaka kada je događaj evidentiran
 
 - **ImeDogađaja** - Ime događaja koji se evidentira
+
+#### <a name="office_firstrun_apple_activationresult"></a>Office_FirstRun_Apple_ActivationResult
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja toka aktivacije aplikacije. Prikupljamo podatke da bismo utvrdili ishod aktiviranja pretplate na O365 zajedno sa tokom koji se koristi za aktiviranje (utisak pri prvom pokretanju, tok u aplikaciji, kupovina, itd.).
+
+Prikupljaju se sledeća polja:
+
+- **Data_ActivationStatusCollectionTime** – vremenska oznaka
+
+- **Data_ActivationStatusError** – kod greške prilikom aktiviranja.
+
+- **Data_ActivationStatusFlowType** – numerička vrednost koja označava tip toka aktivacije
+
+#### <a name="office_firstrun_apple_activationstatus"></a>Office_FirstRun_Apple_ActivationStatus
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za utvrđivanje ishoda aktiviranja pretplate na O365 zajedno sa tokom koji se koristi za aktiviranje (utisak pri prvom pokretanju, tok u aplikaciji, kupovina, itd.). Prikupljamo podatke koji sadrže tip aktivacije, vrstu toka (FRE/DocStage/Kupovina) i ID Office usluge licenciranja.
+
+Prikupljaju se sledeća polja:
+
+- **Data_ActivationTypeCollectionTime** – vremenska oznaka
+
+- **Data_ActivationTypeFlowType** – numerička vrednost koja označava tip toka aktivacije
+
+- **Data_ActivationTypeOLSLicense** – identifikator licence
+
+- **Data_ActivationTypeStatus** – kod status aktivacije
+
+#### <a name="office_firstrun_apple_firstruncomplete"></a>Office_FirstRun_Apple_FirstRunComplete
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj nam daje do znanja da li korisnik radi u freemium programu, tip toka koji se pokreće (FRE/DocStage/Kupovina) i tip identiteta (MSA/OrgID). Koristimo ovaj događaj da utvrdimo da li je „Utisak pri prvom pokretanju“ (FRE) dovršen i tip identiteta koji se koristi za prijavu (MSA/OrgID).
+
+Prikupljaju se sledeća polja:
+
+- **Data_FirstRunCompletedCollectionTime** - vremenska oznaka koja registruje vreme kad je tok dovršen
+
+- **Data_FirstRunCompletedFlowType** - kod koji označava tip korisničkog toka koji je dovršen 
+
+- **Data_FirstRunCompletedFreemiumStatus** - kod koji predstavlja status dovršenosti za tok freemium korisnika
+
+- **Data_FirstRunCompletedIdentityType** - tip identiteta korisnika koji je završio tok
+
+#### <a name="office_firstrun_apple_firstrunstart"></a>Office_FirstRun_Apple_FirstRunStart
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj nam daje do znanja da je korisnik uneo „Utisak pri prvom pokretanju“ i tip toka koji se pokreće (FRE/DocStage/Kupovina). Koristimo ovaj događaj da utvrdimo da li je uspešno pokrenut „Utisak pri prvom pokretanju“ (FRE).
+
+Prikupljaju se sledeća polja:
+
+- **Data_FirstRunStartedCollectionTime** - vremenska oznaka koja registruje vreme kad je tok dovršen
+
+- **Data_FirstRunStartedFlowType** - kod koji označava tip korisničkog toka koji je dovršen 
+
+#### <a name="office_firstrun_apple_firstrunstartedandcompleted"></a>Office_FirstRun_Apple_FirstRunStartedAndCompleted
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj nam daje do znanja da li korisnik radi u freemium programu, tip toka koji se pokreće (FRE/DocStage/Kupovina) i tip identiteta (MSA/OrgID). Koristimo ovaj događaj da utvrdimo stanje i efikasnost toka „Utiska pri prvom pokretanju“ (FRE).
+
+Prikupljaju se sledeća polja:
+
+- **Data_FirstRunCompletedCollectionTime** - vremenska oznaka koja registruje vreme kad je tok dovršen
+
+- **Data_FirstRunCompletedFlowType** - kod koji označava tip korisničkog toka koji je dovršen  
+
+- **Data_FirstRunCompletedFreemiumStatus** - kod koji predstavlja status dovršenosti za tok freemium korisnika
+
+- **Data_FirstRunCompletedIdentityType** - tip identiteta korisnika koji je završio tok
+
+- **Data_FirstRunStartedCollectionTime** - vremenska oznaka koja registruje vreme kad je tok pokrenut
+
+- **Data_FirstRunStartedFlowType** - kod koji označava tip korisničkog toka koji je pokrenut
+
+#### <a name="office_firstrun_apple_inapppurchaseactivationfail"></a>Office_FirstRun_Apple_InAppPurchaseActivationFail
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja toka aktivacije aplikacije. Prikupljamo podatke da bismo utvrdili ishod aktivacije kupovine iz aplikacije zajedno sa tokom koji se koristi za aktiviranje (utisak pri prvom pokretanju, tok u aplikaciji, kupovina, itd.). 
+
+Prikupljaju se sledeća polja:
+
+- **Data_ActivationFailCollectionTime** - vremenska oznaka koja registruje vreme u kojem je došlo do neuspeha aktivacije 
+
+- **Data_ActivationFailFlowType** - kod koji označava tip korisničkog toka koji se koristio
+
+- **Data_AssoicatedSuccessfullyCollectionTime** - vremenska oznaka koja registruje vreme u kojem je došlo do povezivanja 
+
+- **Data_AssoicatedSuccessfullyFlowType** - kod koji označava tip korisničkog toka koji se koristio
+
+#### <a name="office_firstrun_apple_inapppurchaseactivationsuccess"></a>Office_FirstRun_Apple_InAppPurchaseActivationSuccess
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja toka aktivacije aplikacije. Prikupljamo podatke da bismo utvrdili ishod aktivacije kupovine iz aplikacije zajedno sa tokom koji se koristi za aktiviranje (utisak pri prvom pokretanju, tok u aplikaciji, kupovina, itd.). 
+
+Prikupljaju se sledeća polja:
+
+- **Data_ActivatedSuccessfullyCollectionTime** - vremenska oznaka koja registruje vreme u kojem je došlo do aktivacije 
+
+- **Data_ActivatedSuccessfullyFlowType** - kod koji označava tip korisničkog toka koji se koristio
+
+- **Data_AssoicatedSuccessfullyCollectionTime** - vremenska oznaka koja registruje vreme u kojem je došlo do povezivanja 
+
+- **Data_AssoicatedSuccessfullyFlowType** - kod koji označava tip korisničkog toka koji se koristio
+
+#### <a name="office_firstrun_apple_inapppurchaseassociationfailed"></a>Office_FirstRun_Apple_InAppPurchaseAssociationFailed
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja toka aktivacije aplikacije. Prikupljamo podatke da bismo utvrdili ishod aktivacije kupovine iz aplikacije zajedno sa tokom koji se koristi za aktiviranje (utisak pri prvom pokretanju, tok u aplikaciji, kupovina, itd.). 
+
+Prikupljaju se sledeća polja:
+
+- **Data_AppChargedSuccessfullyCollectionTime** - vremenska oznaka koja registruje vreme u kom je kupovina naplaćena
+
+- **Data_AppChargedSuccessfullyFlowType** - kod koji označava tip korisničkog toka koji se koristio
+
+- **Data_AssoicationFailedCollectionTime** - vremenska oznaka koja registruje vreme u kojem povezivanje aplikacije nije uspelo
+
+- **Data_AssoicationFailedFlowType** - kod koji označava tip korisničkog toka koji se koristio
+
+- **Data_AssoicationFailedResult** - kod koji označava tip uočenog neuspeha
+
+#### <a name="office_firstrun_apple_inapppurchaseassociationsuccess"></a>Office_FirstRun_Apple_InAppPurchaseAssociationSuccess
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja toka aktivacije aplikacije. Prikupljamo podatke da bismo utvrdili ishod aktivacije kupovine iz aplikacije zajedno sa tokom koji se koristi za aktiviranje (utisak pri prvom pokretanju, tok u aplikaciji, kupovina, itd.). 
+
+Prikupljaju se sledeća polja:
+
+- **Data_AppChargedSuccessfullyCollectionTime** - vremenska oznaka koja registruje vreme u kom je kupovina naplaćena
+
+- **Data_AppChargedSuccessfullyFlowType** - kod koji označava tip korisničkog toka koji se koristio
+
+- **Data_AssoicatedSuccessfullyCollectionTime** - vremenska oznaka koja registruje vreme u kojem povezivanje aplikacije nije uspelo
+
+- **Data_AssoicatedSuccessfullyFlowType** - kod koji označava tip korisničkog toka koji se koristio
+
+#### <a name="office_firstrun_apple_inapppurchasefailures"></a>Office_FirstRun_Apple_InAppPurchaseFailures
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja toka aktivacije aplikacije. Prikupljamo podatke o ishodu toka kupovine iz aplikacije.
+
+Prikupljaju se sledeća polja:
+
+- **Data_AppStoreFailureFlowType** - kod koji označava tip korisničkog toka koji se koristio
+
+- **Data_AppStoreFailureResult** - uočen rezultat neuspeha
+
+- **Data_CancelRequestFlowType** - kod koji označava tip korisničkog toka koji se koristio
+
+- **Data_EventId** - kod koji označava tip uočenog neuspeha
+
+#### <a name="office_firstrun_apple_inapppurchasesattempted"></a>Office_FirstRun_Apple_InAppPurchasesAttempted
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja toka kupovine iz aplikacije. Prikupljamo podatke da bismo pratili pokušaje kupovine iz aplikacije i tip SKU-a koji se kupuje (mesečno/godišnje/za kućnu upotrebu/za ličnu upotrebu).
+
+Prikupljaju se sledeća polja:
+
+- **Data_EventId** - kod koji označava tip uočenog rezultata
+
+- **Data_PurchasedClickedOfferType** - tip SKU-a koji se pokušao kupiti
+
+- **Data_PurchaseSuccessfulFlowType** - kod koji označava tip korisničkog toka koji se koristio
+
+#### <a name="office_firstrun_apple_inapprestoreattempted"></a>Office_FirstRun_Apple_InAppRestoreAttempted
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja toka kupovine iz aplikacije. Prikupljamo podatke da bismo pratili pokušaje obnove u aplikaciji
+
+Prikupljaju se sledeća polja:
+
+- **Data_EventId** - kod koji označava tip ishoda pokušaja
+
+- **Data_RestoreAttemptFlowType** - kod koji označava tip korisničkog toka koji se koristio
+
+#### <a name="office_firstrun_apple_inapprestoreattemptfailed"></a>Office_FirstRun_Apple_InAppRestoreAttemptFailed
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja toka kupovine iz aplikacije. Prikupljamo podatke da bismo pratili pokušaje obnove u aplikaciji i njihove povezane tokove i greške.
+
+Prikupljaju se sledeća polja:
+
+- **Data_RestoreButtonFlowType** - kod koji označava tip korisničkog toka koji se koristio
+
+- **Data_RestoredFailedPaymentCancelledFlowType** - kod koji označava tip toka otkazivanja plaćanja koje je izvršeno
+
+- **Data_RestoredFailedUnKnownFlowType** - da li je pokušaj propao zbog sprovođenja neočekivanog toka korisnika
+
+- **Data_RestoredFailedUnKnownResult** - da li je pokušaj propao iz nepoznatih razloga
+
+#### <a name="office_firstrun_apple_macfirstruncompleted"></a>Office_FirstRun_Apple_MacFirstRunCompleted
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj nam daje do znanja da je korisnik prošao kroz „Utisak pri prvom pokretanju“. Koristimo ovaj događaj da utvrdimo da li je „Utisak pri prvom pokretanju“ (FRE) uspešno izveden.
+
+Prikupljaju se sledeća polja:
+
+- **Data_FirstRunCollectionTime** - vremenska oznaka koja registruje vreme kad je tok dovršen.
+
+#### <a name="office_firstrun_apple_macwxpfirstrunstarted"></a>Office_FirstRun_Apple_MacWXPFirstRunStarted
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj nam daje do znanja da je korisnik uneo „Utisak pri prvom pokretanju“. Koristimo ovaj događaj da utvrdimo da li je uspešno pokrenut „Utisak pri prvom pokretanju“ (FRE).
+
+Prikupljaju se sledeća polja:
+
+- **Data_FirstRunPanelName** - naziv table sa koje je iskustvo počelo
 
 #### <a name="officelivepersonacarduseractionsopenedpersonacard"></a>Office.LivePersonaCard.UserActions.OpenedPersonaCard
 
@@ -5966,7 +6487,15 @@ Prikupljaju se sledeća polja:
 
 - **processSessionId** - nasumično generisan guid za identifikovanje sesije aplikacije
 
-- **UTCReplace_AppSessionGuid** - Nepromenjiva logička vrednost. Uvek ima vrednost true.
+- **UTCReplace_AppSessionGuid** - Nepromenjiva logička vrednost. Uvek ima vrednost TRUE.
+
+#### <a name="officesystemsessionhandoff"></a>Office.System.SessionHandoff
+
+Označava da je trenutna sesija aplikacije Office sesija predaje. To znači da se rukovanje zahtevom korisnika za otvaranje dokumenta predaje već pokrenutoj instanci iste aplikacije.
+
+Prikupljaju se sledeća polja.
+
+- **ParentSessionId** - ID sesije koja će preuzeti upravljanje zahtevom korisnika.
 
 #### <a name="officetelemetryengineisprelaunch"></a>Office.TelemetryEngine.IsPreLaunch
 
@@ -6002,6 +6531,21 @@ Prikupljaju se sledeća polja:
 
 - **parentSessionId** - nasumično generisan guid za identifikovanje sesije aplikacije
 
+#### <a name="officevisiovisioiosappboottime"></a>Office.Visio.VisioIosAppBootTime
+
+Ovo se pokreće svaki put kada se Visio iOS aplikacija pokrene. Neophodno je razumeti performanse pokretanja Visio iOS aplikacije. Koristi se za rešavanje problema loših performansi. 
+
+Prikupljaju se sledeća polja:
+
+- **Data_AppBootTime** - trajanje potrebno za pokretanje aplikacije u milisekundama.
+
+#### <a name="officevisiovisioiosappresumetime"></a>Office.Visio.VisioIosAppResumeTime 
+
+Ovaj događaj se pokreće svaki put kada Visio iOS aplikacija nastavi s radom. Važno je da merite performanse nastavka aplikacije i rešite probleme performansi aplikacije Visio iOS.
+
+Prikupljaju se sledeća polja:
+
+- **Data_AppResumeTime** - trajanje potrebno za nastavak rada aplikacije u milisekundama.
 
 #### <a name="officewordfileopenopencmdfilemrupriv"></a>Office.Word.FileOpen.OpenCmdFileMruPriv
 
@@ -6604,6 +7148,73 @@ Prikupljaju se sledeća polja:
 
   - **Data\_Data\_ZoomText -** ukazuje na to da li je alatka „Zumiranje teksta“ radila tokom sesije
 
+#### <a name="office_apple_darkmode"></a>Office_Apple_DarkMode
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj nam govori da li je korisnik pokrenuo sistem u Tamnom režimu i da li je korisnik zamenio postavku sistema Tamnog režima u aplikaciji Office.  Koristimo ovaj događaj da bismo obezbedili pristupačnost i odredili prioritete u optimizaciji korisničkog iskustva.
+
+Prikupljaju se sledeća polja:
+
+- **Data_DarkModeIsEnabled** - da li je Tamni režim omoguće u sistemu.
+
+- **Data_RequiresAquaSystemAppearanceEnabled** - da li je Tamni režim zamenjen u aplikaciji Office.
+
+#### <a name="office_apple_hardwarekeyboardinuse_apple"></a>Office_Apple_HardwareKeyboardInUse_Apple
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj nam govori da korisnik priključuje tastaturu na svoj mobilni uređaj. Događaj nam pomaže da poboljšamo pristupačnost i optimizujemo korisničko iskustvo.
+
+
+Prikupljaju se sledeća polja:
+
+- **Data_CollectionTime** - vremenska oznaka koja označava vreme prikupljanja događaja.
+
+#### <a name="office_apple_mbuinstrument_deviceaccessibilitysettings"></a>Office_Apple_MbuInstrument_DeviceAccessibilitySettings
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj prikuplja stanje različitih opcija pristupačnosti dostupnih tokom sesije. Koristimo ovaj događaj da bismo obezbedili pristupačnost i odredili prioritete u optimizaciji korisničkog iskustva.
+
+Prikupljaju se sledeća polja:
+
+- **Data_AccessibilityContentSize** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_AssistiveTouchRunning** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_BoldTextEnabled** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_CollectionTime** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_DarkerSystemColorsEnabled** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_DifferentiateWithoutColor** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_GrayscaleEnabled** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_GuidedAccessEnabled** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_IncreaseContrast** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_InvertColorsEnabled** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_PreferredContentSizeCategory** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_ReduceMotionEnabled** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_ReduceTransparency** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_ReduceTransparencyEnabled** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_ShakeToUndeEnabled** - zastavica koja označava da li je ova postavka omogućena. (Zastarelo - koristi se samo na starim verzijama.)
+
+- **Data_ShakeToUndoEnabled** - zastavica koja označava da li je ova postavka omogućena.
+
+- **Data_SpeakScreenEnabled** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_SpeakSelectionEnabled** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_SwitchControlRunning** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_UAZoomEnabled** - zastavica koja označava da li je ova postavka omogućena
+
+- **Data_VoiceOverRunning** - zastavica koja označava da li je ova postavka omogućena
+
 #### <a name="officewordaccessibilitylearningtoolsreadaloudplayreadaloud"></a>Office.Word.Accessibility.LearningTools.ReadAloud.PlayReadAloud
 
 Ovaj događaj ukazuje na to da program Office Word čita naglas tekst iz dokumenta. Događaj je otkucaj funkcije pristupačnosti koji omogućava korporaciji Microsoft da proceni ispravnost funkcije čitanja naglas.
@@ -6701,45 +7312,51 @@ Prikupljaju se sledeća polja:
 
 - **Event Name** - Ime događaja, što je kategorija i oznaka događaja
 
-#### <a name="officeapplesystemhealthappexitmacandios"></a>Office.Apple.SystemHealthAppExitMacAndiOS
+#### <a name="office_apple_identitydomainname"></a>Office_Apple_IdentityDomainName
 
-Na festivalu pokretanja koji obuhvata graciozne i negraciozne izlaze iz aplikacije radi dalje istrage.
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja našeg sistema kao i za istraživanje uzroka neuspeha određenih korisnika domena. Prikupljamo domen koji koriste naši korisnici prilikom potvrde identiteta.  Ove podatke koristimo da bismo pomogli da identifikujemo i ispravimo one probleme koji na širem nivou možda ne deluju previše uticajno, ali za koje se ispostavi da su vrlo uticajni za određeni domen korisnika.
 
 Prikupljaju se sledeća polja:
 
-- **AffectedProcessResidentMemoryOnCrash** – Stambena memorija srušene aplikacije
+- **Data_Domain** - domen koji se koristi za potvrdu identiteta
 
-- **AffectedProcessSessionID** – ID sesije procesa u prethodnom izlazu
+- **Data_IdentityProvider** - ime dobavljača identiteta za potvrdu identiteta. (npr. LiveId ili ADAL)
 
-- **AffectedProcessUnsymbolicatedChecksum** - Ide sa kompletom hash za simbolizaciju
+- **Data_IdentityProviderEnum** - kod dobavljača identiteta za potvrdu identiteta. (Broj)
 
-- **AffectedProcessVirtualMemoryOnCrash** - Virtuelna memorija srušene aplikacije
+#### <a name="office_apple_systemhealthappexitmacandios"></a>Office_Apple_SystemHealthAppExitMacAndiOS
 
-- **AffectedSessionBuildNumber** – Verzija aplikacije
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja naših Office aplikacija kao i za istraživanje uzroka neuspeha. Prikupljamo podatke o svakom izlazu iz aplikacije kako bismo utvrdili da li je aplikacija zatvorena bez poteškoća.
 
-- **AffectedSessionDuration** – Trajanje sesije u sekundama pri padu
+Prikupljaju se sledeća polja:
 
-- **AffectedSessionIDSMatch** – Boolean da biste proverili da li je ID sesije prijavljivanja isti kao što je pokupila MERP
+- **Data_AffectedProcessSessionID** - identifikator za sesiju koja ima izlaz iz aplikacije.
 
-- **AffectedSessionLongBuildNumber** – Dugački broj izgradnje
+- **Data_AffectedSessionBuildNumber** - pomoćna verzija aplikacije u kojoj je uočen izlaz iz aplikacije.
 
-- **AffectedSessionMERPSessionID** – ID sesije za MERP
+- **Data_AffectedSessionDuration** - dužina sesije od početka do kraja
 
-- **AffectedSessionOSLocale** – Standard OS
+- **Data_AffectedSessionIDSMatch** - indikator stanja telemetrije.
 
-- **AffectedSessionOSVersion** – Verzija OS
+- **Data_AffectedSessionMERPSessionID** - indikator stanja telemetrije.
 
-- **AffectedSessionStackHash** – Hash za praćenje steka aplikacije
+- **Data_AffectedSessionOSLocale** - lokalni standard OS-a pod kojim je uočen izlaz iz aplikacije.
 
-- **AffectedSessionStartTime** – Vreme početka sesije
+- **Data_AffectedSessionOSVersion** - verzija OS-a u kojoj je uočen izlaz iz aplikacije.
 
-- **AffectedSessionUAEType** – ENUM koji nam daje informacije o tipu pada koji je bio
+- **Data_AffectedSessionResidentMemoryOnCrash** - količina ugrađene memorije koja je potrošena kada je došlo do izlaza iz aplikacije
 
-- **AffectedSessionVersion** – Verzija aplikacije
+- **Data_AffectedSessionStackHash** - identifikator koji označava da je pogođena određena greška.
 
-- **DeviceModel** – Hardver model
+- **Data_AffectedSessionStartTime** - vreme kada je sesija počela.
 
-- **ExitWasGraceful** – Da li je prethodna aplikacija bila graciozna?
+- **Data_AffectedSessionUAEType** - tip uočenog izlaza iz aplikacije (ako je to bio izlaz sa poteškoćama, ovaj kod će označavati tip uočene greške)
+
+- **Data_AffectedSessionVersion** - glavna verzija aplikacije u kojoj je uočen izlaz iz aplikacije.
+
+- **Data_AffectedSessionVirtualMemoryOnCrash** - količina virtualne memorije koja je potrošena kada je došlo do izlaza iz aplikacije.
+
+- **Data_ExitWasGraceful** - da li je izlaz iz aplikacije protekao bez poteškoća ili ne.
 
 #### <a name="officeextensibilitycomaddinunhandledexception"></a>Office.Extensibility.COMAddinUnhandledException
 
@@ -6824,6 +7441,11 @@ Prikupljaju se sledeća polja:
 - **RemoterType** – Precizira tip daljinca (pouzdanih, nepouzdanih, Win32webView, pouzdanih UDF-ova itd.) koji se koristi za aktiviranje programskog dodatka
 
 - **StoreType** – Poreklo aplikacije
+
+- **Tag**- navodi gde tačno kod nije uspeo pomoću jedinstvene oznake koja je s njim povezana.
+
+- **UsesSharedRuntime** - označava da li aplikacija koristi sharedRuntime ili ne.
+
 
 #### <a name="officeextensibilityvbatelemetrybreak"></a>Office.Extensibility.VbaTelemetryBreak
 
@@ -7107,6 +7729,20 @@ Prikupljaju se sledeća polja:
 
 Loše vreme odziva ili performansi u scenarijima kao što su pokretanje aplikacije ili otvaranje datoteke.
 
+#### <a name="initial_page_landing"></a>Initial_page_landing 
+ 
+Ovaj događaj vam pomaže da pratite tip iskustva koju korisnici vide kada otvore stranicu naše aplikacije.  Ovi podaci se koriste za utvrđivanje prometa korisnika ugrađenih u svako iskustvo u našoj aplikaciji, i takođe nam pomažu da lako konsolidujemo rezultate eksperimentisanja.
+ 
+Prikupljaju se sledeća polja: 
+
+- **Page** - koristi se za praćenje tipa iskustva koje korisnik prvi put vidi kada otvori našu stranicu. Moguće vrednosti su: „Probna verzija“, „Preskoči“, „Prepakovano“, „Pretplata“, itd.
+
+- **storeExperience** - ovo se koristi da se utvrdi da li je korisnik imao pravo da vidi iskustvo prodavnice SDK.
+
+- **stringVariant** - ovo se koristi za utvrđivanje tipa niski koje korisnik vidi kada otvori našu stranicu. Imajte u vidu da za bilo koju stranicu, kao što je recimo „Probna verzija“, korisnik može da ima pravo da vidi različite niske na osnovu toga da li su imale instaliranu stariju verziju aplikacije Office ili ako su prethodno aktivirali Office. Moguća nabrajanja ovog svojstva su: „LegacyUpsell“, „OfficeOpened“, „Default“, YesIntent“, „NoIntent“, itd.
+
+- **windowsBuildType** - koristi se za praćenje WindowsBuildType tipa na kojem je korisnik. Npr. „RS4“, „RS5“, „RS19H1“, „Vibranium“, itd. Pošto su naša iskustva obično usmerena na različite WindowsBuildTypes tipove, ovo svojstvo je od vitalne važnosti za razlikovanje objavljenih tipova. 
+
 #### <a name="ipcpbootstrapuser"></a>IpcpBootstrapUser
 
 Sakuplja se kada korisnik pokuša da otvori IRM zaštićeni dokument ili primeni IRM zaštitu. Sadrži informacije koje su potrebne da bismo mogli pravilno da istražimo i dijagnostikujemo probleme koji se događaju prilikom IpcpBootstrapUser API poziva.
@@ -7176,6 +7812,211 @@ Prikupljaju se sledeća polja:
 - **RMS.TokenProvided** - Označava da li obezbeđuje korisnika kao unos API poziva ili ne 
 
 - **UserInfo.UserObjectId** - Id korisničkog objekta
+
+#### <a name="json_parse_error"></a>json_parse_error 
+ 
+Ovaj događaj označava da je grešku ubacio JSON analizator.  Moći ćemo da otklonimo grešku pročitanog registra niske koja je poslata u JSON analizator, da bismo omogućili glatko iskustvo našim korisnicima.
+ 
+Prikupljaju se sledeća polja: 
+
+- **Error** - sastoji se od poruke o grešci koju objekt greške vraća.
+
+#### <a name="office_apple_apple_appboot_mac"></a>Office_Apple_Apple_AppBoot_Mac
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za prikupljanje vremena potrebnog za pokretanje aplikacije, kao i nekih detalja o tipu obavljenog pokretanja. Ovaj događaj nam pomaže da nadgledamo performanse i pružimo poboljšanja performansi.
+
+Prikupljaju se sledeća polja:
+
+- **Data_ Data_EvtBootTimerDocStageReady** - vreme proteklo do dostizanja određene tačke u kodu.
+
+- **Data_DocumentRecoveryInvoked** - da li je spasavanje dokumenta pozvano tokom pokretanja.
+
+- **Data_EvtBootTimerBootIdle** - vreme proteklo do dostizanja određene tačke u kodu.
+
+- **Data_EvtBootTimerFinishLaunchEnd** - vreme proteklo do dostizanja određene tačke u kodu.
+
+- **Data_EvtBootTimerLaunchDidFinish** - vreme proteklo do dostizanja određene tačke u kodu.
+
+- **Data_EvtBootTimerLaunchStart** - vreme proteklo do dostizanja određene tačke u kodu.
+
+- **Data_EvtBootTimerMainStart** - vreme proteklo do dostizanja određene tačke u kodu.
+
+- **Data_EvtBootTimerStaticInit** - vreme proteklo do dostizanja određene tačke u kodu.
+
+- **Data_EvtDockStageReady** - vreme proteklo do dostizanja određene tačke u kodu.
+
+- **Data_IsFileOpenAttempted** - da li je pokušano otvaranje datoteke tokom pokretanja sistema.
+
+- **Data_IsFirstRunAttempted** - da li je pokretanje aplikacije prošlo „Utisak pri prvom pokretanju“.
+
+- **Data_SentToBackground** - da li je aplikacija poslata u pozadinu tokom pokretanja sistema.
+
+#### <a name="office_apple_diskruleresultserializererroronstreamop"></a>Office_Apple_DiskRuleResultSerializerErrorOnStreamOp
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja telemetrijske infrastrukture. Ovaj događaj pokazuje da je došlo do greške.
+
+Prikupljaju se sledeća polja:
+
+- **Data_ActualBytesModified** - broj izmenjenih bajtova.
+
+- **Data_BytesRequested** - broj bajtova za obradu.
+
+- **Data_IsWriteOp** - bez obzira na to da li ćemo izvršiti operaciju pisanja
+
+#### <a name="office_apple_macbootresourceusage"></a>Office_Apple_MacBootResourceUsage
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za prikupljanje više indikatora oko resursa koji se troše prilikom pokretanja pomoću Office aplikacija. Ovaj događaj nam pomaže da nadgledamo performanse i pružimo poboljšanja performansi.
+
+Prikupljaju se sledeća polja:
+
+- **Data_BlockInputOperations** - broj blokiranih operacija ulaza
+
+- **Data_BlockOutputOperations** - broj blokiranih operacija izlaza
+
+- **Data_InvoluntaryContextSwitches** - broj nehotičnih kontekstnih prekidača
+
+- **Data_MainThreadCPUTime** - mera proteklog vremena
+
+- **Data_MaxResidentSize** - mera veličine memorije
+
+- **Data_MessagesReceived** - broj primljenih poruka
+
+- **Data_MessagesSent** - broj poslatih poruka
+
+- **Data_PageFaults** - broj povrata stranica
+
+- **Data_PageReclaims** - broj povrata stranica
+
+- **Data_ProcessCPUTime** - mera proteklog vremena
+
+- **Data_SharedTextMemorySize** - mera veličine memorije
+
+- **Data_SignalsReceived** - broj primljenih signala
+
+- **Data_Swaps** - broj zamena podataka
+
+- **Data_SystemCPUTime** - mera proteklog vremena
+
+- **Data_SystemUpTime** - mera proteklog vremena
+
+- **Data_UnsharedDataSize** - mera veličine podataka
+
+- **Data_UnsharedStackSize** - mera veličine steka
+
+- **Data_UserCPUTime** - mera proteklog vremena
+
+- **Data_VoluntaryContextSwitchesNvcsw** - broj nehotičnih kontekstnih prekidača
+
+#### <a name="office_apple_mau_validation"></a>Office_Apple_MAU_Validation
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja komponente Microsoft automatskog ažuriranja koja se koristi za distribuciju i instaliranje ispravki aplikacija. Prikupljeni podaci koriste se za otkrivanje grešaka i istraživanje uzroka neuspeha.
+
+Prikupljaju se sledeća polja:
+
+- **Data_EventID** - prikupljamo nisku koja predstavlja kod greške
+
+- **Data_Message** - prikupljamo nisku koja sadrži opis greške
+
+#### <a name="office_apple_mbuinstrument_hang_detection_spin_control"></a>Office_Apple_MbuInstrument_Hang_Detection_Spin_Control
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se evidentira kad god se čini da neka aplikacija ne reaguje. Ovaj događaj nam pomaže da nadgledamo performanse i pružimo poboljšanja performansi.
+
+Prikupljaju se sledeća polja:
+
+- **Data_CountSpinControlStart** - označivač koji ukazuje na to da je aplikacija prestala da reaguje (ili da sporo reaguje)
+
+#### <a name="office_apple_mbuinstrument_vmondocumentclose"></a>Office_Apple_MbuInstrument_VMOnDocumentClose
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za prikupljanje snimka stanja memorije tokom zatvaranja dokumenta. Ovaj događaj nam pomaže da nadgledamo performanse i pružimo poboljšanja performansi.
+
+Prikupljaju se sledeća polja:
+
+- **Data_CollectionTime** - vremenska oznaka od trenutka kada su podaci prikupljeni
+
+- **Data_ResidentMemory** - uočena vrednost ugrađene memorije
+
+- **Data_VirtualMemory** - uočena vrednost virtuelne memorije
+
+#### <a name="office_apple_mbuinstrument_vmonshutdown"></a>Office_Apple_MbuInstrument_VMOnShutdown
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za prikupljanje snimka stanja memorije tokom zatvaranja aplikacije. Ovaj događaj nam pomaže da nadgledamo performanse i pružimo poboljšanja performansi.
+
+Prikupljaju se sledeća polja:
+
+- **Data_CollectionTime** - vremenska oznaka od trenutka kada su podaci prikupljeni
+
+- **Data_ResidentMemory** - uočena vrednost ugrađene memorije
+
+- **Data_VirtualMemory** - uočena vrednost virtuelne memorije
+
+#### <a name="office_apple_mbuinstrument_vmonstart"></a>Office_Apple_MbuInstrument_VMOnStart
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za prikupljanje snimka stanja memorije tokom pokretanja aplikacije. Ovaj događaj nam pomaže da nadgledamo performanse i pružimo poboljšanja performansi.
+
+Prikupljaju se sledeća polja:
+
+- **Data_CollectionTime** - vremenska oznaka od trenutka kada su podaci prikupljeni
+
+- **Data_ResidentMemory** - uočena vrednost ugrađene memorije
+
+- **Data_VirtualMemory** - uočena vrednost virtuelne memorije
+
+#### <a name="office_apple_msoappdelegate_bootperf"></a>Office_Apple_MsoAppDelegate_BootPerf
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za prikupljanje vremena i memorije utrošene tokom pokretanja od strane Office aplikacija, kao i neke detalje o tipu izvršenog pokretanja. Ovaj događaj nam pomaže da nadgledamo performanse i pružimo poboljšanja performansi.
+
+Prikupljaju se sledeća polja:
+
+- **Data_AppLaunchDurationMicroSec** - trajanje procesa pokretanja
+
+- **Data_AppLaunchFinishSystemTime** - vremenska oznaka na određenom označivaču koda za pokretanje
+
+- **Data_AppLaunchStartSystemTime** - vremenska oznaka na određenom označivaču koda za pokretanje
+
+- **Data_ResidentMemory** - snimak raspoložive ugrađene memorije tokom pokretanja
+
+- **Data_VirtualMemory** - snimak raspoložive virtuelne memorije tokom pokretanja
+
+#### <a name="office_apple_ungracefulappexithangsinprevioussession"></a>Office_Apple_UngracefulAppExitHangsInPreviousSession
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja naših Office aplikacija kao i za istraživanje uzroka neuspeha. Prikupljamo podatak koliko se puta činilo da aplikacija ne reaguje pre nego što je došlo do izlaza iz aplikacije sa poteškoćama.
+
+Prikupljaju se sledeća polja:
+
+- **Data_HangsDetected** - podatak koliko se puta činilo da aplikacija ne reaguje pre nego što je uočen izlaz iz aplikacije sa poteškoćama.
+
+- **Data_LastSessionId** - identifikator za sesiju u kojoj je uočen izlaz iz aplikacije sa poteškoćama.
+
+- **Data_SessionBuildNumber** - pomoćna verzija aplikacije u kojoj je uočen izlaz iz aplikacije sa poteškoćama.
+
+- **Data_SessionVersion** - glavna verzija aplikacije u kojoj je uočen izlaz iz aplikacije sa poteškoćama.
+
+#### <a name="office_apple_whatsnewerrorandwarning"></a>Office_Apple_WhatsNewErrorAndWarning
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za nadgledanje stanja funkcije „Šta je novo“. Ovaj događaj ukazuje na to da je došlo do greške/upozorenja tokom raščlanjivanja sadržaja „Šta je novo“, što ukazuje na potencijalni problem sa kreiranjem sadržaja.
+
+Prikupljaju se sledeća polja:
+
+- **Data_ContentKey** - pokazivač na deo sadržaja koji je verovatno prouzrokovao grešku.
+
+- **Data_ErrorCode** - uočeni kôd greške (ako je dostupno)
+
+- **Data_ErrorDescription** - opis greške (ako je dostupno)
+
+- **Data_EventID** - prikupljamo nisku koja predstavlja tip uočene greške.
+
+- **Data_IncludesHTMLTag** - da li sadržaj ima obogaćeni html
+
+- **Data_IncludesItemsTag** - da li sadržaj ima hijerarhiju stavki
+
+- **Data_LengthOfRawData** - veličina sadržaja
+
+- **Data_RequestURL** - URL adresa sa koje je sadržaj preuzet
+
+- **Data_ServerLanguageTag** - jezik na kojem je sadržaj.
+
+- **Data_StatusCode** - status greške (ako je dostupno)
+
 #### <a name="officeextensibilityrichapimethodinvocation"></a>Office.Extensibility.RichApiMethodInvocation
 
 Kada klijent koristi programski dodatak za Office i telefonira obogaćeni API za pružanje usluge, ovaj događaj će biti aktiviran. Koristi se za merenje pouzdanosti usluge, performansi i upotrebe za pozivanje metoda Rich API.
@@ -7439,6 +8280,28 @@ Prikupljaju se sledeća polja:
 
   - **Data\_Timeout** - Koliko dugo je trajao prekid
 
+#### <a name="office_apple_licensing_mac_dractivationfailures"></a>Office_Apple_Licensing_Mac_DRActivationFailures
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj se koristi za snimanje neuspeha aktivacije preduzeća Digital River (događaj evidentira ključ i proizvod koji su korišteni za aktiviranje, kao i primljeni kod greške).  Ovaj događaj se koristi za otkrivanje i pomoć pri rešavanju problema sa neuspelim aktivacijama (problemi preduzeća Digital River).
+
+Prikupljaju se sledeća polja:
+
+- **Data_DigitalRiverID** - ID Digital River proizvoda koji se mapira na ovaj Office proizvod - SKY
+
+- **Data_Error** - niska koja predstavlja kôd greške aktivacije.
+
+- **Data_ProductKey** - šifra proizvoda koja je pokušana da se aktivira
+
+- **Data_ProductKeyHash** - aktivirana je kodirana šifra proizvoda
+
+#### <a name="office_apple_licensing_mac_getmachinestatuserrors"></a>Office_Apple_Licensing_Mac_GetMachineStatusErrors
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj prikuplja kod greške vraćen tokom periodične provere valjanosti licence pretplate. Kôd greške može da označava nedostupnost servera, ali i isticanje licence, ograničenje broja računara, nevažeći ID hardvera, itd. Ovaj događaj se koristi za nadgledanje stanja usluge Office licenciranja, ali i za istraživanje problema vezanih za upravljanje mašinom pretplate.
+
+Prikupljaju se sledeća polja:
+
+- **Data_Error** - prikupljamo nisku koja predstavlja kod greške
+
 #### <a name="officeextensibilitysandboxodperrornotification"></a>Office.Extensibility.Sandbox.ODPErrorNotification
 
 Prati različita obaveštenja o greškama dobijene iz sandboxa. Koristi se za otkrivanje scenarija grešaka u sandboxu i tamo tako što ćete ga popraviti, da biste poboljšali produktivnost korisnika
@@ -7451,6 +8314,13 @@ Prikupljaju se sledeća polja:
 
 - **Result** - kôd greške rezultata
 
+#### <a name="office_firstrun_apple_maconiolkfirstrunstarted"></a>Office_FirstRun_Apple_MacONIOLKFirstRunStarted
+
+Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple platformi. Događaj nam daje do znanja da je korisnik uneo „Utisak pri prvom pokretanju“. Koristimo ovaj događaj da utvrdimo da li je uspešno pokrenut „Utisak pri prvom pokretanju“ (FRE).
+
+Prikupljaju se sledeća polja:
+
+- **Data_FirstRunCollectionTime** - vremenska oznaka koja registruje vreme kad je tok pokrenut.
 
 #### <a name="officegraphicsarcexceptions"></a>Office.Graphics.ARCExceptions 
 
