@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: 0437779d269d4de7132961ce2edc37363d10b309
-ms.sourcegitcommit: ff396a54d8e36d71ebc4cade5014eb502952dc65
+ms.openlocfilehash: b345c9c8f3138f9c38900dd36dc9983f83623341
+ms.sourcegitcommit: e542473cc4fe07a98874c275846f6982a6863e35
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "38639394"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "39837692"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -3121,7 +3121,7 @@ Prikupljaju se sledeća polja:
 -  **TimeToMedianResultInMs** – označava vreme koje potrebno da bi OneNote pronašao sva podudaranja.
 
 
-#### <a name="officeonenotestickynotesnotecreated"></a>Office.OneNote.StickyNotes.NoteCreated
+#### <a name="officeonenotestickynotesnotecreated-on-ios-onenotestickynotesnotecreated-on-android"></a>Office.OneNote.StickyNotes.NoteCreated (on iOS), OneNote.StickyNotes.NoteCreated (on Android)
 
 Ovo je kritičan signal koji se koristi da prati da li korisnici Lepljivih beležaka mogu da kreiraju beleške u aplikaciji.  Telemetrija se koristi za obezbeđivanje otkrivanja kritične regresivne OneNote aplikacije i ispravnost usluge. Ako korisnici ne mogu da naprave belešku, to bi izazvalo incident krajnje ozbiljnosti.
 
@@ -3134,7 +3134,7 @@ Prikupljaju se sledeća polja:
 - **StickyNotes-SDKVersion** - Broj verzije koji označava verziju aplikacije Lepljive beleške koje korisnik koristi. Omogućava nam da utvrdimo koje verzije proizvoda ispoljavaju problem tako da možemo ispravno da damo prioritet rešavanju tog problema.
 
 
-#### <a name="officeonenotestickynotesnoteviewed"></a>Office.OneNote.StickyNotes.NoteViewed
+#### <a name="officeonenotestickynotesnoteviewed-on-ios-onenotestickynotesnoteviewed-on-android"></a>Office.OneNote.StickyNotes.NoteViewed (on iOS), OneNote.StickyNotes.NoteViewed (on Android)
 
 Ovo je kritičan signal koji se koristi da prati da li korisnici Lepljivih beležaka mogu da kreiraju beleške u aplikaciji.  Telemetrija se koristi za obezbeđivanje otkrivanja kritične regresivne OneNote aplikacije i ispravnost usluge. Ako korisnici ne mogu da naprave belešku, to bi izazvalo incident krajnje ozbiljnosti.
 
@@ -4660,68 +4660,6 @@ Prikupljaju se sledeća polja:
   - **Data\_WarningShownToConvertToTable:bool** - tačno ukazuje na to da je korisniku prikazano upozorenje da konvertuje Excel podatke u format tabele
 
 
-#### <a name="officewordexperimentationdocumentstatsoncloseandsuspend"></a>Office.Word.Experimentation.DocumentStatsOnCloseAndSuspend
-
-Ovaj događaj evidentira statističke podatke za svaki dokument kada je program Office Word zatvoren ili obustavljen.  Događaj se koristi za označavanje uzajamne veze između uređivanja dokumenta, veličine itd. i čuvanja dokumenta, deljenja dokumenta i grešaka prilikom saradnje na uređivanju dokumenta na mreži.
-
-Prikupljaju se sledeća polja:
-
-- **Data_BkmkRefCount** - Broj referenci obeleživača u dokumentu
-
-- **Data_CharacterCount** - Broj znakova u dokumentu
-
-- **Data_CharactersWithSpaceCount** - Broj znakova i razmaka u dokumentu
-
-- **Data_ChartCount** - Broj grafikona u dokumentu
-
-- **Data_CitationCount** - Broj citata u dokumentu
-
-- **Data_DocumentLocation** - Označava koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
-
-- **Data_ETW_TrackbackTag** - identifikuje mesto u kodu odakle je ovaj događaj aktiviran (zatvaranje ili obustavljanje)
-
-- **Data_EndnoteDocCount** - Broj endnota u dokumentu
-
-- **Data_FootnoteDocCount** - Broj fusnota u dokumentu
-
-- **Data_HasBibliography** - Ukazuje na to da li dokument sadrži bibliografiju
-
-- **Data_HasHeader** - Ukazuje na to da li dokument sadrži zaglavlje
-
-- **Data_IsImeUsed** - Ukazuje na to da li je u dokumentu korišćen „Uređivač metode unosa“
-
-- **Data_IsPageCountInProgress** - Ukazuje na to da li je trenutno u toku prebrojavanje stranica dokumenta.
-    
-- **Data_IsTouchUsed** - Ukazuje na to da li je u dokumentu korišćen unos dodirom
-
-- **Data_IsTrackChangesOn** - Označava da li je bilo uključeno praćenje promena za dokument
-
-- **Data_LineCount** - Broj redova u dokumentu
-
-- **Data_MainPdod** - Identifikator dokumenta koji se obrađuje u programu Office Word.
-
-- **Data_PageCount** - Broj stranica u dokumentu
-
-- **Data_PageNumberFieldCount** - Broj polja sa rednim brojem stranice u dokumentu
-
-- **Data_ParagraphCount** - Broj pasusa u dokumentu
-
-- **Data_PicCount** - Broj slika u dokumentu
-
-- **Data_RsidCount** - Broj revizija čuvanje identifikator u dokumentu
-
-- **Data_TocCount** - Broj sadržaja u dokumentu
-
-- **Data_UrlHash** - Jednosmerni heš za kreiranje identifikatora jednostavnog dokumenta
-
-- **Data_UserActionID** - ovo polje podataka se ne koristi (vrednost je uvek 0).
-
-- **Data_UserActionName** - uvek „DocumentStatsOnCloseAndSuspend”
-
-- **Data_UserInteractionTimeMsec** - Vreme u milisekundama koje je korisnik utrošio na interakciju sa dokumentom
-    
-- **Data_WordCount** - Broj reči u dokumentu
-
 #### <a name="officewordfilenewcreatenewfile"></a>Office.Word.FileNew.CreateNewFile
 
 Ovaj događaj označava da je kreiran novi dokument u programu Office Word i prati uspešnost ili neuspešnost operacije. Događaj se koristi da prati da li kreiranje novog dokumenata radi kao što je očekivano. Takođe se koristi i za izračunavanje mesečno aktivnih korisnika/uređaja i metrike pouzdanosti oblaka.
@@ -4955,102 +4893,6 @@ Prikupljaju se sledeća polja:
 - **Data_RenameFlightEnabled** - Da li je omogućena putanja za funkciju preimenovanja
 
     
-#### <a name="officewordfilesaveactfconfirmsavedoccoreautorecoverysave"></a>Office.Word.FileSave.ActFConfirmSaveDocCoreAutoRecoverySave
-
-Ovaj događaj ukazuje na to da Office Word čuva dokument sa automatskim oporavkom koji ranije nije sačuvan. To omogućava korporaciji Microsoft da otkrije greške u automatskom oporavku, što je bitno za bezbednost dokumenta.  Događaj prati da li automatski oporavak radi kao što je očekivano. Takođe se koristi i za izračunavanje mesečno aktivnih korisnika/uređaja i metrike pouzdanosti oblaka.
-
-Prikupljaju se sledeća polja:
-
-- **Data_DetachedDuration** - Koliko dugo je radnja odvojena od niti
-
-- **Data_Doc_AccessMode** -Dokument je samo za čitanje/ili može da se uređuje
-
-- **Data_Doc_AssistedReadingReasons** - Unapred definisani skup vrednosti koji se odnosi na razloge zbog kojih je dokument otvoren u režimu pomoći za čitanje
-
-- **Data_Doc_AsyncOpenKind –** Ukazuje na to da li je otvorena keširana verzija dokumenta u oblaku i koja je logika nesinhronizovanog osvežavanja korišćena.
-    
-- **Data_Doc_ChunkingType** - Jedinice koje se koriste za postepeno otvaranje dokumenta
-
-- **Data_Doc_EdpState** - Postavke elektronske zaštite podataka za dokument
-
-- **Data_Doc_Ext** - Oznaka tipa dokumenta (docx/xlsb/pptx, itd.)
-
-- **Data_Doc_FileFormat** - Verzija protokola za format datoteke
-
-- **Data_Doc_Fqdn** - Ime domena za OneDrive ili SharePoint Online
-
-- **Data_Doc_FqdnHash** - Jednosmerni heš imena domena koji se može identifikovati
-
-- **Data_Doc_IdentityTelemetryId** - Jednosmerni heš za identitet korisnika koji se koristi za izvršavanje otvaranja
-
-- **Data_Doc_InitializationScenario** - Beleži način na koji je otvoren dokument
-
-- **Data_Doc_IOFlags** - Izveštava o keširanim zastavicama koje su korišćene za podešavanje postavki zahteva za otvaranje
-
-- **Data_Doc_IrmRights** - Radnje koje su dozvoljene putem smernica za elektronskih zaštitu podataka koje su primenjene na dokument/korisnika
-
-- **Data_Doc_IsIncrementalOpen** - Zastavica koja označava da je dokument postepeno otvoren
-
-- **Data_Doc_IsOcsSupported** - Zastavica koja ukazuje na to da je dokument podržan u usluzi saradnje
-    
-- **Data_Doc_IsOpeningOfflineCopy** - Zastavica koja ukazuje na to je otvorena vanmrežna kopija dokumenta
-
-- **Data_Doc_IsSyncBacked** -Zastavica koja ukazuje na to da na računaru postoji kopija koja se automatski sinhronizuje
-
-- **Data_Doc_Location** - Ukazuje na to koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint, itd.)
-
-- **Data_Doc_LocationDetails** - Ukazuje na to koja „Poznata fascikla“ je obezbedila lokalno uskladišteni dokument
-
-- **Data_Doc_NumberCoAuthors** - Izračunavanje broja drugih korisnika u sesiji zajedničkog uređivanja
-
-- **Data_Doc_PasswordFlags** - Ukazuje na to da je postavljena zastavica za lozinku za čitanje ili čitanje/pisanje
-
-- **Data_Doc_ReadOnlyReasons** - Razlozi zbog kojih je dokument otvoren samo za čitanje
-
-- **Data_Doc_ResourceIdHash** - Anonimni identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
-
-- **Data_Doc_RtcType** - Označava kako je kanal u realnom vremenu (RTC) podešen za trenutnu datoteku (onemogućen, nije podržan, na zahtev, uvek uključen, itd.)
-
-- **Data_Doc_ServerDocId** - Nepromenljivi anonimni identifikator dokumenta koji se koristi da bi se dijagnostikovali problemi
-
-- **Data_Doc_ServerProtocol** - verzija protokola koji se koristi za komunikaciju sa uslugom
-
-- **Data_Doc_ServerType** - tip servera koji nudi uslugu (SharePoint, OneDrive, WOPI itd.)
-
-- **Data_Doc_ServerVersion** - verzija servera koji nudi uslugu
-
-- **Data_Doc_SessionId** -Identifikuje određenu sesiju uređivanja dokumenta u okviru cele sesije
-
-- **Data_Doc_SharePointServiceContext** - Informacije o dijagnostici iz zahteva usluge SharePoint Online
-
-- **Data_Doc_SizeInBytes** - Indikator veličine dokumenta
-
-- **Data_Doc_SpecialChars** - Indikator specijalnih znakova u URL adresi ili putanji dokumenta
-
-- **Data_Doc_StreamAvailability** - Indikator koji ukazuje na to da li je protok dokumenta omogućen/onemogućen
-
-- **Data_Doc_SyncBackedType** - Indikator tipa dokumenta (lokalni ili iz usluge)
-
-- **Data_Doc_UrlHash** - Jednosmerni heš za kreiranje identifikatora jednostavnog dokumenta
-
-- **Data_Doc_WopiServiceId** - Sadrži jedinstveni identifikator WOPI dobavljača usluge
-
-- **Data_FailureClass** - Ceo broj koji predstavlja klasu greške kod neuspelog Office Collaboration Services OCS prelaza
-    
-- **Data_MainPdod** - Identifikator dokumenta koji se obrađuje u programu Office Word.
-
-- **Data_MoveFlightEnabled** - Da li je omogućena putanja za funkciju premeštanja
-
-- **Data_OCSSyncbackSaveStarted** - Zastavica koja ukazuje na to da se čuvanje odnosi na čuvanje ponovne sinhronizacije
-
-- **Data_RenameDisabledReason** - Greška koja uzrokuje da preimenovanje ovog dokumenta bude onemogućeno
-
-- **Data_RenameFlightEnabled** - Da li je omogućena putanja za funkciju preimenovanja
-
-- **Data_SaveInitiateKind** - Ceo broj koji ukazuje na to kako je pokrenuto čuvanje
-
-- **Data_SrcDocIsUnnamedOrNew** - Ukazuje na to da li je dokument koji čuvamo nov
-
 
 #### <a name="officewordfilesaveactfconfirmsavedoccorequerysave"></a>Office.Word.FileSave.ActFConfirmSaveDocCoreQuerySave
 
@@ -7362,7 +7204,7 @@ Prikupljaju se sledeća polja:
 
 Događaj koji se generiše kada padne programski dodatak COM na potrošačkoj verziji Office aplikacija. 
 
-Upotreba: koristi se za računanje globalnog „usvajanja“ programa Office 365 ProPlus za neodređena velika preduzeća za dodatak koji se zatim objavljuje na sajtu readyforwindows.com i drugim alatkama kao što je Readiness Toolkit To omogućava poslovnim kupcima da provere da li su programski dodaci koje su ugradili u njihove organizacije kompatibilni sa najnovijim verzijama programa Office 365 ProPlus i da na odgovarajući način planiraju nadogradnje. 
+Upotreba: koristi se za računanje globalnog „usvajanja“ programa Office 365 ProPlus za neodređena velika preduzeća za dodatak koji zatim koriste druge alatke kao što je Readiness Toolkit. To omogućava poslovnim kupcima da provere da li su programski dodaci koje su ugradili u njihove organizacije kompatibilni sa najnovijim verzijama programa Office 365 ProPlus i da na odgovarajući način planiraju nadogradnje. 
 
 Prikupljaju se sledeća polja:
 
@@ -7394,7 +7236,7 @@ Prikupljaju se sledeća polja:
 
 Događaj koji se generiše kada padne programski dodatak COM na poslovnoj verziji Office aplikacija.
 
-Upotreba: koristi se za računanje globalnog „usvajanja“ programa Office 365 ProPlus za neodređena velika preduzeća za dodatak koji se zatim objavljuje na sajtu readyforwindows.com i drugim alatkama kao što je Readiness Toolkit To omogućava poslovnim kupcima da provere da li su programski dodaci koje su ugradili u njihove organizacije kompatibilni sa najnovijim verzijama programa Office 365 ProPlus i da na odgovarajući način planiraju nadogradnje. 
+Upotreba: koristi se za računanje globalnog „usvajanja“ programa Office 365 ProPlus za neodređena velika preduzeća za dodatak koji zatim koriste druge alatke kao što je Readiness Toolkit. To omogućava poslovnim kupcima da provere da li su programski dodaci koje su ugradili u njihove organizacije kompatibilni sa najnovijim verzijama programa Office 365 ProPlus i da na odgovarajući način planiraju nadogradnje. 
 
 - **ScopeId** - trenutni opseg niti
 
@@ -7434,7 +7276,9 @@ Prikupljaju se sledeća polja:
 
 - **AssetId** - ID Procene za aplikaciju
 
-- **ErrorCode** – Ukupno potrošeno vreme 
+- **ErrorCode** – Ukupno potrošeno vreme
+
+- **IsDebug**-označava da li je ta sesija namenjena za otklanjanje grešaka
 
 - **NumberOfAddinsActivated**- Brojač aktivnih programskih dodataka
 
