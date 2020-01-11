@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: 7e9207148c9f294e9a1e41d353fa3cdd8878f88c
-ms.sourcegitcommit: 5be570c4403e82352142b3297507cf314815bdea
+ms.openlocfilehash: ab9404b93157875589f2625be51a9e30cc3d0795
+ms.sourcegitcommit: aaf8caeee3367ba6cf3c811d1ee3e43cfccc8b33
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "38276504"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "41024464"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
@@ -37,7 +37,15 @@ Važno je da znate da te opcionalne usluge u oblaku nisu pokrivene licencom vaš
 
 ## <a name="experiences-that-rely-on-bing"></a>Iskustva koja se oslanjaju na Bing
 
-Neke usluge u oblaku obezbeđuje Microsoft Bing. Microsoft Bing je biznis koji je nezavistan od sistema Office 365 ProPlus i njime korporacija Microsoft upravlja nezavisno od sistema Office 365 ProPlus. Iskustva koja obogaćuje u Office 365 ProPlus aplikacijama su: [3D mape](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Grafikoni mape](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Umetanje slika na mreži](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Umetanje Online 3D modela](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [PowerPoint QuickStarter](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Istraživač](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) i [Smart Lookup](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044). Ova iskustva su za vas licencirana pod uslovima [Microsoft ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i pokrivena su [izjavom o privatnosti](https://privacy.microsoft.com/). Sve upite za pretragu koje unesete za Office 365 ProPlus organizaciju dok koristite ove usluge se šalju usluzi Microsoft Bing. Bing organizacija ih ne povezuje sa vama.
+Neke usluge u oblaku obezbeđuje Microsoft Bing. Microsoft Bing je biznis koji je nezavistan od sistema Office 365 ProPlus i njime korporacija Microsoft upravlja nezavisno od sistema Office 365 ProPlus. Iskustva koja obogaćuje u Office 365 ProPlus aplikacijama su: [3D mape](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Grafikoni mape](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Umetanje slika na mreži](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Umetanje Online 3D modela](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [PowerPoint QuickStarter](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Istraživač](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) i [Smart Lookup](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044). 
+
+Iskustva koja Bing ovlašćuje u programu Outlook za iOS i Android su sledeća:
+
+- **Predlozi lokacija: **   Kada u stavku kalendara dodate neko javno mesto sa adresom, Outlook za iOS i Android takođe će u polju Lokacija uključiti celu adresu.
+- **Zanimljivi kalendari:** Možete da se [pretplatite ](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all)na kalendare o vašim omiljenim sportskim timovima ili o TV emisijama.
+
+
+ Ova iskustva koja se oslanjaju na Bing su za vas licencirana pod uslovima[Microsoft ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i pokrivena su [izjavom o privatnosti](https://privacy.microsoft.com/). Sve upite za pretragu koje unesete za Office 365 ProPlus organizaciju dok koristite ove usluge se šalju usluzi Microsoft Bing. Bing organizacija ih ne povezuje sa vama.
 
 ## <a name="experiences-that-rely-on-linkedin"></a>Iskustva koja se oslanjaju na LinkedIn
 
@@ -47,9 +55,13 @@ Napomena: Postavka za privatnost opisana ispod ne kontroliše iskustva koja zaht
 
 ## <a name="experiences-that-rely-on-other-microsoft-owned-online-services-andor-services-owned-by-third-parties"></a>Iskustva koje se oslanjaju na druge usluge na mreži koje poseduje Microsoft i/ili usluge čiji su vlasnici treće strane
 
+### <a name="help--contact-support"></a>Pomoć > Obraćanje podršci
+
+U programu Outlook za iOS i Android možete da prijavite probleme i da se povežete sa našim timom za podršku kroz **Postavke** > **Pomoć & Povratne informacije** > **Kontaktirajte podršku**. Ovo iskustvo pokreće usluga koju obezbeđuje HelpShift, a primenjivaće se[uslovi usluge](https://www.helpshift.com/legal/terms/) i [politika privatnosti](https://www.helpshift.com/legal/privacy/) od HelpShift-a.
+
 ### <a name="help--suggest-a-feature"></a>Pomoć > Predlaganje funkcije
 
-Predlaganje funkcije je iskustvo koje vam omogućava da dostavite svoje ideje u vezi vašeg korišćenja programa Outlook. Vaši predlozi se dostavljaju direktno nezavisnoj usluzi koja se zove UserVoice. Ako dostavite ideje pomoću Predlaganja funkcije, primenjuju se [uslovi korišćenja usluga i politika privatnosti usluge UserVoice](https://outlook.uservoice.com/tos).
+Predlaganje funkcije je iskustvo koje vam omogućava da dostavite svoje ideje u vezi vašeg korišćenja programa Outlook. Vaši predlozi se dostavljaju direktno nezavisnoj usluzi koja se zove UserVoice. Ako podnesete ideje koristeći Predloži funkciju, primenjuju se [uslovi korišćenja usluga ](https://outlook.uservoice.com/tos)i [politika privatnosti](https://outlook.uservoice.com/tos#privacy-policy) usluge UserVoice.
 
 ### <a name="insert-online-video"></a>Umetanje video zapisa na mreži
 
