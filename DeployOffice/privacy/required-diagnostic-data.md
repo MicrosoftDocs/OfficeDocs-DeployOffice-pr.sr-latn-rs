@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: a6003b44bc31f8165e9e102104c4b25336efd4cc
-ms.sourcegitcommit: 17f7bf4bfa65042ad44dfff23489c6a538a004e8
+ms.openlocfilehash: 74f80a494eff6f82310a89cbcc52e10d0a324e15
+ms.sourcegitcommit: 752267dddf9c011bb91136f6223f641053450599
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "39906626"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "41109513"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -2394,6 +2394,139 @@ Prikupljaju se sledeća polja:
 
 - **SolutionId** - ID Rešenja
 
+#### <a name="officefeedeventsinitializing"></a>Office.Feed.Events.Initializing
+
+Ovaj događaj se sakuplja kada se feed pokrene. Ovaj događaj se koristi za ukazivanje na to da feed počinje i da bi se dijagnostikovali problemi sa pouzdanošću prilikom pokretanja feedova.
+
+- **AppInfo.Language** - Jezik aplikacije u IETF formatu jezičke oznake.
+
+- **AppInfo.Name** - Ime komponente u korišćenju (Office feed).
+
+- **AppInfo.Version** - Verzija aplikacije.
+
+- **clientCorrelationId** - Globalni jedinstveni identifikator za sesiju aplikacije.
+
+- **clientType** – Aplikacija na kojoj se komponenta pokreće.
+
+- **DeviceInfo.Make** - Proizvođač uređaja ili ime OEM proizvođača.
+
+- **DeviceInfo.NetworkProvider** - Mrežni ili mobilni operater, kao što je "AT&T".
+
+- **DeviceInfo.NetworkType** - Tip mrežnog povezivanja uređaja koji se koristi, kao što je "Wired", "Wi-Fi" ili "WWAN" (podaci/mobilne uređaje).
+
+- **DeviceInfo.OsName** - Ime OS uređaja.
+
+- **DeviceInfo.SDKUid** - Jedinstveno identifikuje uređaj iz perspektive telemetrije SDK-a.
+
+- **eventId** - Identifikator imena događaja. 
+
+- **EventInfo.SdkVersion** - Verzija telemetrije SDK-a koju klijent koristi za generisanje događaja.
+
+- **eventpriority** - Vrednost nabrajanja za prioritet slanja događaja.
+
+- **feature** - Koristi se za grupisanje različitih događaja iste funkcije.
+
+- **hostAppRing** - Populacija korisnika kojima je aplikacija distribuirana.
+
+- **properties** – Sadrži dodatna svojstva metapodataka prikupljenih za svaki događaj..
+        
+    - **ClientTimeStamp** - Vremenska oznaka kada je događaj prijavljen u klijentu.
+
+- **publicEventName** - Ime događaja koji je javno okrenut.  
+
+- **region** - Geografsko područje usluge feeda na koju je korisnik povezan. 
+
+- **tenantAadObjectId** - Globalni jedinstveni identifikator za korisnika zakupca preduzeća.
+
+- **type** - Tip evidentiranih događaja, npr. praćenje, greška, događaj, QoS.
+
+- **userAadObjectId** - Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog.
+
+- **UserInfo.Id** - Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog.
+
+- **UserInfo.IdType** - Određuje vrstu ID korisnika 
+
+- **UserInfo.Language** - The user's language in IETF language tag format.
+
+- **UserInfo.MsaId** – Globalni jedinstveni identifikator korisnika za korisnika Microsoft naloga.
+
+- **UserInfo.OMSTenantId** - Zakupac za koga je vezana pretplata korisnika. Omogućava nam da klasifikujemo probleme i otkrijemo da li je problem široko rasprostranjen ili izolovan skup korisnika ili određenog zakupca.
+
+- **UserInfo.TimeZone** - Korisnička vremenska zona u odnosu na UTC vreme.
+
+- **userPuid** - Globalni jedinstveni identifikator korisnika Microsoft naloga.
+
+- **version** - Verzija feeda klijenta.
+
+#### <a name="officefeedeventsofficefeeddidappear"></a>Office.Feed.Events.OfficeFeedDidAppear
+
+Ovaj događaj se sakuplja kada se feed prikazuje korisniku. Događaj se koristi za proveru da li je feed završio korak inicijalizacije i da bi se dijagnostikovali problemi sa pouzdanošću prilikom pokretanja feedova.
+
+- **AppInfo.Language** - Jezik aplikacije u IETF formatu jezičke oznake.
+
+- **AppInfo.Name** - Ime komponente u korišćenju (Office feed).
+
+- **AppInfo.Version** - Verzija aplikacije.
+
+- **clientCorrelationId** - Globalni jedinstveni identifikator za sesiju aplikacije.
+
+- **clientType** – Aplikacija na kojoj se komponenta pokreće.
+
+- **DeviceInfo.Make** - Proizvođač uređaja ili ime OEM proizvođača.
+
+- **DeviceInfo.NetworkProvider** - Mrežni ili mobilni operater, kao što je "AT&T".
+
+- **DeviceInfo.NetworkType** - Tip mrežnog povezivanja uređaja koji se koristi, kao što je "Wired", "Wi-Fi" ili "WWAN" (podaci/mobilne uređaje).
+
+- **DeviceInfo.OsName** - Ime OS uređaja.
+
+- **DeviceInfo.SDKUid** - Jedinstveno identifikuje uređaj iz perspektive telemetrije SDK-a.
+
+- **eventId** - Identifikator imena događaja.
+
+- **EventInfo.SdkVersion** - Verzija telemetrije SDK-a koju klijent koristi za generisanje događaja.
+
+- **eventpriority** - Vrednost nabrajanja za prioritet slanja događaja.
+
+- **feature** - Koristi se za grupisanje različitih događaja iste funkcije.
+
+- **hostAppRing** - Populacija korisnika kojima je aplikacija distribuirana.
+
+- **properties** – Sadrži dodatna svojstva metapodataka prikupljenih za svaki događaj..
+        
+  - **bridgeWaitingTime** - Metrika za dijagnostiku performansi u prikazivanju feeda.
+    
+  - **ClientTimeStamp** - Vremenska oznaka kada je događaj prijavljen u klijentu.
+        
+  - **renderTime** - Metrika za dijagnostiku performansi u prikazivanju feeda.
+
+- **publicEventName** - Ime događaja koji je javno okrenut.  
+
+- **region** - Geografsko područje usluge feeda na koju je korisnik povezan. 
+
+- **tenantAadObjectId** - Globalni jedinstveni identifikator za korisnika zakupca preduzeća.
+
+- **type** - Tip evidentiranih događaja, npr. praćenje, greška, događaj, QoS.
+
+- **userAadObjectId** - Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog.
+
+- **UserInfo.Id** - Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog.
+
+- **UserInfo.IdType** - Određuje vrstu ID korisnika 
+
+- **UserInfo.Language** - The user's language in IETF language tag format.
+
+- **UserInfo.MsaId** – Globalni jedinstveni identifikator korisnika za korisnika Microsoft naloga.
+
+- **UserInfo.OMSTenantId** - Zakupac za koga je vezana pretplata korisnika. Omogućava nam da klasifikujemo probleme i otkrijemo da li je problem široko rasprostranjen ili izolovan skup korisnika ili određenog zakupca.
+
+- **UserInfo.TimeZone** - Korisnička vremenska zona u odnosu na UTC vreme.
+
+- **userPuid** - Globalni jedinstveni identifikator korisnika Microsoft naloga.
+
+- **version** - Verzija feeda klijenta.
+
+
 #### <a name="officefileiocsiccachedfilecsiloadfilebasic"></a>Office.FileIO.CSI.CCachedFileCsiLoadFileBasic
 
 Omogućava nam da znamo da li se datoteka uspešno otvorila iz FIO sloja. Koristi se za nadgledanje i ispravnost funkcija.
@@ -3134,6 +3267,191 @@ Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Apple p
 Prikupljaju se sledeća polja:
 
 - **Data_FirstRunPanelName** - naziv table sa koje je iskustvo počelo
+
+#### <a name="officelivepersonacarduseractionsconfigurationsetaction"></a>Office.LivePersonaCard.UserActions.ConfigurationSetAction
+
+Prijavljujemo se kada je korisnik u aplikaciji koja učitava karticu „Personalnost“ u očekivanju da korisnik otvori aktivnu karticu „Personalnost“.  Podaci se koriste za utvrđivanje da li je vizitkarta ispravno ispunjena. 
+
+Prikupljaju se sledeća polja: 
+
+- **Data.appContextId** – Slučajno generisani ID koji se koristi za identifikovanje različitih naloga u istoj aplikaciji
+
+- **Data.AppInfo.Name** - Naziv usluge koja se koristi (Kartica profila)
+
+- **Data.AppInfo_Id** - Ime host aplikacije
+
+- **Data.AppInfo_Version** - Verzija host aplikacije
+
+- **Data.cardCorrelationId** - Globalni jedinstveni identifikator za Karticu „Personalnost“
+
+- **Data.cardPersonaCorrelationId** – Globalni jedinstveni identifikator za određenu personalnost prikazanu na kartici
+
+- **SessionCorrelationId** - Globalni jedinstveni identifikator za sesiju aplikacije.
+
+- **Data.clientType** – Tip uređaja na kom se pokreće aplikacija
+
+- **Data.eventId** - Identifikator imena događaja, npr. "LivePersonaCardRenderedAction"
+
+- **Data.eventpriority** - Vrednost nabrajanja za prioritet slanja događaja.
+
+- **Data.feature** - Koristi se za grupisanje različitih događaja iste funkcije (Kartica profila)
+
+- **Data.OTelJS.Version** - Verzija OTel sistema za evidenciju
+
+- **Data.properties** - Dodatni metapodaci sakupljeni za svaki događaj na sledeći način:
+
+  - **accountType** - Da li korisnik pripada organizaciji ili potrošaču
+
+  - **cardCorrelationId** - Duplikat gore navedenog Data.appContextId
+
+  - **cardPersonaCorrelationId** - Duplikat gore navedenog Data.cardCorrelationId
+
+  - **ClientTimeStamp** - Vreme u aplikaciji kada se evidentira događaj
+
+  - **consumerCorrelationId** - Duplikat gore navedenog Data.clientCorrelationId
+
+  - **contextType** - Koji kontekst (aplikacija) je lansiran sa
+
+  - **ecsConfigIds** - Identifikatori verzije za funkcije omogućene u vizitkarti
+
+  - **ecsTagId** - ID oznake za funkcije
+
+  - **externalAppSessionCorrelationId** - Globalni jedinstveni identifikator za aplikaciju za identifikovanje svih Kartica „Personalnost“ otvorenih u istoj podsesiji
+
+  - **flights** - Funkcije omogućene u vizitkarti
+
+  - **fromCache** - Da li se podaci preuzimaju iz memorije
+
+  - **hasFinePointer** - Da li uređaj ima mogućnost pokazivača miša
+
+  - **hasHoverEvents** - Da li uređaj ima mogućnost pokazivača miša
+
+  - **immersiveProfileCorrelationId** - Globalni jedinstveni identifikator za sesiju prikaza proširenog profila
+
+  - **offlineResolved** - Da li su podaci zastareli dok nisu bili van mreže
+
+  - **personaCorrelationId** - Globalni jedinstveni identifikator za jedinstvene „Personalnosti“ u sesiji
+
+- **Data.region** – Geografska oblast pozadinska usluga kartice profila na koji se korisnik povezuje
+
+- **Data.tenantAadObjectId** – Zakupac sa kojim je pretplata korisnika povezana. Omogućava nam da klasifikujemo probleme i otkrijemo da li je problem široko rasprostranjen ili je ograničen na skup korisnika ili određenog zakupca.
+
+- **Data.type** - Tip evidentiranih događaja, npr. praćenje, greška, događaj
+
+- **Data.userAadObjectId** – Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog (duplikat broja Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** – Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog
+
+- **Data.UserInfo.MsaId** – Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog
+
+- **Data.UserInfo.OMSTenantId** - Zakupac sa kojim je povezana pretplata korisnika. Omogućava nam da klasifikujemo probleme i otkrijemo da li je problem široko rasprostranjen ili je ograničen na skup korisnika ili određenog zakupca.
+
+- **Data.userPuid** - Globalni jedinstveni identifikator korisnika za Microsoft nalog (duplikat od Data.UserInfo.MsaId)
+
+- **Data.version** - Verzija usluge (Kartica profila)
+
+- **Data.workloadCulture** - Kultura postavljena u host aplikaciji
+
+- **DeviceInfo_Id** - Globalni jedinstveni identifikator uređaja za uređaj
+
+- **DeviceInfo_Make** - Brend operativnog sistema
+
+- **DeviceInfo_Model** - Model uređaja
+
+- **DeviceInfo_OsName** - Ime OS uređaja
+
+- **DeviceInfo_OsVersion** - Verzija operativnog sistema
+
+- **DeviceInfo_SDKUid** - Jedinstveno identifikuje uređaj iz perspektive telemetrije SDK-a.
+
+#### <a name="officelivepersonacarduseractionsopenedexpandedpersonacard"></a>Office.LivePersonaCard.UserActions.OpenedExpandedPersonaCard
+
+Evidentira se kada korisnik otvori proširenu karticu „Personalnost“. Koristi se za posmatranje kritičnih anomalija u stopama neuspešnih pokretanja Aktivne kartice „Personalnost“.
+
+Prikupljaju se sledeća polja:
+
+- **AppInfo_Id** – Ime host aplikacije
+
+- **AppInfo_Version** – Verzija host aplikacije
+
+- **Data.appContextId** – Slučajno generisani id koji se koristi za identifikovanje različitih naloga u istoj aplikaciji
+
+- **Data.AppInfo.Name** - Ime upotrebljene usluge (Kartica profila)
+
+- **Data.cardCorrelationId** - Globalni jedinstveni identifikator za Karticu „Personalnost“
+
+- **Data.cardPersonaCorrelationId** – Globalni jedinstveni identifikator za određenu personalnost prikazanu na kartici
+
+- **SessionCorrelationId** - Globalni jedinstveni identifikator za sesiju aplikacije.
+
+- **Data.clientType** – Tip uređaja na kom se pokreće aplikacija
+
+- **Data.eventId** - Identifikator imena događaja, npr. "LivePersonaCardRenderedAction"
+
+- **Data.exportName** - Ime događaja korisničkog postupka koje ljudi mogu da pročitaju, npr. "OpenedPersonaCard"
+
+- **Data.exportType** - Kategorija događaja za izvoz GDPR zahteva
+
+- **Data.feature** - Koristi se za grupisanje različitih događaja iste funkcije (Kartica profila)
+
+- **Data.hostAppRing** – Prsten pomoću kojeg je aplikacija distribuirana
+
+- **Data.OTelJS.Version** - Verzija OTel sistema za evidenciju
+
+- **Data.properties** - Dodatni metapodaci sakupljeni za svaki događaj na sledeći način:
+
+  - **cardCorrelationId** - Duplikat gore navedenog Data.appContextId 
+
+  - **cardPersonaCorrelationId** - Duplikat gore navedenog Data.cardCorrelationId
+
+  - **clientScenario** - Da biste prepoznali funkciju u aplikaciji odakle je otvorena kartica „Personalnost“
+
+  - **consumerCorrelationId** - Duplikat gore navedenog Data.clientCorrelationId 
+
+  - **externalAppSessionCorrelationId** – Globalni jedinstveni identifikator za aplikaciju za identifikovanje svih Kartica „Personalnost“ otvorenih u istoj podsesiji
+
+  - **hasPersonalInsightRing** - Uvid u Office ili LinkedIn mogu biti dostupni korisniku
+
+  - **immersiveProfileCorrelationId** - Globalni jedinstveni identifikator za sesiju prikaza proširenog profila
+
+  - **personaCorrelationId** - Globalni jedinstveni identifikator za jedinstvene „Personalnosti“ u sesiji
+
+  - **section** – Aktivni odeljak proširene vizitkarte
+
+- **Data.region** – Geografska oblast pozadinska usluga kartice profila na koji se korisnik povezuje
+
+- **Data.tenantAadObjectId** – Zakupac sa kojim je pretplata korisnika povezana. Omogućava nam da klasifikujemo probleme i otkrijemo da li je problem široko rasprostranjen ili je ograničen na skup korisnika ili određenog zakupca.
+
+- **Data.type** - Tip evidentiranih događaja, npr. praćenje, greška, događaj
+
+- **Data.userAadObjectId** – Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog (duplikat broja Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** – Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog 
+
+- **Data.UserInfo.MsaId** – Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog
+
+- **Data.UserInfo.OMSTenantId** - Zakupac sa kojim je povezana pretplata korisnika. Omogućava nam da klasifikujemo probleme i otkrijemo da li je problem široko rasprostranjen ili je ograničen na skup korisnika ili određenog zakupca.
+
+- **Data.userPuid** – Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog (duplikat od Data.UserInfo.MsaId)
+
+- **Data.version** – Verzija usluge (Kartica profila)
+
+- **DeviceInfo_Id** – Globalni jedinstveni identifikator uređaja za uređaj
+
+- **DeviceInfo_Make** – Brend operativnog sistema
+
+- **DeviceInfo_Model** – Model uređaja
+
+- **DeviceInfo_OsName** - Ime OS uređaja
+
+- **DeviceInfo_OsVersion** – Verzija operativnog sistema
+
+- **DeviceInfo_SDKUid** – Jedinstveno identifikuje uređaj iz perspektive telemetrije SDK-a.
+
+- **NetworkCost** - Označava tip mreže/vrstu troška (ograničena, ograničena iznad granice, itd.)
+
+- **NetworkCountry** - Poštanski broj zemlje pošiljaoca, na osnovu neočišćene IP adrese klijenta
+
 
 #### <a name="officelivepersonacarduseractionsopenedpersonacard"></a>Office.LivePersonaCard.UserActions.OpenedPersonaCard
 
@@ -4177,7 +4495,9 @@ Prikupljaju se sledeća polja:
 
 - **Data_SrcDoc_ServerType:long** - Unapred definisani skup vrednosti za tip servera (SharePoint, DropBox, WOPI)
 
-- **Data_SrcDoc_ServerVersion:long** - proverava da li je server baziran na Office14, Office15 ili Office16 DataSrcDocSessionId:long generiše GUID koji identifikuje instancu dokumenta u okviru iste sesije procesa
+- **Data_SrcDoc_ServerVersion:long** - proverava da li je server zasnovan na verziji Office14, Office15 ili Office16
+
+- **Data_SrcDoc_SessionId:long** - Generisani GUID koji identifikuje instance dokumenta tokom istog procesa sesije
 
 - **Data_SrcDoc_SharePointServiceContext:string** - Neprozirna niska, obično GridManagerID.FarmID. Korisna je za povezivanje evidencija na strani klijenta i na strani servera
 
@@ -7693,6 +8013,8 @@ Prikupljaju se sledeća polja:
 - **AssetId** - ID Procene za aplikaciju
 
 - **ErrorCode** – Ukupno potrošeno vreme
+
+- **IsAugmentationScenario** – Označava da li je petlja za proširenje odgovorna za pokretanje kontrole okvirnog sistema Office Solutions
 
 - **IsDebug**-označava da li je ta sesija namenjena za otklanjanje grešaka
 
