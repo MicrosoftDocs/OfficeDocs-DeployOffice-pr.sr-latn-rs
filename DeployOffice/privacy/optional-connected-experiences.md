@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: ab9404b93157875589f2625be51a9e30cc3d0795
-ms.sourcegitcommit: aaf8caeee3367ba6cf3c811d1ee3e43cfccc8b33
+ms.openlocfilehash: 3cba95a89c0a1f108485565101d10deea5a70a38
+ms.sourcegitcommit: 41232c8500173289b94a025044166f1d1e91e870
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "41024464"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "41917715"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
@@ -30,6 +30,8 @@ Ako imate poslovni ili školski nalog, administrator u organizaciji vam je možd
 > - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 > - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
 > - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office na Android uređajima](android-privacy-controls.md)
+>
+> Većina opcionalno povezanih iskustava takođe može da upravlja kontrolama privatnosti za povezana iskustva. Na primer, umetanjem slika na mreži takođe se može upravljati putem *Dozvoli upotrebu povezanih iskustava u sistemu Office koja preuzimaju postavku smernica za mrežni sadržaj*.
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>Ako koristite te usluge, koje uslove korišćenja treba da prihvatite?
 
