@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: 4410d94ea0179200fce0cd4dd16aebd62a21a2f6
-ms.sourcegitcommit: 4ec332a6f7457f08aa17fdbb7ee7f308a449887f
+ms.openlocfilehash: d5c5fc824e380741287f0393cdae947d1aabda2d
+ms.sourcegitcommit: 6f5af9a707a833b84202040f998361383f488d23
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "39962859"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42225006"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -56,7 +56,7 @@ Sledeća tabela sadrži listu osnovnih usluga za Office i njihov opis.
 | [Klikni i pokreni](#click-to-run-events) | „Klikni i pokreni“ je tehnologija instaliranja koja se koristi za instalaciju i ažuriranje sistema Office na operativnom sistemu Windows. Ona proverava da li postoje nove verzije sistema Office, a kada nova verzija postane dostupna, preuzima je i instalira. „Klikni i pokreni“ će otkrivati potrebu za preuzimanjem i instaliranjem Office ispravki, kao i bezbednosnih zakrpi.     |
 | [Usluga poboljšane konfiguracije (UPK)](#enhanced-configuration-service-ecs-events) | UPK omogućava korporaciji Microsoft da ponovo konfiguriše instalacije sistema Office, a da vi ne morate ponovo da ga instalirate. Koristi se za kontrolu postepenog objavljivanja funkcija i ažuriranja, dok se uticaj objavljivanja nadgleda preko dijagnostičkih podataka koji se prikupljaju. Takođe se koristi i za smanjivanje bezbednosnih problema i problema performansi uz pomoć funkcija ili ažuriranja. Osim toga, UPK podržava promene u konfiguraciji koje se odnose na dijagnostičke podatke kako bi se obezbedilo prikupljanje odgovarajućih događaja. |
 | [Licenciranje](#licensing-events)     | Licenciranje je usluga zasnovana na tehnologiji oblaka koja održava vašu Office aktivaciju tokom novih instalacija i čuva licencu na vašim uređajima nakon aktivacije. Ona registruje svaki od vaših uređaja i aktivira Office, provera status vaše pretplate na sistem Office i upravlja vašom šifrom proizvoda.    |
-|[Microsoft AutoUpdate (MAU)](#microsoft-autoupdate-mau-events)|Microsoft AutoUpdate (MAU) predstavlja tehnologiju koja se koristi za ažuriranje Microsoft aplikacija za MacOS, na primer za Office. MAU otkriva potrebu za ispravkama za aplikacije, kao i bezbednosnim ispravkama, preuzima ih i instalira.|
+|[Microsoft AutoUpdate (MAU)](#microsoft-autoupdate-mau-events)|Microsoft AutoUpdate (MAU) predstavlja tehnologiju koja se koristi za ažuriranje Microsoft aplikacija za macOS, na primer za Office. MAU otkriva potrebu za ispravkama za aplikacije, kao i bezbednosnim ispravkama, preuzima ih i instalira.|
 |[Sinhronizovanje programa OneNote](#onenote-sync-events)|OneNote za Mac podržava samo beležnice uskladištene na internetu u usluzi OneDrive ili SharePoint Online. OneNote za Mac neprestano sinhronizuje sve beleške korisnika sa uslugom OneDrive ili SharePoint Online. Na taj način omogućava korisnicima da otvaraju, pregledaju i uređuju beležnice na svim uređajima, tako da su one uvek ažurirane.
  [Konfiguracija usluga](#services-configuration-events)  | Konfiguracija usluga pruža mogućnost ažuriranja postavki konfiguracije za Office da bi se omogućile ili onemogućile funkcije klijenta. Ova funkcija se poziva svaki put kada se pokrene Office aplikacija i pruža detalje o ostalim konfiguracijama i uslugama sistema Office. Konfiguracija usluga takođe kontroliše koje usluge su određene kao osnovne.  |
 | [Telemetrija ](#telemetry-events)  | Usluga telemetrije se koristi za prikupljanje dijagnostičkih podataka iz Office aplikacija. Ona omogućava prikupljanje dijagnostičkih podataka koje generiše Office, i obaveznih i opcionalnih. Takođe je odgovorna za delimično prikupljanje neophodnih dijagnostičkih podataka o usluzi za Office.  |
@@ -78,6 +78,17 @@ Možete da vidite ove događaje tako što ćete koristiti Prikazivač dijagnosti
 
 Ovi događaji dijagnostičkih podataka se prikupljaju kada Office pokuša da preuzme token potvrde identiteta, ili tiho ili putem upita.
 
+### <a name="officeandroidmsaguesttoaad"></a>Office.Android.MSAGuestToAAD
+
+Ovaj događaj pomaže u razumevanju koliko korisnika se traži za unošenje lozinke za lični nalog, dok pristupaju radnom resursu, jer bi njihov lični nalog mogao da bude validan zakupac gosta na poslu.
+
+Ovi podaci nam pomažu da shvatimo koliko korisnika prolazi kroz muku zbog ponovnog pokretanja zahteva da prioritetno dobiju AAD tokene tiho na osnovu tvrdnje Microsoft računa SAML (Securiti Assertion Markup Language).
+
+Prikupljaju se sledeća polja:
+
+- **Tag** - Označava da je korisnik dobio poziv za prijavu za lični nalog, dok je pristupao resursima radnog naloga.
+
+
 ### <a name="officeidentityfbapromptwin32"></a>Office.Identity.FbaPromptWin32
 
 Prikuplja se kada Office prikaže korisniku Forms-Based-Auth upit za prijavljivanje zasnovan na formularu za potvrdu identiteta.
@@ -86,7 +97,7 @@ Pored tihog preuzimanja tokena, upit za potvrdu identiteta se koristi da se odre
 
 Upiti za prijavljivanje zasnovani na formularu za potvrdu identiteta (FBA - Forms-Based-Auth) se koriste u nekim scenarijima za lokalnu potvrdu identiteta i uglavnom se trudimo da se to ne dešava jer bi svi trebalo da koriste modernu identifikaciju (modern-Auth) zbog bezbednosnih ranjivosti koje se odnose na FBA.
 
-**Prikupljaju se sledeća polja:**
+Prikupljaju se sledeća polja:
 
   - **AuthScheme** - šema koja se koristi za potvrdu identiteta
 
@@ -2433,7 +2444,7 @@ Izveštava o radnjama preuzimanja datoteka kako bi se odredilo da li je operacij
 
 - **BytesFromLanPeers** – Bajtovi ravnopravnih uređaja na Lan mreži, samo za preuzimanja pomoću optimizacije isporučivanja 
 
-- **CancelledJobs** – Broj otkazanih zahteva u sesiji
+- **canceledJobs -**     Broj otkazanih zahteva u sesiji
 
 - **Connected** – Pokazuje da li postoji veza sa izvorom
 
@@ -2693,6 +2704,11 @@ Izveštava o preduzetim radnjama koje utiču na mašinu, koje su odredili podaci
 
 - **VersionToInstall** – Vrednost niske verzije 16.0.xxxxx.yyyyy sistema Office koja se instalira
 
+### <a name="officeserviceabilitymanagerinventoryaddonheartbeat"></a>Office.ServiceabilityManager.InventoryAddon.Heartbeat
+
+Ovaj se događaj koristi za sticanje standardnih metapodataka pri svakom pokretanju dodatka Inventory, koji je deo usluge Office Serviceabiliti Manager, a koristi se za informacije o Office inventaru na onim mašinama za koje se IT administrator odlučio. Metapodaci od specifičnog interesa ovde su ID sesije i koriste se za povezivanje s drugim podacima pohranjenim u oblačnom servisu korisnika.
+
+Ovaj događaj ne sadrži dodatna polja jer su samo metapodaci relevantni.
 
 ### <a name="officeserviceabilitymanagerinventoryaddonresults"></a>Office.ServiceabilityManager.InventoryAddon.Results
 
@@ -3187,7 +3203,7 @@ Kada novi računari imaju unapred instaliran sistem Office, a korisnici ne posed
 
 Prikupljaju se sledeća polja: 
 
-- **ActiveView** - Obaveštava o id dijaloga koji je prikazan korisniku
+- **ActiveView** - Obaveštava o ID dijaloga koji je prikazan korisniku
 
 - **CurrentOOBEMode** - Obaveštava o unapred instaliranom režimu (režim OOBE, kao što je AFO, OEM, itd.)
 
@@ -10321,9 +10337,9 @@ Prikupljaju se sledeća polja
 
 - **IsUsingRealtimeHierarchySync** – Pokazuje da li se koristi moderna sinhronizacija hijerarhije ili ne
 
-- **NotebookId** – ID beležnice
+- **NotebookId** - ID beležnice
 
-- **PageSyncUIState** – Niska statusa sinhronizovanja stranice, na primer UpToDate, Syncing, SaveOffline, SyncError itd. 
+- **PageSyncUIState** - Niska statusa sinhronizovanja stranice, na primer UpToDate, Syncing, SaveOffline, SyncError itd. 
 
 - **ServerGosid** – ID resursa za novu napravljenu stranicu sa neusaglašenostima
 
@@ -11472,7 +11488,7 @@ Proverava da li korisnici mogu da vide podatke u trenutku kada oni napuštaju ra
 
 Prikupljaju se sledeća polja:
 
-  - **DialogCancelled** - Da li je otkazan dijalog Prikazivača dijagnostičkih podataka
+  - **Dialogcanceled** - Da li je otkazan dijalog Prikazivača dijagnostičkih podataka
 
   - **NewState** - Novo stanje Prikazivača dijagnostičkih podataka
 
