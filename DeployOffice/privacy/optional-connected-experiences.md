@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: 3cba95a89c0a1f108485565101d10deea5a70a38
-ms.sourcegitcommit: 41232c8500173289b94a025044166f1d1e91e870
+ms.openlocfilehash: 0c48bd091998e12603e09fcc9b6ce42207e2d95b
+ms.sourcegitcommit: d07de5b2fc7ea02171b84ff34bf4db9686683ed5
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "41917715"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "42340916"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
@@ -59,7 +59,7 @@ Napomena: Postavka za privatnost opisana ispod ne kontroliše iskustva koja zaht
 
 ### <a name="help--contact-support"></a>Pomoć > Obraćanje podršci
 
-U programu Outlook za iOS i Android možete da prijavite probleme i da se povežete sa našim timom za podršku kroz **Postavke** > **Pomoć & Povratne informacije** > **Kontaktirajte podršku**. Ovo iskustvo pokreće usluga koju obezbeđuje HelpShift, a primenjivaće se[uslovi usluge](https://www.helpshift.com/legal/terms/) i [politika privatnosti](https://www.helpshift.com/legal/privacy/) od HelpShift-a.
+U programu Outlook za iOS i Android možete da prijavite probleme i da se povežete sa našim timom za podršku kroz **Postavke** > **Pomoć & Povratne informacije** > **Kontaktirajte podršku**. Ovo iskustvo zahteva usluge Microsoft korporacije koja se zove PowerLift i primenjuju se uslovi iz [Ugovora o pružanju Microsoft usluga](https://www.microsoft.com/servicesagreement) i [Izjave o privatnosti korporacije Microsoft](https://privacy.microsoft.com/).
 
 ### <a name="help--suggest-a-feature"></a>Pomoć > Predlaganje funkcije
 
