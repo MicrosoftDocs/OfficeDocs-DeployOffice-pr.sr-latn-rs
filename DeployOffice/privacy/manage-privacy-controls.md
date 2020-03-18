@@ -16,11 +16,11 @@ ms.custom:
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u sistemu Office 365 ProPlus pomoću regulatornih postavki.
 hideEdit: true
 ms.openlocfilehash: ee02079595157af2fea8883069a640b90ff962d2
-ms.sourcegitcommit: bec0b4de9d1e5444a5418d2c9d1434ee5489199a
+ms.sourcegitcommit: 6a091ca7e72cd7ce97793ebd0fdcfa2a6fa1a098
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "42556002"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42687242"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Koristite regulatorne postavke za upravljanje kontrolama privatnosti u programu Office 365 ProPlus
 
