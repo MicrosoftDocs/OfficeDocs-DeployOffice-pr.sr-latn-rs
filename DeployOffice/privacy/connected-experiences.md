@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije Office administratorima o povezanim iskustvima za Office, kao što su iskustva koja analiziraju sadržaj ili iskustva koja preuzimaju sadržaj na mreži.
 hideEdit: true
-ms.openlocfilehash: 6dc32a1456402624ab28e0acbe9c3ef85b6add9d
-ms.sourcegitcommit: 41232c8500173289b94a025044166f1d1e91e870
+ms.openlocfilehash: 8939bb1f3a3be8cf256f3bd6912abc95c8b09d2a
+ms.sourcegitcommit: 2475f3c2a61baf298a52c0bcdb0e7c9b9c0407ac
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "41917625"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "43166385"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sistemu Office
 
@@ -44,6 +44,7 @@ Sledeća tabela sadrži spisak povezanih iskustava koja analiziraju vaš sadrža
 | ----------- | ------------------ |
 | 3D mape\*    | [Prvi koraci uz 3D mape](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
 | Automatsko alternativni txt   | [Sve što treba da znate da biste napisali efikasan alternativni tekst](https://support.office.com/article/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
+| Tipovi podataka                  | [Tipovi Excel podataka: „Deonice“ i „Geografija“](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Diktiranje  | [Diktirajte glasom u sistemu Office](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
 | Uređivač    | [Uređivač je vaš pomoćnik za pisanje](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)  |
 | Ideje     | [Ideje u programu Excel](https://support.office.com/article/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
@@ -77,7 +78,6 @@ Sledeća tabela sadrži spisak povezanih iskustava koja preuzimaju sadržaj na i
 | ------------- | ------------- |
 | Aplikacije za kalendar| [Šta su to aplikacije za kalendar?](https://www.osupportweb.com/a/outlook-mobile/?p=android&s=getting-started-on-outlook&f=what-are-calendar-apps) |
 | Fontovi u oblaku                 | [Fontovi u oblaku, u sistemu Office](https://support.office.com/article/f7b009fe-037f-45ed-a556-b5fe6ede6adb)  |
-| Tipovi podataka                  | [Tipovi Excel podataka: „Deonice“ i „Geografija“](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Najčešća pitanja |Kada odaberete **Postavke** > **Pomoć & povratne informacije** > **Najčešća pitanja** u programu Outlook za iOS i Android, odvedeni ste u [https://www.osupportweb.com/a/outlook-mobile](https://www.osupportweb.com/a/outlook-mobile).|
 | Efekti zapisa mastilom                 | [Crtanje i zapisivanje mastilom u sistemu Office](https://support.office.com/article/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Umetanje ikona                | [Umetanje ikona u sistemu Microsoft Office](https://support.office.com/article/e2459f17-3996-4795-996e-b9a13486fa79)   |
@@ -109,7 +109,6 @@ Sledeća tabela sadrži spisak tih drugih povezanih iskustava i pruža veze za v
 | ------------- | ------------- |
 | @pominjanje | [Koristite @pominjanje u komentarima za označavanje nekoga za povratne informacije](https://support.office.com/article/644bf689-31a0-4977-a4fb-afe01820c1fd) |
 |Dijagram sa idejama (Visio)|[Kreiranje dijagrama sa idejama](https://support.office.com/article/642706c0-7e63-463b-8aa8-a9aa67367989)|
-| Ćaskanje | [Poboljšajte saradnju sa Ćaskanjem u sistemu Microsoft Office](https://support.office.com/article/1ecc6c7f-0b02-4baa-b9d9-c9d67023bedd)  |
 | Uskoro stiže (Outlook)  |[Uskoro stiže](https://support.office.com/article/d4b7db49-b4e0-4f98-a0dc-156952e551e2)  |
 | Obratite se podršci (Outlook) | Kada odaberete **Pomoć** > **Obratite se podršci** na traci|
 | Prilagođeni uvoz (Visio)  | [Uvoz podataka u oblike na vašem crtežu](https://support.office.com/article/d174b3fd-3079-42fd-81e8-2dbf8d38bb03) |
@@ -147,12 +146,12 @@ Možete da odaberete da li određeni tipovi povezanih iskustava, kao što su pov
 
 Ako ste prijavljeni pomoću Microsoft naloga, otvorite Office aplikaciju, kao što je Word, i idite na **Datoteka** > **Nalog** > **Privatnost naloga** > **Upravljanje postavkama**. Pod odeljkom **Povezana iskustva** možete da odaberete da li određeni tipovi povezanih iskustava, kao što su povezana iskustva koja analiziraju vaš sadržaj, mogu da se koriste. Ako ne odete na **Upravljanje postavkama**, sva povezana iskustva će vam biti dostupna.
 
-Ako ste prijavljeni pomoću poslovnog ili školskog naloga, administrator u vašoj organizaciji će odlučiti da li su vam ova povezana iskustva dostupna. Nećete videti izbore za ova povezana iskustva ako odete na **Datoteka** > **Nalog** > **Privatnost naloga** > **Upravljanje postavkama**.
+Ako ste prijavljeni pomoću poslovnog ili školskog naloga, administrator u vašoj organizaciji će odlučiti da li su vam ova povezana iskustva dostupna. Nećete videti izbore za ova povezana iskustva ako odete na stavke **Datoteka** > **Nalog** > **Privatnost naloga** > **Upravljanje postavkama**.
 
 > [!NOTE]
 > Ako koristite Office za Mac, otvorite bilo koju Office aplikaciju i izaberite meni aplikacije (kao što je Word ili Excel) > **Željene postavke** > **Privatnost**. To će otvoriti dijalog „Postavke privatnosti naloga“ gde možete da vidite opcije privatnosti.
 
-Ako ste administrator za vašu organizaciju, možete da koristite regulatorne postavke da utvrdite da li su ova povezana iskustva dostupna vašim korisnicima. Ako ne koristite ove regulatorne postavke, sva povezana iskustva će biti dostupna vašim korisnicima. Za više informacija o korišćenju ovih postavki smernica pogledajte sledeće članke: 
+Ako ste administrator za vašu organizaciju, možete da koristite regulatorne postavke da utvrdite da li su ova povezana iskustva dostupna vašim korisnicima. Ako ne koristite ove postavke smernica, sva povezana iskustva će biti dostupna vašim korisnicima. Za više informacija o korišćenju ovih postavki smernica pogledajte sledeće članke: 
 
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md).
@@ -161,9 +160,9 @@ Ako ste administrator za vašu organizaciju, možete da koristite regulatorne po
 
 Ako odlučite da isključite neke vrste povezanih iskustava, traka ili komande na meniju za ta povezana iskustva će biti nedostupna, ili ćete dobiti poruku o grešci kada pokušate da koristite ta povezana iskustva.
 
-Čak i ako odlučite da isključite ova povezana iskustva, pojedine Office funkcije će ostati na raspolaganju, kao što su sinhronizacija poštanskog sandučeta u programu Outlook i Timove i Skype za posao će i dalje raditi. Pored toga, postoji skup usluga koje su od suštinske važnosti za to kako Office funkcioniše i koje se ne mogu isključiti, kao što su usluga licenciranja koja potvrđuje da ste ispravno licencirani za korišćenje sistema Office.
+Čak i ako odlučite da isključite ova povezana iskustva, pojedine Office funkcije će ostati na raspolaganju, kao što su sinhronizacija poštanskog sandučeta u programu Outlook i Timove i Skype za posao će i dalje raditi. Pored toga, postoji skup usluga koje su od suštinske važnosti za način na koji Office funkcioniše i koje se ne mogu isključiti, kao što su usluga licenciranja koja potvrđuje da ste ispravno licencirani za korišćenje sistema Office.
 
-## <a name="related-topics"></a>Srodne teme
+## <a name="related-topics"></a>Povezane teme
 
 - [Pregled kontrola privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
 - [Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md)

@@ -13,16 +13,16 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: 0c48bd091998e12603e09fcc9b6ce42207e2d95b
-ms.sourcegitcommit: d07de5b2fc7ea02171b84ff34bf4db9686683ed5
+ms.openlocfilehash: 9cfbae596b686e2be484756b848514d4c36108df
+ms.sourcegitcommit: 2475f3c2a61baf298a52c0bcdb0e7c9b9c0407ac
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "42340916"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "43166295"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
-Ako imate poslovni ili školski nalog, administrator u organizaciji vam je možda omogućio da koristite jednu ili više usluga koje se baziraju na oblaku (takođe se nazivaju i „opcionalna povezana iskustva”) dok koristite Office 365 ProPlus aplikacije. Ove usluge u oblaku su opcionalne. Na vama je da li ih koristite. One se obezbeđuju u skladu sa uslovima [Microsoft ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjave o privatnosti](https://privacy.microsoft.com/). U nekim slučajevima, drugi uslovi se takođe mogu primenjivati. Ovaj članak navodi usluge u oblaku, dodatno objašnjava njihove uslove korišćenja i opisuje kako možete da ih uključite ili isključite u bilo kom trenutku.
+Ako imate poslovni ili školski nalog, administrator organizacije vam je možda omogućio da koristite neke usluge koje se baziraju na oblaku (nazivaju se i „opcionalna povezana iskustva”) dok koristite Office 365 ProPlus aplikacije. Ove usluge u oblaku su opcionalne. Na vama je da li ih koristite. One se obezbeđuju u skladu sa uslovima [Microsoft ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjave o privatnosti](https://privacy.microsoft.com/). U nekim slučajevima, drugi uslovi se takođe mogu primenjivati. Ovaj članak navodi usluge u oblaku, dodatno objašnjava njihove uslove korišćenja i opisuje kako možete da ih uključite ili isključite u bilo kom trenutku.
 
 > [!NOTE]
 > Ako ste administrator, pogledajte sledeće članke da biste saznali kako da date ili ograničite mogućnost korisnika da koriste opcionalna povezana iskustva:
@@ -63,7 +63,7 @@ U programu Outlook za iOS i Android možete da prijavite probleme i da se povež
 
 ### <a name="help--suggest-a-feature"></a>Pomoć > Predlaganje funkcije
 
-Predlaganje funkcije je iskustvo koje vam omogućava da dostavite svoje ideje u vezi vašeg korišćenja programa Outlook. Vaši predlozi se dostavljaju direktno nezavisnoj usluzi koja se zove UserVoice. Ako podnesete ideje koristeći Predloži funkciju, primenjuju se [uslovi korišćenja usluga ](https://outlook.uservoice.com/tos)i [politika privatnosti](https://outlook.uservoice.com/tos#privacy-policy) usluge UserVoice.
+Predlaganje funkcije je iskustvo koje vam omogućava da prosledite svoje ideje u vezi sa korišćenjem programa Outlook ili Excel. Vaši predlozi se dostavljaju direktno nezavisnoj usluzi koja se zove UserVoice. Ako podnesete ideje koristeći Predloži funkciju, primenjuju se [uslovi korišćenja usluga ](https://outlook.uservoice.com/tos)i [politika privatnosti](https://outlook.uservoice.com/tos#privacy-policy) usluge UserVoice.
 
 ### <a name="insert-online-video"></a>Umetanje video zapisa na mreži
 
@@ -75,7 +75,7 @@ MERP se povezuje sa uslugom Watson.microsoft.com kako bi se poslali dijagnostič
 
 ### <a name="office-store"></a>Office prodavnica 
 
-Kada koristite Office prodavnicu, vaša upotreba same lokacije prodavnice je licencirana [Microsoft ugovorom o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjavom o privatnosti](https://privacy.microsoft.com/). Međutim, svi [programski dodaci za Office](https://support.office.com/article/16278816-1948-4028-91E5-76DCA5380F8D) koje preuzimate preko Office prodavnice su pokriveni uslovima korišćenja provajdera programskog dodatka. To mogu da budu različite organizacije ili preduzeća, a neke mogu da naplate njihovo korišćenje. Morate da proverite dozvole, izjavu o privatnosti i uslove licenciranja za svaki programski dodatak da znate koji uslovi važe i odlučite da li želite da prihvatite uslove korišćenja koje nudi organizacija.
+Kada koristite Office prodavnicu, vaša upotreba same lokacije prodavnice je licencirana [Microsoft ugovorom o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjavom o privatnosti](https://privacy.microsoft.com/). Međutim, svi [programski dodaci za Office](https://support.office.com/article/16278816-1948-4028-91E5-76DCA5380F8D) koje preuzimate preko Office prodavnice pokriveni su uslovima korišćenja dobavljača programskog dodatka. To mogu da budu različite organizacije ili preduzeća, a neke mogu da naplate njihovo korišćenje. Morate da proverite dozvole, izjavu o privatnosti i uslove licenciranja za svaki programski dodatak da znate koji uslovi važe i odlučite da li želite da prihvatite uslove korišćenja koje nudi organizacija.
 
 ### <a name="research"></a>Istraživanje
 
@@ -91,7 +91,7 @@ Kada koristite Office prodavnicu, vaša upotreba same lokacije prodavnice je lic
 
 ## <a name="how-to-determine-if-your-admin-has-given-you-the-ability-to-use-optional-connected-experiences"></a>Kako da odredite da li vam je administrator dao mogućnost korišćenja opcionalnih povezanih iskustava
 
-Da biste utvrdili da li vam je administrator dao mogućnost da koristite bilo koja opcionalna povezana iskustva u Office 365 ProPlus aplikaciji na uređaju koji koristi Windows, idite na **Datoteka** > **Nalog**  >  **Privatnost naloga** i izaberite **Upravljanje postavkama**. Ako vam administrator nije dao kontrolu, videćete poruku sa obaveštenjem da „administrator u organizaciji upravlja vašim postavkama privatnosti i odlučio je da onemogući opcionalna povezana iskustva”.
+Da biste utvrdili da li vam je administrator dao mogućnost da koristite bilo koja opcionalna povezana iskustva u Office 365 ProPlus aplikaciji na uređaju koji koristi Windows, idite na **Datoteka** > **Nalog**  >  **Privatnost naloga** i izaberite **Upravljanje postavkama**. Ako vam administrator nije dao kontrolu, videćete poruku sa obaveštenjem da „Administrator organizacije upravlja vašim postavkama privatnosti i odlučio je da onemogući opcionalna povezana iskustva”.
 
 Ako koristite Office za Mac, otvorite bilo koju Office aplikaciju i izaberite meni aplikacije (kao što je Word ili Excel) > **Željene postavke** > **Privatnost**. To će otvoriti dijalog „Postavke privatnosti naloga“ gde možete da vidite opcije privatnosti.
 
