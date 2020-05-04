@@ -1,4 +1,4 @@
-# Privatnost u usluzi Office 365 ProPlus
+# Privatnost za Microsoft 365 Apps za preduzeće
 
 ## [Pregled kontrola privatnosti](overview-privacy-controls.md)
 
