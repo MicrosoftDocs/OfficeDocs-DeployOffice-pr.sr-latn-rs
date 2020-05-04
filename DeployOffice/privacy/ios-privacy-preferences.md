@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju postavkama privatnosti na iOS uređajima.
 hideEdit: true
-ms.openlocfilehash: d1a14d2e1bfe45710255467fcbce9ac4af2c9cb7
-ms.sourcegitcommit: 903d6bac7d8b7d8003863ac778c0b5bbdfa7a62a
+ms.openlocfilehash: 40fc1ec1f5b2abc587e1b5224dc7fe0a5a656f33
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "37604297"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43992120"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-on-ios-devices"></a>Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje
 
@@ -54,9 +54,18 @@ Rečnik je predstavljen kao skup parova ključeva/vrednosti u XML formatu. Na pr
 
 Nakon što ga pošaljete na uređaj, rečnik za konfiguraciju će se nalaziti pod `com.apple.managed.configuration` ključem, gde će pročitati kada se pokrene aplikacija Office.
 
+> [!NOTE]
+> Možete da koristite i Office uslugu smernica u oblaku i ove 4 postavke smernica:
+> - Podesite nivo dijagnostičkih podataka klijentskog softvera koje Office šalje korporaciji Microsoft
+> - Dozvolite upotrebu povezanih iskustava koja analiziraju sadržaj u sistemu Office
+> - Dozvolite upotrebu povezanih iskustava u sistemu Office koja preuzimaju mrežni sadržaj
+> - Dozvolite upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office
+>
+> Za više informacija o korišćenju usluge smernica oblaka za Office pogledajte članak [Pregled usluge smernica oblaka za Office](../overview-office-cloud-policy-service.md).
+
 ## <a name="preference-setting-for-diagnostic-data"></a>Postavka željenih opcija za dijagnostičke podatke
 
-Dijagnostički podaci se koriste da bi Office bio bezbedan i ažuriran, da bi se otkrili i otklonili problemi i da bi se poboljšao proizvod. Za više informacija pogledajte [Dijagnostički podaci koji se šalju iz Office 365 ProPlus korporaciji Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
+Dijagnostički podaci se koriste da bi Office bio bezbedan i ažuriran, da bi se otkrili i otklonili problemi i da bi se poboljšao proizvod. Više informacija potražite u članku [Dijagnostički podaci koji se šalju iz Microsoft 365 aplikacija za velika preduzeća korporaciji Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft).
 
 |||
 |:-----|:-----|
@@ -64,9 +73,9 @@ Dijagnostički podaci se koriste da bi Office bio bezbedan i ažuriran, da bi se
 |**Tip podataka**  | Niska |
 |**Moguće vrednosti**  | `BasicDiagnosticData` *(ovo postavlja nivo na Obavezno)* <br/> `FullDiagnosticData` *(ovo postavlja nivo na Opcionalno)* <br/> `ZeroDiagnosticData` *(ovo postavlja nivo na Nijedno)* |
 
-Ako ne postavite ovu željenu postavku, korporaciji Microsoft šalju se samo obavezni dijagnostički podaci ako se korisnici sa pretplatom na Office 365 prijave pomoću poslovnog ili školskog naloga Osim toga, ti korisnici ne mogu da promene nivo dijagnostičkih podataka bez obzira na to kako ste postavili ove željene opcije.
+Ako ne postavite ovu željenu postavku, korporaciji Microsoft šalju se samo obavezni dijagnostički podaci ako se korisnici sa pretplatom na Office 365 (ili Microsoft 365) prijave pomoću poslovnog ili školskog naloga. Osim toga, ti korisnici ne mogu da promene nivo dijagnostičkih podataka bez obzira na to kako ste postavili ove željene opcije.
 
-Za druge korisnike, kao što su kućni korisnici sa Office 365 pretplatom, šalju se samo obavezni dijagnostički podaci, osim ako korisnik odabere da pošalje i opcionalne dijagnostičke podatke tako što će posetiti **Postavke** > **Postavke privatnosti**.
+Za druge korisnike, kao što su kućni korisnici sa Office 365 (ili Microsoft 365) pretplatom, šalju se samo obavezni dijagnostički podaci, osim ako korisnik odabere da pošalje i opcionalne dijagnostičke podatke tako što će posetiti **Postavke** > **Postavke privatnosti**.
 
 
 ## <a name="preference-setting-for-connected-experiences-that-analyze-your-content"></a>Postavka željenih opcija za povezana iskustva koja analiziraju vaš sadržaj
@@ -82,9 +91,9 @@ Povezana iskustva koja analiziraju vaš sadržaj su iskustva koja koriste vaš O
 
 Ako ne podesite ovu željenu opciju, povezana iskustva koja analiziraju sadržaj dostupna su korisnicima.
 
-Ako korisnik ima Office 365 pretplatu i ako se prijavi pomoću poslovnog ili školskog naloga, korisnik ne može da isključi povezana iskustva koja analiziraju sadržaj.
+Ako korisnik ima Office 365 (ili Microsoft 365) pretplatu i ako se prijavi pomoću poslovnog ili školskog naloga, korisnik ne može da isključi povezana iskustva koja analiziraju sadržaj.
 
-Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365, korisnik može da odabere da isključi povezana iskustva koja analiziraju sadržaj tako što posetiti **Postavke** > **Postavke privatnosti**.
+Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365 (ili Microsoft 365), korisnik može da odabere da isključi povezana iskustva koja analiziraju sadržaj tako što posetiti **Postavke** > **Postavke privatnosti**.
 
 ## <a name="preference-setting-for-connected-experiences-that-download-online-content"></a>Postavka željenih opcija za povezana iskustva koja preuzimaju sadržaj na mreži
 
@@ -99,9 +108,9 @@ Povezana iskustva koja preuzimaju sadržaj na internetu su iskustva koja vam omo
 
 Ako ne podesite ovu željenu opciju, povezana iskustva koja preuzimaju sadržaj na mreži dostupna su korisnicima.
 
-Ako korisnik ima Office 365 pretplatu i ako se prijavi pomoću poslovnog ili školskog naloga, korisnik ne može da isključi povezana iskustva koja preuzimaju sadržaj na mreži.
+Ako korisnik ima Office 365 (ili Microsoft 365) pretplatu i ako se prijavi pomoću poslovnog ili školskog naloga, korisnik ne može da isključi povezana iskustva koja preuzimaju sadržaj na mreži.
 
-Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365, korisnik može da odabere da isključi povezana iskustva koja preuzimaju sadržaj tako što posetiti **Postavke** > **Postavke privatnosti**.
+Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365 (ili Microsoft 365), korisnik može da odabere da isključi povezana iskustva koja preuzimaju sadržaj tako što posetiti **Postavke** > **Postavke privatnosti**.
 
 ## <a name="preference-setting-for-optional-connected-experiences"></a>Postavka željenih opcija za opcionalna povezana iskustva
 
@@ -114,6 +123,6 @@ Pored povezanih iskustava spomenutih iznad, postoje neka opcionalna povezana isk
 |**Moguće vrednosti**  | `TRUE` *(omogućeno)* <br/> `FALSE` *(onemogućeno)*|
 
 
-Ako ne postavite ovu željenu postavku, opcionalna povezana iskustva su dostupna korisnicima sa pretplatom na Office 365 koji se prijave pomoću poslovnog ili školskog naloga. Ako niste postavili ovu željenu opciju na FALSE, ovi korisnici mogu da isključe opcionalna povezana iskustva tako što će otići na **Postavke** > **Postavke privatnosti**.
+Ako ne postavite ovu željenu postavku, opcionalna povezana iskustva su dostupna korisnicima sa pretplatom na Office 365 (ili Microsoft 365) koji se prijave pomoću poslovnog ili školskog naloga. Ako niste postavili ovu željenu opciju na FALSE, ovi korisnici mogu da isključe opcionalna povezana iskustva tako što će otići na **Postavke** > **Postavke privatnosti**.
 
-Za druge korisnike, kao što su kućni korisnici sa Office 365 pretplatom, ne postoji opcija za isključivanje opcionalnih povezanih iskustava.
+Za druge korisnike, kao što su kućni korisnici sa Office 365 (ili Microsoft 365) pretplatom, ne postoji opcija za isključivanje opcionalnih povezanih iskustava.

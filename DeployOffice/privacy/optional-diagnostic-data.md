@@ -13,20 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije Office administratorima o opcionalno dijagnostičkim podacima u sistemu Office, uključujući neke primere događaja.
 hideEdit: true
-ms.openlocfilehash: ab40e68df1ed91b1aff7510383d47967e8f13ccb
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: 0190c29a017b35d945e6a1d540e1560dfab47a4c
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067109"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43993156"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Opcionalni dijagnostički podaci za Office
 
 > [!IMPORTANT]
 > Informacije u ovom članku odnose se na verziju 1904 ili kasnije od sledećih Office klijentskih softvera instaliranih na računaru sa operativnim sistemom Windows:
-> - Office 365 ProPlus i Office 365 Business
-> - Office 365 Personal, Office 365 Home ili druge verzije sistema Office koje su deo pretplate na Office 365.
-> - Project i Visio koji se dobijaju uz neke planove pretplata, kao što je plan za Project Online Professional ili Visio Online Plan 2.
+> - Microsoft 365 Apps za preduzeće (prethodno poznato kao Office 365 ProPlus)
+> - Microsoft 365 Apps za manje firme (prethodno poznato kao Office 365 Business)
+> - Microsoft 365 Personal, Microsoft 365 Family ili druge verzije sistema Office koje su deo Microsoft 365 pretplate.
+> - Project i Visio aplikacije za računare koje se dovijaju uz neke planove pretplate, na primer, Project Plan 5 ili Visio Plan 2.
 >
 > Informacije se odnose i na verziju 16.28 ili noviju verziju sledećih Office aplikacija za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
@@ -47,8 +48,8 @@ Za više informacija o dijagnostičkim podacima pogledajte sledeće članke:
 
 Ako ste administrator organizacije, možda će vas zanimati i sledeće:
 
-- [Pregled kontrola privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
-- [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
+- [Pregled kontrola privatnosti za Microsoft 365 Apps za preduzeće](overview-privacy-controls.md)
+- [Korišćenje postavki smernica za upravljanje kontrolama privatnosti za Microsoft 365 Apps za preduzeće](manage-privacy-controls.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office na Android uređajima](android-privacy-controls.md)

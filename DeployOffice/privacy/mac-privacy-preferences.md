@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u sistemu Office za Mac.
 hideEdit: true
-ms.openlocfilehash: a1fdd9f7d0fe2095b3a32f61f885f724f2259188
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: d23d1288adf823888c900b44acd5bc905037cd94
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510227"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43992887"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-for-mac"></a>Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac
 
@@ -34,16 +34,27 @@ Pored toga, postoji nova željena postavka koja se odnosi na dijalog **Obavešte
 Više informacija o dijagnostičkim podacima i povezanim iskustvima potražite u članku [Pregled kontrola privatnosti](overview-privacy-controls.md).
 
 > [!NOTE]
-> - Za više informacija o sličnim postavkama za Office na računaru koji koristi Windows pogledajte članak [Koristite regulatorne postavke za upravljanje kontrolama privatnosti za Office 365 ProPlus](manage-privacy-controls.md).
-> - Za više informacija o sličnim postavkama za Office na računaru koji koristi uređajima koji koriste iOS pogledajte članak [Koristite regulatorne postavke za upravljanje kontrolama privatnosti za Office na iOS uređajima](ios-privacy-preferences.md).
+> - Više informacija o sličnim postavkama za Office na računaru koji koristi Windows potražite u članku [Koristite postavke smernica za upravljanje kontrolama privatnosti za Microsoft 365 Apps za preduzeće](manage-privacy-controls.md).
+> - Za više informacija o sličnim postavkama za Office na uređajima koji koriste iOS pogledajte članak [Koristite regulatorne postavke za upravljanje kontrolama privatnosti za Office na iOS uređajima](ios-privacy-preferences.md).
 
 ## <a name="setting-preferences"></a>Postavljanje željenih postavki
 
 Ove nove postavke željenih opcija su CFPreferences API kompatibilne i mogu se postaviti pomoću `defaults` komande u Terminalu i nametnuti putem Configuration Profile ili Mobile Device Management (MDM) servera. Kada su željene postavke nametnute, korisnik ne može da promeni vrednosti, a sve kontrole unutar aplikacije će biti onemogućene.
 
+> [!NOTE]
+> Možete da koristite i Office uslugu smernica u oblaku i ovih 5 postavki smernica:
+> - Podesite nivo dijagnostičkih podataka klijentskog softvera koje Office šalje korporaciji Microsoft
+> - Dozvolite upotrebu povezanih iskustava koja analiziraju sadržaj u sistemu Office
+> - Dozvolite upotrebu povezanih iskustava u sistemu Office koja preuzimaju mrežni sadržaj
+> - Dozvolite upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office
+> - Dozvolite upotrebu povezanih iskustava u sistemu Office
+>
+> Više informacija o korišćenju Office usluge smernica u oblaku potražite u članku [Pregled Office usluge smernica u oblaku](../overview-office-cloud-policy-service.md).
+
+
 ## <a name="preference-setting-for-diagnostic-data"></a>Postavka željenih opcija za dijagnostičke podatke
 
-Dijagnostički podaci se koriste da bi Office bio bezbedan i ažuriran, da bi se otkrili i otklonili problemi i da bi se poboljšao proizvod. Za više informacija pogledajte [Dijagnostički podaci koji se šalju iz Office 365 ProPlus korporaciji Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
+Dijagnostički podaci se koriste da bi Office bio bezbedan i ažuriran, da bi se otkrili i otklonili problemi i da bi se poboljšao proizvod. Više informacija potražite u članku [Dijagnostički podaci koji se šalju iz usluge Microsoft 365 Apps za preduzeće korporaciji Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft).
 
 |||
 |:-----|:-----|
@@ -53,13 +64,13 @@ Dijagnostički podaci se koriste da bi Office bio bezbedan i ažuriran, da bi se
 |**Moguće vrednosti**  | `BasicDiagnosticData` *(ovo postavlja nivo na Obavezno)* <br/> `FullDiagnosticData` *(ovo postavlja nivo na Opcionalno)* <br/> `ZeroDiagnosticData` *(ovo postavlja nivo na Nijedno)* |
 |**Dostupnost** |16.28 i novije verzije |
 
-Počevši od novijih instalacija verzije 16.30, ako ne postavite ovu željenu postavku, samo se obavezni dijagnostički podaci šalju korporaciji Microsoft ako se korisnici sa pretplatom na Office 365 prijave pomoću poslovnog ili školskog naloga ili ako korisnici imaju količinsku licenciranu verziju sistema Office 2019 za Mac. Osim toga, ti korisnici ne mogu da promene nivo dijagnostičkih podataka bez obzira na to kako ste postavili ove željene postavke.
+Počevši od novijih instalacija verzije 16.30, ako ne postavite ovu željenu postavku, samo se obavezni dijagnostički podaci šalju korporaciji Microsoft ako se korisnici sa pretplatom na Office 365 (ili Microsoft 365) prijave pomoću poslovnog ili školskog naloga ili ako korisnici imaju količinski licenciranu verziju sistema Office 2019 za Mac. Osim toga, ti korisnici ne mogu da promene nivo dijagnostičkih podataka bez obzira na to kako ste postavili ove željene opcije.
 
 > [!NOTE]
 > - Ako instalirate verziju 16.28 ili 16.29 i ne postavite ovu željenu postavku, i opcionalni i neophodni dijagnostički podaci šalju se korporaciji Microsoft. Ako se potom nadogradite na verziju 16.30 ili neku noviju verziju, i opcionalni i obavezni dijagnostički podaci se svakako šalju korporaciji Microsoft, osim ako ovu željenu postavku ne postavite na drugačiju vrednost.
 > - Ako postavite ovu željenu postavku, ona će se takođe primenjivati na verziju 1.00.217856 i novije verzije aplikacije Teams za Mac i na verziju 16.28 i novije verzije programa Skype za posao za Mac.
 
-Za druge korisnike, kao što su kućni korisnici sa Office 365 pretplatom, šalju se samo obavezni dijagnostički podaci, osim ako korisnik odabere da pošalje i opcionalne dijagnostičke podatke tako što će posetiti **Željene opcije** > **Privatnost**.
+Za druge korisnike, kao što su kućni korisnici sa Office 365 (ili Microsoft 365) pretplatom, šalju se samo obavezni dijagnostički podaci, osim ako korisnik ne odabere da šalje i opcionalne dijagnostičke podatke tako što će posetiti **Željene opcije** > **Privatnost**.
 
 ## <a name="preference-setting-for-connected-experiences-that-analyze-your-content"></a>Postavka željenih opcija za povezana iskustva koja analiziraju vaš sadržaj
 
@@ -75,9 +86,9 @@ Povezana iskustva koja analiziraju vaš sadržaj su iskustva koja koriste vaš O
 
 Ako ne podesite ovu željenu opciju, povezana iskustva koja analiziraju sadržaj dostupna su korisnicima. 
 
-Ako korisnik ima Office 365 pretplatu i ako se prijavi pomoću poslovnog ili školskog naloga ili ako korisnik ima verziju sistema Office 2019 za količinsku licencu za Mac, korisnik ne može da isključi povezana iskustva koja analiziraju sadržaj.
+Ako korisnik ima pretplatu na Office 365 (ili Microsoft 365) i ako se prijavi pomoću poslovnog ili školskog naloga ili ako korisnik ima količinski licenciranu verziju sistema Office 2019 za Mac, korisnik ne može da isključi povezana iskustva koja analiziraju sadržaj.
 
-Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365, korisnik može da odabere da isključi povezana iskustva koja analiziraju sadržaj tako što posetiti **Željene opcije** > **Privatnost**.
+Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365 (ili Microsoft 365), korisnik može da odabere da isključi povezana iskustva koja analiziraju sadržaj tako što će posetiti **Željene opcije** > **Privatnost**.
 
 ## <a name="preference-setting-for-connected-experiences-that-download-online-content"></a>Postavka željenih opcija za povezana iskustva koja preuzimaju sadržaj na mreži
 
@@ -93,9 +104,9 @@ Povezana iskustva koja preuzimaju sadržaj na internetu su iskustva koja vam omo
 
 Ako ne podesite ovu željenu opciju, povezana iskustva koja preuzimaju sadržaj na mreži dostupna su korisnicima.
 
-Ako korisnik ima Office 365 pretplatu i ako se prijavi pomoću poslovnog ili školskog naloga ili ako korisnik ima neku količinski licenciranu verziju sistema Office 2019 za Mac, korisnik ne može da isključi povezana iskustva koja preuzimaju sadržaj na mreži.
+Ako korisnik ima pretplatu na Office 365 (ili Microsoft 365) i ako se prijavi pomoću poslovnog ili školskog naloga ili ako korisnik ima količinski licenciranu verziju sistema Office 2019 za Mac, korisnik ne može da isključi povezana iskustva koja preuzimaju sadržaj sa veba.
 
-Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365, korisnik može da odabere da isključi povezana iskustva koja preuzimaju sadržaj tako što će posetiti **Željene opcije** > **Privatnost**.
+Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365 (ili Microsoft 365), korisnik može da odabere da isključi povezana iskustva koja preuzimaju sadržaj sa veba tako što će posetiti **Željene opcije** > **Privatnost**.
 
 ## <a name="preference-setting-for-optional-connected-experiences"></a>Postavka željenih opcija za opcionalna povezana iskustva
 
@@ -109,9 +120,9 @@ Pored povezanih iskustava spomenutih iznad, postoje neka opcionalna povezana isk
 |**Moguće vrednosti**  | `TRUE` *(omogućeno)* <br/> `FALSE` *(onemogućeno)*|
 |**Dostupnost** |16.28 i novije verzije |
 
-Ako ne postavite ovu željenu postavku, opcionalna povezana iskustva su dostupna korisnicima sa pretplatom na Office 365 koji se prijave pomoću poslovnog ili školskog naloga ili korisnicima koji imaju količinski licenciranu verziju sistema Office 2019 za Mac. Ako niste postavili ovu željenu opciju na `FALSE`, ovi korisnici mogu da isključe opcionalna povezana iskustva tako što će posetiti **Željene opcije** > **Privatnost**.
+Ako ne podesite ovu željenu postavku, opcionalna povezana iskustva su dostupna korisnicima sa pretplatom na Office 365 (ili Microsoft 365) koji se prijave pomoću poslovnog ili školskog naloga ili korisnicima koji imaju količinski licenciranu verziju sistema Office 2019 za Mac. Ako niste postavili ovu željenu opciju na `FALSE`, ovi korisnici mogu da isključe opcionalna povezana iskustva tako što će posetiti **Željene opcije** > **Privatnost**.
 
-Za druge korisnike, kao što su kućni korisnici sa Office 365 pretplatom, ne postoji opcija za isključivanje opcionalnih povezanih iskustava.
+Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365 (ili Microsoft 365), ne postoji opcija za isključivanje opcionalnih povezanih iskustava.
 
 ## <a name="preference-setting-for-most-connected-experiences"></a>Postavka željenih opcija za većinu povezanih iskustava
 
@@ -136,9 +147,9 @@ Pored toga, ako postavite ovu željenu opciju na `FALSE`, većina drugih povezan
 
 Čak i ako postavite ovu željenu opciju na `FALSE`, pojedine funkcije će ostati na raspolaganju, kao što su sinhronizacija poštanskog sandučeta u programu Outlook, a Teams i Skype za posao će i dalje raditi. [Osnovne usluge](essential-services.md), kao što je usluga licenciranja koja potvrđuje da ste ispravno licencirani da koristite Office, će ostati na raspolaganju.
 
-Ako korisnik ima Office 365 pretplatu i ako se prijavi pomoću poslovnog ili školskog naloga ili ako korisnik ima verziju sistema Office 2019 za količinsku licencu za Mac, korisnik ne može da isključi većinu povezanih iskustava.
+Ako korisnik ima pretplatu na Office 365 (ili Microsoft 365) i ako se prijavi pomoću poslovnog ili školskog naloga ili ako korisnik ima količinski licenciranu verziju sistema Office 2019 za Mac, korisnik ne može da isključi većinu povezanih iskustava.
 
-Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365, korisnik može da odabere da isključi povezana iskustva tako što će posetiti **Željene opcije** > **Privatnost**.
+Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365 (ili Microsoft 365), korisnik može da odabere da isključi većinu povezanih iskustava tako što će posetiti **Željene opcije** > **Privatnost**.
 
 ## <a name="preference-setting-for-the-required-data-notice-dialog-for-microsoft-autoupdate"></a>Postavka željenih opcija za dijalog Obaveštenje o obaveznim podacima za Microsoft AutoUpdate
 

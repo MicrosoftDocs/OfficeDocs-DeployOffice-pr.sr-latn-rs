@@ -13,20 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije Office administratorima o povezanim iskustvima za Office, kao što su iskustva koja analiziraju sadržaj ili iskustva koja preuzimaju sadržaj na mreži.
 hideEdit: true
-ms.openlocfilehash: 8939bb1f3a3be8cf256f3bd6912abc95c8b09d2a
-ms.sourcegitcommit: 2475f3c2a61baf298a52c0bcdb0e7c9b9c0407ac
+ms.openlocfilehash: bcf28caae666900deacbd0effe83a2fae383c41d
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "43166385"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43993021"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sistemu Office
 
 > [!IMPORTANT]
 > Informacije u ovom članku odnose se na verziju 1904 ili kasnije od sledećih Office klijentskih softvera instaliranih na računaru sa operativnim sistemom Windows:
-> - Office 365 ProPlus i Office 365 Business
-> - Office 365 Personal, Office 365 Home ili druge verzije sistema Office koje su deo pretplate na Office 365.
-> - Project i Visio koji se dobijaju uz neke planove pretplata, kao što je plan za Project Online Professional ili Visio Online Plan 2.
+> - Microsoft 365 Apps za preduzeće (prethodno poznato kao Office 365 ProPlus)
+> - Microsoft 365 Apps za manje firme (prethodno poznato kao Office 365 Business)
+> - Microsoft 365 Personal, Microsoft 365 Family ili druge verzije sistema Office koje su deo Microsoft 365 pretplate.
+> - Project i Visio aplikacije za računare koje se dovijaju uz neke planove pretplate, na primer, Project Plan 5 ili Visio Plan 2.
 >
 > Informacije se odnose i na verziju 16.28 ili noviju verziju sledećih Office aplikacija za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 >
@@ -48,7 +49,7 @@ Sledeća tabela sadrži spisak povezanih iskustava koja analiziraju vaš sadrža
 | Diktiranje  | [Diktirajte glasom u sistemu Office](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
 | Uređivač    | [Uređivač je vaš pomoćnik za pisanje](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)  |
 | Ideje     | [Ideje u programu Excel](https://support.office.com/article/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
-| Mastilo u tekst, mastilo u oblik, mastilo u matematički izraz | [Promenite rukopis u oblike, tekst ili matematički izraz u programu PowerPoint za Office 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
+| Mastilo u tekst, mastilo u oblik, mastilo u matematički izraz | [Promenite rukopis u oblike, tekst ili matematički izraz u programu PowerPoint za Microsoft 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Umetanje podataka iz slike| [Umetanje podataka iz slike](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 | Natpisi i titlovi uživo |  [Prisutne u realnom vremenu, automatski titlovi ili podnaslovi u programu PowerPoint](https://support.office.com/article/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
 | Grafikon mape\*    | [Pravljenje grafikona mape](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b)  |
@@ -119,16 +120,16 @@ Sledeća tabela sadrži spisak tih drugih povezanih iskustava i pruža veze za v
 | Fokusirano prijemno sanduče (Outlook) |[Fokusirano prijemno sanduče za Outlook](https://support.office.com/article/f445ad7f-02f4-4294-a82e-71d8964e3978)  |
 | Information Rights Management |[Information Rights Management u sistemu Office](https://support.office.com/Article/c7a70797-6b1e-493f-acf7-92a39b85e30c)  |
 | LinkedIn kontakt kartica |[Povezivanje LinkedIn i Microsoft naloga](https://support.office.com/article/dc81cc70-4d64-4755-9f1c-b9536e34d381)  |
+| Programski dodaci za Office\* | [Upravljanje primenom programskih dodataka u Microsoft 365 centru administracije](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins) |
 | Povratne informacije za Office |[Kako da pošaljem povratne informacije o sistemu Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Podrška za Office (Kontaktirajte nas) |Kada odaberete **Pomoć** > **Obratite se podršci** na traci |
-| Programski dodaci za Office 365\* | [Upravljanje primenom Office 365 programskih dodataka u Microsoft 365 centru administracije](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins) |
 | Organizacioni grafikon (Visio) |[Pravljenje Visio organizacionog grafikona](https://support.office.com/article/abb3dd17-2692-439f-9945-3a015767d96a)  |
 | Outlook Social Connector | [Uključivanje programskog dodatka Outlook Social Connector](https://support.office.com/article/255447E8-82CD-48E7-9B79-1DD8721A2907) |
 | Outlook UserVoice\* | [Kako da pošaljem povratne informacije o sistemu Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11) |
 | Nedavni dokumenti |[Otvaranje datoteka iz menija „Datoteka“](https://support.office.com/article/97f087d8-3136-4485-8e86-c5b12a8c4176)  |
 | Pomoćnik za pisanje biografije (ili pomoćnik za Biografiju)\* |[Napišite najbolju biografiju uz pomoć sa sajta LinkedIn i uz Pomoćnik za pisanje biografije](https://support.office.com/article/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a")  |
 | Nalazač prostora (Outlook)|[Kako da kontrolišete Nalazač prostora u programu Outlook](https://support.microsoft.com/help/2673231/how-to-control-the-room-finder-in-outlook)  |
-| Bezbedne veze |[Office 365 ATP bezbedne veze](https://docs.microsoft.com/office365/securitycompliance/atp-safe-links)  |
+| Bezbedne veze |[ATP bezbedne veze](https://docs.microsoft.com/office365/securitycompliance/atp-safe-links)  |
 | Oznake za osetljivost |[Primenite oznake za osetljivost na svoje dokumente i e-poštu u sistemu Office](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)  |
 | Deljenje  |[Deljenje dokumenta (Excel)](https://support.office.com//article/8D8A52BB-03C3-4933-AB6C-330AABF1E589) <br/>[Deljenje dokumenta (PowerPoint)](https://support.office.com//article/fdcad9ad-4f13-4f5b-9910-12b4108a4c86) <br/>[Deljenje dokumenta (Word)](https://support.office.com//article/d39f3cd8-0aa0-412f-9a35-1abba926d354) |
 | Deljeno sa mnom |[Pogledajte datoteke koje drugi dele sa vama](https://support.office.com/article/e0476dc7-bf2f-4203-b9ad-c809578b03e7)  |
@@ -153,7 +154,7 @@ Ako ste prijavljeni pomoću poslovnog ili školskog naloga, administrator u vaš
 
 Ako ste administrator za vašu organizaciju, možete da koristite regulatorne postavke da utvrdite da li su ova povezana iskustva dostupna vašim korisnicima. Ako ne koristite ove postavke smernica, sva povezana iskustva će biti dostupna vašim korisnicima. Za više informacija o korišćenju ovih postavki smernica pogledajte sledeće članke: 
 
-- [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti u programu Office 365 ProPlus](manage-privacy-controls.md)
+- [Korišćenje postavki smernica za upravljanje kontrolama privatnosti za Microsoft 365 Apps za preduzeće](manage-privacy-controls.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md).
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office na Android uređajima](android-privacy-controls.md)
@@ -164,7 +165,7 @@ Ako odlučite da isključite neke vrste povezanih iskustava, traka ili komande n
 
 ## <a name="related-topics"></a>Povezane teme
 
-- [Pregled kontrola privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
+- [Pregled kontrola privatnosti za Microsoft 365 Apps za preduzeće](overview-privacy-controls.md)
 - [Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md)
 - [Neophodni podaci o usluzi za Office](required-service-data.md)
 - [Osnovne usluge za Office](essential-services.md)
