@@ -1,5 +1,5 @@
 ---
-title: Koristite regulatorne postavke za upravljanje kontrolama privatnosti u programu Office 365 ProPlus
+title: Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Microsoft 365 Apps za preduzeće
 ms.author: danbrown
 author: DHB-MSFT
 manager: laurawi
@@ -13,20 +13,20 @@ ms.collection:
 ms.custom:
 - Ent_Office_ProPlus
 - Ent_Office_Privacy
-description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u sistemu Office 365 ProPlus pomoću regulatornih postavki.
+description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u Microsoft 365 aplikacijama za velika preduzeća (ranije poznato kao Office 365 ProPlus) pomoću regulatornih postavki.
 hideEdit: true
-ms.openlocfilehash: ee02079595157af2fea8883069a640b90ff962d2
-ms.sourcegitcommit: 6a091ca7e72cd7ce97793ebd0fdcfa2a6fa1a098
+ms.openlocfilehash: 284b9b8a2b0231f5079e34ec2b09e35dfd0d07ca
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42687242"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43992983"
 ---
-# <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Koristite regulatorne postavke za upravljanje kontrolama privatnosti u programu Office 365 ProPlus
+# <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Microsoft 365 Apps za preduzeće
 
-Microsoft je posvećen tome da vam pružimo informacije i kontrole koje su vam potrebne da donesete odluke o tome kako se vaši podaci prikupljaju i koriste kada koristite Office 365 ProPlus.
+Microsoft je posvećen tome da vam pruži informacije i kontrole koje su vam potrebne da biste odabrali način prikupljanja i upotrebe vaših podataka kada koristite Microsoft 365 aplikacije za velika preduzeća (ranije poznato kao Office 365 ProPlus).
 
-Počevši od verzije 1904 sistema Office 365 ProPlus, postoje nove regulatorne postavke koje će vam omogućiti da kontrolišete postavke vezane za sledeće:
+Počevši od verzije 1904 usluge Microsoft 365 Apps za preduzeće, postojaće nove regulatorne postavke koje će vam omogućiti da kontrolišete postavke koje se odnose na sledeće:
 
 - ***Diagnostičke podatke*** koji se prikupljaju i šalju korporaciji Microsoft o Office klijentskom softveru koji se koristi
 
@@ -50,9 +50,9 @@ Ove regulatorne postavke mogu da se implementiraju korišćenjem Grupnih pravila
 
 Ako koristite alatku za upravljanje grupnim pravilima, sve ove regulatorne postavke se nalaze u okviru Konfiguracija korisnika\\Politika\\Administrativni predlošci\\Microsoft Office 2016\\Privatnost\\ Centar za pouzdanost.
 
-Ove nove regulativne postavke takođe se primenjuju na desktop verzije programa Project i Visio koje se dobijaju uz neke planove pretplata, kao što je plan za Project Online Professional ili Visio Online Plan 2. Takođe se odnose na Office 365 Business.
+Ove nove regulatorne postavke se primenjuju i na verzije programa Project i Visio za računare koje se dobijaju uz neke planove pretplata, kao što su Project Plan 5 ili Visio Plan 2. Primenjuju se i na Microsoft 365 aplikacije za manje firme (ranije poznato kao Office 365 Business).
 
-Postoje i neke postojeće regulatorne postavke koje se više neće primenjivati na Office 365 ProPlus i postoje neke promene korisničkog interfejsa (UI) za postavke privatnosti koje bi trebalo da imate na umu zato što korisnici mogu da ih primete i postave pitanja o njima.
+Postoje i neke postojeće regulatorne postavke koje se više neće primenjivati na Microsoft 365 Apps za preduzeće, kao i neke promene korisničkog interfejsa (UI) za postavke privatnosti koje bi trebalo da imate na umu jer vaši korisnici mogu da ih primete i da vam postave pitanja o njima.
 
 Kao i sa bilo kojim novim regulatornim postavkama, pažljivo ih testirajte u kontrolisanom okruženju da obezbedite da postavke koje ste konfigurisali imaju željeni efekat pre nego što ih implementirate u vašoj organizaciji.
 
@@ -74,14 +74,14 @@ Ako onemogućite ili ne konfigurišete ovu regulatornu postavku, opcionalni i ob
 
 Za više informacija o dijagnostičkim podacima pogledajte sledeće članke:
 
-- [Pregled kontrola privatnosti za Office 365 ProPlus](overview-privacy-controls.md)
+- [Pregled kontrola privatnosti za Microsoft 365 Apps za preduzeće](overview-privacy-controls.md)
 - [Obavezni dijagnostički podaci za Office](required-diagnostic-data.md)
 - [Opcionalni dijagnostički podaci za Office](optional-diagnostic-data.md)
 - [Korišćenje Prikazivača dijagnostičkih podataka uz Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="policy-settings-for-connected-experiences"></a>Regulatorne postavke za povezana iskustva
 
-Office 365 ProPlus se sastoji od aplikacija klijentskog softvera i povezanih iskustava dizajniranih tako da vam omogućavaju da efikasnije kreirate, komunicirate i sarađujete. Rad sa drugima na dokumentu uskladištenom u OneDrive for Business usluzi ili prevođenje sadržaja Word dokumenta na neki drugi jezik su primeri povezanih iskustava.
+Microsoft 365 Apps za preduzeće se sastoji od aplikacija klijentskog softvera i povezanih iskustava dizajniranih tako da vam omoguće da efikasnije kreirate, komunicirate i sarađujete. Rad sa drugima na dokumentu uskladištenom u OneDrive for Business usluzi ili prevođenje sadržaja Word dokumenta na neki drugi jezik su primeri povezanih iskustava.
 
 Razumemo da možda želite da odaberete koji tipovi povezanih iskustava su dostupni vašim korisnicima prilikom rada u Office aplikacijama. Zato smo za vas obezbedili četiri nove regulatorne postavke:
 
@@ -90,11 +90,11 @@ Razumemo da možda želite da odaberete koji tipovi povezanih iskustava su dostu
 - Dozvolite upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office
 - Dozvolite upotrebu povezanih iskustava u sistemu Office
 
-Ako ne konfigurišete ove regulatorne postavke, sva povezana iskustva će biti dostupna. To korisnicima pruža sve funkcije i funkcionalnosti dostupne kroz Office 365 ProPlus. Mi razumemo da ćete možda morati da isključite neka ili sva od ovih povezanih iskustava da ispunite određene zahteve vaše organizacije.
+Ako ne konfigurišete ove regulatorne postavke, sva povezana iskustva će biti dostupna. To vašim korisnicima pruža sve funkcije i funkcionalnosti dostupne kroz uslugu Microsoft 365 Apps za preduzeće. Mi razumemo da ćete možda morati da isključite neka ili sva od ovih povezanih iskustava da ispunite određene zahteve vaše organizacije.
 
 Ako odlučite da svojim korisnicima ne ponudite neke vrste povezanih iskustava, traka ili komande na meniju za ta povezana iskustva će biti nedostupne, ili će korisnici dobiti poruku o grešci kada pokušaju da koriste ta povezana iskustva. U tom slučaju, nema [obaveznih uslužnih podataka](required-service-data.md) za ta povezana iskustva koja se šalju korporaciji Microsoft.
 
-Vaši korisnici neće moći da odaberu da li žele da uključe ili isključe ova povezana iskustva uključena u Office 365 ProPlus ako su prijavljeni u Office pomoću akreditiva organizacije, koji se ponekad nazivaju poslovnim ili školskim nalogom.
+Vaši korisnici neće moći da odaberu da li žele da isključe ili uključe ova povezana iskustva koja su deo usluge Microsoft 365 Apps za preduzeće ukoliko su prijavljeni u Office pomoću akreditiva organizacije, koji se ponekad nazivaju poslovnim ili školskim nalogom.
 
 ### <a name="policy-setting-for-connected-experiences-that-analyze-your-content"></a>Regulatorne postavke za povezana iskustva koja analiziraju vaš sadržaj
 
@@ -114,7 +114,7 @@ Imajte u vidu da ako onemogućite regulatornu postavku *Dozvoli upotrebu povezan
 
 ### <a name="policy-setting-for-optional-connected-experiences"></a>Regulatorne postavke za opcionalna povezana iskustva
 
-Pored povezanih iskustava spomenutih iznad koja su uključena u Office 365 ProPlus, postoje neka opcionalna povezana iskustva za koje možete da odaberete da omogućite svojim korisnicima da im pristupe pomoću naloga organizacije. Na primer, LinkedIn funkcije Pomoćnika za biografiju u programu Word ili funkcija 3D mape u programu Excel, koja koristi Bing. Za više primera, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md).
+Pored gorenavedenih povezanih iskustava koja su uključena u Microsoft 365 Apps za preduzeće, postoje neka opcionalna povezana iskustva za koje možete da odaberete da li želite da omogućite svojim korisnicima da im pristupe pomoću naloga organizacije. Na primer, LinkedIn funkcije Pomoćnika za biografiju u programu Word ili funkcija 3D mape u programu Excel, koja koristi Bing. Za više primera, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md).
 
 Ova povezana iskustva su različita, zato što nisu pokrivena komercijalnim ugovorom vaše organizacije sa korporacijom Microsoft. Opcionalna povezana iskustva koja Microsoft nudi direktno na raspolaganje vašim korisnicima uređena su dokumentom[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement), a ne [Uslovima korišćenja usluga na mreži](https://www.microsoft.com/licensing/product-licensing/products). U nekim slučajevima, sadržaj trećih strana ili funkcionalnost se pružaju putem ovih opcionalnih povezanih iskustva, a mogu se primenjivati i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md).
 
@@ -138,7 +138,7 @@ Postoji jedan izuzetak. Regulatorna postavka *Dozvoli upotrebu dodatnih opcional
 
 ### <a name="policy-setting-for-most-connected-experiences"></a>Regulatorne postavke za najčešće povezana iskustva
 
-Možete da koristite regulatornu postavku *Dozvoli upotrebu povezanih iskustava u sistemu Office* da kontrolišete da li su najčešće povezana iskustava dostupna vašim korisnicima preko sistema Office 365 ProPlus. Ako onemogućite regulatornu postavku, sledeći tipovi povezanih iskustava neće biti dostupni korisnicima:
+Možete da koristite regulatornu postavku *„Dozvoli upotrebu povezanih iskustava u sistemu Office“* da biste kontrolisali da li su najčešće povezana iskustva dostupna vašim korisnicima putem usluge Microsoft 365 Apps za preduzeće. Ako onemogućite regulatornu postavku, sledeći tipovi povezanih iskustava neće biti dostupni korisnicima:
 
 - Iskustva koja analiziraju vaš sadržaj
 - Iskustva koja preuzimaju sadržaj na mreži
@@ -150,13 +150,13 @@ Pored toga, ako onemogućite ovu regulatornu postavku, većina drugih povezanih 
 
 ## <a name="existing-policy-settings-that-are-replaced-by-new-policy-settings"></a>Postojeće regulatorne postavke koje su zamenile nove regulatorne postavke
 
-Postoje dve postojeće regulatorne postavke koje se više ne odnose na Office 365 ProPlus, počevši od verzije 1904. To su sledeće regulatorne postavke:
+Postoje dve postojeće regulatorne postavke koje se više ne primenjuju na Microsoft 365 Apps za preduzeće, počevši od verzije 1904. To su sledeće regulatorne postavke:
 
 - **Slanje ličnih informacija**, koje možete pronaći u okviru Konfiguracija korisnika\\Politika\\Administrativni predlošci\\Microsoft Office 2016\\Privatnost\\Centar za pouzdanost.
 
 - **Opcije sadržaja na mreži**, koje možete pronaći u okviru Konfiguracije korisnika\\Politika\\Administrativni predlošci\\Microsoft Office 2016\\Alatke | Opcije | Opšte | Opcije usluge... \\Sadržaj na mreži.
 
-Počevši od verzije 1904, konfigurisanje ove dve postojeće regulatorne postavke neće imati uticaja na Office 365 ProPlus. One više nisu primenljive zato što je njihova funkcionalnost zamenjena ovim novim regulatornim postavkama:
+Počevši od verzije 1904, konfigurisanje ove dve postojeće regulatorne postavke neće imati uticaja na Microsoft 365 Apps za preduzeće. One više nisu primenljive zato što je njihova funkcionalnost zamenjena ovim novim regulatornim postavkama:
 
 - Dozvolite upotrebu povezanih iskustava koja analiziraju sadržaj u sistemu Office
 - Dozvolite upotrebu povezanih iskustava u sistemu Office koja preuzimaju mrežni sadržaj
@@ -183,7 +183,7 @@ Uopšteno, ako je jedna regulatorna postavka konfigurisana da uključi određeno
 
 ## <a name="privacy-related-changes-to-the-office-ui"></a>Promene u vezi privatnosti u korisničkom Interfejsu sistema Office
 
-Postoje neke promene u korisničkom interfejsu (UI) usluge Office 365 ProPlus u vezi sa privatnošću koje vaši korisnici mogu da primete i da postave pitanja u vezi sa njima. Te promene su direktan rezultat nove kontrole privatnosti i regulatornih postavki koje su dostupne počevši od verzije 1904.
+Postoje neke promene u korisničkom interfejsu (UI) usluge Microsoft 365 Apps za preduzeće u vezi sa privatnošću koje vaši korisnici mogu da primete i da vam postave pitanja o njima. Te promene su direktan rezultat nove kontrole privatnosti i regulatornih postavki koje su dostupne počevši od verzije 1904.
 
 ### <a name="dialog-about-optional-connected-experiences"></a>Dijaloški okvir o opcionalnim povezanim iskustvima
 
