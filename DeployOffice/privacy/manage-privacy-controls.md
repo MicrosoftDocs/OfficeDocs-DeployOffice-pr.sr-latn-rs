@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u Microsoft 365 aplikacijama za velika preduzeća (ranije poznato kao Office 365 ProPlus) pomoću regulatornih postavki.
 hideEdit: true
-ms.openlocfilehash: 284b9b8a2b0231f5079e34ec2b09e35dfd0d07ca
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: ca076099be15a5a4cd19ac7c99660bfe26de8eed
+ms.sourcegitcommit: edd1190877db7996206147ad1d691fd8e84f23b1
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43992983"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "44589041"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Microsoft 365 Apps za preduzeće
 
@@ -225,7 +225,7 @@ Neki administratori žele da promene postavke direktno u registratoru, na primer
 
 Da biste napravili. reg datoteku za postavke privatnosti, otvorite „Beležnicu“ i dodajte sledeće redove. Prilagodite vrednosti tako da odgovaraju vašim potrebama, a zatim sačuvajte datoteku. Uverite se da ime datoteke ima oznaku tipa. reg
 
-```
+```console
 Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Policies\Microsoft\office\16.0\common\privacy]
