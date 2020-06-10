@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: 33f4c32c64713e63c02db95b93fc0295e2decb62
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 74d827255ddbedb42cbe242229140d2c8eafea66
+ms.sourcegitcommit: f8201a088d2b160b6fcec2342e11be0e9ba3d189
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43992851"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "44663187"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -27,7 +27,7 @@ ms.locfileid: "43992851"
 > - Microsoft 365 Apps za preduzeće (prethodno poznato kao Office 365 ProPlus)
 > - Microsoft 365 Apps za manje firme (prethodno poznato kao Office 365 Business)
 > - Microsoft 365 Personal, Microsoft 365 Family ili druge verzije sistema Office koje su deo Microsoft 365 pretplate.
-> - Project i Visio aplikacije za računare koje se dovijaju uz neke planove pretplate, na primer, Project Plan 5 ili Visio Plan 2.
+> - Project i Visio aplikacije za računare koje se dobijaju uz neke planove pretplate, poput Project Plan 5 ili Visio Plan 2.
 >
 > Informacije se odnose i na verziju 16.28 ili noviju verziju sledećih Office aplikacija za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 
@@ -41,8 +41,8 @@ Dodatne informacije potražite u sledećim člancima:
 
 Ako ste administrator organizacije, možda će vas zanimati i sledeće:
 
-- [Pregled kontrola privatnosti za Microsoft 365 Apps za preduzeće](overview-privacy-controls.md)
-- [Korišćenje postavki smernica za upravljanje kontrolama privatnosti za Microsoft 365 Apps za preduzeće](manage-privacy-controls.md)
+- [Pregled kontrola privatnosti za Microsoft 365 Apps za velika preduzeća](overview-privacy-controls.md)
+- [Korišćenje postavki smernica za upravljanje kontrolama privatnosti za Microsoft 365 Apps za velika preduzeća](manage-privacy-controls.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office na Android uređajima](android-privacy-controls.md)
@@ -2528,11 +2528,11 @@ Izveštava o rezultatu pokušaja potpunog instaliranja
 
 Izveštava o radnji koja donosi programske odluke u vezi sa unosom prikupljenim pomoću događaja CollectParameters
 
-- **BitField** – Vrednost celog broja argumenta BitField koji pokazuje da li je zatražen eksplicitan kanal instalacije/ažuriranja (mesečni, spori za insajdere, brzi za insajdere, polugodišnji, polugodišnji za izabrane korisnike)
+- **BitField –**    Vrednost celog broja argumenta BitField koji pokazuje da li je zatražen eksplicitan kanal instalacije/ažuriranja. Na primer, beta kanal, trenutni kanal (pregled), trenutni kanal, mesečni kanal za preduzeća, polugodišnji kanal za preduzeća (pregled) ili polugodišnji kanal za preduzeća.
 
-- **ChannelID –**    Vrednost celog broja koja predstavlja numeričku vrednost izabranog kanala instalacije/ažuriranja (Mesečni, Insiders Slow, Insiders Fast, Polugodišnji, Polugodišnji (izabrani korisnici), Nevažeći)
+- **ChannelID –**    Ceo broj koji predstavlja numeričku vrednost izabranog kanala ažuriranja/instalalcije. Na primer, beta kanal, trenutni kanal (pregled), trenutni kanal, mesečni kanal za preduzeća, polugodišnji kanal za preduzeća (pregled), polugodišnji kanal za preduzeća ili nevažeći.
 
-- **CMDMode –**    Prepoznatljiva niska koja odgovara celokupnom prekidaču za režim otkrivenom u cmd argumentima prebačena je u .exe datoteku.
+- **CMDMode –**    Prepoznatljiva niska, koja odgovara celokupnom prekidaču za režim otkrivenom u cmd argumentima, prebačena je u exe datoteku.
 
 - **C2RClientUICulture –**    Kultura klijenta za verziju „Klikni i pokreni“ koju treba instalirati
 
@@ -2607,9 +2607,9 @@ Izveštava o radnji koja čita označeni unos iz ugrađenog potpisa izvršne dat
 
 Izveštava o parametrima koji se koriste za instaliranje sistema Office
 
-- **BitField** – Vrednost celog broja argumenta BitField koji pokazuje da li je zatražen eksplicitan kanal instalacije/ažuriranja (mesečni, spori za insajdere, brzi za insajdere, polugodišnji, polugodišnji za izabrane korisnike)
+- **BitField –**    Vrednost celog broja argumenta BitField koji pokazuje da li je zatražen eksplicitan kanal instalacije/ažuriranja. Na primer, beta kanal, trenutni kanal (pregled), trenutni kanal, mesečni kanal za preduzeća, polugodišnji kanal za preduzeća (pregled) ili polugodišnji kanal za preduzeća.
 
-- **ChannelID –**    Vrednost celog broja koja predstavlja numeričku vrednost izabranog kanala instalacije/ažuriranja (Mesečni, Insiders Slow, Insiders Fast, Polugodišnji, Polugodišnji (izabrani korisnici), Nevažeći)
+- **ChannelID –**    Ceo broj koji predstavlja numeričku vrednost izabranog kanala ažuriranja/instalalcije. Na primer, beta kanal, trenutni kanal (pregled), trenutni kanal, mesečni kanal za preduzeća, polugodišnji kanal za preduzeća (pregled), polugodišnji kanal za preduzeća ili nevažeći.
 
 - **CMDMode –**    Prepoznatljiva niska koja odgovara celokupnom prekidaču za režim otkrivenom u cmd argumentima prebačena je u .exe datoteku. Mogućnosti su: automatsko pokretanje, konfigurisanje, potrošačka verzija, preuzimanje, pomoć i program za pakovanje
 
@@ -8387,7 +8387,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="installupdatestask_retrysuccess"></a>installupdatestask_retrysuccess
 
-Ovaj događaj evidentira uspešno instaliranje ispravke posle ponovnog pokušaja. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj evidentira uspešno instaliranje ispravke posle ponovnog pokušaja. Ovaj događaj koristimo da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
  
 Prikupljaju se sledeća polja:
 
