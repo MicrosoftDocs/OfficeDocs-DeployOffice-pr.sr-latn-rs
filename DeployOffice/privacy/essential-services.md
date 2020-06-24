@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: 74d827255ddbedb42cbe242229140d2c8eafea66
-ms.sourcegitcommit: f8201a088d2b160b6fcec2342e11be0e9ba3d189
+ms.openlocfilehash: a73cfa56d6da769e1ced46e58054e55419bb36e8
+ms.sourcegitcommit: fc906d2163687242e98fd1719055038758068424
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "44663187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "44800402"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -43,8 +43,8 @@ Ako ste administrator organizacije, možda će vas zanimati i sledeće:
 
 - [Pregled kontrola privatnosti za Microsoft 365 Apps za velika preduzeća](overview-privacy-controls.md)
 - [Korišćenje postavki smernica za upravljanje kontrolama privatnosti za Microsoft 365 Apps za velika preduzeća](manage-privacy-controls.md)
-- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
-- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
+- [Коришћење жељених поставки за управљање контролама приватности за Office for Mac](mac-privacy-preferences.md)
+- [Коришћење жељених поставки за управљање контролама приватности за Office на iOS уређајима](ios-privacy-preferences.md)
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office na Android uređajima](android-privacy-controls.md)
 
 ## <a name="list-of-essential-services-for-office"></a>Lista osnovnih usluga za Office 
@@ -2719,13 +2719,22 @@ Ovaj događaj se evidentira kada se završi poziv upućen funkciji webservice, o
 
 Prikupljaju se sledeća polja:
 
+- **ActionDetail** – Dodatni detalji kada dođe do neuspeha.
+   - Ako HTTP zahtev uspe, ActionDetail će biti 0.
+   - Ako polje „Result“ nije u redu (tj. nije 0), što znači da zahtev nije poslat, ovo polje će evidentirati kôd unutrašnje greške koji je isti kao polje „Result“.
+   - Ako je polje „Result“ u redu (tj. 0), što znači da je kôd HTTP odgovora >= 300, ono će evidentirati kôd HTTP odgovora (npr. 404).
+
+- **Result** – Zastavice numeričkog koda greške dobijene iz API-ja za pozivanje Office veb usluge. – npr. 3 bi značilo da je došlo do problema prilikom pokretanja HTTP zaglavlja.
+
+- **Type** – Dodatne informacije o tipu. U slučaju zaliha, ove informacije navode tip korisnih podataka koji se šalju – npr. kompletni ili samo delta promena. 
+
 -  **WebCallSource** - Vrednost nabrajanja (navedena kao ceo broj) koja ukazuje na dodatak „Upravljač servisiranja“, koji je bio izvor poziva:
    - Inventar: 0
    - Konfiguracija inventara: 1
    - Smernice za inventar: 2
    - Status mreže inventara: 3
-
-- **Result** - Zastavice numeričkog koda greške dobijene iz Office webservice API-ja za pozivanje
+   - Upravljač uslužnošću: 4
+   - Mogućnost upravljanja: 5
 
 ### <a name="officeserviceabilitymanagerwebservicefailure"></a>Office.ServiceabilityManager.WebserviceFailure
 
@@ -3143,6 +3152,8 @@ Ova aktivnost telemetrije prati tačke uspeha i neuspeha u pretraživanju obavez
 
 Prikupljaju se sledeća polja:
 
+- **DexShouldRetry** – Signal da smo pronašli problem koji se može ponovo pokušati (internet i nijedan server nisu prestali sa radom)
+
 - **GenuineTicketFailure** – Obaveštava nas o grešci HRESULT prilikom pokušaja preuzimanja originalnog Windows tiketa/šifre proizvoda (WPK) za računar.
 
 - **PinValidationFailure** - Obaveštava nas zašto nije uspeo proces provere valjanosti pin-a. Moguće greške:
@@ -3177,13 +3188,27 @@ Nakon uspešnog pribavljanja važećeg Office pin-a koji je povezan sa računaro
 
 Prikupljaju se sledeća polja:
 
-- **ActionCreateAccount** - Korisnik bira da napravi nalog
+- **ActionActivate** – Signal da je korisnik kliknuo na dugme „Aktiviraj“.
 
-- **ActionSignIn** - Korisnik bira da se prijavi.
+- **ActionChangeAccount** – Signal da je korisnik kliknuo na hipervezu „Koristite drugi nalog“.
 
-- **DialogRedemption** - Prikazuje se AFO dijalog za preuzimanje.
+- **ActionCreateAccount** – Signal da je korisnik kliknuo na dugme „Kreiraj nalog“.
 
-- **DialogSignIn** - Prikazuje se AFO dijalog za prijavljivanje.
+- **ActionSignIn** – Signal da je korisnik kliknuo na dugme „Prijavite se“.
+
+- **CurrentView** – Tip dijaloga koji je korisnik zatvorio.
+
+- **DialogEULA** – Signal da smo prikazali dijalog „Prihvatite EULA“. 
+
+- **DialogRedemption** – Signal da smo prikazali dijalog „AFO iskorišćavanje“.
+
+- **DialogSignIn** – Signal da smo prikazali dijalog „AFO prijavljivanje“.
+
+- **EmptyRedemptionDefaults** – Signal da nismo uspeli da dobavimo informacije o podrazumevanom iskorišćavanju.
+ 
+- **GetRedemptionInfo** – Signal da dobavljamo informacije o demografiji za iskorišćavanje PIN koda.
+
+- **MalformedCountryCode** – Signal da je pozivni broj za zemlju koji je potreban za iskorišćavanje PIN koda pogrešno uobličen.
 
 - **OExDetails** – Detalji o grešci koje dobijemo kada je odbačen dijalog za prijavljivanje sa identitetom.
 
@@ -3199,6 +3224,14 @@ Prikupljaju se sledeća polja:
     - 0x03113811    Korisnik je zatvorio dijalog za prijavljivanje/preuzimanje
     - 0x03113812    Korisnik je zatvorio dijalog za prihvatanje EULA ugovora
     - 0x03113808    Korisnik je prihvatio EULA ugovor
+    - 0x03113811      Korisnik je zatvorio dijalog
+    - 0x2370e3a0      Korisnik je zatvorio dijalog
+    - 0x2370e3c1      Idi na veb radi iskorišćavanja PIN koda
+    - 0x2370e3a1      Idi na veb radi iskorišćavanja PIN koda
+    - 0x2370e3c0      Petlja sekvence dijaloga do koje je doveo korisnik koji se kretao napred-nazad u toku dijaloga
+    - 0x2370e3a3      Korisnik je kliknuo na hipervezu „Ne sada“, koja preskače AFO ponudu za tu sesiju
+    - 0x2370e3a2      Korisnik je kliknuo na hipervezu „Nikada ne prikazuj ovo“, koja onemogućava AFO ponudu
+
 
 - **UseInAppRedemption** – Obaveštava nas da li zadržavamo korisnike u aplikaciji radi preuzimanja ili ih prebacujemo na veb da bi iskoristili svoj preuzeti pin (unapred popunjen).
 
@@ -3230,7 +3263,7 @@ Prikupljaju se sledeća polja:
 
 - **HasConnectivity** – Obaveštava da li korisnik ima vezu sa internetom i u slučaju da nema, može koristiti grejs licencu tokom pet dana ili se može naći u režimu smanjene funkcionalnosti
 
-- **InAppTrialPurchase** - Obaveštava da li je probni paket omogućen za pokretanje SDK-a za kupovinu u prodavnici da bi se zabeležio PI i kupila probna verzija unutar aplikacije
+- **InAppTrialPurchase** – Saopštava da li je probni paket omogućen za pokretanje SDK-a za kupovinu u prodavnici da bi se uhvatio PI i kupila probna verzija unutar aplikacije *[Ovo polje je uklonjeno iz trenutnih izdanja sistema Office, ali možda će se i dalje prikazivati u starijim izdanjima.]*
 
 - **IsRS1OrGreater** - Obaveštava da li je OS verzija novija od verzije RS1 ili ne, pošto SDK za kupovinu u prodavnici treba koristiti samo ako jeste
 
@@ -3238,15 +3271,15 @@ Prikupljaju se sledeća polja:
 
 - **OEMSendToWebForTrial** - Obaveštava da li je probni paket omogućen za prebacivanje korisnika na veb da bi preuzeli probnu verziju
 
-- **StoreErrorConditions** - Obaveštava o različitim uslovima u kojima je moguć neuspeh SDK-a za kupovinu u prodavnici
+- **StoreErrorConditions** – Saopštava različite uslove u kojima je moguć neuspeh SDK-a za kupovinu u prodavnici *[Ovo polje je uklonjeno iz trenutnih izdanja sistema Office, ali možda će se i dalje prikazivati u starijim izdanjima.]*
 
-- **StoreErrorHResult** - Obaveštava o kodu greške koji je dobijen iz SDK-a za kupovinu u prodavnici
+- **StoreErrorHResult** – Saopštava kôd greške koji je dobijen iz SDK-a za kupovinu u prodavnici *[Ovo polje je uklonjeno iz trenutnih izdanja sistema Office, ali možda će se i dalje prikazivati u starijim izdanjima.]*
 
-- **StorePurchaseStatusResult** - Obaveštava o rezultatu poziva SDK-a za kupovinu u prodavnici i o tome da li je korisnik obavio kupovinu, čime se određuje da li treba da dobije licencu kako bi koristio Office
+- **StorePurchaseStatusResult** – Saopštava rezultat pozivanja SDK-a za kupovinu u prodavnici i da li je korisnik obavio kupovinu, čime se određuje da li korisnik treba da dobije licencu za korišćenje sistema Office *[Ovo polje je uklonjeno iz trenutnih izdanja sistema Office, ali možda će se i dalje prikazivati u starijim izdanjima.]*
 
-- **Tag** - Koristi se da saopšti sa kog mesta u kodu je poslat događaj
+- **Tag** – Koristi se da saopšti sa kog mesta u kodu je poslat događaj
 
-- **UserSignedInExplicitly** - Obaveštava da li se korisnik eksplicitno prijavio i u tom slučaju preusmeravamo korisnike na veb za probnu verziju
+- **UserSignedInExplicitly** – Saopštava da li se korisnik eksplicitno prijavio i u tom slučaju preusmeravamo korisnike na veb za probnu verziju *[Ovo polje je uklonjeno iz trenutnih izdanja sistema Office, ali možda će se i dalje prikazivati u starijim izdanjima.]*
 
 ### <a name="officelicensingusegracekey"></a>Office.Licensing.UseGraceKey
 
@@ -4542,7 +4575,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="controller_downloadwindow_noconnectionok"></a>controller_downloadwindow_noconnectionok
 
-Ovaj događaj pokazuje da je mrežna veza izgubljena tokom preuzimanja ispravki. On pokazuje i da je korisnik obavešten o toj grešci. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj pokazuje da je mrežna veza izgubljena tokom preuzimanja ispravki. On pokazuje i da je korisnik obavešten o toj grešci. Ovaj događaj koristimo da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
 
 Prikupljaju se sledeća polja:
 
