@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije Office administratorima o povezanim iskustvima za Office, kao što su iskustva koja analiziraju sadržaj ili iskustva koja preuzimaju sadržaj na mreži.
 hideEdit: true
-ms.openlocfilehash: bcf28caae666900deacbd0effe83a2fae383c41d
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 4ec1ffef4b8bc0e82a7a1ce96061a9c715636bea
+ms.sourcegitcommit: 7adeab733277e6ed3eafddcc1d4df20e2743a752
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43993021"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "44930425"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sistemu Office
 
@@ -27,7 +27,7 @@ ms.locfileid: "43993021"
 > - Microsoft 365 Apps za preduzeće (prethodno poznato kao Office 365 ProPlus)
 > - Microsoft 365 Apps za manje firme (prethodno poznato kao Office 365 Business)
 > - Microsoft 365 Personal, Microsoft 365 Family ili druge verzije sistema Office koje su deo Microsoft 365 pretplate.
-> - Project i Visio aplikacije za računare koje se dovijaju uz neke planove pretplate, na primer, Project Plan 5 ili Visio Plan 2.
+> - Project i Visio aplikacije za računare koje se dobijaju uz neke planove pretplate, poput Project Plan 5 ili Visio Plan 2.
 >
 > Informacije se odnose i na verziju 16.28 ili noviju verziju sledećih Office aplikacija za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
 >
@@ -43,7 +43,7 @@ Sledeća tabela sadrži spisak povezanih iskustava koja analiziraju vaš sadrža
 
 | **Ime**   | **Više informacija**   |
 | ----------- | ------------------ |
-| 3D mape\*    | [Prvi koraci uz 3D mape](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
+| *3D mape*\*    | [Prvi koraci uz 3D mape](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
 | Automatsko alternativni txt   | [Sve što treba da znate da biste napisali efikasan alternativni tekst](https://support.office.com/article/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
 | Tipovi podataka                  | [Tipovi Excel podataka: „Deonice“ i „Geografija“](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Diktiranje  | [Diktirajte glasom u sistemu Office](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
@@ -52,22 +52,22 @@ Sledeća tabela sadrži spisak povezanih iskustava koja analiziraju vaš sadrža
 | Mastilo u tekst, mastilo u oblik, mastilo u matematički izraz | [Promenite rukopis u oblike, tekst ili matematički izraz u programu PowerPoint za Microsoft 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Umetanje podataka iz slike| [Umetanje podataka iz slike](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 | Natpisi i titlovi uživo |  [Prisutne u realnom vremenu, automatski titlovi ili podnaslovi u programu PowerPoint](https://support.office.com/article/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
-| Grafikon mape\*    | [Pravljenje grafikona mape](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b)  |
+| *Grafikon mape*\*    | [Pravljenje grafikona mape](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b)  |
 | Mape u prikazu Power View   | [Mape u programskom dodatku Power View](https://support.office.com/article/8A9B2AF3-A055-4131-A327-85CC835271F7) |
 | Office usluge za prezentacije  | [Emitovanje prezentacije udaljenoj publici](https://support.office.com/article/25330108-518e-44be-a281-e3d85f784fee)    |
 | Dizajner za PowerPoint   | [Pravljenje profesionalnih prikaza slajdova pomoću usluge „Dizajner za PowerPoint“](https://support.office.com/article/53c77d7b-dc40-45c2-b684-81415eac0617)   |
 | Objavljivanje u usluzi Power BI   | [Objavljivanje sadržaja u usluzi Power BI iz programa Excel](https://docs.microsoft.com/power-bi/service-publish-from-excel) |
 | Objavljivanje u usluzi Microsoft Stream    | [Pretvaranje prezentacije u video zapis](https://support.office.com/article/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
-| Istraživanje\*   | [Dodavanje ili promena usluga istraživanja](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
+| *Istraživanje*\*   | [Dodavanje ili promena usluga istraživanja](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
 | Skeniranje vizitkarte|  [Skeniranje ili dodirivanje za dodavanja kontakata u programu Outlook za Android](https://support.office.com/article/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
-| Pametno pronalaženje\*   | [Dobijanje uvida u ono na čemu radite uz pametno pronalaženje](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
+| *Pametno pronalaženje*\*   | [Dobijanje uvida u ono na čemu radite uz pametno pronalaženje](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Predloženi odgovori | [Šta su predloženi odgovori?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Dodirnite za Word (Dodaj iz datoteke)   | [Pronalaženje i korišćenje potrebnog sadržaja, kada vam je potreban, bez napuštanja programa Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
 | Prebacivanje na veb stranicu   | [Pretvaranje Word dokumenta u Sway veb stranicu](https://support.office.com/article/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Prevodilac   | [Prevod teksta na drugi jezik](https://support.office.com/article/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
 
 > [!NOTE]
-> \*Kada su korisnici prijavljeni sa poslovnim ili školskim nalogom, ovo povezano iskustvo nije obavezno i pruža se po uslovima[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement)i[izjave o privatnosti](https://privacy.microsoft.com/), a mogu se primeniti i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md). Ako ste administrator, ovo povezano iskustvo može biti upravljano kontrolom privatnosti za povezana iskustva ili *Dozvolite upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office*postavka privatnosti.
+> \*Kada su korisnici prijavljeni sa poslovnim ili školskim nalogom, povezana iskustva navedena gore u kurzivu nisu obavezna i pružaju se po uslovima[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement)i[izjave o privatnosti](https://privacy.microsoft.com/), a mogu se primeniti i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md). Ako ste administrator, ova povezana iskustva mogu biti upravljana kontrolom privatnosti za povezana iskustva ili u postavci privatnosti *Dozvoljavanje upotrebe dodatnih opcionalnih povezanih iskustava u sistemu Office*.
 
 ## <a name="connected-experiences-that-download-online-content"></a>Povezana iskustva koja preuzimaju sadržaj na mreži
 
@@ -83,22 +83,22 @@ Sledeća tabela sadrži spisak povezanih iskustava koja preuzimaju sadržaj na i
 | Efekti zapisa mastilom                 | [Crtanje i zapisivanje mastilom u sistemu Office](https://support.office.com/article/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Umetanje ikona                | [Umetanje ikona u sistemu Microsoft Office](https://support.office.com/article/e2459f17-3996-4795-996e-b9a13486fa79)   |
 | Umetanje Microsoft formulara      | [Umetanje obrasca ili kvizova u PowerPoint](https://support.office.com/article/1a316f81-9ea7-4bc2-bda0-024c0d780df1) |
-| Umetnite 3D model na mreži\*     | [Budite kreativni uz 3D modele](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a)   |
-| Umetanje slika na mreži\*      | [Umetanje slika](https://support.office.com/article/3c51edf4-22e1-460a-b372-9329a8724344)  |
-| Umetanje video zapisa na mreži\*     | [Umetanje video zapisa iz usluge YouTube ili sa nekog drugog sajta](https://support.office.com/article/8340ec69-4cee-4fe1-ab96-4849154bc6db) |
-| Zanimljivi kalendari\*| [Pretplatite se na kalendar](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) o omiljenim sportskim timovima ili o TV emisijama u programu Outlook za iOS i Android. |
-| Predlozi lokacije\* | Kada u stavku kalendara dodate neko javno mesto sa adresom, Outlook za iOS i Android takođe će u polju Lokacija uključiti celu adresu. |
+| *Umetnite 3D model na mreži*\*     | [Budite kreativni uz 3D modele](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a)   |
+| *Umetanje slika na mreži*\*      | [Umetanje slika](https://support.office.com/article/3c51edf4-22e1-460a-b372-9329a8724344)  |
+| *Umetanje video zapisa na mreži*\*     | [Umetanje video zapisa iz usluge YouTube ili sa nekog drugog sajta](https://support.office.com/article/8340ec69-4cee-4fe1-ab96-4849154bc6db) |
+| *Zanimljivi kalendari*\*| [Pretplatite se na kalendar](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) o omiljenim sportskim timovima ili o TV emisijama u programu Outlook za iOS i Android. |
+| *Predlozi lokacije*\* | Kada u stavku kalendara dodate neko javno mesto sa adresom, Outlook za iOS i Android takođe će u polju Lokacija uključiti celu adresu. |
 | Mape u detaljima događaja | Znajte gde treba da idete sa [mapama](https://www.osupportweb.com/a/outlook-mobile/?s=time-to-leave&f=how-can-i-choose-which-map-will-open-when-i-click-on-get-directions&p=all) u detaljima događaja u programu Outlook za iOS i Android. |
 | Pomoć za Office                 | Kada odaberete **Pomoć** > **Pomoć** na traci ili koristite F1 u Office aplikaciji   |
 | Pretraga oblika na mreži (Visio) | [Pronalaženje dodatnih oblika i šablona](https://support.office.com/article/0475ddea-2a0a-4dec-ab8c-7dda9e63bca9)  |
-| PowerPoint QuickStarter\*     | [Istraživanje teme pomoću usluge PowerPoint QuickStarter](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224) |
-| Istraživač\*    | [Jednostavno istraživanje za rad u programu Word](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) |
+| *PowerPoint QuickStarter*\*     | [Istraživanje teme pomoću usluge PowerPoint QuickStarter](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224) |
+| *Istraživač*\*    | [Jednostavno istraživanje za rad u programu Word](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) |
 | Recite mi    | [Brzo obavljanje stvari pomoću funkcije „Reci mi...“](https://support.office.com/article/f20d2198-17b8-4b09-a3e5-007a337f1e4e)  |
 | Predlošci  | [Preuzimanje besplatnih, unapred urađenih predložaka](https://support.office.com/article/29f2a18d-29a6-4a07-998b-cfe5ff7ffbbb)  |
-| Outlook traka vremenske prognoze \*| [Menjanje grada na traci „Vremenska prognoza“ u kalendaru](https://support.office.com/article/D11B7532-7C58-489E-8103-5CC5D727B06B) |
+| *Outlook traka vremenske prognoze *\*| [Menjanje grada na traci „Vremenska prognoza“ u kalendaru](https://support.office.com/article/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 
 > [!NOTE]
->\*Kada su korisnici prijavljeni sa poslovnim ili školskim nalogom, ovo povezano iskustvo nije obavezno i pruža se po uslovima[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement)i[izjave o privatnosti](https://privacy.microsoft.com/), a mogu se primeniti i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md). Ako ste administrator, ovo povezano iskustvo može biti upravljano kontrolom privatnosti za povezana iskustva ili *Dozvolite upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office*postavka privatnosti.
+>\*Kada su korisnici prijavljeni sa poslovnim ili školskim nalogom, povezana iskustva navedena gore u kurzivu nisu obavezna i pružaju se po uslovima[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement)i[izjave o privatnosti](https://privacy.microsoft.com/), a mogu se primeniti i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md). Ako ste administrator, ova povezana iskustva mogu biti upravljana kontrolom privatnosti za povezana iskustva ili u postavci privatnosti *Dozvoljavanje upotrebe dodatnih opcionalnih povezanih iskustava u sistemu Office*.
 
 ## <a name="other-connected-experiences"></a>Druga povezana iskustva
 
@@ -120,14 +120,14 @@ Sledeća tabela sadrži spisak tih drugih povezanih iskustava i pruža veze za v
 | Fokusirano prijemno sanduče (Outlook) |[Fokusirano prijemno sanduče za Outlook](https://support.office.com/article/f445ad7f-02f4-4294-a82e-71d8964e3978)  |
 | Information Rights Management |[Information Rights Management u sistemu Office](https://support.office.com/Article/c7a70797-6b1e-493f-acf7-92a39b85e30c)  |
 | LinkedIn kontakt kartica |[Povezivanje LinkedIn i Microsoft naloga](https://support.office.com/article/dc81cc70-4d64-4755-9f1c-b9536e34d381)  |
-| Programski dodaci za Office\* | [Upravljanje primenom programskih dodataka u Microsoft 365 centru administracije](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins) |
+| *Programski dodaci za Office*\* | [Upravljanje primenom programskih dodataka u Microsoft 365 centru administracije](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins) |
 | Povratne informacije za Office |[Kako da pošaljem povratne informacije o sistemu Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Podrška za Office (Kontaktirajte nas) |Kada odaberete **Pomoć** > **Obratite se podršci** na traci |
 | Organizacioni grafikon (Visio) |[Pravljenje Visio organizacionog grafikona](https://support.office.com/article/abb3dd17-2692-439f-9945-3a015767d96a)  |
 | Outlook Social Connector | [Uključivanje programskog dodatka Outlook Social Connector](https://support.office.com/article/255447E8-82CD-48E7-9B79-1DD8721A2907) |
-| Outlook UserVoice\* | [Kako da pošaljem povratne informacije o sistemu Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11) |
+| *Outlook UserVoice*\* | [Kako da pošaljem povratne informacije o sistemu Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11) |
 | Nedavni dokumenti |[Otvaranje datoteka iz menija „Datoteka“](https://support.office.com/article/97f087d8-3136-4485-8e86-c5b12a8c4176)  |
-| Pomoćnik za pisanje biografije (ili pomoćnik za Biografiju)\* |[Napišite najbolju biografiju uz pomoć sa sajta LinkedIn i uz Pomoćnik za pisanje biografije](https://support.office.com/article/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a")  |
+| *Pomoćnik za pisanje biografije (ili pomoćnik za Biografiju)*\* |[Napišite najbolju biografiju uz pomoć sa sajta LinkedIn i uz Pomoćnik za pisanje biografije](https://support.office.com/article/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a")  |
 | Nalazač prostora (Outlook)|[Kako da kontrolišete Nalazač prostora u programu Outlook](https://support.microsoft.com/help/2673231/how-to-control-the-room-finder-in-outlook)  |
 | Bezbedne veze |[ATP bezbedne veze](https://docs.microsoft.com/office365/securitycompliance/atp-safe-links)  |
 | Oznake za osetljivost |[Primenite oznake za osetljivost na svoje dokumente i e-poštu u sistemu Office](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)  |
@@ -139,7 +139,7 @@ Sledeća tabela sadrži spisak tih drugih povezanih iskustava i pruža veze za v
 | Dok ste bili odsutni |[Budite obavešteni kada članovi vašeg tima ažuriraju vašu deljenu datoteku](https://support.office.com/article/9cc94893-02d5-4d96-9b3f-8b9414d5047a)  |
 
 > [!NOTE]
->\*Kada su korisnici prijavljeni sa poslovnim ili školskim nalogom, ovo povezano iskustvo nije obavezno i pruža se po uslovima[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement)i[izjave o privatnosti](https://privacy.microsoft.com/), a mogu se primeniti i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md). Ako ste administrator, ovo povezano iskustvo može biti upravljano kontrolom privatnosti za povezana iskustva ili *Dozvolite upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office*postavka privatnosti.
+>\*Kada su korisnici prijavljeni sa poslovnim ili školskim nalogom, povezana iskustva navedena gore u kurzivu nisu obavezna i pružaju se po uslovima[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement)i[izjave o privatnosti](https://privacy.microsoft.com/), a mogu se primeniti i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md). Ako ste administrator, ova povezana iskustva mogu biti upravljana kontrolom privatnosti za povezana iskustva ili u postavci privatnosti *Dozvoljavanje upotrebe dodatnih opcionalnih povezanih iskustava u sistemu Office*.
 
 ## <a name="choose-whether-these-connected-experiences-are-available-to-use"></a>Odaberite da li ova povezana iskustva mogu da se koriste
 
