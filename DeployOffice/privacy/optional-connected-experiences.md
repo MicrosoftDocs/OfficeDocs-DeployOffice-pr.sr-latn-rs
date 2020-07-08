@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: ecfe38bc6dbedd57ff1eb2ab4851c8e4dddab730
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: d5de9a7a1eb2f2a825feb28798e8f0d195476696
+ms.sourcegitcommit: 9e44d65a5d59339df7d6a2f1116462c0fb774f83
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43993246"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "45068725"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
@@ -27,8 +27,8 @@ Ako imate poslovni ili školski nalog, administrator organizacije vam je možda 
 > [!NOTE]
 > Ako ste administrator, pogledajte sledeće članke da biste saznali kako da date ili ograničite mogućnost korisnika da koriste opcionalna povezana iskustva:
 > - [Korišćenje postavki smernica za upravljanje kontrolama privatnosti za Microsoft 365 Apps za preduzeće](manage-privacy-controls.md)
-> - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
-> - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
+> - [Коришћење жељених поставки за управљање контролама приватности за Office for Mac](mac-privacy-preferences.md)
+> - [Коришћење жељених поставки за управљање контролама приватности за Office на iOS уређајима](ios-privacy-preferences.md)
 > - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office na Android uređajima](android-privacy-controls.md)
 >
 > Većina opcionalno povezanih iskustava takođe može da upravlja kontrolama privatnosti za povezana iskustva. Na primer, umetanjem slika na mreži takođe se može upravljati putem *Dozvoli upotrebu povezanih iskustava u sistemu Office koja preuzimaju postavku smernica za mrežni sadržaj*.
@@ -39,7 +39,7 @@ Važno je da znate da te opcionalne usluge u oblaku nisu pokrivene licencom vaš
 
 ## <a name="experiences-that-rely-on-bing"></a>Iskustva koja se oslanjaju na Bing
 
-Neke usluge u oblaku obezbeđuje Microsoft Bing. Microsoft Bing je odvojen od usluge Microsoft 365 Apps za preduzeće i njime Microsoft upravlja nezavisno od usluge Microsoft 365 Apps za preduzeće. Iskustva koja obogaćuje u Office aplikacijama uključenim uz Microsoft 365 Apps za preduzeće su: [3D mape](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Grafikoni mape](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Umetanje slika na mreži](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Umetanje Online 3D modela](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [PowerPoint QuickStarter](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Istraživač](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) i [Smart Lookup](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044). 
+Neke usluge u oblaku obezbeđuje Microsoft Bing. Microsoft Bing je odvojen od usluge Microsoft 365 Apps za preduzeće i njime Microsoft upravlja nezavisno od usluge Microsoft 365 Apps za preduzeće. Iskustva koja pružaju u Office aplikacijama uključenim uz Microsoft 365 Apps za preduzeće su: [3D mape](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Grafikoni mape](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Umetanje slika na mreži](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Umetanje Online 3D modela](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [PowerPoint QuickStarter](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Istraživač](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f), [Smart Lookup](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044), i [alat za proveru sličnosti](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) (funkcija „Uređivača“).
 
 Iskustva koja Bing ovlašćuje u programu Outlook za iOS i Android su sledeća:
 
