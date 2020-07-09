@@ -15,6 +15,7 @@ description: Pruža informacije Office administratorima o povezanim iskustvima z
 hideEdit: true
 ms.openlocfilehash: ed42864d90c0ec8f50e28248720ffc8c2f569713
 ms.sourcegitcommit: 85c6ac9351a9305b774fb2a63cb895f952b433d6
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
 ms.lasthandoff: 07/06/2020
 ms.locfileid: "45048563"
@@ -36,7 +37,7 @@ Office se sastoji od aplikacija klijentskog softvera i povezanih iskustava dizaj
 
 ## <a name="connected-experiences-that-analyze-your-content"></a>Povezana iskustva koja analiziraju vaš sadržaj
 
-Povezana iskustva koja analiziraju vaš sadržaj su iskustva koja koriste vaš Office da pruže preporuke za dizajn, predloge za uređivanje, uvid u podatke i slične funkcije. Na primer, Dizajner za PowerPoint ili prevodilac.
+Povezana iskustva koja analiziraju vaš sadržaj su iskustva koja koriste vaš Office da pruže preporuke za dizajn, predloge za uređivanje, uvid u podatke i slične funkcije. Na primer, Dizajner za PowerPoint ili Prevodilac.
 
 Sledeća tabela sadrži spisak povezanih iskustava koja analiziraju vaš sadržaj i pružaju veze za više informacija o njima.
 
@@ -59,7 +60,7 @@ Sledeća tabela sadrži spisak povezanih iskustava koja analiziraju vaš sadrža
 | Objavljivanje u usluzi Microsoft Stream    | [Pretvaranje prezentacije u video zapis](https://support.office.com/article/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
 | *Istraživanje*\*   | [Dodavanje ili promena usluga istraživanja](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
 | Skeniranje vizitkarte|  [Skeniranje ili dodirivanje za dodavanja kontakata u programu Outlook za Android](https://support.office.com/article/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
-|*Provera sličnosti*\* (funkcija redaktora)|[Proveravanje sličnosti dokumenta sa izvorima na mreži](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) |
+|*Provera sličnosti*\* (svojstvo funkcije Uređivač)|[Proveravanje sličnosti dokumenta sa izvorima na mreži](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) |
 | *Pametno pronalaženje*\*   | [Dobijanje uvida u ono na čemu radite uz pametno pronalaženje](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Predloženi odgovori | [Šta su predloženi odgovori?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Dodirnite za Word (Dodaj iz datoteke)   | [Pronalaženje i korišćenje potrebnog sadržaja, kada vam je potreban, bez napuštanja programa Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
