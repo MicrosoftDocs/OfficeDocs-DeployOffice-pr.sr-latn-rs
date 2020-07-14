@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: a73cfa56d6da769e1ced46e58054e55419bb36e8
-ms.sourcegitcommit: fc906d2163687242e98fd1719055038758068424
+ms.openlocfilehash: f9010fcc04540073dde219dc765e1811aa8a42e5
+ms.sourcegitcommit: 7b24028ab20d4f43dbca85cea2617398b36a3180
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "44800402"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "45117214"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -2851,11 +2851,13 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officelicensingfullvalidation"></a>Office.Licensing.FullValidation 
 
-Ovo se prikuplja pri svakoj sesiji koja izveštava o statusu licence na računaru i greškama koje se prikazuju korisniku zbog kojih nije u mogućnosti da koristi aplikaciju. Ovaj događaj ukazuje na to da li je korisnikov računar ispravan ili nije. Za ovaj događaj imamo podešen detektor anomalija da bismo označili da li regresija uzrokuje neispravno ponašanje korisnika. Takođe je od suštinske važnosti pri dijagnostikovanju korisničkih problema i za nadgledanje ispravnosti sistema
+Ovo se prikuplja pri svakoj sesiji koja izveštava o statusu licence na računaru i greškama koje se prikazuju korisniku zbog kojih nije u mogućnosti da koristi aplikaciju. Ovaj događaj ukazuje na to da li je korisnikov računar ispravan ili nije. Za ovaj događaj imamo podešen detektor anomalija da bismo označili da li regresija ili mehanizam aktivacije uzrokuje neispravno ponašanje korisnika. Takođe je od suštinske važnosti pri dijagnostikovanju korisničkih problema i za nadgledanje ispravnosti sistema.
 
 Prikupljaju se sledeća polja:
 
   - **Acid** – GUID identifikator koji predstavlja Office proizvod za koji je korisnik licenciran  
+  
+  - **ActivationAttributes** – tip mehanizma aktivacije koji korisnik koristi.
 
   - **IsSessionLicensing** - Da li je trenutno pokrenuta u režimu aktivacije deljenog računara ili nije. 
 
@@ -4534,7 +4536,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="controller_downloadwindow_networkunavailablealertok"></a>controller_downloadwindow_networkunavailablealertok
 
-Ovaj događaj pokazuje da je mrežna veza izgubljena tokom preuzimanja ispravki. On pokazuje i da je korisnik obavešten o toj grešci. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj pokazuje da je mrežna veza izgubljena tokom preuzimanja ispravki. On pokazuje i da je korisnik obavešten o toj grešci. Ovaj događaj koristimo da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -10458,6 +10460,27 @@ Prikupljaju se sledeća polja:
 
  - **Data_EventId** – kôd koji označava željenu opciju za prikupljanje dijagnostičkih podataka koju je odabrao korisnik.
 
+### <a name="officesystemgracefulexitgracefulappexitdesktop"></a>Office.System.GracefulExit.GracefulAppExitDesktop
+
+Događaj je pokrenut gracioznim raskidom aplikacija za Office klijentske aplikacije kao što su, ali ne ograničavajući se na, Word, Excel, PowerPoint i Outlook. Korišćenje gracioznog izlaza za merenje ispravnosti proizvoda Office klijenata. Zamišljeno je da bude poslovni kritični signal koji koriste Office inženjeri a bi postigli stabilnost proizvoda.
+
+Prikupljaju se sledeća polja:
+
+- **AppBuild** – Identifikator izdanja verzije ugroženog procesa.
+- **AppMajor** – Identifikator glavne verzije ugroženog procesa.
+- **AppMinor** – Identifikator međuverzije ugroženog procesa.
+- **AppRevision** – Identifikator izdanja verzije ugroženog procesa.
+- **BootCompleted** – Da li je Office proces završio pokretanje sistema.
+- **DetectionTime** – Vreme kada je otkriven neočekivani izlaz.
+- **EcsETag** – Identifikator eksperimenta za proces.
+- **HasEdit** – Da li se uređivanje dokumenta dogodilo tokom Office procesa.
+- **HasOpen** – Da li je dokument otvoren tokom Office procesa.
+- **InstallMethod** – Da li je trenutno izdanje sistema Office instalirano nadogradnjom, vraćanjem na prethodnu verziju ili novom instalacijom.
+- **OfficeUILang** – Jezik Office procesa.
+- **PreviousBuild** – Izdanje prethodno instalirane verzije.
+- **SafeMode** – Bio je Office proces u bezbednom režimu.
+- **SessionId** – Jedinstveni identifikator procesa.
+- **SessionInitTime** – Vreme kada je počeo ugroženi proces.
 
 ### <a name="officesystemidentitychanged"></a>Office.System.IdentityChanged
 
