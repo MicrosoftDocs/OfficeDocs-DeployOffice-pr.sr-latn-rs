@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: 6e5ea5a865acb893c92af12e68e7815fcf2fee65
-ms.sourcegitcommit: 5a4d3419d5ff4c8008ad3cf894a8f03ec170504b
+ms.openlocfilehash: 6638ac773e4b39f17648161421548f445d2194e7
+ms.sourcegitcommit: 0654f421d001168605f936dc54c9ee0a26fca844
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "45128580"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45156055"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -2767,7 +2767,7 @@ Prikupljaju se sledeća polja:
 
   - **Vreme prikupljanja podataka** - Vremenska oznaka koja označava kada je evidentiran događaj pada
 
-#### <a name="office_appdocs_appdocs_operationopenfrommrubypath"></a>Office_AppDocs_AppDocs_OperationOpenFromMruByPath
+#### <a name="office_docs_appdocs_operationopenfrommrubypath"></a>Office_Docs_AppDocs_OperationOpenFromMruByPath
 
 Ovaj događaj se prikuplja za Office aplikacije pokrenute na Android, iOS, Universal ili Windows platformama. Događaj se snima kad se izvršava operacija otvaranja datoteke sa putanje obezbeđene na poslednjoj korišćenoj listi i koristi se za razumevanje korisnika i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji otvaranja datoteke.
 
@@ -2879,7 +2879,7 @@ Prikupljaju se sledeća polja:
 
 - **Data_UnpackLinkPromptResult** – Nabrajanje koje predstavlja odgovor upita veze za raspakivanje.
 
-#### <a name="office_appdocs_appdocs_operationopenfrommrubyurl"></a>Office_AppDocs_AppDocs_OperationOpenFromMruByUrl
+#### <a name="office_docs_appdocs_operationopenfrommrubyurl"></a>Office_Docs_AppDocs_OperationOpenFromMruByUrl
 
 Ovaj događaj se prikuplja za Office aplikacije pokrenute na Android, iOS, Universal ili Windows platformama. Događaj se snima kad se izvršava operacija otvaranja datoteke sa URL adrese obezbeđene na poslednjoj korišćenoj listi i koristi se za razumevanje korisnika i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji otvaranja datoteke. 
 
@@ -2992,7 +2992,7 @@ Prikupljaju se sledeća polja:
 - **Data_UnpackLinkPromptResult** – Nabrajanje koje predstavlja odgovor upita veze za raspakivanje.
 
 
-#### <a name="office_appdocs_appdocs_operationopenfrompath"></a>Office_AppDocs_AppDocs_OperationOpenFromPath
+#### <a name="office_docs_appdocs_operationopenfrompath"></a>Office_Docs_AppDocs_OperationOpenFromPath
 
 Ovaj događaj se prikuplja za Office aplikacije pokrenute na Android, iOS, Universal ili Windows platformama. Događaj beleži kada se izvršava otvaranje datoteke sa putanje i koristi se za razumevanje i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji otvaranja datoteke.
 
@@ -3104,7 +3104,7 @@ Prikupljaju se sledeća polja:
 
 - **Data_UnpackLinkPromptResult** – Nabrajanje koje predstavlja odgovor upita veze za raspakivanje.
 
-#### <a name="office_appdocs_appdocs_operationopenfromprotocolhandler"></a>Office_AppDocs_AppDocs_OperationOpenFromProtocolHandler
+#### <a name="office_docs_appdocs_operationopenfromprotocolhandler"></a>Office_Docs_AppDocs_OperationOpenFromProtocolHandler
 
 Ovaj događaj se prikuplja za Office aplikacije pokrenute na Android, iOS, Universal ili Windows platformama. Događaj se snima kad se izvršava operacija otvaranja datoteke iz neke druge aplikacije pomoću interfejsa rukovaoca protokolom i koristi se za razumevanje korisnika i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji otvaranja datoteke.
 
@@ -3216,7 +3216,7 @@ Prikupljaju se sledeća polja:
 
 - **Data_UnpackLinkPromptResult** – Nabrajanje koje predstavlja odgovor upita veze za raspakivanje.
 
-#### <a name="office_appdocs_appdocs_operationopenfromshell"></a>Office_AppDocs_AppDocs_OperationOpenFromShell
+#### <a name="office_docs_appdocs_operationopenfromshell"></a>Office_Docs_AppDocs_OperationOpenFromShell
 
 Ovaj događaj se prikuplja za Office aplikacije pokrenute na Android, iOS, Universal ili Windows platformama. Događaj beleži kada se izvršava otvaranje datoteke iz ljuske i koristi se za razumevanje i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji otvaranja datoteke.
 
@@ -3329,7 +3329,7 @@ Prikupljaju se sledeća polja:
 - **Data_UnpackLinkPromptResult** – Nabrajanje koje predstavlja odgovor upita veze za raspakivanje.
 
 
-#### <a name="office_appdocs_appdocs_operationopenfromurl"></a>Office_AppDocs_AppDocs_OperationOpenFromUrl
+#### <a name="office_docs_appdocs_operationopenfromurl"></a>Office_Docs_AppDocs_OperationOpenFromUrl
 
 Ovaj događaj se prikuplja za Office aplikacije pokrenute na Android, iOS, Universal ili Windows platformama. Događaj beleži kada se izvršava otvaranje datoteke sa URL adrese i koristi se za razumevanje i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji otvaranja datoteke.
 
@@ -5230,7 +5230,7 @@ Prikupljaju se sledeća polja:
 
   - **cardCorrelationId** - Duplikat gore navedenog Data.appContextId 
   - **cardPersonaCorrelationId** - Duplikat gore navedenog Data.cardCorrelationId
-  - **consumerCorrelationId** - Duplikat gore navedenog Data.clientCorrelationId 
+  - **consumerCorrelationId** – Duplikat gore navedenog Data.clientCorrelationId 
 
 - **Data.region** – Geografska oblast pozadinska usluga kartice profila na koji se korisnik povezuje
 
