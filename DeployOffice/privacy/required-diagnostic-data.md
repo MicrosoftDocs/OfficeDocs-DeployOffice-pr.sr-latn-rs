@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: 6638ac773e4b39f17648161421548f445d2194e7
-ms.sourcegitcommit: 0654f421d001168605f936dc54c9ee0a26fca844
+ms.openlocfilehash: 777c0bdb8651a046022e8078820870b67e99f2f7
+ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45156055"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46683280"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -650,6 +650,13 @@ Pored toga, sledeća polja su uobičajena za sve događaje za aplikaciju Outlook
 
 - **process_bitness** - Broj bitova procesa (32 ili 64) aplikacije, pomaže u otkrivanju problema koji su specifični za broj bitova uređaja
 
+- **webview_kernel_version**: verzija jezgra sistema Chromium veb prikaza na uređaju koja nam pomaže da prepoznamo probleme sa kompatibilnošću povezane sa verzijom veb prikaza.
+
+- **webview_package_name**: naziv paketa veb prikaza na uređaju koji nam pomaže da prepoznamo probleme sa kompatibilnošću povezane sa verzijom veb prikaza.
+
+- **webview_package_version**: verzija paketa veb prikaza na uređaju koji nam pomaže da prepoznamo probleme sa kompatibilnošću povezane sa verzijom veb prikaza.
+
+
 ## <a name="software-setup-and-inventory-data-events"></a>Podaci dobijeni iz instalacije i popis softvera
 
 Podtipovi podataka koji spadaju u ovu kategoriji su:
@@ -925,7 +932,7 @@ Prikupljaju se sledeća polja:
 
 - **Result**- Uspeo, neuspešan, nepoznat, otkazan
 
-- **ServerType** – Daje tip servera koji nudi uslugu 
+- **ServerType** - daje tip servera koji nudi uslugu 
 
 - **SignInMode** - prijavljivanje, automatsko prijavljivanje ili ubrzavanje prijavljivanja
 
@@ -1572,9 +1579,9 @@ Prikupljaju se sledeća polja:
 
 - **error_type** - Tip greške koja se dogodila. Neki primeri uključuju grešku sačuvaj radnu verziju, pošalji radnu verziju i grešku datoteke u oblaku.
 
-- **exrule** - proširena vrednost pravila (odnosi se samo na greške ponavljanja imenovanja)
+- **exdate** – datum proširenog pravila (odnosi se samo na greške u ponavljanju zakazanih obaveza) *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
-- **exdate** - proširena vrednost datuma (odnosi se samo na greške ponavljanja imenovanja)
+- **exrule** – proširena vrednost pravila (odnosi se samo na greške u ponavljanju zakazanih obaveza) *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
 - **has_attachments** - odražava ako je došlo do nacrta greške u vezi sa prilogom, ako je primenljivo.
 
@@ -1586,13 +1593,13 @@ Prikupljaju se sledeća polja:
 
 - **is_recoverable** - odražava da li se greška može oporaviti od ili ako je u pitanju fatalna greška.
 
-- **rdate** – datum pravila ponavljanja (odnosi se samo na greške u ponavljanju zakazanih obaveza) 
+- **rdate** – datum pravila ponavljanja (odnosi se samo na greške u ponavljanju zakazanih obaveza) *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
-- **rrule** – sama vladavina ponavljanja (odnosi se samo na greške u ponavljanju sastanaka) 
+- **rrule** – samo pravilo ponavljanja (odnosi se samo na greške u ponavljanju zakazanih obaveza) *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
-- **rrule_error_type** - poruka o grešci pri raščlanjivanju pravila ponavljanja (odnosi se samo na greške ponavljanja zakazanih obaveza)
+- **rrule_error_message** – poruka o grešci sa raščlanjavanjem pravila ponavljanja (odnosi se samo na greške u ponavljanju zakazanih obaveza) *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
-- **rrule_error_type** - pravilo greške pri raščlanjavanju pravila ponavljanja (odnosi se samo na greške u ponavljanju zakazanih obaveza)
+- **rrule_error_type** – vrsta greške sa raščlanjavanjem pravila ponavljanja (odnosi se samo na greške u ponavljanju zakazanih obaveza) *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
 - **status_code** - Statusni kôd greške koja se dogodila. To nam pomaže da shvatimo uzrok greške.
 
@@ -1664,6 +1671,8 @@ Prikupljaju se sledeća polja:
 
 - **is_all_day** – koristi kao „meeting_duration“ da biste naveli da li je ovo celodnevni sastanak. Pomaže nam da shvatimo da li postoje problemi sa radnjama koji se izvode na celodnevnim sastancima. 
 
+- **is_location_permission_granted** – da li je korisnik dodelio dozvolu aplikaciji za sistemsku lokaciju. Ako je dozvoljen pristup lokaciji, aplikacija može da prikaže dodatne uslužne informacije u korisničkom interfejsu. Ako znamo da je dozvola lokacije dodeljena, moći ćemo da znamo koliko se često dodatne uslužne informacije prikazuju korisnicima.
+
 - **is_organizer** - pomaže nam da shvatimo da li organizator može ispravno da uređuje i kreira sastanke. 
 
 - **is_recurring** - pomaže nam da shvatimo da li postoji problem koji posebno utiče na periodične sastanke. 
@@ -1714,27 +1723,23 @@ Prikupljaju se sledeća polja:
 
 Koristi se za nadgledanje mogućeg negativnog uticaja na vašu sposobnost da obavljate ključne funkcije pretraživanja, kao što su pretraživanje pošte, kontakata ili događaja.
 
-Prikupljaju se sledeća polja:  
+Sledeća polja se prikupljaju za iOS i Android: 
 
 - **account_switcher_action_type** - ovaj tip radnje prati ako je korisnik koristio program za promenu naloga bilo u jednostavnom otkrivanju ili ako je odlučio da promeni nalog
 
-- **action** - tip radnje koja je izvršena za pretragu. Ovo prepoznaje da li je pokrenuta pretraga, da li je nastala ili završena, kao i koje su se radnje događale tokom pretrage, tj. bio je mikrofon korišćen. Ovo je instrument za obezbeđivanje ispravnih i korisnih pretraga.
-
 - **action_type** - tip radnje koja je izvršena za pretragu. Ovo prepoznaje da li je pokrenuta pretraga, da li je nastala ili završena, kao i koje su se radnje događale tokom pretrage, tj. bio je mikrofon korišćen. Ovo je instrument za obezbeđivanje ispravnih i korisnih pretraga. 
-
-- **answer_result_selected_count** – prati koliko puta je pretraživanje bilo „uspešno“ tj. da li je korisnik pronašao osobu koju je želeo? Napisali ste e-poruku? Obeležili ste poruku obeleživačem? 
-
-- **contact_result_in_full_list_selected_count**–prati koliko puta je korisnik tražio da „Vidi sve kontakte“ na celoj listi izabranoj tokom kombinovanih sesija pretrage
-
-- **contact_result_selected_count** - prati koliko je bilo izbora izabranih kontakata tokom kombinovane sesije pretrage
-
-- **conversation_result_selected_count** - prati koliko razgovora je bilo izabrano tokom kombinovane sesije pretrage
 
 - **entrance_type** - ovo utvrđuje na koji način je korisnik pokrenuo upit za pretragu, sa kartice pretraga, nuli upita, zaglavlju pretrage ili rezultatu pretrage. 
 
 - **has_contact_results** – jednostavno bilo da su prikazani rezultati kontakta ili ne u upitu pretrage
 
 - **include_deleted** - da li pretraga prikazuje izbrisane opcije u rezultatima pretrage 
+
+- **is_ics_external_data** – snima da li je dodati događaj unutrašnji (tj. dodat u Outlook u kalendar programa Outlook) ili spoljni (tj. dodat iz neke druge aplikacije za e-poštu, kao što je Gmail u kalendar programa Outlook).
+
+- **is_network_fully_connected** – ovo služi da dobijete nagoveštaj o razlogu za pretragu van mreže. Ako je mreža povezana i pretraga je van mreže, razlog je verovatno vremensko ograničenje servera
+
+- **is_offline_search** – da li je sesija pretrage bila pretraga van mreže na osnovu rezultata pretrage koje je vratio hx
 
 - **re_enter_search_tab** - Boolean da naznači da li je korisnik zamenio kartice pre nego što je odabrao rezultat pretraživanja
 
@@ -1744,11 +1749,29 @@ Prikupljaju se sledeća polja:
 
 - **search_origin** - odakle je došla pretraga, tj. pomoćnik za glasovne pomoćnika, Cortana, unos tastature itd. 
 
+- **search_scope** - niska koja ukazuje na tip naloga koji je korisnik tražio (npr. Exchange, gmail itd.) ili ako je to bilo na svim nalozima. 
+
+- **search_suggestion_type** - pokazuje šta se nalazi iza predloga pretrage, tj. da li je ispravka pravopisa? Na osnovu istorije? Automatsko dovršavanje?
+
 - **search_request_reason** - označava razlog za slanje zahteva za pretragu iz aplikacije, što znači da ukazuje na akciju komponente ili korisnika koja je pokrenula pretragu.
 
 - **search_result_filter_type** - označava koji tip filtera je primenjen za pretraživanje, samo prikaz svih ili priloga
 
-- **search_scope** - niska koja ukazuje na tip naloga koji je korisnik tražio (npr. Exchange, gmail itd.) ili ako je to bilo na svim nalozima. 
+Sledeća polja se prikupljaju za iOS aplikacije programa Outlook Mobile: 
+
+- **action** - tip radnje koja je izvršena za pretragu. Ovo prepoznaje da li je pokrenuta pretraga, da li je nastala ili završena, kao i koje su se radnje događale tokom pretrage, tj. bio je mikrofon korišćen. Ovo je instrument za obezbeđivanje ispravnih i korisnih pretraga.
+
+- **answer_result_selected_count** – prati koliko puta je pretraživanje bilo „uspešno“ tj. da li je korisnik pronašao osobu koju je želeo? Napisali ste e-poruku? Obeležili ste poruku obeleživačem? 
+
+- **contact_result_in_full_list_selected_count**–prati koliko puta je korisnik tražio da „Vidi sve kontakte“ na celoj listi izabranoj tokom kombinovanih sesija pretrage
+
+- **contact_result_selected_count** - prati koliko je bilo izbora izabranih kontakata tokom kombinovane sesije pretrage
+
+- **conversation_result_selected_count** - prati koliko razgovora je bilo izabrano tokom kombinovane sesije pretrage
+
+- **mail_requests_count** – prati koliko je zahteva za pretragu pošte poslato u okviru kombinovane sesije pretrage
+
+- **people_filter_selected_contacts_count** – prati koliko kontakata je izabrano u filteru za osobe
 
 - **search_session_ended_type** - označava gde je pretraga završena zato što je otkazana ili je upit ažuriran
 
@@ -1792,6 +1815,10 @@ Prikupljaju se sledeća polja:
 - **contains_mention** - saopštava nam da li je konverzacija za @ pominjanje primenjena kako bi nam pomogao da otkrijemo probleme sa pomenutim porukama
 
 - **conversation_type** - govori nam koji tip prikaza e-poruke je vizuelizovana, kao što su jedan prikaz poruke ili više prikaza poruke. Pomaže nam da otkrijemo probleme u vezi sa određenim tipom poruke u našem prikazu za razgovor kroz e-poštu.
+
+- **reaction_origin** – saopštava koji je izvor iz kog je korisnik reagovao 
+
+- **reaction_type** – saopštava tip reakcije korisnika
 
 - **suggested_reply_char_count** - govori nam koliko znakova predlažemo predloge koji pružamo (ako je dostupno) da nam pomognu da otkrijemo anomalije i probleme u vezi sa našim predlozima
 
@@ -2615,6 +2642,8 @@ Prikupljaju se sledeća polja:
 
 - **Data_FileOpenFlowMarkers** – Pre nego što počne proces otvaranja datoteke, postoji neka preliminarna obrada. Vreme utrošeno za ovu preliminarnu obradu hvata se u vrednosti niske koja je u formatu \<functionId>\<functionValue>\<functionId>\<functionValue>...
 
+- **Data_FirstPartyProviderApp** – ako se otvaranje datoteke u programu Word, Excel ili PowerPoint ili Office aplikacijama, poziva iz druge Microsoft aplikacije, onda se ime tog dobavljača aplikacije snima ovde.
+
 - **Data_InclusiveMeasurements**-– Vrednost niske koja evidentira trajanje pozivanja funkcije, u formatu sa oznakom funkcije i trajanjem koje obuhvata trajanje podfunkcijskih poziva. 
 
 - **Data_InitializationReason** - Nabrajanje koje ukazuje na način otvaranja datoteke, npr. element korisničkog interfejsa, pokretanje iz druge aplikacije, itd.
@@ -2766,6 +2795,124 @@ Prikuplja se samo kada krajni korisnik (najverovatnije administrator) omogući K
 Prikupljaju se sledeća polja:
 
   - **Vreme prikupljanja podataka** - Vremenska oznaka koja označava kada je evidentiran događaj pada
+
+#### <a name="office_appdocs_appdocs_documentoperation"></a>Office_AppDocs_AppDocs_DocumentOperation
+
+Ovaj događaj se prikuplja za Office aplikacije pokrenute na Android, iOS, Universal ili Windows platformama. Događaj beleži kada se izvršava operacija sa datotekom (kreiranje/otvaranje/čuvanje/izvoz/itd.) i koristi se za razumevanje i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji datoteke.
+
+Prikupljaju se sledeća polja:
+
+- **Data_AppIdForReportEndBeforeAppKnown** – ID aplikacije kada nije poznat pre nego što je kraj izveštaja pozvao operaciju.
+
+- **Data_CanContinueFromOnBeforeOperationBegins** – CanContinue stanje, pre nego što je pozvan rukovalac početkom.
+
+- **Data_DetachedDuration** – Trajanje procesa odvajanja događaja. 
+
+- **Data_Doc_AccessMode** – Nabrajanje koje označava režim pristupa datoteke, npr. samo za čitanje, čitanje pisanje.
+
+- **Data_Doc_AsyncOpenKind** – Nabrajanje koje ukazuje na tip asinhronog toka korišćenog za otvaranje datoteke.
+
+- **Data_Doc_ChunkingType** – Nabrajanje koje ukazuje na tip algoritma deljenja datoteke na odlomke.
+
+- **Data_Doc_EdpState** – Nabrajanje koje označava stanje zaštite podataka preduzeća.
+
+- **Data_Doc_Ext** – Prva 4 znaka datoteke za oznaku tipa datoteke.
+
+- **Data_Doc_Fqdn** – Ime datoteke na host serveru.
+
+- **Data_Doc_FqdnHash** – GUID koji jedinstveno identifikuje ime hosta servera.
+
+- **Data_Doc_IdentityTelemetryId** – Jednosmerni heš za identitet korisnika koji se koristi za izvršavanje otvaranja.
+
+- **Data_Doc_InitializationScenario** – Nabrajanje koje označava detaljan tip scenarija operacije otvaranja datoteke.
+
+- **Data_Doc_IOFlags** – Nabrajanje koje ukazuje na IO zastavice operacije otvaranje datoteke, npr. da li je datoteka keširana ili ne.
+
+- **Data_Doc_IsCloudCollabEnabled** – Da li je za određenu datoteku omogućena saradnja u oblaku ili ne.
+
+- **Data_Doc_IsIncrementalOpen** – Da li je datoteka otvorena postepenim otvaranjem ili ne.
+
+- **Data_Doc_IsOcsSupported** – Da li datoteka podržava Office uslugu za saradnju ili ne.
+
+- **Data_Doc_IsOpeningOfflineCopy** – Da li je datoteka otvorena iz vanmrežne keširane kopije ili ne.
+
+- **Data_Doc_IsPrefetched** – Da li je datoteka bila učitana u pozadini pre operacije otvaranja.
+
+- **Data_Doc_IsSyncBacked** – Da li datoteka u oblaku postoji lokalno i da li je sinhronizovana sa serverom.
+
+- **Data_Doc_Location** – Nabrajanje koje ukazuje na to gde se datoteka nalazi, npr. lokalno ili u oblaku.
+
+- **Data_Doc_ReadOnlyReasons** – Nabrajanje koji označava razlog za datoteku koja je samo za čitanje.
+
+- **Data_Doc_ResourceIdHash** – GUID koji na jedinstveno identifikuje ID resursa datoteke na serveru.
+
+- **Data_Doc_RtcType** – Nabrajanje koje označava tip RTC kanala koji datoteka koristi.
+
+- **Data_Doc_ServerDocId** – GUID koji jedinstveno identifikuje ID dokumenta na serveru.
+
+- **Data_Doc_ServerProtocol** – Nabrajanje koje označava protokol servera datoteke u oblaku.
+
+- **Data_Doc_ServerType** – Nabrajanje koje označava tip servera datoteke u oblaku.
+
+- **Data_Doc_ServerVersion** – Nabrajanje koje označava tip servera datoteke u oblaku.
+
+- **Data_Doc_SessionId** – Ceo broj koji se povećava za 1 za svaku operaciju otvaranja datoteke u sesiji.
+
+- **Data_Doc_SharePointServiceContext** – Niska koja se koristi za uporednu evidenciju na strani klijenta i na strani servera, to je obično neka vrsta ID-a.
+
+- **Data_Doc_SizeInBytes** – Veličina dokumenta u bajtovima.
+
+- **Data_Doc_SpecialChars** – Nabrajanje koje označava vrstu specijalnog znaka u URL adresi.
+
+- **Data_Doc_UrlHash** – GUID koji jedinstveno identifikuje URL adresu datoteke.
+
+- **Data_Doc_UsedWrsDataOnOpen** – Da li je datoteka otvorena postepeno pomoću unapred keširanih WRS podataka.
+
+- **Data_Doc_WopiServiceId** – Niska koja označava od koje usluge potiče WOPI (Web Application Open Platform Interface Protocol) datoteka.
+
+- **Data_DocumentInputCurrency** – Tip unosa dokumenta koji koristi operacija.
+
+- **Data_DocumentOperation_AppId** – Vrednost nabrajanja koja predstavlja ID aplikacije.
+
+- **Data_DocumentOperation_EndEventId** – Oznaka koja predstavlja gde se operacija završila.
+
+- **Data_DocumentOperation_EndReason** – Vrednost nabrajanja koja predstavlja razlog završetka.
+
+- **Data_DocumentOperation_IsReinitialized** – Predstavlja ponovno pokretanje dokumenta koji je već otvoren.
+
+- **Data_DocumentOperation_isTargetECBeginEC** – Predstavlja ciljni kontekst izvršavanja isti kao odakle je otvoren kontekst.
+
+- **Data_DocumentOperation_ParamsFlags** – Zastavice nabrajanja koje se koriste za pokretanje operacije.
+
+- **Data_DocumentOperation_TelemetryReason** – Predstavljanje nabrajanja ulaze tačke za otvoreni događaj. Npr. otvaranje iz MRU-a ili pregledanje, aktivacija datoteke itd.
+
+- **Data_FileIOInclusiveMeasurements**-– Vrednost niske koja evidentira trajanje pozivanja funkcije, u formatu sa oznakom funkcije i trajanjem koje obuhvata trajanje podfunkcijskih poziva.
+
+- **Data_FileIOMeasurements** – Vrednost niske koja evidentira trajanje pozivanja funkcije, u formatu sa oznakom funkcije i trajanjem koje isključuje trajanje podfunkcijskih poziva.
+
+- **Data_InitializationReason** – Predstavljanje nabrajanja specifičnog razloga za operaciju. Na primer – otvoreno iz URL adrese ili lokalne putanje datoteke, kreirano pomoću birača datoteke, kopirano na putanju datoteke, izvezeno u URL, itd.
+
+- **Data_IsDisambiguateCsiNetworkConnectivityErrorEnabled**.
+
+- **Data_IsNameMissingInUrl** – Ukazuje na to da li ime nije rapčlanjeno iz URL adrese.
+
+- **Data_IsPathMissingForLocalFile** – Ukazuje na to da li je ovo lokalna datoteka bez putanje.
+
+- **Data_IsUnpackedLinkSupportedForOpen** – Ukazuje na to da li je veza koja se ne može spakovati podržana za otvaranje.
+
+- **Data_LinksOpenRightScenario** – Vrednost nabrajanja za scenario ispravnog otvaranja veza.
+
+- **Data_OpEndEventId** – Otnaka koja predstavlja gde se operacija završila.
+
+- **Data_OperationType** – predstavljanje nabrajanja generičkog tipa operacije. Na primer – kreirati, otvoriti, kopirati, sačuvati, itd.
+
+- **Data_RelatedPrevOpTelemetryReason** – Predstavlja operaciju vezanu za prethodnu operaciju.
+
+- **Data_StopwatchDuration** – Ukupno vreme za događaj.
+
+- **Data_UnpackLinkHint** – Nabrajanje koje predstavlja potencijalnu radnju korisnika na osnovu veze za raspakivanje.
+
+- **Data_UnpackLinkPromptResult** – Nabrajanje koje predstavlja odgovor upita veze za raspakivanje.
 
 #### <a name="office_docs_appdocs_operationopenfrommrubypath"></a>Office_Docs_AppDocs_OperationOpenFromMruByPath
 
@@ -5216,7 +5363,7 @@ Prikupljaju se sledeća polja:
 
 - **Data.feature** - Koristi se za grupisanje različitih događaja iste funkcije (Kartica profila)
 
-- **Data.hasPersonalInsightRing** – Uvidi iz sistema Office ili usluge LinkedIn mogu biti dostupni korisniku
+- **Data.hasPersonaInsightRing** – Uvidi iz sistema Office ili usluge LinkedIn mogu biti dostupni korisniku
 
 - **Data.hostAppRing** – Prsten pomoću kojeg je aplikacija distribuirana
 
@@ -5299,6 +5446,8 @@ Prikupljaju se sledeća polja:
 
 - **Data.feature** - Koristi se za grupisanje različitih događaja iste funkcije (Kartica profila)
 
+- **Data.hasPersonaInsightRing** – Uvidi iz sistema Office ili usluge LinkedIn mogu biti dostupni korisniku
+
 - **Data.hostAppRing** – Prsten pomoću kojeg je aplikacija distribuirana
 
 - **Data.immersiveProfileCorrelationId** – Globalni jedinstveni identifikator za sesiju prikaza proširenog profila
@@ -5364,11 +5513,13 @@ Prikupljaju se sledeća polja:
 
 #### <a name="office_officemobile_pdfviewer_pdffileopenmeasurements"></a>Office_OfficeMobile_PdfViewer_PdfFileOpenMeasurements
 
-Ovaj događaj se prikuplja za Union iOS i beleži kada se izvršava operacija otvaranja datoteke. Prikupili smo ove podatke da bismo obezbedili dobar učinak za svako otvaranje datoteke u aplikaciji. 
+Ovaj događaj se prikuplja za Office aplikaciju za iOS i beleži kada se izvršava operacija otvaranja datoteke. Prikupili smo ove podatke da bismo obezbedili dobar učinak za svako otvaranje datoteke u aplikaciji. 
 
 Prikupljaju se sledeća polja:
 
 - **Data_Doc_ActivationFQDN** – Ime domena aplikacije dobavljača za scenario aktiviranja datoteke (beleže se samo informacije o aplikaciji 1. strane).
+
+- **Data_Doc_CreateTelemetryReason** – telemetrijski razlog za kreiranje PDF datoteke. (npr: kreiranje iz skeniranja pomoću radnje „slika u PDF“, radnje „dokument u PDF“ itd.)
 
 - **Data_Doc_DownloadDurationms** – Vreme za preuzimanje PDF datoteke u oblaku.
 
@@ -5405,11 +5556,17 @@ Prikupljaju se sledeća polja:
 
 - **Data_FailureReason** – U slučaju neuspešnog otvaranja, ovi enums definišu razlog neuspeha.
 
+- **Data_FileGUID** – globalni identifikator datoteke koja se generiše nasumično
+
 - **Data_FileLocation** – Lokacija na kojoj se nalazi datoteka, npr. Lokalna, ODSP, iCloud itd.
 
 - **Data_FileOpenEntryPoint Ulazna tačka** – ulazna tačka za otvaranje datoteke
 
 - **Data_FileSize** – Veličina datoteke na kojoj se odvija operacija
+
+- **Data_NetworkRequestErrorResponse** – odgovor greške na mreži koja odgovara kôdu greške.
+
+- **Data_NetworkRequestStage** – faza greške u slučaju preuzimanja pdf datoteke iz oblaka.
 
 - **Data_OpenMode** – U kojem režimu je PDF otvoren, npr. 0: Režim prikaza, 2: Režim potpisivanja
 
@@ -5424,6 +5581,43 @@ Prikupljaju se sledeća polja:
 - **Data_Result** – Status operacije koja se izvršava, npr. true:uspeh, false:neuspeh
 
 - **Data_Type** – Tip operacije datoteke (otvaranje, zatvaranje ili čuvanje) 
+
+#### <a name="office_officemobile_pdfviewer_pdffileoperations"></a>Office_OfficeMobile_PdfViewer_PdfFileOperations
+
+Događaj se prikuplja za Office aplikaciju za iOS. On snima kad se izvršava operacija otvaranja, zatvaranja ili čuvanja pdf-a i koristi se za razumevanje korisnika i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji pdf datoteka. Događaj nam omogućava da operacije otvaranja, zatvaranja i čuvanja pdf-a rade na očekivani način, kao i da se poboljšaju performanse operacija pdf datoteka. 
+
+- **Data_Doc_FileOpSessionID** – Jedinstveni Id za sesiju dokumenta 
+
+- **Data_Doc_URLHash** – GUID za url adresu datoteke 
+
+- **Data_ErrorCode** – greška u slučaju neuspelih otvaranja datoteka/neuspelih preuzimanja / otkazanih preuzimanja 
+
+- **Data_ErrorMessage** – Relevantan kôd poruke-do-greške 
+
+- **Data_FailureReason** – U slučaju neuspešnog otvaranja, ova nabrajanja definišu razlog neuspeha. 
+
+- **Data_FileGUID** – globalni identifikator datoteke koja se generiše nasumično
+
+- **Data_FileLocation** – Lokacija na kojoj se nalazi datoteka (Lokalna, ODSP, iCloud itd.) 
+
+- **Data_FileOpenEntryPoint Ulazna tačka** – Ulazna tačka za otvaranje datoteke 
+
+- **Data_FileSize** – Veličina datoteke na kojoj se odvija operacija 
+
+- **Data_OpenMode** – U kojem režimu je PDF otvoren (0: Režim prikaza, 2: Režim potpisivanja) 
+
+- **Data_PageCount** – Prebrojavanje stranica u PDF datoteci.
+
+- **Data_PasswordProtected** – Obeleživač koji govori da li je datoteka zaštićena lozinkom ili nije. 
+
+- **Data_ProviderApp** – Trenutno obezbeđena aplikacija dobavljača samo u slučaju aktiviranja datoteka 
+
+- **Data_ReadOnly** – Obeleživač koji govori da li je datoteka samo za čitanje ili ne.
+
+- **Data_Result** – Status operacije koja se izvršava, (true:uspeh, false:neuspeh) 
+
+- **Data_Type** – Tip operacije datoteke (otvaranje, zatvaranje ili čuvanje)
+
 
 #### <a name="officeonenoteandroidappnavigationnavigationuistatechanged-onenoteappnavigationnavigationuistatechanged-previous-name"></a>Office.OneNote.Android.App.Navigation.NavigationUIStateChanged, OneNote.App.Navigation.NavigationUIStateChanged *(prethodno ime)*
 
@@ -5927,7 +6121,7 @@ Prikupljaju se sledeća polja:
 
   - **Podaci\_DocHasStorage:bool -** Da li ovaj dokument ima lokalno skladište?
 
-  - **Data\_fLifeguarded:bool -** Da li se dokument ikada samokorigovao (funkcija koja sama ispravlja greške u dokumentu bez upita za korisnika)?
+  - **Data\_fLifeguarded:bool -** Da li se dokument ikada samokorigovao (funkcija koja sama ispravlja greške u dokumentu bez slanja upita korisniku)?
 
   - **Podaci\_IsDocAutoSaveable:bool -** Da li se prezentacija može automatski sačuvati?
 
@@ -8695,7 +8889,7 @@ Prikupljaju se sledeća polja:
 
 - **UsesSharedRuntime** – označava da li aplikacija koristi sharedRuntime ili ne.
 
-#### <a name="officeofficemobilefirstrunsetup"></a>Office.OfficeMobile.FirstRunSetup
+#### <a name="officeofficemobilefrefirstrunsetup"></a>Office.OfficeMobile.FRE.FirstRunSetup
 
 Prvo pokretanje aplikacije nakon instalacije aktiviraće ovaj događaj otkucaja. On će nam pomoći da identifikujemo instalacije i automatske nadogradnje sa starijih verzija aplikacije i omogućiće nam da identifikujemo greške u automatskim nadogradnjama, uključujući opterećenja biblioteka i neuspela preuzimanja paketa proširenja/jezičkih paketa.
 
@@ -10189,7 +10383,7 @@ Prikupljaju se sledeća polja:
 
      - java – ako je pad zabeležen na sloju aplikacije.
 
-     - osnovni – ako je pad zabeležen na osnovnom sloju u okviru aplikacije. 
+     - osnovni – ako je pad zabeležen na osnovnom sloju unutar aplikacije. 
 
      - otklonjivi – padovi koji se zabeleže da bi se otklonile greške u bilo kojoj funkciji. Aplikacije neće pasti već će otpremiti evidencije o otklonjivim padovima radi lakšeg otklanjanja greške u funkciji.
 
@@ -11479,6 +11673,8 @@ Prikupljaju se sledeća polja:
 
 - **CritiqueSummary** – Rezime svih kritika koje su korisnici videli uz svoje brojeve.
 
+- **ExitEventCode** – Kôd za prepoznavanje u kom scenariju korisnik izlazi iz sesije vežbanja, bez obzira na to je li reč o scenariju greške ili uspešnom izlazu. 
+
 - **PauseRehearsingCount** – Prebrojavanje koliko je puta korisnik kliknuo na pauziranje probe.
 
 - **RehearsalInitTime** – Vreme koje je potrebno da se proba pokrene.
@@ -11706,7 +11902,7 @@ Prikupljaju se sledeća polja:
 
 #### <a name="onenoteappsafebootdialogactiontaken-officeonenoteandroidsafebootdialogactiontaken-officeandroidearlytelemetrysafebootdialogactiontaken"></a>OneNote.App.SafeBootDialogActionTaken, Office.OneNote.Android.SafeBootDialogActionTaken, Office.Android.EarlyTelemetry.SafeBootDialogActionTaken
 
-Kritičan signal koji se koristi za praćenje odgovora korisnika kada vidi dijalog „Bezbedno pokretanje aplikacije“. Dijalog „Bezbedno pokretanje aplikacije“ se prikazuje kada nismo bili u mogućnosti da pokrećemo više puta. Izbor korisnika da bezbedno pokrene aplikaciju koristi se kao dozvola za čišćenje podataka aplikacije za uspešno pokretanje. Koristi se da obezbedi otkrivanje kritičnih regresija OneNote aplikacije i ispravnost usluge. Korisnik vidi kada naiđe na kritičnu grešku kritičnog pada prilikom pokretanja aplikacije. Ove informacije će pomoći da se prati da li je rešen uzrok pada i da li korisnik može da uspešno pokrene aplikaciju ili ne može.
+Kritičan signal koji se koristi za praćenje odgovora korisnika kada vidi dijalog „Bezbedno pokretanje aplikacije“. Dijalog „Bezbedno pokretanje aplikacije“ se prikazuje kada nismo bili u mogućnosti da pokrećemo više puta. Izbor korisnika da bezbedno pokrene aplikaciju koristi se kao dozvola za čišćenje podataka aplikacije za uspešno pokretanje. Koristi se da obezbedi otkrivanje kritičnih regresija OneNote aplikacije i ispravnost usluge. Korisnik vidi kada naiđe na kritičnu grešku kritičnog pada prilikom pokretanja aplikacije. Ove informacije će pomoći da se prati da li je rešen uzrok pada i da li korisnik može da uspešno pokrene aplikaciju ili ne.
 
 Prikupljaju se sledeća polja: 
 
@@ -12997,6 +13193,12 @@ Prikupljaju se sledeća polja samo za Android:
 - **switch_access** – saopštava nam ako je korisnik uključio postavku za prebacivanje pristupa na uređaju kako bi nam pomogao da otkrijemo probleme u vezi sa ovom postavkom
 
 - **talkbalk** – saopštava nam ako je korisnik uključio postavku za vezu na uređaju kako bi nam pomogao da otkrijemo probleme u vezi sa ovom postavkom
+
+- **webview_kernel_version**: verzija jezgra sistema Chromium veb prikaza na uređaju koja nam pomaže da prepoznamo probleme sa kompatibilnošću povezane sa verzijom veb prikaza.
+
+- **webview_package_name**: naziv paketa veb prikaza na uređaju koji nam pomaže da prepoznamo probleme sa kompatibilnošću povezane sa verzijom veb prikaza.
+
+- **webview_package_version**: verzija paketa veb prikaza na uređaju koji nam pomaže da prepoznamo probleme sa kompatibilnošću povezane sa verzijom veb prikaza.
 
 #### <a name="low_storage_warning"></a>low_storage_warning
 
