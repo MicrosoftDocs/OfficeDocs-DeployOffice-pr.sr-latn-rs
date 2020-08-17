@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: f9010fcc04540073dde219dc765e1811aa8a42e5
-ms.sourcegitcommit: 7b24028ab20d4f43dbca85cea2617398b36a3180
+ms.openlocfilehash: 1485ef7bdcfdf945ba2c9dd0e751cbe6b84dde5c
+ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "45117214"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46683244"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -10425,6 +10425,140 @@ Ovaj događaj se evidentira kada ne uspe premeštanje lokalne beležnice na disk
 Prikupljaju se sledeća polja:
  
 - **ErrorMsg** - Poruka o grešci koja odgovara neuspehu.
+
+### <a name="onenotestorageconnectivitychanged"></a>OneNote.Storage.ConnectivityChanged
+
+Događaj se evidentira bez obzira da li korisnik ima vezu sa internetom. Ovo se koristi za uzajamno povezivanje sa drugom metrikom performansi sinhronizacije, omogućavajući nam da zanemarimo događaje koji se dešavaju dok korisnik nema vezu sa Internetom, jer ne očekujemo da bi kašnjenje u usluzi bilo prihvatljivo bez veze sa Internetom. To nam omogućava da proračunamo tačan broj sesija za naše metrike, kroz isečke klijenata (po zakupcu, po sektoru). Koristimo ga i da bi filtrirali izveštaje o greškama jer postoje brojne greške sinhronizacije za koje očekujemo da se pojave bez mrežnog povezivanja, što u suprotnom garantuje istragu.
+
+Ukoliko ne primimo ove podatke, nećemo moći da precizno nadgledamo performanse proizvoda ili utvrdimo da li su greške koje korisnik iskusi, očekivane ili zahtevaju dalju istragu. 
+
+Prikupljaju se sledeća polja:
+
+- **InternetConnectivityNowAvailable** – ako je došlo do promene stanja veze, tako da je sada internet
+
+### <a name="onenotestoragelegacyinboundlatency"></a>OneNote.Storage.LegacyInboundLatency
+
+Kritičan signal koji se koristi za praćenje performansi ulaznih operacija sinhronizacije, koje komuniciraju direktno sa SharePoint, uključujući povezivanje informacija koje nam omogućavaju da nadgledamo i istražujemo performanse otpremanja podataka ka našoj usluzi (onenote.com). Ovaj signal se sakuplja za najgore izvedena preuzimanja u poslednjih 300 sekundi (broj sekundi konfiguriše Microsoft u zavisnosti od performansi i uslova usluge).
+
+Ovo se koristi za obezbeđivanje ispravnosti usluge dopuštajući nam da vidimo koji zakupci prolaze kroz neprihvatljivo spor dolazak podataka u našu uslugu, informacije o podacima koje su otpremali kada su doživeli spor dolazak i koliko je rasprostranjen problem sa kašnjenjem među zakupcima. Koristi se i za izveštavanje o ispravnosti i performansama usluge za sve naše klijente, radi merenja trendova tokom vremena i automatskog upozorenja o problemima za ublažavanje inženjeringa. Ako nemamo ove podatke, to će nas sprečiti da osiguramo adekvatne performanse kada se sinhronizovanje korisnika promeni u sistemu SharePoint.
+
+Prikupljaju se sledeća polja: 
+
+- **IsEducationNotebook** – Bulova vrednost koja ukazuje da li je beležnica, beležnica za obrazovanje
+
+- **NotebookId** – ID beležnice čiji je deo ovo otpremanje
+
+- **TimeToConfirmSyncedWithServerInMs** – Vreme, u milisekundama, koje je bilo potrebno da se izvrši otpremanje
+
+### <a name="onenotestoragelegacyoutboundlatency"></a>OneNote.Storage.LegacyOutboundLatency
+
+Kritičan signal koji se koristi za praćenje performansi odlaznih operacija sinhronizacije koje direktno komuniciraju sa SharePoint, uključujući informacije o međusobnom povezivanju, koje nam omogućavaju da nadgledamo i istražujemo performanse otpremanja podataka ka našoj usluzi (onenote.com). Ovaj signal se sakuplja za najgore izvedena preuzimanja u poslednjih 300 sekundi (broj sekundi konfiguriše Microsoft u zavisnosti od performansi i uslova usluge).
+
+Ovo se koristi za obezbeđivanje ispravnosti usluge, omogućavajući nam da vidimo koji zakupci prolaze kroz neprihvatljivo sporo odlaženje podataka ka našoj usluzi, informacije o podacima koje su otpremali kada su iskusili sporo odlaženje i koliko je rasprostranjen problem sa kašnjenjem među zakupcima. Koristi se i za izveštavanje o ispravnosti i performansama usluge za sve naše klijente, radi merenja trendova tokom vremena i automatskog upozorenja o problemima za ublažavanje inženjeringa. Ako nemamo ove podatke, to će nas sprečiti da osiguramo adekvatne performanse kada se sinhronizovanje korisnika promeni u sistemu SharePoint. 
+
+Prikupljaju se sledeća polja: 
+
+- **IsEducationNotebook** – Bulova vrednost koja ukazuje da li je beležnica, beležnica za obrazovanje
+
+- **NotebookId** – ID beležnice čiji je deo ovo otpremanje
+
+- **TimeToConfirmSyncedWithServerInMs** – Vreme, u milisekundama, koje je bilo potrebno da se izvrši otpremanje
+
+### <a name="onenotestoragerealtimefiledataobjectdownload"></a>OneNote.Storage.RealTime.FileDataObjectDownload 
+
+Kritičan signal koji se koristi za praćenje performansi kada korisniku dolazi objekat sa podacima datoteke (tj. ugrađena datoteka ili slika) koja se preuzima direktno iz naše usluge, a ne kao deo operacije sinhronizacije na stranici, odeljku ili beležnici. Ovaj signal se sakuplja za najgore izvedena preuzimanja u poslednjih 300 sekundi (broj sekundi konfiguriše Microsoft u zavisnosti od performansi i uslova usluge).
+
+Ovo se koristi za obezbeđivanje ispravnosti usluge, omogućavajući nam da vidimo koji zakupci prolaze kroz neprihvatljivo sporo preuzimanje podataka iz naše usluge, i koliko je rasprostranjen problem sa kašnjenjem među zakupcima, i izveštavamo o našem ponašanju tokom vremena omogućavajući nam da merimo trendove performanse usluge. Ako vidimo neprihvatljivo kašnjenje objekta za datoteku, takođe ćemo koristiti i ove podatke kako bismo to uzajamno povezali sa signalima od klijenta i usluge u vezi sa poboljšanjima procesa preuzimanja od strane objekta. Takođe delimo podatke na osnovu proširenja preuzetog objekta datoteke, jer imamo drugačija očekivanja na osnovu toga da li je datoteka predstavljena neposredno na podlozi na platnu (npr. slika) ili je posredna datoteka (na primer, tekstualni dokument). Ako ne primimo ove podatke, to će nas sprečiti u nadgledanju performansi tih preuzimanja
+
+Prikupljaju se sledeća polja: 
+
+- **FileSizeInBytes** – veličina datoteke preuzete u bajtovima 
+
+- **IsImage** – Bulova vrednost koja utvrđuje da li datoteka koja se preuzima ima proširenje koje se podudara sa unapred definisanom listom uobičajenih formata slika (.bmp, .emf, .gif, .jpe, .jpeg, .jpg, .png) koje prikazujemo u okviru podloge za pisanje
+
+- **TimeToDownload** – Dužina vremena koje je bilo potrebno za uspešno preuzimanje FDO, na uređaj, iz našeg skladišta blob objekta 
+
+### <a name="onenotestoragerealtimewebsocketdownload"></a>OneNote.Storage.RealTime.WebSocketDownload
+
+Kritičan signal koji se koristi za praćenje performansi ulaznih operacija sinhronizacije, uključujući informacije o međusobnom povezivanju, koje nam omogućavaju da nadgledamo i istražujemo performanse preuzimanja podataka iz naše usluge (onenote.com). Ovaj signal se sakuplja za najgore izvedena preuzimanja u poslednjih 300 sekundi (broj sekundi konfiguriše Microsoft u zavisnosti od performansi i uslova usluge).
+
+Ovo se koristi za obezbeđivanje ispravnosti usluge, omogućavajući nam da vidimo koji zakupci prolaze kroz neprihvatljivo sporo ulaženje podataka iz naše usluge, informacije o podacima koje su preuzimali kada su iskusili sporo ulaženje i koliko je rasprostranjen problem sa kašnjenjem među zakupcima. Koristi se i za izveštavanje o ispravnosti i performansama usluge za sve naše klijente, radi merenja trendova tokom vremena i automatskog upozorenja o problemima za ublažavanje inženjeringa. 
+
+Ako vidimo neprihvatljivo kašnjenje odeljka ili beležnice, koristićemo i ove kako bismo to uzajamno povezali sa drugim signalima klijenta i usluge u vezi sa istim dokumentom za identifikovanje regresije performansi koje nam omogućavaju da pružimo uslugu sa boljim performansama.
+
+Ukoliko ne primimo ove podatke, nećemo moći da nadgledamo performanse ovog aspekta naše usluge, ili uticaj promena na strani servera koje možda smatramo neophodnim zbog korišćenja drugih faktora.
+
+Prikupljaju se sledeća polja:
+
+- **DeviceSessionId** – ID sesije uređaja
+
+- **IsEducationNotebook** – Bulova vrednost koja ukazuje da li je beležnica, beležnica za obrazovanje
+
+- **IsHierarchyResource** – Bulova vrednost koja označava je li resurs hijerarhijski
+
+- **NotebookId** – ID beležnice čiji je deo ovo otpremanje
+
+- **ResourceId** – ID resursa koji otpremamo
+
+- **SectionId** – ID odeljka čiji je deo ovo otpremanje
+
+- **ServerSessionId** – ID sesije servera čiji je deo ovo otpremanje
+
+- **TimeToConfirmSyncedWithServerInMs** – Vreme, u milisekundama, između odlaska korisnika na stranicu i svežnja replikacije koji potvrđuje da je stranica sinhronizovana sa serverom.
+
+- **TimeToFirstUpdateInMs** – Vreme, u milisekundama, između početka ulazne replikacije stranice od strane mašine za sinhronizaciju i operacije replikacije koja se sinhronizuje sa stanjem servera.
+
+### <a name="onenotestoragerealtimewebsocketupload"></a>OneNote.Storage.RealTime.WebSocketUpload
+
+Kritičan signal koji se koristi za praćenje performansi ulaznih operacija sinhronizacije, uključujući informacije o međusobnom povezivanju, koje nam omogućavaju da nadgledamo i istražujemo performanse otpremanja podataka ka našoj usluzi (onenote.com).
+
+Ovo se koristi za obezbeđivanje ispravnosti usluge, omogućavajući nam da vidimo koji zakupci prolaze kroz neprihvatljivo sporo odlaženje podataka ka našoj usluzi, informacije o podacima koje su otpremali kada su iskusili sporo odlaženje i koliko je rasprostranjen problem sa kašnjenjem među zakupcima. Koristi se i za izveštavanje o ispravnosti i performansama usluge za sve naše klijente, radi merenja trendova tokom vremena i automatskog upozorenja o problemima za ublažavanje inženjeringa. Takođe ćemo koristiti ove podatke za praćenje uticaja i efikasnosti poboljšanja koje pružamo našim klijentima i uslugama. 
+
+Ako vidimo neprihvatljivo kašnjenje odeljka ili beležnice, koristićemo ove i podatke kako bismo to uzajamno povezali sa drugim signalima klijenta i usluge u vezi sa istim dokumentom za identifikovanje regresije performansi koje nam omogućavaju da pružimo iskustvo sa boljim performansama.
+
+Ukoliko ne primimo ove podatke, nećemo moći da nadgledamo performanse ovog aspekta naše usluge, ili uticaj promena na strani servera koje možda smatramo neophodnim zbog korišćenja drugih faktora.
+
+Prikupljaju se sledeća polja: 
+
+- **DeviceSessionId** – ID sesije uređaja
+
+- **IsEducationNotebook** – Bulova vrednost koja ukazuje da li je beležnica, beležnica za obrazovanje
+
+- **IsHierarchyResource** – Bulova vrednost koja označava je li resurs hijerarhijski
+
+- **IsWorstTime** – Bulova vrednost koja ukazuje da li je vreme uobičajen događaj otpremanja, ili najgore vreme koje smo videli za ovog klijenta u poslednjih 300 sekundi (broj sekundi konfiguriše Microsoft u zavisnosti od performansi i stanja usluge).
+
+- **NotebookId** – ID beležnice čiji je deo ovo otpremanje
+
+- **RecommendedPutIntervalInMs** – vreme kada je usluga komunicirala sa klijentom kao preporučeni interval stavljanja
+
+- **ResourceId** – ID resursa koji otpremamo
+
+- **SectionId** – ID odeljka čiji je deo ovo otpremanje
+
+- **SenderRequestId** – ID pošiljaoca koji izvršava otpremanje
+
+- **ServerSessionId** – ID sesije servera čiji je deo ovo otpremanje
+
+- **UploadNonSuspendedTimeInMs**– vreme, u milisekundama, koje je bilo potrebno da se izvrši otpremanje, izuzimajući vreme kada je aplikacija bila obustavljena
+
+- **UploadTimeInMs** – Vreme, u milisekundama, koje je bilo potrebno da se stvarno izvrši otpremanje
+
+- **WaitTimeInMs** – Vreme, u milisekundama, između zahteva za otpremanje i započinjanja otpremanja
+
+- **WebUrl** – URL adresa veb lokacije otpremanja (Prijavljen kao PiiWz)
+
+### <a name="onenotestoragesynchealth"></a>OneNote.Storage.SyncHealth
+
+Kritičan signal koji se koristi za praćenje grešaka i izuzetaka koji su se dogodili unutar svežnja sinhronizacije u klijentu programa OneNote, koji nam omogućava da nadgledamo i ublažavamo ove neočekivane uslove.
+
+Ovo se koristi za obezbeđivanje ispravnosti usluge tako što će nam omogućiti da vidimo izveštaje o greškama klijenata u bliskom realnom vremenu, koji nam omogućavaju da odgovaramo na probleme pri sinhronizaciji kada se pojave. Koristi se i za identifikovanje toga koliko je rasprostranjen i obiman problem kroz unakrsno upućivanje na oznaku greške sa kodom klijenta za identifikovanje izvora neuspeha. Prikupljamo i ove podatke kako bismo dobili informacije o našem nastupu kroz vreme i o uticaju i efikasnosti poboljšanja koje pružamo našim klijentima i uslugama. Ako nemamo ove podatke, nećemo moći da proaktivno odgovaramo na uslove greške u usluzi sinhronizacije bez eskalacije klijenata.
+
+Prikupljaju se sledeća polja: 
+
+- **Service** – usluga sinhronizacije koju je klijent koristio kada se dogodila greška (zastarela ili moderna sinhronizacija)
+
+- **Tag** – Oznaka (vrednost prepoznavanja) koja predstavlja grešku na koju je klijent naišao tokom operacije sinhronizacije
 
 ### <a name="onenotesynccreatenotebookfailed"></a>OneNote.Sync.CreateNotebookFailed
  
