@@ -15,14 +15,17 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u Microsoft 365 aplikacijama za velika preduzeća (ranije poznato kao Office 365 ProPlus) pomoću regulatornih postavki.
 hideEdit: true
-ms.openlocfilehash: 5f9cafff0f7baf12ed8f0f57d7561bc356fbb98b
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: f02714428dd580d79a3fc8f160b00d6df95c4237
+ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087222"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47440251"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Microsoft 365 Apps za preduzeće
+
+> [!NOTE]
+> Da biste videli listu Office proizvoda koji su obuhvaćeni ovim informacijama o privatnosti, pogledajte članak [„Dostupne kontrole privatnosti za Office proizvode“](products-versions-privacy-controls.md).
 
 Microsoft je posvećen tome da vam pruži informacije i kontrole koje su vam potrebne da biste odabrali način prikupljanja i upotrebe vaših podataka kada koristite Microsoft 365 aplikacije za velika preduzeća (ranije poznato kao Office 365 ProPlus).
 
@@ -46,6 +49,7 @@ Ove regulatorne postavke mogu da se implementiraju korišćenjem Grupnih pravila
 > - Za informacije o tome kako da upravljate kontrolama privatnosti u sistemu Office za Mac, pogledajte članak [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md).
 > - Za više informacija o sličnim postavkama za Office na uređajima koji koriste iOS pogledajte članak [Koristite regulatorne postavke za upravljanje kontrolama privatnosti za Office na iOS uređajima](ios-privacy-preferences.md).
 > - Za više informacija o sličnim postavkama za Office na Android uređajima pogledajte članak [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office na Android uređajima](android-privacy-controls.md).
+> - Za više informacija o kontrolama privatnosti za Office aplikacije na vebu pogledajte članak [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office za veb aplikacije](office-web-privacy-controls.md).
 
 
 Ako koristite alatku za upravljanje grupnim pravilima, sve ove regulatorne postavke se nalaze u okviru Konfiguracija korisnika\\Politika\\Administrativni predlošci\\Microsoft Office 2016\\Privatnost\\ Centar za pouzdanost.
@@ -77,7 +81,7 @@ Za više informacija o dijagnostičkim podacima pogledajte sledeće članke:
 - [Pregled kontrola privatnosti za Microsoft 365 Apps za preduzeće](overview-privacy-controls.md)
 - [Obavezni dijagnostički podaci za Office](required-diagnostic-data.md)
 - [Opcionalni dijagnostički podaci za Office](optional-diagnostic-data.md)
-- [Korišćenje Prikazivača dijagnostičkih podataka uz Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
+- [Korišćenje Prikazivača dijagnostičkih podataka uz Office](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="policy-settings-for-connected-experiences"></a>Regulatorne postavke za povezana iskustva
 
@@ -116,25 +120,15 @@ Imajte u vidu da ako onemogućite regulatornu postavku *Dozvoli upotrebu povezan
 
 Pored gorenavedenih povezanih iskustava koja su uključena u Microsoft 365 Apps za preduzeće, postoje neka opcionalna povezana iskustva za koje možete da odaberete da li želite da omogućite svojim korisnicima da im pristupe pomoću naloga organizacije. Na primer, LinkedIn funkcije Pomoćnika za biografiju u programu Word ili funkcija 3D mape u programu Excel, koja koristi Bing. Za više primera, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md).
 
-Ova povezana iskustva su različita, zato što nisu pokrivena komercijalnim ugovorom vaše organizacije sa korporacijom Microsoft. Opcionalna povezana iskustva koja Microsoft nudi direktno na raspolaganje vašim korisnicima uređena su dokumentom[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement), a ne [Uslovima korišćenja usluga na mreži](https://www.microsoft.com/licensing/product-licensing/products). U nekim slučajevima, sadržaj trećih strana ili funkcionalnost se pružaju putem ovih opcionalnih povezanih iskustva, a mogu se primenjivati i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md).
+Ova povezana iskustva su različita, zato što nisu pokrivena komercijalnim ugovorom vaše organizacije sa korporacijom Microsoft. Opcionalna povezana iskustva koja Microsoft nudi direktno na raspolaganje vašim korisnicima uređena su dokumentom[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement), a ne [Uslovima korišćenja usluga na mreži](https://www.microsoft.com/licensing/product-licensing/products). U nekim slučajevima, sadržaj ili funkcionalnost nezavisnih proizvođača se obezbeđuju putem ovih opcionih povezanih iskustava, a mogu se primenjivati i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md).
 
 Možete da koristite regulatornu postavku *Dozvoli upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office* da kontrolišete da li su ove vrste povezanih iskustava dostupne vašim korisnicima. Ako ne konfigurišete ovu regulatornu postavku, ova povezana iskustva će biti dostupna vašim korisnicima.
 
-> [!NOTE]
-> Postavke smernice *Dozvolite upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office* takođe može da se konfiguriše za primenu na sledećim aplikacijama programa Office za veb:
-> - Excel za veb
-> - OneNote za veb
-> - PowerPoint za veb
-> - Visio za veb
-> - Word za veb
->
-> Da biste konfigurisali ovu postavku smernica za ove aplikacije programa Office za veb, morate da koristite [uslugu smernica oblaka za Office](../overview-office-cloud-policy-service.md).
-
-Čak i ako odaberete da ova opcionalna povezana iskustva učinite dostupnim vašim korisnicima, korisnici će imati opciju da ih isključe kao grupu tako što će otići u [dijalog postavki privatnosti](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vaši korisnici će imati ovaj izbor samo ako su prijavljeni u Office pomoću akreditiva organizacije (oni se ponekad nazivaju poslovnim ili školskim nalozima), a ne ako su prijavljeni na ličnu adresu elektronske pošte.
+Čak i ako odaberete da ova opcionalna povezana iskustva učinite dostupnim vašim korisnicima, korisnici će imati opciju da ih isključe kao grupu tako što će otići u [dijalog postavki privatnosti](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vaši korisnici će imati ovaj izbor samo ako su prijavljeni u Office pomoću akreditiva organizacije (oni se ponekad nazivaju poslovnim ili školskim nalozima), a ne ako su prijavljeni na ličnu adresu elektronske pošte.
 
 Pored toga, neka od ovih opcionalnih povezanih iskustava se takođe smatraju povezanim iskustvima koja analiziraju sadržaj ili preuzimaju sadržaj na mreži. Na primer, Umetanje slika na mreži je opcionalno povezano iskustvo, bazirano na tehnologiji Microsoft Bing, ali se takođe smatra i povezanim iskustvom koje preuzima sadržaj na mreži. Stoga, ako onemogućite regulatornu postavku *Dozvoli upotrebu povezanih iskustava u sistemu Office koja preuzimaju mrežni sadržaj*, Umetanje slika na mreži neće biti dostupno vašim korisnicima. Ono neće biti dostupno čak i ako ste omogućili regulatornu postavku *Dozvoli upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office*. Više informacija o tome koja povezana iskustva analiziraju sadržaj ili preuzimaju sadržaj na mreži potražite u članku [Povezani iskustva u sistemu Office](connected-experiences.md).
 
-Postoji jedan izuzetak. Regulatorna postavka *Dozvoli upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office* ne kontroliše iskustva koja zahtevaju da povežete svoj LinkedIn nalog sa Microsoft poslovnim ili školskim nalogom. Da biste kontrolisali ovu vrstu iskustva, kao što su LinkedIn informacije na [Kartici profila](https://support.office.com/article/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) u programu Outlook, pogledajte članak [Povezivanje LinkedIn i Microsoft naloga](https://support.office.com/article/dc81cc70-4d64-4755-9f1c-b9536e34d381) i [Prihvatanje povezivanja LinkedIn naloga za organizaciju Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/linkedin-integration).
+Postoji jedan izuzetak. Regulatorna postavka *Dozvoli upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office* ne kontroliše iskustva koja zahtevaju da povežete svoj LinkedIn nalog sa Microsoft poslovnim ili školskim nalogom. Da biste kontrolisali ovu vrstu iskustava (poput LinkedIn informacija na [kartici profila](https://support.microsoft.com/office/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) u usluzi Outlook) pogledajte članak [LinkedIn u Microsoft aplikacijama i uslugama](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381) i [Integracija veza sa LinkedIn naloga u Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/linkedin-integration).
 
 ### <a name="policy-setting-for-most-connected-experiences"></a>Regulatorne postavke za najčešće povezana iskustva
 
@@ -181,7 +175,7 @@ Kao što verovatno već znate, postoje neke postojeće regulatorne postavke koje
 
 Uopšteno, ako je jedna regulatorna postavka konfigurisana da uključi određeno povezano iskustvo, dok je istovremeno druga regulatorna postavka konfigurisana tako da isključi taj tip povezanog iskustva, to određeno povezano iskustvo je isključeno za vaše korisnike.
 
-## <a name="privacy-related-changes-to-the-office-ui"></a>Promene u vezi privatnosti u korisničkom Interfejsu sistema Office
+## <a name="privacy-related-changes-to-the-office-ui"></a>Promene u vezi sa privatnošću u korisničkom interfejsu sistema Office
 
 Postoje neke promene u korisničkom interfejsu (UI) usluge Microsoft 365 Apps za preduzeće u vezi sa privatnošću koje vaši korisnici mogu da primete i da vam postave pitanja o njima. Te promene su direktan rezultat nove kontrole privatnosti i regulatornih postavki koje su dostupne počevši od verzije 1904.
 
@@ -207,7 +201,7 @@ Ovo su novi elementi dodati korisničkom interfejsu za Office:
 
 - U okviru **Datoteka** > **Nalog**, korisnici će videti novi izbor za **Privatnost naloga** > **Upravljanje postavkama**. Nalazi se pod **Upravljanje postavkama** gde korisnici mogu da isključe opcionalna povezana iskustva, ako ste im dali tu opciju.
 
-- U okviru **Datoteka** > **Opcije** > **Centar za pouzdanost** > **Postavke centra za pouzdanost...** > **Opcije privatnosti,** postoji opcija da omogućite upotrebu [Prikazivača dijagnostičkih podataka](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855) na uređaju.
+- U okviru **Datoteka** > **Opcije** > **Centar za pouzdanost** > **Postavke centra za pouzdanost...** > **Opcije privatnosti,** postoji opcija da omogućite upotrebu [Prikazivača dijagnostičkih podataka](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855) na uređaju.
 
  
 ## <a name="control-privacy-settings-by-editing-the-registry"></a>Kontrolišite postavke privatnosti uređivanjem registratora

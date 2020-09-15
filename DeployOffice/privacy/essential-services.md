@@ -13,39 +13,33 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: 81694daded27994d5026d923acd36302a79acc9f
-ms.sourcegitcommit: 5fc8194df704f79d340d9e8872a03ab2b0ebc62b
+ms.openlocfilehash: 8b4c473736bfe19edffde227be009dd2555852df
+ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "46815335"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47440503"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
-> [!IMPORTANT]
-> Informacije u ovom članku odnose se na verziju 1904 ili kasnije od sledećih Office klijentskih softvera instaliranih na računaru sa operativnim sistemom Windows:
-> - Microsoft 365 Apps za preduzeće (prethodno poznato kao Office 365 ProPlus)
-> - Microsoft 365 Apps za manje firme (prethodno poznato kao Office 365 Business)
-> - Microsoft 365 Personal, Microsoft 365 Family ili druge verzije sistema Office koje su deo Microsoft 365 pretplate.
-> - Project i Visio aplikacije za računare koje se dobijaju uz neke planove pretplate, poput Project Plan 5 ili Visio Plan 2.
->
-> Informacije se odnose i na verziju 16.28 ili noviju verziju sledećih Office aplikacija za Mac: Excel, Outlook, OneNote, PowerPoint i Word.
+> [!NOTE]
+> Da biste videli listu Office proizvoda koji su obuhvaćeni ovim informacijama o privatnosti, pogledajte članak [„Dostupne kontrole privatnosti za Office proizvode“](products-versions-privacy-controls.md).
 
-Office se sastoji od aplikacija klijentskog softvera i povezanih iskustava dizajniranih tako da vam omogućavaju da efikasnije kreirate, komunicirate i sarađujete. Iako možete da kontrolišete mnoga povezana iskustva koja su dostupna vama ili, ako ste administrator organizacije, vašim korisnicima, postoji i skup usluga koje su od suštinske važnosti za funkcionisanje sistema Office, te stoga ne mogu biti onemogućene. Na primer, usluga licenciranja koja potvrđuje da ste ispravno licencirani da koristite Office. Neophodni podaci o ovim uslugama prikupljaju se i šalju korporaciji Microsoft, bez obzira na bilo koje druge postavke smernica za privatnost koje ste konfigurisali. Možete da vidite ove podatke tako što ćete koristiti Prikazivač dijagnostičkih podataka.
+Office se sastoji od aplikacija klijentskog softvera i povezanih iskustava dizajniranih tako da vam omogućavaju da efikasnije kreirate, komunicirate i sarađujete. Iako možete da kontrolišete mnoga povezana iskustva koja su dostupna vama ili, ako ste administrator organizacije, vašim korisnicima, postoji i skup usluga koje su od suštinske važnosti za funkcionisanje sistema Office, te stoga ne mogu biti onemogućene. Na primer, usluga licenciranja koja potvrđuje da ste ispravno licencirani da koristite Office. Neophodni podaci o ovim uslugama prikupljaju se i šalju korporaciji Microsoft, bez obzira na bilo koje druge postavke smernica za privatnost koje ste konfigurisali.
 
 Dodatne informacije potražite u sledećim člancima:
 
 - [Neophodni podaci o usluzi za Office](required-service-data.md)
-- [Korišćenje Prikazivača dijagnostičkih podataka uz Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 - [Povezana iskustva u sistemu Office](connected-experiences.md)
 
 Ako ste administrator organizacije, možda će vas zanimati i sledeće:
 
 - [Pregled kontrola privatnosti za Microsoft 365 Apps za velika preduzeća](overview-privacy-controls.md)
 - [Korišćenje postavki smernica za upravljanje kontrolama privatnosti za Microsoft 365 Apps za velika preduzeća](manage-privacy-controls.md)
-- [Коришћење жељених поставки за управљање контролама приватности за Office for Mac](mac-privacy-preferences.md)
-- [Коришћење жељених поставки за управљање контролама приватности за Office на iOS уређајима](ios-privacy-preferences.md)
+- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
+- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office na Android uređajima](android-privacy-controls.md)
+- [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office aplikacije za veb](office-web-privacy-controls.md)
 
 ## <a name="list-of-essential-services-for-office"></a>Lista osnovnih usluga za Office 
 
@@ -60,7 +54,7 @@ Sledeća tabela sadrži listu osnovnih usluga za Office i njihov opis.
 |[Microsoft AutoUpdate (MAU)](#microsoft-autoupdate-mau-events)|Microsoft AutoUpdate (MAU) predstavlja tehnologiju koja se koristi za ažuriranje Microsoft aplikacija za macOS, na primer za Office. MAU otkriva potrebu za ispravkama za aplikacije, kao i bezbednosnim ispravkama, preuzima ih i instalira.|
 |[Sinhronizovanje programa OneNote](#onenote-sync-events)|OneNote za Mac podržava samo beležnice uskladištene na internetu u usluzi OneDrive ili SharePoint Online. OneNote za Mac neprestano sinhronizuje sve beleške korisnika sa uslugom OneDrive ili SharePoint Online. Na taj način omogućava korisnicima da otvaraju, pregledaju i uređuju beležnice na svim uređajima, tako da su one uvek ažurirane.
  [Konfiguracija usluga](#services-configuration-events)  | Konfiguracija usluga pruža mogućnost ažuriranja postavki konfiguracije za Office da bi se omogućile ili onemogućile funkcije klijenta. Ova funkcija se poziva svaki put kada se pokrene Office aplikacija i pruža detalje o ostalim konfiguracijama i uslugama sistema Office. Konfiguracija usluga takođe kontroliše koje usluge su određene kao osnovne.  |
-| [Telemetrija ](#telemetry-events)  | Usluga telemetrije se koristi za prikupljanje dijagnostičkih podataka iz Office aplikacija. Ona omogućava prikupljanje dijagnostičkih podataka koje generiše Office, i obaveznih i opcionalnih. Takođe je odgovorna za delimično prikupljanje neophodnih dijagnostičkih podataka o usluzi za Office.  |
+| [Telemetrija ](#telemetry-events)  | Usluga telemetrije se koristi za prikupljanje dijagnostičkih podataka iz Office aplikacija. Ona omogućava prikupljanje dijagnostičkih podataka koje generiše Office, i obaveznih i opcionalnih. Takođe je odgovorna za delimično prikupljanje neophodnih podataka o usluzi za Office.  |
 
 ## <a name="events-and-data-fields-for-essential-services-for-office"></a>Događaji i polja sa podacima za osnovne usluge za Office
 
@@ -70,9 +64,6 @@ Odeljci u nastavku pružaju sledeće informacije:
 - Opis svakog događaja
 - Listu polja sa podacima u svakom događaju
 - Opis svakog polja sa podacima
-
-Možete da vidite ove događaje tako što ćete koristiti Prikazivač dijagnostičkih podataka.
-
 
 
 ## <a name="authentication-events"></a>Događaji potvrde identiteta
@@ -3175,7 +3166,7 @@ Prikupljaju se sledeća polja:
 
 - **Tag** - Obaveštava kada smo prestali da pretražujemo obavezujući ugovor. Moguće oznake:
   - 0x03113809    Nema internet veze/usluge prilikom provere valjanosti PIN koda
-   - 0x0311380a    Neuspeh provere valjanosti PIN koda, poslato pomoću polja „PinValidationFailure“
+  - 0x0311380a    Neuspeh provere valjanosti PIN koda, poslato pomoću polja „PinValidationFailure“
   - 0x0310410f    Uspeh, poslato pomoću polja „Success“
   - 0x0311380d    Greške kod kojih je moguć ponovni pokušaj (problemi sa internet vezom, nepoznate greške)
   - 0x0311380e    Greške kod kojih nije moguć ponovni pokušaj (ponuda obavezujućeg ugovora je istekla)
@@ -14567,7 +14558,7 @@ Prikupljaju se sledeća polja:
 
 ## <a name="services-configuration-events"></a>Događaji konfiguracije usluga
 
-Konfiguracija usluga ne prikuplja neophodne dijagnostičke podatke o usluzi.
+Konfiguracija usluga ne prikuplja neophodne podatke o usluzi.
 
 ## <a name="telemetry-events"></a>Događaji telemetrije
 

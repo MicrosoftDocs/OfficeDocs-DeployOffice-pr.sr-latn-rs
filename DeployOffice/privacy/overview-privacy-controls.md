@@ -15,35 +15,27 @@ ms.custom:
 - Ent_Office_Privacy
 description: Пружа Office администраторима преглед контрола приватности за Microsoft 365 Apps for enterprise (претходно Office 365 ProPlus), укључујући дијагностичке податке и повезане утиске при раду.
 hideEdit: true
-ms.openlocfilehash: f5a957d57a7c8f95503091f456aef5a9c1e0fca7
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: f367550169e75d0f1dbb0726e947ce8797fb1003
+ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087711"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47440579"
 ---
-# <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Преглед контрола приватности за Microsoft 365 Apps for enterprise
+# <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Pregled kontrola privatnosti za Microsoft 365 Apps za preduzeće
 
-Microsoft настоји да вам обезбеди информације и контроле које су вам потребне за доношење избора о томе како се ваши подаци прикупљају и користе док користите Microsoft 365 Apps for enterprise (претходно Office 365 ProPlus).
+> [!NOTE]
+> Da biste videli listu Office proizvoda koji su obuhvaćeni ovim informacijama o privatnosti, pogledajte članak [„Dostupne kontrole privatnosti za Office proizvode“](products-versions-privacy-controls.md).
+
+Microsoft je posvećen tome da vam pruži informacije i kontrole koje su vam potrebne da biste odabrali način prikupljanja i upotrebe vaših podataka kada koristite Microsoft 365 aplikacije za velika preduzeća (ranije poznato kao Office 365 ProPlus).
 
 Почевши од верзије 1904 услуге Microsoft 365 Apps for enterprise, пружаћемо вам нове, ажуриране и унапређене контроле приватности за следеће области:
 - ***Дијагностички подаци*** који се прикупљају и шаљу корпорацији Microsoft о Office клијентском софтверу који се користи на рачунарима који раде под оперативним системом Windows у вашој организацији.
 - ***Повезана искуства*** која користе функционалност засновану на облаку како би пружила унапређене Office функције вама и вашим корисницима.
 
-Као део тих промена, објављене су нови и ажурирани елементи корисничког интерфејса (UI) и поставке смерница.
+U sklopu ovih promena, postoje elementi novog i ažuriranog korisničkog interfejsa (UI) i postavki pravila.
 
-> [!IMPORTANT]
-> - Те промене се односе на Access, Excel, OneNote, Outlook, PowerPoint, Publisher и Word.
-> - Ове промене се односе и на следеће:
->   - Верзија 16.28 или новије верзије следећих Office for Mac апликација: Excel, Outlook, OneNote, PowerPoint и Word.
->   - Верзија 1904 или новије верзије програма Project и Visio за рачунаре које се добијају уз неке планове претплате, као што су Project план 5 или Visio план 2.
-> - Ове контроле приватности укључене су у верзију 1908 или новије верзије полугодишњег канала за велика предузећа (преглед) и полугодишњег канала за велика предузећа.
-> - Ове контроле приватности доступне су за верзију 2.30 и новије iOS верзије програма Excel, OneNote, PowerPoint и Word, као и верзија 1.17 и новије за Visio Viewer за iOS.
-> - Ове контроле приватности доступне су за верзију 16.0.12226.10000 и новије Android верзија програма Excel, PowerPoint и Word, као и верзију 16.0.12228.20004 и новије верзије програма OneNote за Android.
-> - Већина Office апликација за веб користи нову контролу приватности за [опционална повезана искуства](optional-connected-experiences.md). То су следеће апликације: Excel за веб, OneNote за веб, PowerPoint за веб, Visio за веб и Word за веб. Можете да користите [Office услугу смерница у облаку](../overview-office-cloud-policy-service.md) да бисте конфигурисали одговарајућу [поставку смерница](manage-privacy-controls.md#policy-setting-for-optional-connected-experiences).
-> - Те нове и унапређене контроле приватности проширићемо на додатне Office клијенте, укључујући Teams и наше апликације за мобилне уређаје. Наредних месеци ћемо пружити више информација о тим променама. Наставићемо да пажљиво слушамо ваше повратне информације и примењујемо унапређења у свим Office 365 (и Microsoft 365) клијентима и услугама.
-
-## <a name="diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft"></a>Дијагностички подаци послати из Microsoft 365 Apps for enterprise у Microsoft
+## <a name="diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft"></a>Dijagnostički podaci koji se šalju iz usluge Microsoft 365 Apps za preduzeće korporaciji Microsoft
 
 Дијагностички подаци се користе за обезбеђивање и ажурирање система Office, откривање, дијагностику и решавање проблема, као и за унапређивање производа. Ти подаци не обухватају корисничко име ни адресу е-поште, садржај корисникових датотека нити информације о апликацијама које немају везе са системом Office.
 
@@ -74,10 +66,10 @@ Microsoft настоји да вам обезбеди информације и 
 - [Обавезни дијагностички подаци за Office](required-diagnostic-data.md)
 - [Опционални дијагностички подаци за Office](optional-diagnostic-data.md)
 - [Коришћење поставки смерница за управљање контролама приватности за Microsoft 365 Apps for enterprise](manage-privacy-controls.md)
-- [Коришћење жељених поставки за управљање контролама приватности за Office for Mac](mac-privacy-preferences.md)
-- [Коришћење жељених поставки за управљање контролама приватности за Office на iOS уређајима](ios-privacy-preferences.md)
+- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
+- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
 - [Коришћење поставки смерница за управљање контролама приватности за Office на Android уређајима](android-privacy-controls.md)
-- [Коришћење Приказивача дијагностичких података уз Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
+- [Коришћење Приказивача дијагностичких података уз Office](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="connected-experiences-for-microsoft-365-apps-for-enterprise"></a>Повезана искуства за Microsoft 365 Apps for enterprise
 
@@ -85,9 +77,9 @@ Microsoft 365 Apps for enterprise се састоји од апликација 
 
 Разумемо да ћете можда желети да одаберете типове повезаних утисака при раду који су доступни вашим корисницима док раде у Office апликацијама. Као администратор своје организације, имаћете поставке смерница које вам омогућавају да одаберете да ли ћете својим корисницима омогућити следеће типове повезаних утисака при раду:
 
-- **Povezana iskustva koja analiziraju vaš sadržaj** Iskustva koja koriste vaš Office sadržaj da vam pruže preporuke za dizajn, predloge za uređivanje, uvid u podatke i slične funkcije. Na primer, Dizajner za PowerPoint ili prevodilac.
+- **Утисци при раду који анализирају садржај** Утисци при раду који користе Office садржај да би вам обезбедили препоруке дизајна, предлоге уређивања, увиде у податке и сличне функције. На пример, PowerPoint дизајнер или Преводилац.
 
-- **Povezana iskustva koja preuzimaju sadržaj na internetu** Iskustva koja vam omogućavaju da pretražite i preuzmete sadržaj na mreži, uključujući predloške, slike, 3D modele, video zapise i referentne materijale kako biste poboljšali svoje dokumente. На пример, Office предлошци или PowerPoint брзи почетак.
+- **Утисци при раду који преузимају садржај на мрежи** Утисци при раду који вам омогућавају претраживање и преузимање садржаја на мрежи, укључујући предлошке, слике, 3D моделе, видео записе и референтне материјале за побољшавање докумената. На пример, Office предлошци или PowerPoint брзи почетак.
 
 На пример, можете одабрати да својим корисницима обезбедите повезане утиске при раду који преузимају садржај на мрежи, али не и повезане утиске при раду који анализирају садржај. Ако не конфигуришете те поставке смерница, корисницима ће бити доступни сви ти повезани утисци при раду.
 
@@ -101,8 +93,8 @@ Microsoft 365 Apps for enterprise се састоји од апликација 
 
 - [Повезани утисци при раду у систему Office](connected-experiences.md)
 - [Коришћење поставки смерница за управљање контролама приватности за Microsoft 365 Apps for enterprise](manage-privacy-controls.md)
-- [Коришћење жељених поставки за управљање контролама приватности за Office for Mac](mac-privacy-preferences.md)
-- [Коришћење жељених поставки за управљање контролама приватности за Office на iOS уређајима](ios-privacy-preferences.md)
+- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
+- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
 - [Коришћење поставки смерница за управљање контролама приватности за Office на Android уређајима](android-privacy-controls.md)
 
 ## <a name="optional-connected-experiences-for-microsoft-365-apps-for-enterprise"></a>Опционална повезана искуства за Microsoft 365 Apps for enterprise
@@ -113,39 +105,28 @@ Microsoft 365 Apps for enterprise се састоји од апликација 
 
 Пошто за опционалне повезане утиске при раду важе засебни услови и одредбе, њима управљате одвојено од горепоменутих повезаних утисака при раду. Као администратор своје организације, моћи ћете да користите поставку смерница да бисте одабрали да ли ћете те опционалне повезане утиске при раду, као групу, учинити доступним за своје кориснике. Ако не конфигуришете ту поставку смерница, ти опционални утисци при раду биће доступни корисницима.
 
-Чак и ако одаберете да те опционална повезана искуства учините доступним за своје кориснике, корисници ће имати опцију да их искључе као групу тако што ће отићи у [дијалог са поставкама приватности](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Ваши корисници ће имати овај избор само ако су у Office пријављени са акредитивима организације (који се понекад називају пословни или школски налог), а не ако су пријављени са личном адресом е-поште.
+Чак и ако одаберете да те опционална повезана искуства учините доступним за своје кориснике, корисници ће имати опцију да их искључе као групу тако што ће отићи у [дијалог са поставкама приватности](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Ваши корисници ће имати овај избор само ако су у Office пријављени са акредитивима организације (који се понекад називају пословни или школски налог), а не ако су пријављени са личном адресом е-поште.
 
 Више информација потражите путем следећих веза:
 
 - [Преглед опционалних повезаних утисака при раду у систему Office](optional-connected-experiences.md)
 - [Коришћење поставки смерница за управљање контролама приватности за Microsoft 365 Apps for enterprise](manage-privacy-controls.md)
-- [Коришћење жељених поставки за управљање контролама приватности за Office for Mac](mac-privacy-preferences.md)
-- [Коришћење жељених поставки за управљање контролама приватности за Office на iOS уређајима](ios-privacy-preferences.md)
-- [Коришћење поставки смерница за управљање контролама приватности за Office на Android уређајима](android-privacy-controls.md)
+- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
+- [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
+- [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office na Android uređajima](android-privacy-controls.md)
+- [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office aplikacije za veb](office-web-privacy-controls.md)
 
-## <a name="required-service-data-for-connected-experiences"></a>Обавезни подаци о услузи за повезане утиске при раду
+## <a name="required-service-data-for-connected-experiences"></a>Neophodni podaci o usluzi za povezane utiske pri radu
 
-Обавезни подаци о услузи представљају податке који нам омогућавају да пружимо повезане утиске при раду засноване на облаку и помажу да те утиске при раду учинимо безбедним и функционалним као што је очекивано. Обавезне податке о услузи чине три типа информација.
+Dok koristite povezano iskustvo, podaci se šalju i Microsoft ih obrađuje kako bi se obezbedilo povezano iskustvo. Ovi podaci su od suštinskog značaja jer nam te informacije omogućavaju da isporučimo povezana iskustva zasnovana na tehnologiji oblaka. Ove podatke smatramo obaveznim podacima o usluzi.
 
-- **Кориснички садржај**, који представља садржај који креирате користећи Office, као што је текст откуцан у Word документу.
-- **Функционални подаци**, који обухватају информације које су потребне повезаном утиску при раду да би извршио свој задатак, на пример информације о конфигурацији за апликацију.
-- **Дијагностички подаци услуге**, који представљају податке неопходне да би услуга остала безбедна, ажурна и да би функционисала као што је очекивано. Пошто су ти подаци строго повезани са повезаним утиском при раду, они су одвојени од обавезних или опционалних нивоа дијагностичких података.
+Obavezni podaci o usluzi mogu da obuhvataju informacije koje se odnose na radnju povezanog iskustva koja je neophodna da bi osnovna usluga bila bezbedna, ažurna i da bi funkcionisala kao što je očekivano. Ako odlučite da koristite povezano iskustvo koje analizira sadržaj, na primer, funkciju „Prevođenje“ u programu Word, tekst koji otkucate i izaberete za prevođenje u dokumentu se takođe šalje i obrađuje kako bi se obezbedilo povezano iskustvo. Obavezni podaci o usluzi mogu da obuhvataju i informacije koje su potrebne kako bi povezano iskustvo obavilo svoj zadatak, kao što su informacije o konfiguraciji aplikacije Office.
 
-Да бисте лакше разумели обавезне податке о услузи, следи пример сценарија у ком се користи Дизајнер за PowerPoint, повезани утисак при раду који можете да користите кад креирате слајдове за презентацију. Дизајнер за PowerPoint омогућава вам да побољшате слајдове тако што аутоматски генерише идеје за дизајн које можете да бирате. Док постављате садржај на слајд, Дизајнер ради у позадини како би повезао тај садржај са професионално дизајнираним распоредима.
+Više informacija potražite u članku [Neophodni podaci o usluzi za Office](required-service-data.md).
 
-Обавезни подаци о услузи који се шаљу корпорацији Microsoft да би се омогућио тај повезани утисак при раду за вас могу да обухватају следеће:
+## <a name="essential-services-for-microsoft-365-apps-for-enterprise"></a>Osnovne usluge za Microsoft 365 Apps za preduzeće
 
-- *Кориснички садржај*, као што су текст или слике које сте додали на слајд.
-- *Функционални подаци*, као што је то на ком слајду радите и његов распоред.
-- *Дијагностички подаци услуге*, као што су догађаји који нам говоре да ли је идеја дизајна исправно примењена на ваш слајд и да ли позиви услуга исправно функционишу.
-
-Ако одаберете да корисницима не обезбедите категорију повезаних утисака при раду која обухвата Дизајнер за PowerPoint, функција ће бити искључена и неће нам бити послато ништа од ових обавезних података о услузи.
-
-Више информација потражите у чланку [Обавезни подаци о услузи за Office](required-service-data.md).
-
-## <a name="essential-services-for-microsoft-365-apps-for-enterprise"></a>Основне услуге за Microsoft 365 Apps for enterprise
-
-Такође постоји скуп услуга које су основне за начин на који Microsoft 365 Apps for enterprise функционише и не могу се онемогућити. На пример, услуга лиценцирања која потврђује да сте исправно лиценцирани за коришћење система Microsoft 365 Apps for enterprise. Обавезни подаци о услузи о овим услугама прикупљају се и шаљу корпорацији Microsoft без обзира на друге поставке услуга које сте конфигурисали.
+Postoji i skup usluga koje su od suštinske važnosti za to kako funkcije usluge Microsoft 365 Apps za preduzeće rade i one se ne mogu onemogućiti. Na primer, usluga licenciranja koja potvrđuje da ste ispravno licencirani da koristite Microsoft 365 Apps za preduzeće. Обавезни подаци о услузи о овим услугама прикупљају се и шаљу корпорацији Microsoft без обзира на друге поставке услуга које сте конфигурисали.
 
 Више информација потражите у чланку [Основне услуге за Office](essential-services.md).
 
