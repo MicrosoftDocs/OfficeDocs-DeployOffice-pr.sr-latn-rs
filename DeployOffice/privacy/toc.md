@@ -21,3 +21,4 @@
 ### [Neophodni podaci o usluzi](required-service-data.md)
 
 ## [Osnovne usluge](essential-services.md)
+## [Preporuke u okviru proizvoda](in-product-recommendations.md)
