@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: f200e22e639f2c89315c2f7fa2e9eab0367f86b1
-ms.sourcegitcommit: 1b12952b55f071b87026b49d372158209ed2e322
+ms.openlocfilehash: 7d9b2918983933ba4601ebce2b3930409001688d
+ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "48368651"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48491520"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -356,6 +356,8 @@ Ova kategorija sadrži sledeća polja:
   - **Zastavice** - Informacije koje se koriste da izmene način odgovara određenog događaja. Koristi se za upravljanje načina na koji se određeni događaj tretira u svrhu otpremanja podataka korporaciji Microsoft.
 
   - **Id** - Jedinstveni identifikator događaja. Omogućava nam da jedinstveno identifikujemo događaje koji primamo.
+
+  - **Level** – označava tip događaja.
 
   - **Ime** - Ime događaja. Omogućava da identifikujemo događaj koji je klijent poslao.
 

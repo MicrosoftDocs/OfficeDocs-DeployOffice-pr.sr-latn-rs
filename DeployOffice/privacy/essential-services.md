@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: 2449c56af99d40bcc1a4a3f85575984da6af3252
-ms.sourcegitcommit: a8c69c9c02320edec51c3bd7bb8dce28fa737e47
+ms.openlocfilehash: 94f248d64c74cd6575b4039178270f62b3715d15
+ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "48367472"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48491556"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -293,6 +293,12 @@ Prikupljaju se sledeća polja:
 
   - **Duration** - Koliko vremena je bilo potrebno za potvrdu identiteta
 
+  - **Duration_Max** – Ako je ovaj signal agreriran, maksimalno trajanje bilo kog agreriranog događaja.
+
+  - **Duration_Min** – Ako je ovaj signal agreriran, minimalno trajanje bilo kog agreriranog događaja.
+
+  - **Duration_Sum** – Ako je ovaj signal agreriran, zbir trajanja svih agreriranih događaja.
+
   - **EndTime** - Kada je događaj potvrde identiteta završen
 
   - **Error** - Kôd greške ako potvrda identiteta nije uspela
@@ -407,11 +413,19 @@ Prikupljaju se sledeća polja:
 
   - **Microsoft\_ADAL\_user\_cancel** - Tačno/netačno ako je prozor korisničkog interfejsa otkazan.
 
+  - **Microsoft_ADAL_was_request_throttled** – True / false koji označava da li je ADAL ograničio ovaj događaj zbog previše zahteva.
+ 
   - **Microsoft\_ADAL\_x\_ms\_request\_id** - Dodatni zahtev koji je obezbedio ID za ADAL uslugu u HTTP zaglavlju.
 
   - **Platform** - Win32/WinRT/Android/iOS/Mac
 
+  - **Promptreasoncorrelationid** – Za upite, ovo je ID korelacije drugog događaja koji objašnjava zašto korisnik možda vidi upit za potvrdu identiteta.
+
+  - **Resource** – Resurs za koji korisnik zahteva token, kao što su Exchange ili SharePoint.
+
   - **Scenarioid** - GUID. Različiti događaji mogu da pripadaju samo jednom scenariju, npr. on može da dodaje novi nalog, ali postoji više različitih upita koji se javljaju kao deo tog scenarija. Ovaj ID omogućava da se korelacija dogodi.
+
+  - **Scenarioname** – Ime scenarija kojem pripada ovaj događaj autentifikacije.
 
   - **Sessionid** - GUID identifikacija za pokretanje sesije
 
