@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Пружа Office администраторима преглед контрола приватности за Microsoft 365 Apps for enterprise (претходно Office 365 ProPlus), укључујући дијагностичке податке и повезане утиске при раду.
 hideEdit: true
-ms.openlocfilehash: f367550169e75d0f1dbb0726e947ce8797fb1003
-ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
+ms.openlocfilehash: f894db695caf8a6dfa56dd6db541d8b8fd4bd564
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47440579"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794773"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Pregled kontrola privatnosti za Microsoft 365 Apps za preduzeće
 
@@ -29,23 +29,23 @@ ms.locfileid: "47440579"
 
 Microsoft je posvećen tome da vam pruži informacije i kontrole koje su vam potrebne da biste odabrali način prikupljanja i upotrebe vaših podataka kada koristite Microsoft 365 aplikacije za velika preduzeća (ranije poznato kao Office 365 ProPlus).
 
-Почевши од верзије 1904 услуге Microsoft 365 Apps for enterprise, пружаћемо вам нове, ажуриране и унапређене контроле приватности за следеће области:
-- ***Дијагностички подаци*** који се прикупљају и шаљу корпорацији Microsoft о Office клијентском софтверу који се користи на рачунарима који раде под оперативним системом Windows у вашој организацији.
-- ***Повезана искуства*** која користе функционалност засновану на облаку како би пружила унапређене Office функције вама и вашим корисницима.
+Počevši od verzije 1904 usluge Microsoft 365 Apps za preduzeće, pružićemo vam nove, ažurirane i poboljšane kontrole privatnosti za sledeće oblasti:
+- ***Dijagnostički podaci** _ koji se prikupljaju i šalju korporaciji Microsoft u vezi sa Office klijentskim softverom pokrenutim na uređaju korisnika u vašoj organizaciji.
+- _*_Povezana iskustva_*_ koja koriste funkcionalnost zasnovanu na oblaku da pruže poboljšane funkcije sistema Office vama i vašim korisnicima.
 
 U sklopu ovih promena, postoje elementi novog i ažuriranog korisničkog interfejsa (UI) i postavki pravila.
 
 ## <a name="diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft"></a>Dijagnostički podaci koji se šalju iz usluge Microsoft 365 Apps za preduzeće korporaciji Microsoft
 
-Дијагностички подаци се користе за обезбеђивање и ажурирање система Office, откривање, дијагностику и решавање проблема, као и за унапређивање производа. Ти подаци не обухватају корисничко име ни адресу е-поште, садржај корисникових датотека нити информације о апликацијама које немају везе са системом Office.
+Дијагностички подаци се користе за обезбеђивање и ажурирање система Office, откривање, дијагностику и решавање проблема, као и за унапређивање производа. Ti podaci ne sadrže korisničko ime ili adresu elektronske pošte, sadržaj korisničkih datoteka ili informacije o aplikacijama nevezanim za Office.
 
-Ти дијагностички подаци прикупљају се и шаљу корпорацији Microsoft о Office клијентском софтверу који се користи на рачунарима који раде под оперативним системом Windows у вашој организацији.
+Ovi dijagnostički podaci se prikupljaju i šalju korporaciji Microsoft u vezi sa Office klijentskim softverom pokrenutim na uređaju korisnika u vašoj organizaciji.
 
-Постоје три нивоа дијагностичких података за Microsoft 365 Apps for enterprise клијентски софтвер између којих можете да бирате:
+Postoje tri nivoa dijagnostičkih podataka za klijentski softver usluge Microsoft 365 Apps za preduzeće između kojih možete da birate:
 
-- **Обавезни** Минимални подаци неопходни да би Office остао безбедан, ажуран и да би функционисао као што је очекивано на уређају на ком је инсталиран.
+- _ *Obavezan* * Minimalni podaci neophodni da bi Office bio bezbedan, ažuriran i da radi kao što se očekuje na uređaju na kome je instaliran.
 
-- **Опционални** Додатни подаци који нам помажу да унапредимо производ и пружају побољшане информације помоћу којих откривамо, дијагностикујемо и решавамо проблеме.
+- **Opcionalan** Dodatni podaci koji nam pomažu da poboljšamo proizvod i pružaju dodatne informacije koje nam pomažu u detektovanju i rešavanju problema.
 
 - **Никакви** Не прикупљају се и не шаљу нам се никакви дијагностички подаци о Office клијентском софтверу покренутом на уређају корисника. Међутим, ова опција знатно ограничава нашу могућност откривања, дијагнозе и решавања проблема на које ваши корисници могу наићи док користе Office.
 
@@ -59,11 +59,11 @@ U sklopu ovih promena, postoje elementi novog i ažuriranog korisničkog interfe
 
 Ти дијагностички подаци не обухватају имена корисника, њихове адресе е-поште или садржај њихових Office датотека. Наш систем прави јединствени ID који повезује са дијагностичким подацима вашег корисника. Кад добијемо дијагностичке податке који приказују да је нека од наших апликација отказала 100 пута, тај јединствени ID нам омогућава да утврдимо да ли је до отказа дошло код једног корисника 100 пута или је код 100 различитих корисника по једном дошло до отказивања. Тај јединствени ID не користимо да бисмо идентификовали одређеног корисника.
 
-Да бисте видели који се дијагностички подаци шаљу корпорацији Microsoft, можете да користите Приказивач дијагностичких података који можете да преузмете и инсталирате из услуге Microsoft Store.
+Da biste videli koji dijagnostički podaci se šalju korporaciji Microsoft, možete da koristite besplatan Prikazivač dijagnostičkih podataka koji možete da preuzmete i instalirate iz Microsoft prodavnice.
 
-Више информација потражите путем следећих веза:
+Više informacija potražite u sledećim člancima:
 
-- [Обавезни дијагностички подаци за Office](required-diagnostic-data.md)
+- [Obavezni dijagnostički podaci za Office](required-diagnostic-data.md)
 - [Опционални дијагностички подаци за Office](optional-diagnostic-data.md)
 - [Коришћење поставки смерница за управљање контролама приватности за Microsoft 365 Apps for enterprise](manage-privacy-controls.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
@@ -87,11 +87,11 @@ Microsoft 365 Apps for enterprise се састоји од апликација 
 
 Ако одаберете да корисницима не обезбедите одређене типове повезаних утисака при раду, команда на траци или у менију за те повезане утиске при раду биће засивљена или ће корисници добијати поруку о грешци кад покушају да користе те повезане утиске при раду.
 
-Ваши корисници неће моћи да одаберу да ли ће укључити или искључити те повезане утиске при раду ако су пријављени у Office са акредитивима организације, што се некад назива и пословни или школски налог.
+Vaši korisnici neće moći da odaberu da li žele da uključe ili isključe ova povezana iskustva ako su prijavljeni u Office pomoću akreditiva organizacije, koji se ponekad nazivaju poslovnim ili školskim nalogom.
 
-Више информација потражите путем следећих веза:
+Više informacija potražite u sledećim člancima:
 
-- [Повезани утисци при раду у систему Office](connected-experiences.md)
+- [Povezana iskustva u sistemu Office](connected-experiences.md)
 - [Коришћење поставки смерница за управљање контролама приватности за Microsoft 365 Apps for enterprise](manage-privacy-controls.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
@@ -105,11 +105,11 @@ Microsoft 365 Apps for enterprise се састоји од апликација 
 
 Пошто за опционалне повезане утиске при раду важе засебни услови и одредбе, њима управљате одвојено од горепоменутих повезаних утисака при раду. Као администратор своје организације, моћи ћете да користите поставку смерница да бисте одабрали да ли ћете те опционалне повезане утиске при раду, као групу, учинити доступним за своје кориснике. Ако не конфигуришете ту поставку смерница, ти опционални утисци при раду биће доступни корисницима.
 
-Чак и ако одаберете да те опционална повезана искуства учините доступним за своје кориснике, корисници ће имати опцију да их искључе као групу тако што ће отићи у [дијалог са поставкама приватности](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Ваши корисници ће имати овај избор само ако су у Office пријављени са акредитивима организације (који се понекад називају пословни или школски налог), а не ако су пријављени са личном адресом е-поште.
+Чак и ако одаберете да те опционална повезана искуства учините доступним за своје кориснике, корисници ће имати опцију да их искључе као групу тако што ће отићи у [дијалог са поставкама приватности](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Korisnici će imati ovaj izbor samo ako su prijavljeni u Office pomoću akreditiva organizacije (oni se ponekad nazivaju poslovnim ili školskim nalozima), a ne ako su prijavljeni na ličnu adresu elektronske pošte.
 
-Више информација потражите путем следећих веза:
+Više informacija potražite u sledećim člancima:
 
-- [Преглед опционалних повезаних утисака при раду у систему Office](optional-connected-experiences.md)
+- [Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md)
 - [Коришћење поставки смерница за управљање контролама приватности за Microsoft 365 Apps for enterprise](manage-privacy-controls.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
@@ -128,8 +128,8 @@ Više informacija potražite u članku [Neophodni podaci o usluzi za Office](req
 
 Postoji i skup usluga koje su od suštinske važnosti za to kako funkcije usluge Microsoft 365 Apps za preduzeće rade i one se ne mogu onemogućiti. Na primer, usluga licenciranja koja potvrđuje da ste ispravno licencirani da koristite Microsoft 365 Apps za preduzeće. Обавезни подаци о услузи о овим услугама прикупљају се и шаљу корпорацији Microsoft без обзира на друге поставке услуга које сте конфигурисали.
 
-Више информација потражите у чланку [Основне услуге за Office](essential-services.md).
+Više informacija potražite u članku [Osnovne usluge za Office](essential-services.md).
 
-## <a name="related-topics"></a>Сродне теме
-- [Приватност у корпорацији Microsoft](https://privacy.microsoft.com/)
+## <a name="related-articles"></a>Povezani članci
+- [Privatnost u korporaciji Microsoft](https://privacy.microsoft.com/)
 - [Windows приватност](https://docs.microsoft.com/windows/privacy/)

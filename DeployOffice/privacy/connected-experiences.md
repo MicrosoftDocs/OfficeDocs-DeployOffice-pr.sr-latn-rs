@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije Office administratorima o povezanim iskustvima za Office, kao što su iskustva koja analiziraju sadržaj ili iskustva koja preuzimaju sadržaj na mreži.
 hideEdit: true
-ms.openlocfilehash: ca3139f95f20392efce25bb00572c2973cec82db
-ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
+ms.openlocfilehash: 2ffbac14694578fc1f5964cef2c92eea6d6a2172
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "48491592"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794759"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sistemu Office
 
@@ -71,7 +71,7 @@ Sledeća tabela sadrži spisak povezanih iskustava koja analiziraju vaš sadrža
 <sup>1</sup> osnovna funkcionalnost Uređivača ostaje dostupna čak i ako niste povezani sa Internetom. Ta ista osnovna funkcionalnost ostaje dostupna i ako odlučite da onemogućite korišćenje povezanih iskustava koje analiziraju sadržaj. U oba slučaja, nema poslatih podataka o korišćenju Uređivača korporaciji Microsoft.
 
 > [!NOTE]
-> \*Kada su korisnici prijavljeni sa poslovnim ili školskim nalogom, povezana iskustva navedena gore u kurzivu nisu obavezna i pružaju se po uslovima[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement)i[izjave o privatnosti](https://privacy.microsoft.com/), a mogu se primeniti i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md). Ako ste administrator, ova povezana iskustva mogu biti upravljana kontrolom privatnosti za povezana iskustva ili u postavci privatnosti *Dozvoljavanje upotrebe dodatnih opcionalnih povezanih iskustava u sistemu Office*.
+> \*Kada su korisnici prijavljeni sa poslovnim ili školskim nalogom, povezana iskustva navedena gore u kurzivu nisu obavezna i pružaju se po uslovima[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement)i[izjave o privatnosti](https://privacy.microsoft.com/), a mogu se primeniti i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md). Ako ste administrator, ova povezana iskustva mogu biti upravljana kontrolom privatnosti za povezana iskustva ili u postavci privatnosti *Dozvoljavanje upotrebe dodatnih opcionalnih povezanih iskustava u sistemu Office* .
 
 ## <a name="connected-experiences-that-download-online-content"></a>Povezana iskustva koja preuzimaju sadržaj na mreži
 
@@ -100,10 +100,10 @@ Sledeća tabela sadrži spisak povezanih iskustava koja preuzimaju sadržaj na i
 | Recite mi    | [Brzo obavljanje stvari pomoću funkcije „Reci mi...“](https://support.microsoft.com/office/f20d2198-17b8-4b09-a3e5-007a337f1e4e)  |
 | Predlošci  | [Preuzimanje besplatnih, unapred urađenih predložaka](https://support.microsoft.com/office/29f2a18d-29a6-4a07-998b-cfe5ff7ffbbb)  |
 |*Procenjuje se vreme putovanja u kartici „Sledi“*\*|Kada odlučite da omogućite programu Outlook za iOS i Android da pristupe lokaciji, procenjeno vreme putovanja do sledećeg događaja biće uključeno u [karticu „Sledi“](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work) na vrhu prijemnog poštanskog sandučeta.|
-| *Outlook traka vremenske prognoze *\*| [Menjanje grada na traci „Vremenska prognoza“ u kalendaru](https://support.microsoft.com/office/D11B7532-7C58-489E-8103-5CC5D727B06B) |
+| *Outlook traka vremenske prognoze*\*| [Menjanje grada na traci „Vremenska prognoza“ u kalendaru](https://support.microsoft.com/office/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 
 > [!NOTE]
->\*Kada su korisnici prijavljeni sa poslovnim ili školskim nalogom, povezana iskustva navedena gore u kurzivu nisu obavezna i pružaju se po uslovima[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement)i[izjave o privatnosti](https://privacy.microsoft.com/), a mogu se primeniti i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md). Ako ste administrator, ova povezana iskustva mogu biti upravljana kontrolom privatnosti za povezana iskustva ili u postavci privatnosti *Dozvoljavanje upotrebe dodatnih opcionalnih povezanih iskustava u sistemu Office*.
+>\*Kada su korisnici prijavljeni sa poslovnim ili školskim nalogom, povezana iskustva navedena gore u kurzivu nisu obavezna i pružaju se po uslovima[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement)i[izjave o privatnosti](https://privacy.microsoft.com/), a mogu se primeniti i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md). Ako ste administrator, ova povezana iskustva mogu biti upravljana kontrolom privatnosti za povezana iskustva ili u postavci privatnosti *Dozvoljavanje upotrebe dodatnih opcionalnih povezanih iskustava u sistemu Office* .
 
 ## <a name="other-connected-experiences"></a>Druga povezana iskustva
 
@@ -125,7 +125,7 @@ Sledeća tabela sadrži spisak tih drugih povezanih iskustava i pruža veze za v
 | Fokusirano prijemno sanduče (Outlook) |[Fokusirano prijemno sanduče za Outlook](https://support.microsoft.com/office/f445ad7f-02f4-4294-a82e-71d8964e3978)  |
 | Information Rights Management |[Otvaranje datoteke koja ima ograničene dozvole](https://support.microsoft.com/office/c7a70797-6b1e-493f-acf7-92a39b85e30c)  |
 | LinkedIn kontakt kartica |[LinkedIn u Microsoft aplikacijama i uslugama](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381)  |
-| *Programski dodaci za Office*\* | [Primena dodataka u centru administracije](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins) |
+| *Programski dodaci za Office*\* | [Prikaz, upravljanje i instaliranje programskih dodataka u Office programima](https://support.microsoft.com/office/16278816-1948-4028-91e5-76dca5380f8d) *(za korisnike)* <br/> [Primena dodataka u centru administracije](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins) *(za administratore)* |
 | Povratne informacije za Office |[Kako da pošaljem povratne informacije o sistemu Microsoft Office?](https://support.microsoft.com/office/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Podrška za Office (Kontaktirajte nas) |Kada odaberete **Pomoć** > **Obratite se podršci** na traci |
 | Organizacioni grafikon (Visio) |[Pravljenje organizacionog grafikona u programu Visio](https://support.microsoft.com/office/abb3dd17-2692-439f-9945-3a015767d96a)|
@@ -146,18 +146,18 @@ Sledeća tabela sadrži spisak tih drugih povezanih iskustava i pruža veze za v
 | Dok ste bili odsutni |[Budite obavešteni kada članovi vašeg tima ažuriraju vašu deljenu datoteku](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)  |
 
 > [!NOTE]
->\*Kada su korisnici prijavljeni sa poslovnim ili školskim nalogom, povezana iskustva navedena gore u kurzivu nisu obavezna i pružaju se po uslovima[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement)i[izjave o privatnosti](https://privacy.microsoft.com/), a mogu se primeniti i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md). Ako ste administrator, ova povezana iskustva mogu biti upravljana kontrolom privatnosti za povezana iskustva ili u postavci privatnosti *Dozvoljavanje upotrebe dodatnih opcionalnih povezanih iskustava u sistemu Office*.
+>\*Kada su korisnici prijavljeni sa poslovnim ili školskim nalogom, povezana iskustva navedena gore u kurzivu nisu obavezna i pružaju se po uslovima[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement)i[izjave o privatnosti](https://privacy.microsoft.com/), a mogu se primeniti i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md). Ako ste administrator, ova povezana iskustva mogu biti upravljana kontrolom privatnosti za povezana iskustva ili u postavci privatnosti *Dozvoljavanje upotrebe dodatnih opcionalnih povezanih iskustava u sistemu Office* .
 
 ## <a name="choose-whether-these-connected-experiences-are-available-to-use"></a>Odaberite da li ova povezana iskustva mogu da se koriste
 
 Možete da odaberete da li određeni tipovi povezanih iskustava, kao što su povezana iskustva koja preuzimaju sadržaj na mreži, mogu da se koriste. Kako da to odlučite zavisi od toga da li ste prijavljeni u Office pomoću Microsoft naloga, kao što je lična adresa e-pošte outlook.com ili preko poslovnog ili školskog naloga.
 
-Ako ste prijavljeni pomoću Microsoft naloga, otvorite Office aplikaciju, kao što je Word, i idite na **Datoteka** > **Nalog** > **Privatnost naloga** > **Upravljanje postavkama**. Pod odeljkom **Povezana iskustva** možete da odaberete da li određeni tipovi povezanih iskustava, kao što su povezana iskustva koja analiziraju vaš sadržaj, mogu da se koriste. Ako ne odete na **Upravljanje postavkama**, sva povezana iskustva će vam biti dostupna.
+Ako ste prijavljeni pomoću Microsoft naloga, otvorite Office aplikaciju, kao što je Word, i idite na **Datoteka** > **Nalog** > **Privatnost naloga** > **Upravljanje postavkama** . Pod odeljkom **Povezana iskustva** možete da odaberete da li određeni tipovi povezanih iskustava, kao što su povezana iskustva koja analiziraju vaš sadržaj, mogu da se koriste. Ako ne odete na **Upravljanje postavkama** , sva povezana iskustva će vam biti dostupna.
 
-Ako ste prijavljeni pomoću poslovnog ili školskog naloga, administrator u vašoj organizaciji će odlučiti da li su vam ova povezana iskustva dostupna. Nećete videti izbore za ova povezana iskustva ako odete na stavke **Datoteka** > **Nalog** > **Privatnost naloga** > **Upravljanje postavkama**.
+Ako ste prijavljeni pomoću poslovnog ili školskog naloga, administrator u vašoj organizaciji će odlučiti da li su vam ova povezana iskustva dostupna. Nećete videti izbore za ova povezana iskustva ako odete na stavke **Datoteka** > **Nalog** > **Privatnost naloga** > **Upravljanje postavkama** .
 
 > [!NOTE]
-> - Ako koristite Office za Mac, otvorite bilo koju Office aplikaciju i izaberite meni aplikacije (kao što je Word ili Excel) > **Željene postavke** > **Privatnost**. To će otvoriti dijalog „Postavke privatnosti naloga“ gde možete da vidite opcije privatnosti.
+> - Ako koristite Office za Mac, otvorite bilo koju Office aplikaciju i izaberite meni aplikacije (kao što je Word ili Excel) > **Željene postavke** > **Privatnost** . To će otvoriti dijalog „Postavke privatnosti naloga“ gde možete da vidite opcije privatnosti.
 > - Za više informacija pogledajte [Postavke privatnosti naloga.](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
 
 Ako ste administrator za vašu organizaciju, možete da koristite regulatorne postavke da utvrdite da li su ova povezana iskustva dostupna vašim korisnicima. Ako ne koristite ove postavke smernica, sva povezana iskustva će biti dostupna vašim korisnicima. Za više informacija o korišćenju ovih postavki smernica pogledajte sledeće članke: 

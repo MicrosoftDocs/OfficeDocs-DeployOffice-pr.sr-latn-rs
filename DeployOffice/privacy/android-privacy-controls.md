@@ -13,29 +13,25 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju postavkama privatnosti na Android uređajima.
 hideEdit: true
-ms.openlocfilehash: 6086ecd1b2cd55bbf6cb4577879714f1d20a2f93
-ms.sourcegitcommit: 81295dff0f2fa474f0db39fd40560e3a23fff32a
+ms.openlocfilehash: 2c1ecab42f31c85616faca42a5cb01b183a36087
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45092132"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794455"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-on-android-devices"></a>Korišćenje postavki smernica za upravljanje kontrolama privatnosti za Office na Android uređajima
 
+> [!NOTE]
+> Da biste videli listu Office proizvoda koji su obuhvaćeni ovim informacijama o privatnosti, pogledajte članak [„Dostupne kontrole privatnosti za Office proizvode“](products-versions-privacy-controls.md).
+
 Postoje postavke za Office na Android uređajima koje će vam omogućiti da kontrolišete postavke vezane za sledeće:
 
-- ***Diagnostičke podatke*** koji se prikupljaju i šalju korporaciji Microsoft o Office klijentskom softveru koji se koristi
+- ***Dijagnostičke podatke** _ koji se prikupljaju i šalju korporaciji Microsoft o Office klijentskom softveru koji se koristi.
 
-- ***Povezana iskustva*** koja koriste funkcionalnost zasnovanu na oblaku da pruže poboljšane funkcije sistema Office vama i vašim korisnicima.
+- _*_Povezana iskustva_*_ koja koriste funkcionalnost zasnovanu na oblaku da pruže poboljšane funkcije sistema Office vama i vašim korisnicima.
 
 Više informacija o dijagnostičkim podacima i povezanim iskustvima potražite u članku [Pregled kontrola privatnosti](overview-privacy-controls.md).
-
-Ove željene postavke primenjuju se na sledeće aplikacije:
-- Verzija 16.0.12228.20260 i novije verzije programa Word za Android, Excel za Android i PowerPoint za Android.
-- Verzija 4.1.71 i novije verzije programa Outlook za Android.
-- Verzija 16.0.12228.20004 i novije verzije programa OneNote za Android.
-- Verzija 5.47 i novije verzije programa OneDrive za Android.
-- Verzija 16.0.12430.20254 i novije verzije aplikacije Office za Android.
 
 ## <a name="policy-settings-available-for-office-on-android-devices"></a>Postavke smernica dostupne za Office na Android uređajima
 
@@ -43,7 +39,7 @@ Sledeća tabela navodi postavke smernica koje su dostupne za Office na Android u
 
 > [!NOTE]
 >- Predviđene dodatne informacije obuhvataju postavke smernica za Office na uređajima koji rade pod operativnim sistemom Windows. Ali iste informacije se primenjuju na Office na Android uređajima jer su to iste postavke smernica.
->- Postavka smernica *Dozvoli upotrebu povezanih iskustava u sistemu Office* dostupna za Office na uređajima koji koriste Windows ne primenjuje se na Office na Android uređajima. 
+>- Postavka smernica _Dozvoli upotrebu povezanih iskustava u sistemu Office* dostupna za Office na uređajima koji koriste Windows ne primenjuje se na Office na Android uređajima. 
 
 
 |Naziv postavke smernica  |Dodatne informacije |

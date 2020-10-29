@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije Office administratorima o opcionalno dijagnostičkim podacima u sistemu Office, uključujući neke primere događaja.
 hideEdit: true
-ms.openlocfilehash: 2183863e1f7050d7d6ba838b639debf2b53ac9bd
-ms.sourcegitcommit: e1e4c309d62d0708404b7838c96416ce89f1b8b7
+ms.openlocfilehash: bcb9a8d4a886fefde3fbb42280183bf163b315c3
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48328333"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794815"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Opcionalni dijagnostički podaci za Office
 
@@ -27,9 +27,9 @@ ms.locfileid: "48328333"
 
 Dijagnostički podaci se koriste da bi Office bio bezbedan i ažuriran, da bi se otkrili i otklonili problemi i da bi se poboljšao proizvod. Ti podaci ne sadrže korisničko ime ili adresu elektronske pošte, sadržaj korisničkih datoteka ili informacije o aplikacijama nevezanim za Office.
 
-Ovi dijagnostički podaci se prikupljaju i šalju korporaciji Microsoft o Office klijentskom softveru koji se koristi na Windows računarima. Neki dijagnostički podaci su obavezni, a neki su opcionalni. Možete da izaberete da li ćete nam slati obavezne ili opcionalne dijagnostičke podatke pomoću kontrole privatnosti, kao što su postavke smernica organizacije. Možete da vidite dijagnostičke podatke koji nam se šalju koristeći prikaz dijagnostičkih podataka.
+Ovi dijagnostički podaci se prikupljaju i šalju korporaciji Microsoft u vezi sa Office klijentskim softverom pokrenutim na uređaju korisnika. Neki dijagnostički podaci su obavezni, a neki su opcionalni. Možete da izaberete da li ćete nam slati obavezne ili opcionalne dijagnostičke podatke pomoću kontrole privatnosti, kao što su postavke smernica organizacije. Možete da vidite dijagnostičke podatke koji nam se šalju koristeći prikaz dijagnostičkih podataka.
 
-***Opcionalni dijagnostički podaci*** su dodatni podaci koji nam pomažu da poboljšamo proizvod i pružaju dodatne informacije koje nam pomažu u otkrivanju i otklanjaju problema.
+***Opcionalni dijagnostički podaci** _ su dodatni podaci koji nam pomažu da poboljšamo proizvod i pružaju dodatne informacije koje nam pomažu u otkrivanju i otklanjaju problema.
 
 Ako odaberete da nam pošaljete opcionalne dijagnostičke podatke, oni se prikupljaju uz obavezne dijagnostičke podatke. Osim toga, možda će biti poslate dijagnostičke datoteke evidencije za Office, koje sadrže informacije koje su vrlo slične pojedinim dijagnostičkim podacima. Za više informacija o tim datotekama evidencije pogledajte članak [Pregled dijagnostičkih datoteka evidencije za Office](https://support.microsoft.com/office/fba86aac-70dc-4858-ae1f-ec2034346cdf).
 
@@ -71,7 +71,7 @@ Ova kategorija uključuje događaje koji obuhvataju sledeće oblasti:
 
 Sledeća tabela sadrži primere događaja za ovu kategoriju, kao i njihove opise.
 
-| **Ime događaja**   | **Opis događaja**  |
+| _ *Ime događaja**   | **Opis događaja**  |
 | ---- | ---- |
 | Office.Extensibility.AppCommands.GetRibbonUpdatesForUserId | Ovaj događaj ukazuje na to da li Word uspešno ažurira traku na Word korisničkom interfejsu kada korisnik promeni svoj identitet. Koristimo ga za otkrivanje neispravnog podešavanja i drugih problema koji utiču na Office korisnički interfejs. |
 | Office.Extensibility.AppCommands.AppCmdInstall   | Ovaj događaj pruža informacije o Office programskom dodatku koji je korisnik instalirao, uključujući ID aplikacije, verziju operativnog sistema, uspeh i trajanje instalacije.  |
