@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: c7593aed7e4bc6037bca6b84181c0434b2e27e30
-ms.sourcegitcommit: 288d54b2e6b463f67358f701ef0dd5424237f811
+ms.openlocfilehash: d0eea79f28d2c2f79991ac0d59ebb6a567fecb21
+ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "48322384"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931450"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
@@ -40,8 +40,8 @@ Neke usluge u oblaku obezbeđuje Microsoft Bing. Microsoft Bing je odvojen od us
 
 Bing omogućava sledeća iskustva u usluzi Outlook za iOS i Android:
 
-- **Predlozi lokacija: **   Kada u stavku kalendara dodate neko javno mesto sa adresom, Outlook za iOS i Android takođe će u polju Lokacija uključiti celu adresu.
-- **Zanimljivi kalendari:** Možete da se [pretplatite ](https://support.microsoft.com/office/cff1429c-5af6-41ec-a5b4-74f2c278e98c)na kalendare o vašim omiljenim sportskim timovima ili o TV emisijama.
+- **Predlozi lokacija:**   Kada u stavku kalendara dodate neko javno mesto sa adresom, Outlook za iOS i Android takođe će u polju Lokacija uključiti celu adresu.
+- **Zanimljivi kalendari:** Možete da se [pretplatite](https://support.microsoft.com/office/cff1429c-5af6-41ec-a5b4-74f2c278e98c)na kalendare o vašim omiljenim sportskim timovima ili o TV emisijama.
 - **Vreme putovanja u kartici „Sledi“:** predstojeći događaj će biti rezimiran na vrhu prijemnog poštanskog sandučeta e-pošte u kartici koja se zove [„Sledi“](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). U programu Outlook za android, ovo iskustvo zahteva Bing mape kako bi obezbedilo predviđeno vreme putovanja.
 
  Ova iskustva koja se oslanjaju na Bing su za vas licencirana pod uslovima[Microsoft ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i pokrivena su [izjavom o privatnosti](https://privacy.microsoft.com/). Svi upiti za pretragu koje unesete za organizaciju u usluzi Microsoft 365 Apps za preduzeće dok koristite ove usluge šalju se usluzi Microsoft Bing. Bing organizacija ih ne povezuje sa vama.
@@ -101,6 +101,9 @@ Ako koristite Office za Mac, otvorite bilo koju Office aplikaciju i izaberite me
 
 Za više informacija pogledajte [Postavke privatnosti naloga.](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
 
+> [!NOTE]
+> Ako vam je administrator u vašoj organizaciji dao verziju za količinsko licenciranje sistema Office 2019, Project 2019 ili Visio 2019, idite na stavku **Datoteka** > **Opcije** > **Centar za pouzdanost** > **Postavke Centra za pouzdanost** > **Opcije privatnosti**. Tu treba da vidite polje za potvrdu za stavku **Uključi opcionalno povezana iskustva**. Ako ne vidite to polje za potvrdu u programu Project 2019 ili Visio 2019, odaberite **Postavke privatnosti…** u tom dijalogu stavke **Centar za pouzdanost**. Onda bi trebalo da se dijalog **Postavke privatnosti** pojavi sa poljem za potvrdu za stavku **Omogući opcionalno povezana iskustva**.
+
 ## <a name="your-privacy-settings"></a>Vaše postavke privatnosti
 
 Ako vam je administrator dao mogućnost da koristite opcionalna povezana iskustva u Office aplikacijama uključenim uz Microsoft 365 Apps za preduzeće na Windows uređaju, idite na **Datoteku** > **Nalog** > **Privatnost naloga** i izaberite **Upravljanje postavkama** da biste bilo kada upravljali svojim postavkama. Kada je to omogućeno, imaćete opciju da koristite usluge opisane u ovom članku kada god želite da ih koristite. Kada je onemogućen, one neće biti dostupne.
@@ -109,9 +112,12 @@ Ako koristite Office za Mac, otvorite bilo koju Office aplikaciju i izaberite me
 
 Za više informacija pogledajte [Postavke privatnosti naloga.](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
 
+> [!NOTE]
+> Ako vam je administrator u vašoj organizaciji dao verziju za količinsko licenciranje sistema Office 2019, Project 2019 ili Visio 2019, idite na stavku **Datoteka** > **Opcije** > **Centar za pouzdanost** > **Postavke Centra za pouzdanost** > **Opcije privatnosti**. Tu treba da vidite polje za potvrdu za stavku **Uključi opcionalno povezana iskustva**. Ako ne vidite to polje za potvrdu u programu Project 2019 ili Visio 2019, odaberite **Postavke privatnosti…** u tom dijalogu stavke **Centar za pouzdanost**. Onda bi trebalo da se dijalog **Postavke privatnosti** pojavi sa poljem za potvrdu za stavku **Omogući opcionalno povezana iskustva**.
+
 ## <a name="required-service-data"></a>Neophodni podaci o usluzi
 
-Kada koristite bilo koju od opcionalnih usluga u oblaku koje su opisane u ovom članku, Microsoft može da prikuplja [obavezne podatke o usluzi](required-service-data.md) (kao što su podaci o korišćenju, podaci o greškama i performansama) o učinku tokom vašeg iskustva njihovog korišćenja. Ovi obavezni podaci o usluzi mogu da sadrže „lične podatke“ kao što je definisano u Članu 4 evropskog GDPR-a. Svi obavezni podaci o usluzi koje Microsoft prikuplja tokom korišćenja aplikacija i usluga u okviru Microsoft 365 Apps za preduzeće imaju pseudonime, kao što je definisano u standardu ISO/IEC 19944:2017, (odeljak 8.3.3).
+Kada koristite bilo koju od opcionalnih usluga u oblaku koje su opisane u ovom članku, Microsoft može da prikuplja [obavezne podatke o usluzi](required-service-data.md) (kao što su podaci o korišćenju, podaci o greškama i performansama) o učinku tokom vašeg iskustva njihovog korišćenja. Ovi obavezni podaci o usluzi mogu da sadrže „lične podatke“ kao što je definisano u Članu 4 evropskog GDPR-a.  Svi obavezni podaci o usluzi koje Microsoft prikuplja tokom korišćenja aplikacija i usluga u okviru Microsoft 365 Apps za preduzeće imaju pseudonime, kao što je definisano u standardu ISO/IEC 19944:2017, (odeljak 8.3.3).
 
 ## <a name="admin-controls-for-optional-connected-experiences"></a>Administratorske kontrole za opcionalna povezana iskustva 
 

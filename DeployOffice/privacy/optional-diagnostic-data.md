@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije Office administratorima o opcionalno dijagnostičkim podacima u sistemu Office, uključujući neke primere događaja.
 hideEdit: true
-ms.openlocfilehash: bcb9a8d4a886fefde3fbb42280183bf163b315c3
-ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
+ms.openlocfilehash: 7dc10c50baed0306e3e7fc6dd70e0d798a72d0bc
+ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48794815"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931268"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Opcionalni dijagnostički podaci za Office
 
@@ -28,6 +28,9 @@ ms.locfileid: "48794815"
 Dijagnostički podaci se koriste da bi Office bio bezbedan i ažuriran, da bi se otkrili i otklonili problemi i da bi se poboljšao proizvod. Ti podaci ne sadrže korisničko ime ili adresu elektronske pošte, sadržaj korisničkih datoteka ili informacije o aplikacijama nevezanim za Office.
 
 Ovi dijagnostički podaci se prikupljaju i šalju korporaciji Microsoft u vezi sa Office klijentskim softverom pokrenutim na uređaju korisnika. Neki dijagnostički podaci su obavezni, a neki su opcionalni. Možete da izaberete da li ćete nam slati obavezne ili opcionalne dijagnostičke podatke pomoću kontrole privatnosti, kao što su postavke smernica organizacije. Možete da vidite dijagnostičke podatke koji nam se šalju koristeći prikaz dijagnostičkih podataka.
+
+> [!NOTE]
+> Ako koristite verziju sistema Office 2019 ili Office 2016 koja vama ili vašem administratoru ne daje mogućnost izbora da li želite da nam šaljete obavezne ili opcionalne dijagnostičke podatke, onda se šalju samo obavezni dijagnostički podaci. Na primer, ako koristite Office Professional Plus 2019 ili Office Standard 2016, koji ne pružaju tu mogućnost izbora, onda se šalju samo obavezni dijagnostički podaci. Office 2013 ne šalje obavezne ili opcionalne dijagnostičke podatke. Za više informacija o tome koja verzija sistema Office pruža ovu mogućnost izbora, pogledajte članak [Kontrole privatnosti dostupne za Office proizvode](products-versions-privacy-controls.md).
 
 ***Opcionalni dijagnostički podaci** _ su dodatni podaci koji nam pomažu da poboljšamo proizvod i pružaju dodatne informacije koje nam pomažu u otkrivanju i otklanjaju problema.
 
