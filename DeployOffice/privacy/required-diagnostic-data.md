@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: e8b54e50ca8fc080cf09b26d83f4b7f28bc81290
-ms.sourcegitcommit: 521da3465e94ca9d29f3c6f49b78dd5f952d9cc6
+ms.openlocfilehash: 97d334551743566bde549da4b3b4a2476255d248
+ms.sourcegitcommit: 1c635a2906afb601e7c92b3f48dde3d271d06105
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "49088133"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49367375"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -665,7 +665,7 @@ Pored toga, sledeća polja su uobičajena za sve događaje za aplikaciju Outlook
 
 Podtipovi podataka koji spadaju u ovu kategoriji su:
 - [Podešavanje sistema Office i popis](#office-setup-and-inventory-subtype)
-- [Konfiguracija Office programskih dodataka](#office-add-in-configuration-subtype)
+- [Konfiguracija programskih dodataka za Office](#office-add-in-configuration-subtype)
 - [Bezbednost](#security-subtype)  
 
 ### <a name="office-setup-and-inventory-subtype"></a>*Podtip podešavanja sistema Office i popisa*
@@ -1554,7 +1554,7 @@ Ovaj događaj se prikuplja da bi se osiguralo da konfiguracija naloga uspešno f
 
 Prikupljaju se sledeća polja: 
 
-- **account_creation_source** – opcionalno svojstvo koje se koristi za pronalaženje i dijagnostikovanje problema koji se dešavaju tokom kreiranja naloga kada se doda tip radnje.  Ona može da ima vrednosti kao što su jedinstveno prijavljivanje (SS0), create_new_account, uputstvo, itd.
+- **account_creation_source** – opciono svojstvo koje se koristi za pronalaženje i dijagnostikovanje problema koji se dešavaju tokom kreiranja naloga kada se doda tip radnje.  Ono može da ima vrednosti kao što su jedinstveno prijavljivanje (SS0), create_new_account, uputstvo, itd.
 
 - **action** – Tip radnje koja se izvršava na nalogu, na primer, dodavanje, uklanjanje ili uspostavljanje početnih vrednosti
 
@@ -2177,7 +2177,7 @@ Prikupljaju se sledeća polja:
 
 - **RMS.StatusCode** - Kod statusa vraćenog rezultata
 
-- **RMS.TokenProvided** - Označava da li obezbeđuje token kao unos API poziva ili ne 
+- **RMS.TokenProvided** – Označava da li obezbeđuje token kao unos API poziva ili ne 
 
 - **RMS.TokenProvided** - Označava da li obezbeđuje korisnika kao unos API poziva ili ne 
 
@@ -2217,7 +2217,7 @@ Prikupljaju se sledeća polja:
 
 - **RMS.StatusCode** - Kod statusa vraćenog rezultata
 
-- **RMS.TokenProvided** - Označava da li obezbeđuje token kao unos API poziva ili ne 
+- **RMS.TokenProvided** – Označava da li obezbeđuje token kao unos API poziva ili ne 
 
 - **RMS.TokenProvided** - Označava da li obezbeđuje korisnika kao unos API poziva ili ne 
 
@@ -4247,7 +4247,7 @@ Ovaj događaj se sakuplja kada se feed prikazuje korisniku. Događaj se koristi 
 
 - **UserInfo.Id** - Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog.
 
-- **UserInfo.IdType** - Određuje vrstu ID korisnika 
+- **UserInfo.IdType** – Određuje tip ID korisnika. 
 
 - **UserInfo.Language** - The user's language in IETF language tag format.
 
@@ -5093,7 +5093,7 @@ Prikupljaju se sledeća polja:
 
 - **Data_RestoreButtonFlowType** - kod koji označava tip korisničkog toka koji se koristio
 
-- **Data_RestoredFailedPaymentCancelledFlowType** – Kod koji označava tip toka otkazivanja plaćanja koje je izvršeno
+- **Data_RestoredFailedPaymentCancelledFlowType** – Kôd koji označava tip toka otkazivanja plaćanja koje je izvršeno
 
 - **Data_RestoredFailedUnKnownFlowType** - da li je pokušaj propao zbog sprovođenja neočekivanog toka korisnika
 
@@ -6579,7 +6579,7 @@ Prikupljaju se sledeća polja:
 
 - **Data_DstDoc_IdentityUniqueId:string** - Jedinstveni identifikator identiteta koji je korišćen za radnju deljenja dokumenata
 
-- **Data_DstDoc_IOFlags:long** - Maske bitova za različite zastavice koje se odnose na IO u datom dokumentu
+- **Data_DstDoc_IOFlags:long** – Maske bitova za različite zastavice koje se odnose na IO u datom dokumentu
 
 - **Data_DstDoc_IrmRights:long** - Unapred definisani skup vrednosti za tip upravljanja pravima o informacijama koji je primenjen na dokument (prosleđivanje, odgovaranje, bezbedni čitač, uređivanje, itd.)
     
@@ -9609,7 +9609,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_PreviousDiscardFailed -** Ukazuje na to da prethodni pokušaj otvaranja/zatvaranja dokumenta nije pravilno oslobodio svu memoriju
 
-  - **Data\_PreviousFailureHr -** Koji je bio poslednji rezultat greške u slučaju ponovnog otvaranja istog dokumenta?
+  - **Data\_PreviousFailureHr -** Koji je bio poslednji rezultat greške u slučaju ponovnog otvaranja istog dokumenta
 
   - **Data\_PreviousFailureTag -** Koja je bila poslednja oznaka greške (pokazivač lokacije koda) u slučaju ponovnog otvaranja istog dokumenta? 
 
@@ -13145,7 +13145,7 @@ Prikupljaju se sledeća polja:
 
 - **IsGallatin** - Logička vrednost koja proverava da li se radi o Gallatin nalogu
 
-- **MessageCode** – nabrajanje da bi se ukazalo na tačku otkazivanja aktivacije
+- **MessageCode** – nabrajanje da bi se ukazalo na mesto otkazivanja aktivacije
 
 - **PreviousEntryPoint** - Nabrajanje ulaznih tačaka za pokretanje toka aktiviranja licence
 
