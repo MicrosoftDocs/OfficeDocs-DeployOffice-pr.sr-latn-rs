@@ -665,7 +665,7 @@ Pored toga, sledeća polja su uobičajena za sve događaje za aplikaciju Outlook
 
 Podtipovi podataka koji spadaju u ovu kategoriji su:
 - [Podešavanje sistema Office i popis](#office-setup-and-inventory-subtype)
-- [Konfiguracija programskih dodataka za Office](#office-add-in-configuration-subtype)
+- [Konfiguracija Office programskih dodataka](#office-add-in-configuration-subtype)
 - [Bezbednost](#security-subtype)  
 
 ### <a name="office-setup-and-inventory-subtype"></a>*Podtip podešavanja sistema Office i popisa*
@@ -1534,7 +1534,7 @@ Prikupljaju se sledeća polja:
  
 - **number_of_accounts** - ukupan broj naloga na kojima se radnja obavlja
  
-- **result** – rezultat akcije, npr. uspeh, neuspeh.
+- **result** - rezultat akcije, npr. uspeh, neuspeh.
    
 - **server_type** - tip servera za nalog, slično kao account_type
  
@@ -2177,7 +2177,7 @@ Prikupljaju se sledeća polja:
 
 - **RMS.StatusCode** - Kod statusa vraćenog rezultata
 
-- **RMS.TokenProvided** – Označava da li obezbeđuje token kao unos API poziva ili ne 
+- **RMS.TokenProvided** - Označava da li obezbeđuje token kao unos API poziva ili ne 
 
 - **RMS.TokenProvided** - Označava da li obezbeđuje korisnika kao unos API poziva ili ne 
 
@@ -2217,7 +2217,7 @@ Prikupljaju se sledeća polja:
 
 - **RMS.StatusCode** - Kod statusa vraćenog rezultata
 
-- **RMS.TokenProvided** – Označava da li obezbeđuje token kao unos API poziva ili ne 
+- **RMS.TokenProvided** - Označava da li obezbeđuje token kao unos API poziva ili ne 
 
 - **RMS.TokenProvided** - Označava da li obezbeđuje korisnika kao unos API poziva ili ne 
 
@@ -2355,7 +2355,7 @@ Prikupljaju se sledeća polja:
 
 - **RMS.StatusCode** - Kod statusa vraćenog rezultata
 
-- **RMS.TokenProvided** – Označava da li obezbeđuje token kao unos API poziva ili ne 
+- **RMS.TokenProvided** - Označava da li obezbeđuje token kao unos API poziva ili ne 
 
 - **RMS.TokenProvided** - Označava da li obezbeđuje korisnika kao unos API poziva ili ne 
 
@@ -2581,7 +2581,7 @@ Prikupljaju se sledeća polja:
 
 - **Data_AppWarmUpGain** – Podešavanje trajanja pokretanja aplikacije koje dobijamo zbog prethodnog dela aplikacije pre pokretanja.
 
-- **Data_BootDuration** – Trajanje pokretanja aplikacije u procesu otvorene datoteke.
+- **Data_BootDuration** - trajanje pokretanja aplikacije u procesu otvorene datoteke.
 
 - **Data_ClosePreviouslyOpenedMarkers** – Vrednost niske koja evidentira trajanje između nekih poziva funkcije prilikom pokretanja aplikacije, u formatu sa ID-om funkcije i trajanjem.
 
@@ -4137,7 +4137,7 @@ Ovaj događaj se sakuplja kada se feed pokrene. Ovaj događaj se koristi za ukaz
 
 - **AppInfo.Version** - Verzija aplikacije.
 
-- **clientCorrelationId** – Globalni jedinstveni identifikator za sesiju aplikacije.
+- **clientCorrelationId** - Globalni jedinstveni identifikator za sesiju aplikacije.
 
 - **clientType** – Aplikacija na kojoj se komponenta pokreće.
 
@@ -4177,7 +4177,7 @@ Ovaj događaj se sakuplja kada se feed pokrene. Ovaj događaj se koristi za ukaz
 
 - **UserInfo.Id** - Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog.
 
-- **UserInfo.IdType** – Određuje tip ID korisnika. 
+- **UserInfo.IdType** - Određuje vrstu ID korisnika 
 
 - **UserInfo.Language** - The user's language in IETF language tag format.
 
@@ -4247,7 +4247,7 @@ Ovaj događaj se sakuplja kada se feed prikazuje korisniku. Događaj se koristi 
 
 - **UserInfo.Id** - Globalni jedinstveni identifikator korisnika za Enterprise Microsoft nalog.
 
-- **UserInfo.IdType** – Određuje tip ID korisnika. 
+- **UserInfo.IdType** - Određuje vrstu ID korisnika 
 
 - **UserInfo.Language** - The user's language in IETF language tag format.
 
@@ -5093,7 +5093,7 @@ Prikupljaju se sledeća polja:
 
 - **Data_RestoreButtonFlowType** - kod koji označava tip korisničkog toka koji se koristio
 
-- **Data_RestoredFailedPaymentCancelledFlowType** – Kôd koji označava tip toka otkazivanja plaćanja koje je izvršeno
+- **Data_RestoredFailedPaymentCancelledFlowType** - kod koji označava tip toka otkazivanja plaćanja koje je izvršeno
 
 - **Data_RestoredFailedUnKnownFlowType** - da li je pokušaj propao zbog sprovođenja neočekivanog toka korisnika
 
@@ -5378,7 +5378,7 @@ Prikupljaju se sledeća polja:
   - **ClientTimeStamp** - Vreme u aplikaciji kada se evidentira događaj
   - **cardCorrelationId** - Duplikat gore navedenog Data.appContextId
   - **cardPersonaCorrelationId** - Duplikat gore navedenog Data.cardCorrelationId
-  - **consumerCorrelationId** – Duplikat gore navedenog Data.clientCorrelationId
+  - **consumerCorrelationId** - Duplikat gore navedenog Data.clientCorrelationId
 
 - **Data.region** – Geografska oblast pozadinska usluga kartice profila na koji se korisnik povezuje
 
@@ -5450,7 +5450,7 @@ Prikupljaju se sledeća polja:
 
   - **cardCorrelationId** - Duplikat gore navedenog Data.appContextId 
   - **cardPersonaCorrelationId** - Duplikat gore navedenog Data.cardCorrelationId
-  - **consumerCorrelationId** – Duplikat gore navedenog Data.clientCorrelationId 
+  - **consumerCorrelationId** - Duplikat gore navedenog Data.clientCorrelationId 
 
 - **Data.region** – Geografska oblast pozadinska usluga kartice profila na koji se korisnik povezuje
 
@@ -6579,7 +6579,7 @@ Prikupljaju se sledeća polja:
 
 - **Data_DstDoc_IdentityUniqueId:string** - Jedinstveni identifikator identiteta koji je korišćen za radnju deljenja dokumenata
 
-- **Data_DstDoc_IOFlags:long** – Maske bitova za različite zastavice koje se odnose na IO u datom dokumentu
+- **Data_DstDoc_IOFlags:long** - Maske bitova za različite zastavice koje se odnose na IO u datom dokumentu
 
 - **Data_DstDoc_IrmRights:long** - Unapred definisani skup vrednosti za tip upravljanja pravima o informacijama koji je primenjen na dokument (prosleđivanje, odgovaranje, bezbedni čitač, uređivanje, itd.)
     
@@ -6844,7 +6844,7 @@ Prikupljaju se sledeća polja:
 
 - **Data_DstDoc_IdentityUniqueId:string** - Jedinstveni identifikator identiteta koji je korišćen za radnju deljenja dokumenata
 
-- **Data_DstDoc_IOFlags:long** – Maske bitova za različite zastavice koje se odnose na IO u datom dokumentu
+- **Data_DstDoc_IOFlags:long** - Maske bitova za različite zastavice koje se odnose na IO u datom dokumentu
 
 - **Data_DstDoc_IrmRights:long** - Unapred definisani skup vrednosti za tip upravljanja pravima o informacijama koji je primenjen na dokument (prosleđivanje, odgovaranje, bezbedni čitač, uređivanje, itd.)
 
@@ -7380,7 +7380,7 @@ Prikupljaju se sledeća polja:
 
 - **Data.sourceTextWords** – Broj reči u tekstu koji treba da se prevede
 
-- **Data.warningMessage** – Poruka upozorenja koju je prijavila usluga
+- **Data.warningMessage**- Poruka upozorenja koju je prijavila usluga
 
 
 #### <a name="officeuxacccheckeracccheckerfinalviolationcountperrule"></a>Office.UX.AccChecker.AccCheckerFinalViolationCountPerRule
@@ -7754,7 +7754,7 @@ Prikupljaju se sledeća polja:
 
 - **Data_PartsUnknown** – broj segmenata dokumenta za koji nismo mogli da dobijemo podatke 
 
-- **Data_RecoverableFailureInitiationLocationTag** – Jedinstvena oznaka za sajt poziva koda koja se koristi da bi se identifikovalo mesto u kodu gde pokušavamo da popravimo datoteku pre nego što je otvorimo 
+- **Data_RecoverableFailureInitiationLocationTag** - Jedinstvena oznaka za lokaciju poziva koda koja se koristi da bi se identifikovalo mesto u kodu na kom pokušavamo da popravimo datoteku pre nego što je otvorimo 
 
 - **Data_RenameDisabledReason** - Greška koja uzrokuje da preimenovanje ovog dokumenta bude onemogućeno 
 
@@ -8478,10 +8478,10 @@ Prikupljaju se sledeća polja:
    - **izvor** – označava šta je izvor obaveštenja, ako je primenljivo, iz postavki ili ne uznemiravaj postavke
    - **swipe_setting** – ukazuje na detalje, ako je primenljivo, postavki prevlačenja koje se tiču ove radnje
      - **swipe_action** – označava ono što je korisnik pokušavao da uradi, npr. zastavica, brisanje, arhiviranje, to nam omogućava da ustanovimo koju akciju je korisnik tražio, kao i da li je radnja uspela ili ne. 
-     - **swipe_direction** - označava na koji način će korisnik podesiti prevlačenje, tj. sleva nadesno ili zdesna nalevo. To nam omogućava da utvrdimo da li postoji problem sa određenim pravcima za brzo prevlačenje.
+     - **swipe_direction** - označava na koji način će korisnik podesiti prevlačenje, tj. sleva nadesno ili zdesna nalevo. To nam omogućava da odlučimo da li postoji problem sa određenim pravcima za brzo prevlačenje.
    - **temperature_unit_setting** – izabrana jedinica za temperaturu koja treba da se koristi za vremensku prognozu 
    - **theme_color_setting** – prilagođena boja teme aplikacije koju je izabrao korisnik 
-   - **ui_mode_setting** – izabrani režim korisničkog interfejsa (mračno, svetlo, podrazumevane vrednosti sistema, slaba baterija itd.)
+   - **ui_mode_setting** – izabrani režim korisničkog interfejsa (mračno, svetlo, podrazumevano sistemski, niska baterija itd.)
    - **signature_setting** – označava da li je postavka primenjena na ceo nalog ili pojedinačni nalog
 
 - **state_changed_to** – da biste proverili da li je postavka vašeg fokusiranog prijemnog sandučeta „uključeno/isključeno“ ispravno konfigurisana 
@@ -9609,7 +9609,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_PreviousDiscardFailed -** Ukazuje na to da prethodni pokušaj otvaranja/zatvaranja dokumenta nije pravilno oslobodio svu memoriju
 
-  - **Data\_PreviousFailureHr -** Koji je bio poslednji rezultat greške u slučaju ponovnog otvaranja istog dokumenta
+  - **Data\_PreviousFailureHr -** Koji je bio poslednji rezultat greške u slučaju ponovnog otvaranja istog dokumenta?
 
   - **Data\_PreviousFailureTag -** Koja je bila poslednja oznaka greške (pokazivač lokacije koda) u slučaju ponovnog otvaranja istog dokumenta? 
 
@@ -10508,7 +10508,7 @@ Prikupljaju se sledeća polja:
 
 - **Data_AssistiveTouchRunning** - zastavica koja označava da li je ova postavka omogućena
 
-- **Data_BoldTextEnabled** – zastavica koja označava da li je ova postavka omogućena
+- **Data_BoldTextEnabled** - zastavica koja označava da li je ova postavka omogućena
 
 - **Data_CollectionTime** - zastavica koja označava da li je ova postavka omogućena
 
@@ -11247,7 +11247,7 @@ Ovaj događaj nam omogućava da otkrijemo i rešimo probleme tamo gde postoji ut
 
 Prikupljaju se sledeća polja: 
 
-- **above_40fps** – broj okvira prikazanih preko 40 o/s
+- **above_40fps** - prebrojavanje okvira prikazanih preko 40 o/s
 
 - **above_40rate** – radio okvira prikazanih preko 40 o/s
 
@@ -11259,7 +11259,7 @@ Prikupljaju se sledeća polja:
 
 - **above_55rate** – radio okvira prikazanih preko 55 o/s
 
-- **account_counter** – prati broj naloga povezanih za svaku vrstu kalendara, npr. 2 za Gmail kalendar i da li taj nalog koristi našu novu uslugu sinhronizacije
+- **account_counter** -prati broj naloga povezanih za svaku vrstu kalendara, npr. 2 za Gmail kalendar i da li taj nalog koristi našu novu uslugu sinhronizacije
 
 - **app_instance** – Outlook ima 2 ulazna mesta za duo, jedan je za kalendar i jedan je za poštu i oba mogu da se lansiraju uporedo u okruženju sa više instanci. Tako ćemo znati koja instanca obavlja ovaj poziv izveštavanja, bilo poštom ili kalendarom
 
@@ -11335,7 +11335,7 @@ Ovaj događaj prikuplja dve vrste korisničkih podataka: status pretplate na Mic
 
 Prikupljaju se sledeća polja: 
 
-- **above_40fps** – broj okvira prikazanih preko 40 o/s
+- **above_40fps** - prebrojavanje okvira prikazanih preko 40 o/s
 
 - **above_40rate** – radio okvira prikazanih preko 40 o/s
 
@@ -11347,7 +11347,7 @@ Prikupljaju se sledeća polja:
 
 - **above_55rate** – radio okvira prikazanih preko 55 o/s
 
-- **account_counter**- broj svakog tipa naloga koji je prisutan na uređaju, na primer, Office 365 nalog = 1 nalog, Outlook.com nalog = 1 nalog.
+- **account_counter**- prebrojavanje za svaki tip naloga koji je prisutan na uređaju, na primer, Office 365 nalog = 1 nalog, Outlook.com nalog = 1 nalog.
 
 - **ad_not_shown_reason** - razlog zašto se oglasi ne prikazuju
 
@@ -11387,7 +11387,7 @@ Prikupljaju se sledeća polja:
 
 #### <a name="initialpagelanding"></a>Initial.page.landing 
  
-Ovaj događaj pomaže da se prati tip iskustva koje korisnici vide kada otvore stranicu naše aplikacije.  Ovi podaci se koriste za utvrđivanje prometa korisnika ugrađenih u svako iskustvo u našoj aplikaciji, i takođe nam pomažu da lako konsolidujemo rezultate eksperimentisanja.
+Ovaj događaj vam pomaže da pratite tip iskustva koju korisnici vide kada otvore stranicu naše aplikacije.  Ovi podaci se koriste za utvrđivanje prometa korisnika ugrađenih u svako iskustvo u našoj aplikaciji, i takođe nam pomažu da lako konsolidujemo rezultate eksperimentisanja.
  
 Prikupljaju se sledeća polja: 
 
@@ -11563,7 +11563,7 @@ Ovaj događaj nam omogućava da otkrijemo i rešimo probleme tamo gde postoji ut
 
 Prikupljaju se sledeća polja: 
 
-- **above_40fps** – broj okvira prikazanih preko 40 o/s
+- **above_40fps** - prebrojavanje okvira prikazanih preko 40 o/s
 
 - **above_40rate** – radio okvira prikazanih preko 40 o/s
  
@@ -11575,7 +11575,7 @@ Prikupljaju se sledeća polja:
 
 - **above_55rate** – radio okvira prikazanih preko 55 o/s
  
-- **account_counter**- broj svakog tipa naloga koji je prisutan na uređaju, na primer, Office 365 nalog = 1 nalog, Outlook.com nalog = 1 nalog.
+- **account_counter**- prebrojavanje za svaki tip naloga koji je prisutan na uređaju, na primer, Office 365 nalog = 1 nalog, Outlook.com nalog = 1 nalog.
  
 - **ad_not_shown_reason** - razlog zašto se oglasi ne prikazuju
  
@@ -13145,7 +13145,7 @@ Prikupljaju se sledeća polja:
 
 - **IsGallatin** - Logička vrednost koja proverava da li se radi o Gallatin nalogu
 
-- **MessageCode** – nabrajanje da bi se ukazalo na mesto otkazivanja aktivacije
+- **MessageCode** - nabrajanje da bi se ukazalo na tačku otkazivanja aktivacije
 
 - **PreviousEntryPoint** - Nabrajanje ulaznih tačaka za pokretanje toka aktiviranja licence
 
@@ -13528,7 +13528,7 @@ Prikupljaju se sledeća polja:
 
 - **origin** - odakle potiče pokušaj čuvanja datoteke, (na primer, iz e-poruke) kako bismo mogli da otkrijemo probleme koje se odnose na čuvanje datoteke sa određenog mesta u aplikaciji
 
-- **token_type** – tip tokena koji se koristi za potvrdu identiteta naloga da biste sačuvali datoteku kako biste nam pomogli da otkrijemo probleme potvrde identiteta povezane sa čuvanjem datoteke
+- **token_type** - tip simbola koji se koristi za potvrdu identiteta naloga da biste sačuvali datoteku kako bi nam pomogao u otkrivanju problema potvrde identiteta povezanog sa čuvanjem datoteke
 
 #### <a name="wkwebviewerror"></a>wkwebview.error
 
@@ -13553,7 +13553,7 @@ Prikupljaju se sledeća polja:
 - **scenario** – gde je došlo do greške, prikazivanja ili sastavljanja.
 
 
-## <a name="device-connectivity-and-configuration-data-events"></a>Događaji podataka o povezivanju i konfiguraciji uređaja
+## <a name="device-connectivity-and-configuration-data-events"></a>Podaci dobijeni iz povezivanja uređaja i konfiguracije
 
 Podtipovi podataka koji spadaju u ovu kategoriji su:
 
@@ -13672,11 +13672,11 @@ Prikupljaju se sledeća polja samo za Android:
 
 - **switch_access** – saopštava nam ako je korisnik uključio postavku za prebacivanje pristupa na uređaju kako bi nam pomogao da otkrijemo probleme u vezi sa ovom postavkom
 
-- **talkback** – saopštava nam da li je korisnik uključio postavku za TalkBack na uređaju kako bi nam pomogao da otkrijemo probleme u vezi sa ovom postavkom
+- **talkbalk** – saopštava nam ako je korisnik uključio postavku za vezu na uređaju kako bi nam pomogao da otkrijemo probleme u vezi sa ovom postavkom
 
 - **theme_color** – prilagođena (izabrana od strane korisnika) boja teme koju aplikacija trenutno koristi
 
-- **webview_kernel_version**: Chromium verzija jezgra veb prikaza na uređaju koja nam pomaže da prepoznamo probleme sa kompatibilnošću povezane sa verzijom veb prikaza.
+- **webview_kernel_version**: verzija jezgra sistema Chromium veb prikaza na uređaju koja nam pomaže da prepoznamo probleme sa kompatibilnošću povezane sa verzijom veb prikaza.
 
 - **webview_package_name**: naziv paketa veb prikaza na uređaju koji nam pomaže da prepoznamo probleme sa kompatibilnošću povezane sa verzijom veb prikaza.
 
