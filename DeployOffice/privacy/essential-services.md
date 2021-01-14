@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: 03274656b30fe1e30e609ef32aa38947917a23cd
-ms.sourcegitcommit: 954510a42df092730412aa25cd8683f6a629537c
+ms.openlocfilehash: 8934226591ed83c630a1c98e5be70e521c93295e
+ms.sourcegitcommit: 862ffbcfc2d7c3722dddb5b008d7b68c9316c675
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "49685843"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49799149"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -151,7 +151,7 @@ Ovi događaji, zajedno sa događajima prostora Office.MATS, koriste se za slede�
 
 3\) Kada dođe do greške, ovi signali emituju bitne kodove grešaka odgovornih komponenata (kôd Office klijenta, biblioteke potvrde identiteta, upravne usluge) i mogu se koristiti za trijažu, dijagnozu i ublažavanje.
 
-4\) Ovi signali napajaju razne spremnosti otpreme i nadgledanja ispravnosti koja šalju upozorenja da bi naši inženjeri mogli brzo da odreaguju i da smanje vreme ublažavanja kritičnih grešaka koje blokiraju korisnika.
+4\) Ovi signali napajaju razne spremnosti otpreme i nadgledanja ispravnosti koja šalju upozorenja da bi naši inženjeri mogli brzo da odreaguju i da smanje vreme ublažavanja kritičnih grešaka koje blokiraju korisnika
 
 Prikupljaju se sledeća polja:
 
@@ -327,7 +327,7 @@ Prikupljaju se sledeća polja:
 
   - **Microsoft\_ADAL\_broker\_app** - Pokazuje da li je ADAL koristio posrednika za potvrdu identiteta
 
-  - **Microsoft\_ADAL\_broker\_app\_used** - Prikazuje ime posrednika (npr. Windows Account Management)
+  - **Microsoft\_ADAL\_broker\_app\_used** – Prikazuje ime posrednika (npr. Windows Account Management)
 
   - **Microsoft\_ADAL\_broker\_version** - Prikazuje verziju posrednika ako je korišćen
 
@@ -423,7 +423,7 @@ Prikupljaju se sledeća polja:
 
   - **Resource** – Resurs za koji korisnik zahteva token, kao što su Exchange ili SharePoint.
 
-  - **Scenarioid** - GUID. Različiti događaji mogu da pripadaju samo jednom scenariju, npr. on može da dodaje novi nalog, ali postoji više različitih upita koji se javljaju kao deo tog scenarija. Ovaj ID omogućava da se korelacija dogodi.
+  - **Scenarioid** - GUID. Različiti događaji mogu da pripadaju samo jednom scenariju, na primer on može da dodaje novi nalog, ali postoji više različitih upita koji se javljaju kao deo tog scenarija. Ovaj ID omogućava da se korelacija dogodi.
 
   - **Scenarioname** – Ime scenarija kojem pripada ovaj događaj autentifikacije.
 
@@ -588,7 +588,7 @@ Prikupljaju se sledeća polja:
 
 - **Microsoft_ADAL_is_silent_ui** – vrednost true/false koja označava je li ADAL prikazao korisnički interfejs (upit)
 
-- **Microsoft_ADAL_is_successfull** – vrednost true/false koja označava je li API ADAL-a uspeo (MacOS)
+- **Microsoft_ADAL_is_successfull** – vrednost true/false koja označava je li API ADAL-a uspeo (macOS)
 
 - **Microsoft_ADAL_is_successful** – vrednost true/false koja označava je li API ADAL-a uspeo
 
@@ -670,7 +670,7 @@ Prikupljaju se sledeća polja:
 
 - **MSAL_auth_flow** – koraci koje je MSAL pokušao za vreme tog toka potvrde identiteta (AT, PRT, LRT, FRT, ART, IRT). Odvojen simbolom uspravne crte "|" za jednostavno raščlanjivanje.
 
-- **MSAL_auth_flow_last_error** – šifra greške koji smo primili sa servera od 2. do zadnje stavke u AuthFlowu. (Prim.: If AuthFlow = „PRT|LRT ", greška PRT-a bila bi u AuthFlowLastError).
+- **MSAL_auth_flow_last_error** – šifra greške koji smo primili sa servera od druge do zadnje stavke u AuthFlowu. (Prim.: If AuthFlow = „PRT|LRT ", greška PRT-a bila bi u AuthFlowLastError).
 
 - **MSAL_authority_type** – označava je li ovaj zahtev za korisnika bio u: AAD, spoljašnji ili MSA.
 
@@ -692,7 +692,7 @@ Prikupljaju se sledeća polja:
 
 - **MSAL_read_token** – tokeni koji su se pročitali iz keš memorije (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = AT koji je istekao je pročitan, ali odbačen]).
 
-- **MSAL_read_token_last_error** – ako je MSAL naišla na grešku prilikom čitanja keš memorije, ovde ćemo skladištiti informacije. (Primer: greška čitanja diska iz OS-a, Keychain greška na MacOS-u).
+- **MSAL_read_token_last_error** – ako je MSAL naišla na grešku prilikom čitanja keš memorije, ovde ćemo skladištiti informacije. (Primer: greška čitanja diska iz OS-a, Keychain greška na macOS-u).
 
 - **MSAL_request_duration** – označava koliko je zahtevu trebalo vremena od kada je pozvan API najvišeg nivoa MSAL-a do vraćanja rezultata.
 
@@ -704,7 +704,7 @@ Prikupljaju se sledeća polja:
 
 - **MSAL_server_suberror_code** – niz podšifre greške Microsoft usluge sigurnog tokena, ako smo je primili.
 
-- **MSAL_start_time** – označava vreme pokretanja zahteva MSALA-a na javnom API-ju najviše razine.
+- **MSAL_start_time** – označava vreme pokretanja zahteva MSALA-a na javnom API-ju najvišeg nivoa.
 
 - **MSAL_stop_time** označava vreme u kojem je MSAL dovršila obradu zahteva i vratila rezultat pozivaocu.
 
@@ -718,7 +718,7 @@ Prikupljaju se sledeća polja:
 
 - **MSAL_write_token** – tokeni koji su pisani u keš memoriji (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = AT koji je istekao je pročitan, ali odbačen]).
 
-- **MSAL_read_token_last_error** – ako je MSAL naišla na grešku prilikom pisanja u keš memoriju, ovde ćemo skladištiti informacije. (Primer: greška čitanja diska iz OS-a, Keychain greška na MacOS-u).
+- **MSAL_read_token_last_error** – ako je MSAL naišla na grešku prilikom pisanja u keš memoriju, ovde ćemo skladištiti informacije. (Primer: greška čitanja diska iz OS-a, Keychain greška na macOS-u).
 
 - **oneauth_api** – API za OneAuth koji je pozvan za taj pokušaj potvrde identiteta.
 
@@ -734,7 +734,7 @@ Prikupljaju se sledeća polja:
 
 - **Scenarioid** – Veći broj događaja može pripadati jednom scenariju, npr. scenarij možda dodaje novi nalog, ali u sklopu tog scenarija postoji više upita. Ovaj identifikator omogućuje korelaciju tih povezanih događaja.
 
-- **Scenarioname** – označava naziv scenarija aplikacije u kojem je bila potrebna potvrda identiteta, npr. prvo pokretanje, provera licenciranja, itd.
+- **Scenarioname** – označava naziv scenarija aplikacije u kojem je bila potrebna potvrda identiteta, na primer prvo pokretanje, provera licenciranja, itd.
 
 - **Scope** – označava opseg pretraživanja za koji se traži token.
 
@@ -3235,7 +3235,7 @@ Prikuplja listu o konfiguracijama koje je primio klijent iz usluge ECS
 
 Prikupljaju se sledeća polja:
 
-  - **ECSConfigs** - Lista konfiguracije ECS odvojena zarezima
+  - **ECSConfigs** – Lista konfiguracije ECS odvojena zarezima
 
   - **LockType** - Tip FlightManager zaključavanja
 
@@ -3259,7 +3259,7 @@ Ovaj događaj se evidentira kada OneNote upita ECS server za vrednosti probnog p
  
 Prikupljaju se sledeća polja:
  
-- **ConfigParam** - Konfiguracija zbog koje se pristupa vrednosti
+- **ConfigParam** – Konfiguracija zbog koje se pristupa vrednosti
 
 ## <a name="licensing-events"></a>Događaji licenciranja
 
@@ -3315,6 +3315,20 @@ Prikupljaju se sledeća polja:
 
 - **SessionID** – GUID za povezivanje događaja po sesiji
 
+### <a name="officeandroiddocsuipaywallcontrolpurchasetokenredemptionresponse"></a>Office.Android.DocsUI.PaywallControl.PurchaseTokenRedemptionResponse
+
+*[Ovaj događaj je prethodno imao ime Office.Android.DocsUI.Views.PurchaseTokenRedemptionResponse.]*
+
+Ova telemetrija proizvoda prikuplja se za praćenje i evidentiranje statusa interne transakcije i informacija o usaglašavanju radi poboljšanja pouzdanosti i performansi. Microsoft koristi ove podatke za analizu i poboljšanje pouzdanosti i performansi mehanizama interne obrade transakcija i usaglašavanja.
+
+Prikupljaju se sledeća polja:
+
+- **MicrosoftPurchaseOrderId** – Microsoft ID porudžbine koji šalje usluga maloprodajne službe (RFS) za svrhu praćenja.
+
+- **ResponseCode** – HTTP kôd za odziv (INT)
+
+- **StatusCode** – RFS status statusa odgovora (RFS definisao brojač beskonačan)
+
 
 ### <a name="officeandroiddocsuipaywallcontrolseeallfeaturesanalytics"></a>Office.Android.DocsUI.PaywallControl.SeeAllFeaturesAnalytics
 
@@ -3343,22 +3357,26 @@ Prikupljaju se sledeća polja:
 - **SessionID** – GUID za povezivanje događaja po sesiji
 
 
-### <a name="officeandroiddocsuiviewspurchasetokenredemptionresponse"></a>Office.Android.DocsUI.Views.PurchaseTokenRedemptionResponse
+### <a name="officeandroiddocsuiviewsdimeerror"></a>Office.Android.DocsUI.Views.DimeError
 
-Ova telemetrija proizvoda prikuplja se za praćenje i evidentiranje statusa interne transakcije i informacija o usaglašavanju radi poboljšanja pouzdanosti i performansi. Microsoft koristi ove podatke za analizu i poboljšanje pouzdanosti i performansi mehanizama interne obrade transakcija i usaglašavanja.
+Ovaj događaj se prikuplja za Office aplikaciju za Android (objavljen u prodavnicama Huawei i u Kini). Taj događaj označava da pokušaj kupovine pretplate na Microsoft 365 putem platforme Dime (webURL učitan u veb prikazu u klijentu) nije uspeo. Snimaju se samo scenariji grešaka. Ti podaci o događajima su samo podaci o greškama, a koriste se za osiguravanje dobrog stanja toka kupovine putem platforme Dime u klijentu.
 
 Prikupljaju se sledeća polja:
 
-- **MicrosoftPurchaseOrderId** – Microsoft ID porudžbine koji šalje usluga maloprodajne službe (RFS) za svrhu praćenja.
+- **CorrelationID** – ID koji na jedinstven način identifikuje sesiju kupovine putem platforme Dime.
 
-- **ResponseCode** – HTTP kôd za odziv (INT)
-
-- **StatusCode** – RFS status statusa odgovora (RFS definisao brojač beskonačan)
+- **ErrorReason** – označava razlog greške do koje je došlo.
+  - 0 – nepoznata greška
+  - 1 – internet nije dostupan
+  - 2 – nije uspela provera valjanosti univerzalno jedinstvenog identifikatora (UUID)
+  - 3 – univerzalno jedinstven identifikator (UUID) null je ili prazan
+  - 4 – greška umetanja u JavaScript pri kojoj aplikacija Office za Android ne može da prosledi authToken platformi Dime
+  - 5 – osnovni WebURL učitan na klijentu nije važeći
 
 
 ### <a name="officedimesdkhealth"></a>Office.Dime.Sdk.Health
 
-Ovaj događaj prikuplja podatke koji pomažu u nadgledanju zdravlja komponenata Dime. Podaci se koriste za nadgledanje i upozoravanje na stanje toka kupovine u Dime kupovini kako bi se osiguralo da radi kako se očekuje. 
+Ovaj događaj prikuplja podatke koji pomažu u nadgledanju zdravlja komponenata Dime. Na primer, da biste mogli da koristite tok kupovine u aplikaciji kada se korisnik odluči za kupovinu pretplate na Microsoft 365 iz aplikacije Office za Android ili na uređajima sa sistemom Windows.
 
 Prikupljaju se sledeća polja:
 
@@ -3410,23 +3428,23 @@ Prikupljaju se sledeća polja:
 
 - **Data_QosLevel** – Severity 0/1/2
 
-- **Data_SDX_AssetId** – ID sredstva hosting sadržaja sa isporučenim iskustvom (SDX)
+- **Data_SDX_AssetId** – ID sredstva hosting sadržaja sa isporučenim iskustvom (SDX) za Win32
 
-- **Data_SDX_BrowserToken** – token pregledača
+- **Data_SDX_BrowserToken** – token pregledača za Win32
 
-- **Data_SDX_HostJsVersion** – JavaScript verzija biblioteke
+- **Data_SDX_HostJsVersion** – JavaScript verzija biblioteke za Win32
 
-- **Data_SDX_Id** – ID isporučenog iskustva usluge
+- **Data_SDX_Id** – ID isporučenog iskustva usluge za Win32
 
-- **Data_SDX_InstanceId** – ID instance za SDX
+- **Data_SDX_InstanceId** – ID instance za SDX za Win32
 
-- **Data_SDX_MarketplaceType** – tip SDX tržišta
+- **Data_SDX_MarketplaceType** – tip SDX tržišta za Win32
 
-- **Data_SDX_OfficeJsVersion** – Office JS verzija
+- **Data_SDX_OfficeJsVersion** – Office JS verzija za Win32
 
-- **Data_PageSessionId** – ID sesije za SDX
+- **Data_PageSessionId** – ID sesije za SDX za Win32
 
-- **Data_SDX_Version** – SDX verzija
+- **Data_SDX_Version** – SDX verzija za Win32
 
 - **Data_TimestampUTC** – vremenska oznaka događaja
 
@@ -15405,7 +15423,9 @@ Konfiguracija usluga ne prikuplja neophodne podatke o usluzi.
 
 ## <a name="telemetry-events"></a>Događaji telemetrije
 
-### <a name="officeandroiddocsuiviewspaywalloperationmetrics"></a>Office.Android.DocsUI.Views.PaywallOperationMetrics
+### <a name="officeandroiddocsuipaywallcontrolpaywalloperationmetrics"></a>Office.Android.DocsUI.PaywallControl.PaywallOperationMetrics
+
+*[Ovaj događaj je prethodno imao ime Office.Android.DocsUI.Views.PaywallOperationMetrics.]*
 
 Microsoft to koristi za dobijanje ispravnosti funkcije, uspeha ili stope grešaka za korisnike pri kupovinama, kako bi osigurao odgovarajuća ulaganja za poboljšanje korisničkog iskustva kupca na mobilnim platformama.
 
@@ -15417,7 +15437,9 @@ Prikupljaju se sledeća polja:
 
 - **PaywallOperationType** – označava vrstu Paywall operacije (enum/ int – konačna)
 
-### <a name="officeandroiddocsuiviewspaywallsessiondata"></a>Office.Android.DocsUI.Views.PaywallSessionData
+### <a name="officeandroiddocsuipaywallcontrolpaywallsessiondata"></a>Office.Android.DocsUI.PaywallControl.PaywallSessionData
+
+*[Ovaj događaj je prethodno imao ime Office.Android.DocsUI.Views.PaywallSessionData.]*
 
 Metapodaci zasnovani na sesiji kada se UI Paywall-a prikaže korisniku. Microsoft ovo koristi zarad korisničkog putovanja i razumevanja uređaja i verzije operativnog sistema koji korisnik koristi, radi lakšeg donošenja odluka o investiranju u unapređenje iskustva u tim oblastima.
 
@@ -16731,7 +16753,7 @@ Prikupljaju se sledeća polja:
 
   - **RejectedConfigs** - Broj odbijenih konfiguracija
 
-  - **RejectedConfigsList** - Lista odbijenih konfiguracija razdvojena zarezima
+  - **RejectedConfigsList** – Lista odbijenih konfiguracija razdvojena zarezima
 
 ### <a name="officetelemetrydynamicconfigparsejsonconfig"></a>Office.Telemetry.DynamicConfig.ParseJsonConfig
 
@@ -16898,8 +16920,6 @@ Prikupljaju se sledeća polja:
   - **ErrorRuleVersion** - Verzija pravila telemetrije koje je izazvala grešku
 
   - **WarningInfo** - Broj informacije o dijagnostičkom upozorenju
-
-<!-- end list -->
 
   - **QueueFlushCount** - Broj pražnjenja reda
 
