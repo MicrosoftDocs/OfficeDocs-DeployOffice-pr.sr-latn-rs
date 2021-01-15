@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: b7993abbca401d65cc99ed9fdd7960bae03e89a3
-ms.sourcegitcommit: c891622923aecf9afd3ba61e008501cb0c374b73
+ms.openlocfilehash: 6b099a73550f3a2c31147b9c7a5adb34dce6ff5f
+ms.sourcegitcommit: 9f4afc7525d1d4cb6fbc0feef721a8eaffc09048
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49841730"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "49867466"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -11463,7 +11463,7 @@ Prikupljaju se sledeća polja:
 
 - **AddinProviderV2** – dobavljač programskog dodatka 
 
-- **AddinTimeDateStampV2** – vremenske oznake "Komlijere"
+- **AddinTimeDateStampV2** – vremenska oznaka kompajlera
 
 - **AddinVersionV2** –programski dodatak 
 
