@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: 8934226591ed83c630a1c98e5be70e521c93295e
-ms.sourcegitcommit: 862ffbcfc2d7c3722dddb5b008d7b68c9316c675
+ms.openlocfilehash: 7660e79628e31b17fb2b1c606378391419f15e8e
+ms.sourcegitcommit: 163de1916420d26e4a0ef9de941fc4e86ade0412
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49799149"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50242168"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -3466,6 +3466,14 @@ Prikupljaju se sledeća polja:
 
 - **toggleCount** – Int – koliko je puta korisnik prelazio s jednog prikaza proizvoda na drugi pre nego što je dodirnuo dugme Kupi u trenutnoj sesiji Paywall-a.
 
+### <a name="officeiospaywallsuccessscreenseeallbenefitsbuttontap"></a>Office.iOS.Paywall.SuccessScreen.SeeAllBenefitsButtonTap
+
+Telemetrija upotrebe koja prikazuje kada korisnik dodirne dugme „Pogledajte sve pogodnosti“ nakon uspešne kupovine da bi video aplikacije i funkcije uključene u kupovinu koju je upravo obavio. Podaci se koriste da bi se razvijala buduća poboljšanja radi smanjenja ometanja korisnika tokom ažuriranja aplikacije.
+
+Prikupljaju se sledeća polja:
+
+- **productId** – niska – ID proizvoda usluge App Store za koji korisnik prikazuje sve ponuđene pogodnosti
+
 
 ### <a name="officelicensingaccepteulaforcurrentlicense"></a>Office.Licensing.AcceptEulaForCurrentLicense 
 
@@ -4332,7 +4340,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="catalogerrorsignature"></a>catalog.errorsignature
 
-Ovaj događaj pokazuje da je došlo do otkazivanja prilikom validacije potpisivanja kodom u pomoćnoj datoteci ispravke.  Sve pomoćne datoteke za koje nije uspela verifikacija potpisa kodom treba smatrati nevažećim.
+Ovaj događaj izveštava o različitim problemima sa preuzetim datotekama, uključujući potpis prodavca i nepodudaranje vrednosti heša u preuzetoj datoteci. Ovaj događaj koristimo za otkrivanje problema u skupu manifesta za objavljivanje za aplikacije.
 
 Prikupljaju se sledeća polja:
 
@@ -4360,9 +4368,15 @@ Prikupljaju se sledeća polja:
 
 - **EventInfo_Time** – Vreme dešavanja evidentiranog događaja telemetrije 
 
+- **FileHash** – Vrednost heša preuzete datoteke
+
+- **FileName** – Ime datoteke koje prikazuje nepodudaranje vrednosti heša
+
+- **HashInCatalog** – Stavka vrednosti heša u odgovarajućoj datoteci kataloga
+
 - **HowTocheck** – Željene opcije za proveru da li postoje ispravke
 
-- **Payload** – Sadrži ime datoteke kataloga sa nevažećim potpisom. Različiti statički tekstovi opisuju različita stanja greške.
+- **Payload** – sadrži informacije o aplikaciji koja prijavljuje problem
 
 - **PipelineInfo_ClientCountry** – Zemlja u kojoj se nalazi uređaj (na osnovu IP adrese)
 
@@ -7987,11 +8001,13 @@ Prikupljaju se sledeća polja:
 
 - **HowToCheck** – Kako proveriti postavku
 
-- **Payload** – Statički tekst
+- **Payload** – statični tekst *[Ovo polje je uklonjeno iz trenutnih verzija sistema Office, ali može se i dalje pojaviti u starijim verzijama.]*
 
 - **PipelineInfo_ClientCountry** – Zemlja u kojoj se nalazi uređaj (na osnovu IP adrese)
 
 - **PipelineInfo_ClientIp** – Prva tri okteta IP adrese
+
+- **Reason** – Statični tekst koji ukazuje na to da tiho ažuriranje ne može da se nastavi zato što je korisnički interfejs otvoren
 
 - **SessionId** – Identifikator sesije
 
@@ -9392,6 +9408,8 @@ Prikupljaju se sledeća polja:
 
 - **Channel** – Željene opcije za korisnike
 
+- **CustomNotification** – Bulova vrednost koja ukazuje na to da li je korišćeno prilagođeno obaveštenje.
+
 - **Device_NetworkCountry** – Zemlja u kojoj se nalazi uređaj (na osnovu IP adrese)
 
 - **DeviceID** – Identifikator uređaja
@@ -9410,7 +9428,7 @@ Prikupljaju se sledeća polja:
 
 - **HowTocheck** – Željene opcije za proveru da li postoje ispravke
 
-- **Payload** – Tekst koji navodi prirodu događaja.
+- **Payload** – Tekst koji navodi prirodu događaja. *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
 - **PipelineInfo_ClientCountry** – Zemlja u kojoj se nalazi uređaj (na osnovu IP adrese)
 
@@ -10523,6 +10541,7 @@ Prikupljaju se sledeća polja:
 
 - **Success** – Ukazuje na to da li je aplikacija subjekta prijavila uspeh operacije
 
+- **UpdateID** – Identifikator ispravke.
     
 ### <a name="installstatuscodesign"></a>installstatus.codesign
 
@@ -10577,7 +10596,11 @@ Prikupljaju se sledeća polja:
 
 - **AppVersionLong** – Verzija aplikacije
 
+- **BundleReachable** – Bulova vrednost koja ukazuje na to da li je došlo do problema sa pristupanjem kompletu za aplikaciju Microsoft AutoUpdate.
+
 - **Channel** – Željene opcije za korisnike
+
+- **Codesigned** – Bulova vrednost koja ukazuje na to da li je pomoćnik za ažuriranje ispravno kodizajniran.
 
 - **Device_NetworkCountry** – Zemlja u kojoj se nalazi uređaj (na osnovu IP adrese)
 
@@ -10595,9 +10618,11 @@ Prikupljaju se sledeća polja:
 
 - **EventInfo_Time** – Vreme dešavanja evidentiranog događaja telemetrije 
 
+- **Exists** – Bulova vrednost koja ukazuje na to da li pomoćnik za ažuriranje postoji na disku.
+
 - **HowTocheck** – Željene opcije za proveru da li postoje ispravke
 
-- **Payload** – Sadrži naznaku toga da li komponenta daemona postoji na očekivanoj lokaciji i da li je potpisana kodom.
+- **Payload** – Sadrži naznaku toga da li komponenta daemona postoji na očekivanoj lokaciji i da li je potpisana kodom. *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
 - **PipelineInfo_ClientCountry** – Zemlja u kojoj se nalazi uređaj (na osnovu IP adrese)
 

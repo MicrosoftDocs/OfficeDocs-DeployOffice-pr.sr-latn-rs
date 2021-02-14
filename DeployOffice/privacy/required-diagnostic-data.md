@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: 6b099a73550f3a2c31147b9c7a5adb34dce6ff5f
-ms.sourcegitcommit: 9f4afc7525d1d4cb6fbc0feef721a8eaffc09048
+ms.openlocfilehash: 7bf7ce172600d1b944f521da6bb5e0420d6d59f2
+ms.sourcegitcommit: 163de1916420d26e4a0ef9de941fc4e86ade0412
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "49867466"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50242204"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -29,7 +29,7 @@ Dijagnostički podaci se koriste da bi Office bio bezbedan i ažuriran, da bi se
 
 Ovi dijagnostički podaci se prikupljaju i šalju korporaciji Microsoft u vezi sa Office klijentskim softverom pokrenutim na uređaju korisnika. Neki dijagnostički podaci su obavezni, a neki su opcionalni. Možete da izaberete da li ćete nam slati obavezne ili opcionalne dijagnostičke podatke pomoću kontrole privatnosti, kao što su postavke smernica organizacije. Možete da vidite dijagnostičke podatke koji nam se šalju koristeći prikaz dijagnostičkih podataka.
 
-***Obavezni dijagnostički podaci** _ su minimalni podaci neophodni da bi Office bio bezbedan, ažuriran i da radi kao što se očekuje na uređaju na kome je instaliran.
+***Obavezni dijagnostički podaci*** su minimalni podaci neophodni da bi Office bio bezbedan, ažuriran i da radi kao što se očekuje na uređaju na kome je instaliran.
 
 Obavezni dijagnostički podaci pomažu u identifikovanju problema sa sistemom Office koji su možda povezani sa konfiguracijom uređaja ili softvera. Na primer, oni mogu da pomognu da odredite da li neka funkcija sistema Office pada češće na određenoj verziji operativnog sistema, zbog novih funkcija, ili kada su određene funkcije sistema Office onemogućene. Obavezni dijagnostički podaci pomažu nam da otkrijemo, ustanovimo i rešimo probleme brže, tako da se smanji uticaj na korisnike ili organizacije.
 
@@ -57,7 +57,7 @@ Sledeća tabela sadrži listu kategorija za obavezne dijagnostičke podatke. Nav
 - Listu polja sa podacima u svakom događaju
 - Opis svakog polja sa podacima
 
-| _ *Kategorija**       | **Podtip podataka**| **Opis**    |
+| **Kategorija**       | **Podtip podataka**| **Opis**    |
 | ---------- | ------------- | ---- |
 | **Podešavanje softvera i popis** | [Podešavanje sistema Office i popis](#office-setup-and-inventory-subtype)   | Instalirani proizvod, verzija i status instalacije.  |
 | | [Konfiguracija Office programskih dodataka](#office-add-in-configuration-subtype)  | Softverski dodaci i njihova podešavanja.     |
@@ -1291,6 +1291,7 @@ Prikupljaju se sledeća polja:
   
   - **Loadresalt** – stanje uspeha opterećenja
 
+  - **OfficeArchitecture** – Arhitektura Office klijenta
 
 #### <a name="officevisiovisioaddonload"></a>Office.Visio.Visio.AddonLoad
 
@@ -5370,6 +5371,37 @@ Prikupljaju se sledeća polja:
 
 - **Trajanje korisnika** – Duplo – Trajanje u milisekundama koje je korisnik potrošio na Paywall-u
 
+
+#### <a name="officeiospaywallprovisioningresponse"></a>Office.iOS.Paywall.Provisioning.Response
+
+Kritična telemetrija inženjerstva sa uslugom Microsoft Retail Federation Service (RFS) za prikupljanje informacija obezbeđenih u ovom događaju. RFS je interna usluga koja se u okviru korporacije Microsoft koristi za unakrsnu proveru kupovine. Podaci se koriste za dobijanje ispravnosti API poziva upućenog usluzi RFS, što bi pomoglo u razumevanju stope uspešnosti i otklanjanju grešaka u slučaju otkazivanja.
+
+Prikupljaju se sledeća polja:
+
+- **entryPoint** – niska – Dugme/tok sa kojeg je prikazan Paywall. Kao što je „Premium Upgrade Button“ ili „First run flow“
+
+- **failureReason** – niska – Dodaje se samo kada je status „neupeh“. Ukazuje na odgovor na grešku koji je dao RFS odgovor dodeljivanja privilegija.
+
+- **productId** – niska – ID proizvoda usluge App Store za koji je upućen zahtev
+
+- **status** – niska – Uspeh ili Neuspeh, što upućuje na to je li zahtev uspeo ili ne
+
+
+#### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
+
+Kritična telemetrija upotrebe koja ukazuje na to kada korisnik dodirne dugme Kupi. Upotrebljava se za zaključivanje o načinu korišćenja i mernim podacima konverzije za korisnike koji pokušaju da kupe pretplatu u aplikaciji.
+
+Prikupljaju se sledeća polja:
+
+- **entryPoint** – niska – Dugme/tok sa kojeg je prikazan Paywall. Kao što je „Premium Upgrade Button“ ili „First run flow“
+
+- **isdefaultSKU** – Bulova vrednost – Ako korisnik kupuje proizvod, preporučili smo mu ga tako što smo ga podrazumevano prikazali.
+
+- **productId** – niska – ID proizvoda usluge App-store za koji je dodirnuto dugme Kupi
+
+- **toggleCount** – Int – Koliko se puta korisnik prebacivao između prikazivanja različitih proizvoda pre nego što je dodirnuo dugme Kupi u trenutnoj sesiji u usluzi Paywall.
+
+
 #### <a name="officeiospaywallskuchoosermorebenefitsstats"></a>Office.iOS.Paywall.SKUChooser.MoreBenefits.Stats
 
 Ovaj događaj prikuplja funkcije i aplikacije koje korisnik razvija iz "Pogledajte dodatne pogodnosti" i trajanje potrošenog vremena.  Podaci se koriste da se razume upotreba funkcije "Pogledajte sve pogodnosti" i dodatno optimizujete iskustvo u budućim verzijama.
@@ -5381,6 +5413,16 @@ Prikupljaju se sledeća polja:
 - **ID proizvoda** – Niska – ID proizvoda u App Store za koji korisnik prikazuje više ponuđenih pogodnosti
 
 - **Trajanje korisnika** – Duplo – Trajanje u milisekundama koje je korisnik proveo na ekranu „Pogodnosti“.
+
+
+### <a name="officeiospaywallskuchooserproductswitched"></a>Office.iOS.Paywall.SKUChooser.ProductSwitched
+
+Telemetrija upotrebe koja prikazuje koliko puta se korisnik prebacuje između različitih SKU-ova pre pokušaja kupovine.
+
+Prikupljaju se sledeća polja:
+
+- **productId** – niska – ID proizvoda usluge App Store na čije prikazivanje se korisnik upravo prebacio sa dostupnih proizvoda u SKU biraču.
+
 
 #### <a name="officeiospaywallskuchooserstats"></a>Office.iOS.Paywall.SKUChooser.Stats
 
@@ -11473,6 +11515,7 @@ Prikupljaju se sledeća polja:
 
 - **Method** –COM metodu programskog dodatka, koji je doveo do nesrece 
 
+- **OfficeArchitecture** – Arhitektura Office klijenta
 
 #### <a name="officeprogrammabilitytelemetryaddincrash"></a>Office.Programmability.Telemetry.AddInCrash
 
