@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: d0eea79f28d2c2f79991ac0d59ebb6a567fecb21
-ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
+ms.openlocfilehash: ed197ed1cc8dd3c19d10a227510fe687da54d9c7
+ms.sourcegitcommit: f7496035cde1b3a5a4efb9013fd30064fb0c9132
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931450"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "50597380"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
@@ -42,7 +42,7 @@ Bing omogućava sledeća iskustva u usluzi Outlook za iOS i Android:
 
 - **Predlozi lokacija:**   Kada u stavku kalendara dodate neko javno mesto sa adresom, Outlook za iOS i Android takođe će u polju Lokacija uključiti celu adresu.
 - **Zanimljivi kalendari:** Možete da se [pretplatite](https://support.microsoft.com/office/cff1429c-5af6-41ec-a5b4-74f2c278e98c)na kalendare o vašim omiljenim sportskim timovima ili o TV emisijama.
-- **Vreme putovanja u kartici „Sledi“:** predstojeći događaj će biti rezimiran na vrhu prijemnog poštanskog sandučeta e-pošte u kartici koja se zove [„Sledi“](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). U programu Outlook za android, ovo iskustvo zahteva Bing mape kako bi obezbedilo predviđeno vreme putovanja.
+- **Vreme putovanja u kartici „Sledi“:** predstojeći događaj će biti rezimiran na vrhu prijemnog poštanskog sandučeta e-pošte u kartici koja se zove [„Sledi“](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e). U programu Outlook za android, ovo iskustvo zahteva Bing mape kako bi obezbedilo predviđeno vreme putovanja.
 
  Ova iskustva koja se oslanjaju na Bing su za vas licencirana pod uslovima[Microsoft ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i pokrivena su [izjavom o privatnosti](https://privacy.microsoft.com/). Svi upiti za pretragu koje unesete za organizaciju u usluzi Microsoft 365 Apps za preduzeće dok koristite ove usluge šalju se usluzi Microsoft Bing. Bing organizacija ih ne povezuje sa vama.
 
