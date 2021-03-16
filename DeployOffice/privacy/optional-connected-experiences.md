@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: ed197ed1cc8dd3c19d10a227510fe687da54d9c7
-ms.sourcegitcommit: f7496035cde1b3a5a4efb9013fd30064fb0c9132
+ms.openlocfilehash: 942f32d7a8d177e6d74530a8382c145e94bec41a
+ms.sourcegitcommit: dee7b8706ba5a0e763052d2f2f79fb2d3d3a6907
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "50597380"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "50826420"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
@@ -87,7 +87,7 @@ Kada koristite Office prodavnicu, vaša upotreba same lokacije prodavnice je lic
 
 ### <a name="travel-time-in-up-next-in-outlook-for-ios"></a>Vreme putovanja u kartici „Sledi“ u programu Outlook za iOS
 
-U programu Outlook za iOS, predstojeći događaj će biti rezimiran na vrhu prijemnog poštanskog sandučeta e-pošte u kartici koja se zove [„Sledi“](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). Ovo iskustvo zahteva uslugu koja se zove Apple Maps, u vlasništvu Apple korporacije, kako bi obezbedilo predviđeno vreme putovanja. Apple Maps [uslovi korišćenja](https://www.apple.com/legal/internet-services/maps/) i Apple [smernica za privatnost](https://www.apple.com/legal/privacy) primeni.
+U programu Outlook za iOS, predstojeći događaj će biti rezimiran na vrhu prijemnog poštanskog sandučeta e-pošte u kartici koja se zove [„Sledi“](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e). Ovo iskustvo zahteva uslugu koja se zove Apple Maps, u vlasništvu Apple korporacije, kako bi obezbedilo predviđeno vreme putovanja. Apple Maps [uslovi korišćenja](https://www.apple.com/legal/internet-services/maps/) i Apple [smernica za privatnost](https://www.apple.com/legal/privacy) primeni.
 
 ### <a name="weather-bar-in-outlook"></a>Outlook traka vremenske prognoze
 
