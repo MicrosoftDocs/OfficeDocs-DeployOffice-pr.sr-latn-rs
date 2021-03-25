@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u Microsoft 365 aplikacijama za velika preduzeća (ranije poznato kao Office 365 ProPlus) pomoću regulatornih postavki.
 hideEdit: true
-ms.openlocfilehash: 401cc5ca875dac28a5cda321a812e9b6c25289e5
-ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
+ms.openlocfilehash: 636916acf0cb36eecc7ba51318467264bb9ff2d4
+ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931232"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51181220"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Microsoft 365 Apps za preduzeće
 
@@ -31,9 +31,9 @@ Microsoft je posvećen tome da vam pruži informacije i kontrole koje su vam pot
 
 Počevši od verzije 1904 usluge Microsoft 365 Apps za preduzeće, postojaće nove regulatorne postavke koje će vam omogućiti da kontrolišete postavke koje se odnose na sledeće:
 
-- ***Dijagnostički podaci** _ koji se prikupljaju i šalju korporaciji Microsoft o Office klijentskom softveru koji se koristi
+- ***Diagnostičke podatke*** koji se prikupljaju i šalju korporaciji Microsoft o Office klijentskom softveru koji se koristi
 
-- _*_Povezana iskustva_*_ koja koriste funkcionalnost zasnovanu na oblaku da pruže poboljšane funkcije sistema Office vama i vašim korisnicima.
+- ***Povezana iskustva*** koja koriste funkcionalnost zasnovanu na oblaku da pruže poboljšane funkcije sistema Office vama i vašim korisnicima.
 
 Ovo je pet novih regulatornih postavki:
 
@@ -43,7 +43,7 @@ Ovo je pet novih regulatornih postavki:
 - Dozvolite upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office
 - Dozvolite upotrebu povezanih iskustava u sistemu Office
 
-Ove regulatorne postavke mogu da se implementiraju korišćenjem Grupnih pravila ili [Uslugom pravila za Office iz oblaka](../overview-office-client-policy-service.md). Ako koristite Grupna pravila, potrebno je da preuzmete najnoviju verziju datoteka administrativnih predložaka (ADMX/ADML) sa [Microsoft centra za preuzimanje](https://www.microsoft.com/download/details.aspx?id=49030).
+Ove regulatorne postavke mogu da se implementiraju korišćenjem Grupnih pravila ili [Uslugom pravila za Office iz oblaka](../overview-office-cloud-policy-service.md). Ako koristite Grupna pravila, potrebno je da preuzmete najnoviju verziju datoteka administrativnih predložaka (ADMX/ADML) sa [Microsoft centra za preuzimanje](https://www.microsoft.com/download/details.aspx?id=49030).
 
 > [!NOTE]
 > - Za informacije o tome kako da upravljate kontrolama privatnosti u sistemu Office za Mac, pogledajte članak [Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md).
@@ -62,17 +62,17 @@ Kao i sa bilo kojim novim regulatornim postavkama, pažljivo ih testirajte u kon
 
 ## <a name="policy-setting-for-diagnostic-data"></a>Regulatorne postavke za dijagnostičke podatke
 
-Дијагностички подаци се користе за обезбеђивање и ажурирање система Office, откривање, дијагностику и решавање проблема, као и за унапређивање производа.
+Dijagnostički podaci se koriste da bi Office bio bezbedan i ažuriran, da bi se otkrili i otklonili problemi i da bi se poboljšao proizvod.
 
-Možete da koristite regulatornu postavku _Podesite nivo dijagnostičkih podataka klijentskog softvera koje Office šalje korporaciji Microsoft* da biste odabrali koji nivo dijagnostičkih podataka se šalje korporaciji Microsoft.
+Možete da koristite regulatornu postavku *Podesite nivo dijagnostičkih podataka klijentskog softvera koje Office šalje korporaciji Microsoft* da biste odabrali koji nivo dijagnostičkih podataka se šalje korporaciji Microsoft.
 
 Ako omogućite ovu regulatornu postavku, morate da odaberete nivo dijagnostičkih podataka koji se šalje korporaciji Microsoft. Opcije između kojih možete da odaberete su Obavezni, Opcionalni ili Nijedan.
 
-- Ukoliko odaberete * **Obavezan** _ nivo, korporaciji Microsoft se šalju minimalni podaci neophodni da bi Office bio bezbedan, ažuriran i da radi kao što se očekuje na uređaju na kome je instaliran.
+- Ukoliko odaberete ***Obavezan*** nivo, korporaciji Microsoft se šalju minimalni podaci neophodni da bi Office bio bezbedan, ažuriran i da radi kao što se očekuje na uređaju na kome je instaliran.
 
-- Ukoliko odaberete _*_Opcionalan_*_ nivo, korporaciji Microsoft se šalju dodatni podaci koji nam pomažu da poboljšamo proizvod i oni pružaju dodatne informacije koje nam pomažu u detektovanju, dijagnostikovanju i rešavanju problema. Ako odaberete da nam pošaljete opcionalne dijagnostičke podatke, oni se prikupljaju uz obavezne dijagnostičke podatke.
+- Ukoliko odaberete ***Opcionalan*** nivo, korporaciji Microsoft se šalju dodatni podaci koji nam pomažu da poboljšamo proizvod i oni pružaju dodatne informacije koje nam pomažu u detektovanju, dijagnostikovanju i rešavanju problema. Ako odaberete da nam pošaljete opcionalne dijagnostičke podatke, oni se prikupljaju uz obavezne dijagnostičke podatke.
 
-- Ako odaberete _*_Nijedan_*_ , nikakvi dijagnostički podaci o Office klijentskom softveru koji radi na uređaju korisnika se ne prikupljaju i ne šalju korporaciji Microsoft. Ova opcija, međutim, znatno ograničava našu mogućnost da otkrijemo, dijagnoziramo i rešimo probleme na koje vaši korisnici mogu da naiđu dok koriste Office.
+- Ako odaberete ***Nijedan***, nikakvi dijagnostički podaci o Office klijentskom softveru koji radi na uređaju korisnika se ne prikupljaju i ne šalju korporaciji Microsoft. Ova opcija, međutim, znatno ograničava našu mogućnost da otkrijemo, dijagnoziramo i rešimo probleme na koje vaši korisnici mogu da naiđu dok koriste Office.
 
 Ako onemogućite ili ne konfigurišete ovu regulatornu postavku, opcionalni i obavezni dijagnostički podaci se šalju korporaciji Microsoft.
 
@@ -104,9 +104,9 @@ Vaši korisnici neće moći da odaberu da li žele da isključe ili uključe ova
 
 Ovo su iskustva koja koriste vaš Office sadržaj da vam daju preporuke za dizajn, predloge za uređivanje, uvid u podatke i slične funkcije. Na primer, Dizajner za PowerPoint ili Prevodilac. Kompletniji spisak povezanih iskustava potražite u članku [Povezana iskustva u sistemu Office](connected-experiences.md).
 
-Možete da koristite regulatornu postavku _Dozvoli upotrebu povezanih iskustava u sistemu Office koja analiziraju sadržaj* da biste kontrolisali da li su ove vrste povezanih iskustava dostupne svim vašim korisnicima. Ako ne konfigurišete ove regulatorne postavke, sva povezana iskustva će biti dostupna vašim korisnicima.
+Možete da koristite regulatornu postavku *Dozvoli upotrebu povezanih iskustava u sistemu Office koja analiziraju sadržaj* da kontrolišete da li su ove vrste povezanih iskustava dostupna svim vašim korisnicima. Ako ne konfigurišete ove regulatorne postavke, sva povezana iskustva će biti dostupna vašim korisnicima.
 
-Imajte u vidu da ako onemogućite regulatornu postavku *Dozvoli upotrebu povezanih iskustava u sistemu Office* , povezana iskustva koja analiziraju sadržaj neće biti dostupna vašim korisnicima.
+Imajte u vidu da ako onemogućite regulatornu postavku *Dozvoli upotrebu povezanih iskustava u sistemu Office*, povezana iskustva koja analiziraju sadržaj neće biti dostupna vašim korisnicima.
 
 ### <a name="policy-setting-for-connected-experiences-that-download-online-content"></a>Regulatorne postavke za povezana iskustva koja preuzimaju sadržaj na mreži
 
@@ -114,7 +114,7 @@ Ovo su iskustva koja vam omogućavaju da pretražite i preuzmete sadržaj na mre
 
 Možete da koristite regulatornu postavku *Dozvoli upotrebu povezanih iskustava u sistemu Office koja analiziraju sadržaj* da kontrolišete da li su ove vrste povezanih iskustava dostupne vašim korisnicima. Ako ne konfigurišete ove regulatorne postavke, sva povezana iskustva će biti dostupna vašim korisnicima.
 
-Imajte u vidu da ako onemogućite regulatornu postavku *Dozvoli upotrebu povezanih iskustava u sistemu Office* , povezana iskustva koja preuzimaju mrežni sadržaj neće biti dostupna vašim korisnicima.
+Imajte u vidu da ako onemogućite regulatornu postavku *Dozvoli upotrebu povezanih iskustava u sistemu Office*, povezana iskustva koja preuzimaju mrežni sadržaj neće biti dostupna vašim korisnicima.
 
 ### <a name="policy-setting-for-optional-connected-experiences"></a>Regulatorne postavke za opcionalna povezana iskustva
 
@@ -129,9 +129,9 @@ Možete da koristite regulatornu postavku *Dozvoli upotrebu dodatnih opcionalnih
 
 Čak i ako odaberete da ova opcionalna povezana iskustva učinite dostupnim vašim korisnicima, korisnici će imati opciju da ih isključe kao grupu tako što će otići u [dijalog postavki privatnosti](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Vaši korisnici će imati ovaj izbor samo ako su prijavljeni u Office pomoću akreditiva organizacije (oni se ponekad nazivaju poslovnim ili školskim nalozima), a ne ako su prijavljeni na ličnu adresu elektronske pošte.
 
-Pored toga, neka od ovih opcionalnih povezanih iskustava se takođe smatraju povezanim iskustvima koja analiziraju sadržaj ili preuzimaju sadržaj na mreži. Na primer, Umetanje slika na mreži je opcionalno povezano iskustvo, bazirano na tehnologiji Microsoft Bing, ali se takođe smatra i povezanim iskustvom koje preuzima sadržaj na mreži. Stoga, ako onemogućite regulatornu postavku *Dozvoli upotrebu povezanih iskustava u sistemu Office koja preuzimaju mrežni sadržaj* , Umetanje slika na mreži neće biti dostupno vašim korisnicima. Ono neće biti dostupno čak i ako ste omogućili regulatornu postavku *Dozvoli upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office*. Više informacija o tome koja povezana iskustva analiziraju sadržaj ili preuzimaju sadržaj na mreži potražite u članku [Povezani iskustva u sistemu Office](connected-experiences.md).
+Pored toga, neka od ovih opcionalnih povezanih iskustava se takođe smatraju povezanim iskustvima koja analiziraju sadržaj ili preuzimaju sadržaj na mreži. Na primer, Umetanje slika na mreži je opcionalno povezano iskustvo, bazirano na tehnologiji Microsoft Bing, ali se takođe smatra i povezanim iskustvom koje preuzima sadržaj na mreži. Stoga, ako onemogućite regulatornu postavku *Dozvoli upotrebu povezanih iskustava u sistemu Office koja preuzimaju mrežni sadržaj*, Umetanje slika na mreži neće biti dostupno vašim korisnicima. Ono neće biti dostupno čak i ako ste omogućili regulatornu postavku *Dozvoli upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office*. Više informacija o tome koja povezana iskustva analiziraju sadržaj ili preuzimaju sadržaj na mreži potražite u članku [Povezani iskustva u sistemu Office](connected-experiences.md).
 
-Postoji jedan izuzetak. Regulatorna postavka *Dozvoli upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office* ne kontroliše iskustva koja zahtevaju da povežete svoj LinkedIn nalog sa Microsoft poslovnim ili školskim nalogom. Da biste kontrolisali ovu vrstu iskustava (poput LinkedIn informacija na [kartici profila](https://support.microsoft.com/office/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) u usluzi Outlook) pogledajte članak [LinkedIn u Microsoft aplikacijama i uslugama](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381) i [Integracija veza sa LinkedIn naloga u Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/linkedin-integration).
+Postoji jedan izuzetak. Regulatorna postavka *Dozvoli upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office* ne kontroliše iskustva koja zahtevaju da povežete svoj LinkedIn nalog sa Microsoft poslovnim ili školskim nalogom. Da biste kontrolisali ovu vrstu iskustava (poput LinkedIn informacija na [kartici profila](https://support.microsoft.com/office/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) u usluzi Outlook) pogledajte članak [LinkedIn u Microsoft aplikacijama i uslugama](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381) i [Integracija veza sa LinkedIn naloga u Azure Active Directory](/azure/active-directory/users-groups-roles/linkedin-integration).
 
 ### <a name="policy-setting-for-most-connected-experiences"></a>Regulatorne postavke za najčešće povezana iskustva
 
@@ -149,9 +149,9 @@ Pored toga, ako onemogućite ovu regulatornu postavku, većina drugih povezanih 
 
 Postoje dve postojeće regulatorne postavke koje se više ne primenjuju na Microsoft 365 Apps za preduzeće, počevši od verzije 1904. To su sledeće regulatorne postavke:
 
-- **Slanje ličnih informacija** , koje možete pronaći u okviru Konfiguracija korisnika\\Politika\\Administrativni predlošci\\Microsoft Office 2016\\Privatnost\\Centar za pouzdanost.
+- **Slanje ličnih informacija**, koje možete pronaći u okviru Konfiguracija korisnika\\Politika\\Administrativni predlošci\\Microsoft Office 2016\\Privatnost\\Centar za pouzdanost.
 
-- **Opcije sadržaja na mreži** , koje možete pronaći u okviru Konfiguracije korisnika\\Politika\\Administrativni predlošci\\Microsoft Office 2016\\Alatke | Opcije | Opšte | Opcije usluge... \\Sadržaj na mreži.
+- **Opcije sadržaja na mreži**, koje možete pronaći u okviru Konfiguracije korisnika\\Politika\\Administrativni predlošci\\Microsoft Office 2016\\Alatke | Opcije | Opšte | Opcije usluge... \\Sadržaj na mreži.
 
 Počevši od verzije 1904, konfigurisanje ove dve postojeće regulatorne postavke neće imati uticaja na Microsoft 365 Apps za preduzeće. One više nisu primenljive zato što je njihova funkcionalnost zamenjena ovim novim regulatornim postavkama:
 
@@ -160,7 +160,7 @@ Počevši od verzije 1904, konfigurisanje ove dve postojeće regulatorne postavk
 - Dozvolite upotrebu dodatnih opcionalnih povezanih iskustava u sistemu Office
 - Dozvolite upotrebu povezanih iskustava u sistemu Office
 
-Ove nove regulatorne postavke vam daju precizniju kontrolu u odnosu na dve postojeće regulatorne postavke. Na primer, ako ste ranije koristili regulatornu postavku *Slanje ličnih informacija* , i PowerPoint QuickStarter i Smart Lookup bi bili isključeni. Ali sada, uz nove regulatorne postavke, ako koristite regulatornu postavku *Dozvoli upotrebu povezanih iskustava u sistemu Office koja analiziraju sadržaj* da biste isključili taj tip povezanih iskustava, isključuje se samo Smart Lookup. PowerPoint QuickStarter će i dalje biti dostupan korisnicima.
+Ove nove regulatorne postavke vam daju precizniju kontrolu u odnosu na dve postojeće regulatorne postavke. Na primer, ako ste ranije koristili regulatornu postavku *Slanje ličnih informacija*, i PowerPoint QuickStarter i Smart Lookup bi bili isključeni. Ali sada, uz nove regulatorne postavke, ako koristite regulatornu postavku *Dozvoli upotrebu povezanih iskustava u sistemu Office koja analiziraju sadržaj* da biste isključili taj tip povezanih iskustava, isključuje se samo Smart Lookup. PowerPoint QuickStarter će i dalje biti dostupan korisnicima.
 
 Regulatorne postavke se i dalje pojavljuju u alatki za Upravljanje grupnom politikom zato što i dalje važe za količinski licencirane verzije sistema Office 2016 i Office 2019, kao što je Office Professional Plus 2019.
 
@@ -168,13 +168,13 @@ Regulatorne postavke se i dalje pojavljuju u alatki za Upravljanje grupnom polit
 
 Kao što verovatno već znate, postoje neke postojeće regulatorne postavke koje vam omogućavaju da kontrolišete povezana iskustva. Evo nekoliko primera postojećih regulatornih postavki:
 
-- *Opcije za PowerPoint Dizajner* , koje možete pronaći u okviru Konfiguracije korisnika\\Politika\\Administrativni predlošci\\Microsoft Office 2016\\Alatke | Opcije | Opšte | Opcije usluge... \\PowerPoint Dizajner
+- *Opcije za PowerPoint Dizajner*, koje možete pronaći u okviru Konfiguracije korisnika\\Politika\\Administrativni predlošci\\Microsoft Office 2016\\Alatke | Opcije | Opšte | Opcije usluge... \\PowerPoint Dizajner
 
-- *Isključivanje brzog početka* , u okviru Konfiguracija korisnika\\Politika\\Administrativni predlošci\\Microsoft PowerPoint 2016\\Opcije programa PowerPoint\\Opšte
+- *Isključivanje brzog početka*, u okviru Konfiguracija korisnika\\Politika\\Administrativni predlošci\\Microsoft PowerPoint 2016\\Opcije programa PowerPoint\\Opšte
 
-- *Dozvoli funkciju LinkedIn pomoćnika za pisanje biografije* , u okviru Konfiguracija korisnika\\Politiku\\Administrativni predlošci\\Microsoft Word 2016\\Opcije programa Word\\Opšte
+- *Dozvoli funkciju LinkedIn pomoćnika za pisanje biografije*, u okviru Konfiguracija korisnika\\Politiku\\Administrativni predlošci\\Microsoft Word 2016\\Opcije programa Word\\Opšte
 
- I dalje možete da koristite ove postojeće regulatorne postavke ako želite da isključite pojedinačna povezana iskustva. Ali imajte na umu da ako koristite neku od novih regulatornih postavki, ta nova regulatorna postavka može da isključi povezano iskustvo koje ste uključili pomoću druge regulatorne postavke. Na primer, ako omogućite regulatornu postavku *Dozvoli funkciju LinkedIn pomoćnika za pisanje biografije* , ali onemogućite regulatornu postavku *Dozvoli upotrebu povezanih iskustva u sistemu Office* , LinkedIn pomoćnik za pisanje biografije neće biti dostupan vašim korisnicima.
+ I dalje možete da koristite ove postojeće regulatorne postavke ako želite da isključite pojedinačna povezana iskustva. Ali imajte na umu da ako koristite neku od novih regulatornih postavki, ta nova regulatorna postavka može da isključi povezano iskustvo koje ste uključili pomoću druge regulatorne postavke. Na primer, ako omogućite regulatornu postavku *Dozvoli funkciju LinkedIn pomoćnika za pisanje biografije*, ali onemogućite regulatornu postavku *Dozvoli upotrebu povezanih iskustva u sistemu Office*, LinkedIn pomoćnik za pisanje biografije neće biti dostupan vašim korisnicima.
 
 Uopšteno, ako je jedna regulatorna postavka konfigurisana da uključi određeno povezano iskustvo, dok je istovremeno druga regulatorna postavka konfigurisana tako da isključi taj tip povezanog iskustva, to određeno povezano iskustvo je isključeno za vaše korisnike.
 
@@ -188,13 +188,13 @@ Ako ste odabrali da korisnicima omogućite [opcionalna povezana iskustva](option
 
 ### <a name="privacy-settings-removed-from-the-office-ui"></a>Postavke privatnosti su uklonjene iz korisničkog interfejsa sistema Office
 
-Sledeće postavke se uklanjaju iz **Datoteka** > **Opcije** > **Centar za pouzdanost** > **Postavke centra za pouzdanost...** > **Opcije privatnosti** :
+Sledeće postavke se uklanjaju iz **Datoteka** > **Opcije** > **Centar za pouzdanost** > **Postavke centra za pouzdanost...** > **Opcije privatnosti**:
 
 - Dobijte dizajne, informacije, preporuke i usluge tako što ćete dozvoliti sistemu Office da pristupi proizvodima i poboljša ih na osnovu Office sadržaja na uređaju.
 
 - Dozvolite da se Office poveže sa Microsoft uslugama na mreži da bi se pružila funkcionalnost relevantna za vaše korišćenje i željene opcije.
 
-Pored toga, u okviru **Datoteka** > **Opcije** > **Opšte** , uklanja se izbor da omogućite inteligentne Office usluge.
+Pored toga, u okviru **Datoteka** > **Opcije** > **Opšte**, uklanja se izbor da omogućite inteligentne Office usluge.
 
 Kao administrator za organizaciju, vi sada kontrolišete ekvivalentne postavke za ovo kroz nove regulatorne postavke opisane ranije.
 
@@ -202,7 +202,7 @@ Kao administrator za organizaciju, vi sada kontrolišete ekvivalentne postavke z
 
 Ovo su novi elementi dodati korisničkom interfejsu za Office:
 
-- U okviru **Datoteka** > **Nalog** , korisnici će videti novi izbor za **Privatnost naloga** > **Upravljanje postavkama**. Nalazi se pod **Upravljanje postavkama** gde korisnici mogu da isključe opcionalna povezana iskustva, ako ste im dali tu opciju.
+- U okviru **Datoteka** > **Nalog**, korisnici će videti novi izbor za **Privatnost naloga** > **Upravljanje postavkama**. Nalazi se pod **Upravljanje postavkama** gde korisnici mogu da isključe opcionalna povezana iskustva, ako ste im dali tu opciju.
 
 - U okviru **Datoteka** > **Opcije** > **Centar za pouzdanost** > **Postavke centra za pouzdanost...** > **Opcije privatnosti,** postoji opcija da omogućite upotrebu [Prikazivača dijagnostičkih podataka](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855) na uređaju.
 

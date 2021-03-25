@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: 942f32d7a8d177e6d74530a8382c145e94bec41a
-ms.sourcegitcommit: dee7b8706ba5a0e763052d2f2f79fb2d3d3a6907
+ms.openlocfilehash: d651fb94cb031a0fc1a154201e2875c28f979f2a
+ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50826420"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51181745"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
@@ -76,7 +76,7 @@ Kada koristite Office prodavnicu, vaša upotreba same lokacije prodavnice je lic
 
 > [!NOTE]
 > - Administrator u vašoj organizaciji vam može pružiti dodatke, čak i ako ne odaberete da koristite Office prodavnicu.
-> - Ako ste administrator, da biste dobili više informacija o dodacima pogledajte odeljak „Opcionalna povezana iskustva“ u članku [Privatnost i bezbednost za Office dodatke](https://docs.microsoft.com/office/dev/add-ins/concepts/privacy-and-security) i [Privatnost, dozvole i bezbednost za Outlook dodatke](https://docs.microsoft.com/office/dev/add-ins/outlook/privacy-and-security).
+> - Ako ste administrator, da biste dobili više informacija o dodacima pogledajte odeljak „Opcionalna povezana iskustva“ u članku [Privatnost i bezbednost za Office dodatke](/office/dev/add-ins/concepts/privacy-and-security) i [Privatnost, dozvole i bezbednost za Outlook dodatke](/office/dev/add-ins/outlook/privacy-and-security).
 
 ### <a name="research"></a>Istraživanje
 
@@ -91,7 +91,7 @@ U programu Outlook za iOS, predstojeći događaj će biti rezimiran na vrhu prij
 
 ### <a name="weather-bar-in-outlook"></a>Outlook traka vremenske prognoze
 
-[Traka vremenske prognoze](https://support.microsoft.com/office/d11b7532-7c58-489e-8103-5cc5d727b06b) u programu Outlook prikazuje vremensku prognozu za geografske lokacije koje odaberete. Tokom korišćenja, traka vremenske prognoze u programu Outlook se podrazumevano povezuje sa MSN vremenskom prognozom. MSN je u vlasništvu korporacije Microsoft i primenjuju se uslovi iz [Microsoft ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjave o privatnosti korporacije Microsoft](https://privacy.microsoft.com/). Kada koristite traku vremenske prognoze sa MSN vremenskom prognozom, Microsoft ne otkriva vašu lokaciju i gradovi koje odaberete da prikažete se ne povezuju sa vama. Možete da [promenite ovu podrazumevanu postavku](https://docs.microsoft.com/office/client-developer/outlook/weather/extending-the-weather-bar-in-outlook) da se povežete sa drugim provajderima usluga vremenske prognoze. Ako odlučite da koristite drugog provajdera usluga vremenske prognoze, moraćete da proverite izjavu o privatnosti i uslove korišćenja tog provajdera da biste znali koji uslovi se primenjuju.
+[Traka vremenske prognoze](https://support.microsoft.com/office/d11b7532-7c58-489e-8103-5cc5d727b06b) u programu Outlook prikazuje vremensku prognozu za geografske lokacije koje odaberete. Tokom korišćenja, traka vremenske prognoze u programu Outlook se podrazumevano povezuje sa MSN vremenskom prognozom. MSN je u vlasništvu korporacije Microsoft i primenjuju se uslovi iz [Microsoft ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjave o privatnosti korporacije Microsoft](https://privacy.microsoft.com/). Kada koristite traku vremenske prognoze sa MSN vremenskom prognozom, Microsoft ne otkriva vašu lokaciju i gradovi koje odaberete da prikažete se ne povezuju sa vama. Možete da [promenite ovu podrazumevanu postavku](/office/client-developer/outlook/weather/extending-the-weather-bar-in-outlook) da se povežete sa drugim provajderima usluga vremenske prognoze. Ako odlučite da koristite drugog provajdera usluga vremenske prognoze, moraćete da proverite izjavu o privatnosti i uslove korišćenja tog provajdera da biste znali koji uslovi se primenjuju.
 
 ## <a name="how-to-determine-if-your-admin-has-given-you-the-ability-to-use-optional-connected-experiences"></a>Kako da odredite da li vam je administrator dao mogućnost korišćenja opcionalnih povezanih iskustava
 

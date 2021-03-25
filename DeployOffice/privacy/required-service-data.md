@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža administratorima sistema Office pregled neophodnih podataka o usluzi koji se prikupljaju o povezanim iskustvima u sistemu Office.
 hideEdit: true
-ms.openlocfilehash: faa3507708b4768ee3b2b0f51257273c31ad2de7
-ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
+ms.openlocfilehash: 7480869114096dc8f858ce2b1551575c6224ae64
+ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47440201"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51181933"
 ---
 # <a name="required-service-data-for-office"></a>Neophodni podaci o usluzi za Office
 
@@ -27,9 +27,9 @@ ms.locfileid: "47440201"
 
 Office se sastoji od aplikacija klijentskog softvera i [povezanih iskustava](connected-experiences.md) koji su osmišljeni tako da vam omogućavaju da efikasnije kreirate, komunicirate i sarađujete. Rad sa drugima na dokumentu uskladištenom u OneDrive for Business usluzi ili prevođenje sadržaja Word dokumenta na neki drugi jezik su primeri povezanih iskustava.
 
-Dok koristite povezano iskustvo, podaci se šalju i Microsoft ih obrađuje kako bi se obezbedilo povezano iskustvo. Ovi podaci su od suštinskog značaja jer nam te informacije omogućavaju da isporučimo povezana iskustva zasnovana na tehnologiji oblaka. Ove podatke smatramo kao obavezne podatke o usluzi.
+Dok koristite povezano iskustvo, podaci se šalju i Microsoft ih obrađuje kako bi se obezbedilo povezano iskustvo. Ovi podaci su od suštinskog značaja jer nam te informacije omogućavaju da isporučimo povezana iskustva zasnovana na tehnologiji oblaka. Ove podatke smatramo obaveznim podacima o usluzi.
 
-Obavezni podaci o usluzi mogu da uključuju informacije koje se odnose na radnju povezanog iskustva koja je neophodna da bi osnovna usluga bila bezbedna, ažurna i da bi funkcionisala kao što je očekivano. Ako odlučite da koristite povezano iskustvo koje analizira sadržaj, na primer, funkciju „Prevođenje“ u programu Word, tekst koji otkucate i izaberete za prevođenje u dokumentu se takođe šalje i obrađuje kako bi se obezbedilo povezano iskustvo. Obavezni podaci o usluzi mogu da uključuju i informacije koje su potrebne kako bi povezano iskustvo izvršilo svoj zadatak, kao što su informacije o konfiguraciji aplikacije Office.
+Obavezni podaci o usluzi mogu da obuhvataju informacije koje se odnose na radnju povezanog iskustva koja je neophodna da bi osnovna usluga bila bezbedna, ažurna i da bi funkcionisala kao što je očekivano. Ako odlučite da koristite povezano iskustvo koje analizira sadržaj, na primer, funkciju „Prevođenje“ u programu Word, tekst koji otkucate i izaberete za prevođenje u dokumentu se takođe šalje i obrađuje kako bi se obezbedilo povezano iskustvo. Obavezni podaci o usluzi mogu da uključuju i informacije koje su potrebne kako bi povezano iskustvo izvršilo svoj zadatak, kao što su informacije o konfiguraciji aplikacije Office.
 
 ## <a name="example-of-required-service-data-for-a-connected-experience"></a>Primer obaveznih podataka o usluzi za povezano iskustvo
 
@@ -51,12 +51,12 @@ Obavezni podaci o usluzi nisu povezani sa obaveznim ili opcionim [dijagnostički
 
 Obavezni podaci o usluzi se prikupljaju i šalju korporaciji Microsoft i za [bazične usluge](essential-services.md) sistema Office, kao što je usluga licenciranja koja potvrđuje da ste ispravno licencirani za korišćenje sistema Office. Iako možete da kontrolišete mnoga povezana iskustva koja su dostupna vama ili, ako ste administrator organizacije, vašim korisnicima, ovaj skup usluga je od suštinske važnosti za funkcionisanje sistema Office, te stoga ne može biti onemogućen. Podaci za bazične usluge se uvek šalju korporaciji Microsoft prilikom korišćenja sistema Office i obrađuju se, bez obzira na to kako su konfigurisana druga podešavanja vezana za privatnost.
 
-Obavezni podaci o usluzi su dostupni putem zahteva za uslugom podataka (DSRs). Za više informacija pročitajte [izjavu o privatnosti korporacije Microsoft](https://privacy.microsoft.com/privacystatement) i članak [„Zahtevi lica na koje se odnose podaci u usluzi Office 365 za GDPR i CCPA](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-office365).
+Obavezni podaci o usluzi su dostupni putem zahteva za uslugom podataka (DSRs). Za više informacija pročitajte [izjavu o privatnosti korporacije Microsoft](https://privacy.microsoft.com/privacystatement) i članak [„Zahtevi lica na koje se odnose podaci u usluzi Office 365 za GDPR i CCPA](/microsoft-365/compliance/gdpr-dsr-office365).
 
 Ako ste administrator u organizaciji i želite da upravljate povezanim iskustvima, pogledajte sledeće članke:
 
 - [Pregled kontrola privatnosti za Microsoft 365 Apps za velika preduzeća](overview-privacy-controls.md)
-- [Korišćenje postavki smernica za upravljanje kontrolama privatnosti za Microsoft 365 Apps za velika preduzeća](manage-privacy-controls.md)
+- [Korišćenje postavki smernica za upravljanje kontrolama privatnosti za Microsoft 365 Apps za preduzeće](manage-privacy-controls.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office na Android uređajima](android-privacy-controls.md)
