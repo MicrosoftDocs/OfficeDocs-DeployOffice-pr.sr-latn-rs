@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: 7bf7ce172600d1b944f521da6bb5e0420d6d59f2
-ms.sourcegitcommit: 163de1916420d26e4a0ef9de941fc4e86ade0412
+ms.openlocfilehash: 52922aee6117744074d382f6c86e7ec50c6f874b
+ms.sourcegitcommit: f006f5890d12988e03a3878937eb02aa7e265f8d
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "50242204"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51167383"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -41,7 +41,7 @@ Za više informacija o dijagnostičkim podacima pogledajte sledeće članke:
 Ako ste administrator organizacije, možda će vas zanimati i sledeći članci:
 
 - [Pregled kontrola privatnosti za Microsoft 365 Apps za velika preduzeća](overview-privacy-controls.md)
-- [Korišćenje postavki smernica za upravljanje kontrolama privatnosti za Microsoft 365 Apps za velika preduzeća](manage-privacy-controls.md)
+- [Korišćenje postavki smernica za upravljanje kontrolama privatnosti za Microsoft 365 Apps za preduzeće](manage-privacy-controls.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za Mac](mac-privacy-preferences.md)
 - [Korišćenje željenih opcija za upravljanje kontrolama privatnosti u sistemu Office za iOS uređaje](ios-privacy-preferences.md)
 - [Korišćenje regulatornih postavki za upravljanje kontrolama privatnosti za Office na Android uređajima](android-privacy-controls.md)
@@ -1788,6 +1788,8 @@ Sledeća polja se prikupljaju za iOS i Android:
 
 - **include_deleted** - da li pretraga prikazuje izbrisane opcije u rezultatima pretrage 
 
+- **is_best_match_suggestion** – da li izabrani predlog za pretragu najbolje odgovara.
+
 - **is_ics_external_data** – snima da li je dodati događaj unutrašnji (tj. dodat u Outlook u kalendar programa Outlook) ili spoljni (tj. dodat iz neke druge aplikacije za e-poštu, kao što je Gmail u kalendar programa Outlook).
 
 - **is_network_fully_connected** – ovo služi da dobijete nagoveštaj o razlogu za pretragu van mreže. Ako je mreža povezana i pretraga je van mreže, razlog je verovatno vremensko ograničenje servera
@@ -2621,6 +2623,18 @@ Prikupljaju se sledeća polja:
 
 - **with_message_enabled** – označava da li korisnik može da odgovara porukom kako bi nam pomogao da ustanovimo probleme pri odgovaranju na pozivnice za sastanke
 
+
+#### <a name="multiwindowlaunch"></a>multi.window.launch
+
+Ovaj događaj beleži kada korisnik preduzima radnju koja podrazumeva pokretanje više prozora na uređajima koji se mogu preklopiti, npr. sastavljanje pošte, događaja, otvaranje prozora kalendara.  Koristi tu radnju kako bi je zapamtio, npr. kako bi se dobio odziv ili uvek pokretao u novom prozoru.  Podaci koje ovaj događaj prikuplja koriste se za procenu mogućnosti otkrivanja, efikasnosti, kao i opštih željenih postavki korisnika kako bi se podstakao trenutni i budući razvoj funkcionalnosti povezanih sa više prozora.
+
+Prikupljaju se sledeća polja: 
+
+- **is_remembered** – da li je korisnik sačuvao željenu postavku da se otvara u novom prozoru sa prijavljene lokacije.
+
+- **multi_window_origin** – lokacija u okviru aplikacije u kojoj dolazi do interakcije za pokretanje ekrana druge aplikacije u novom prozoru.
+
+
 #### <a name="officeandroiddocsuifileoperationsopendocumentmeasurements"></a>Office.Android.DocsUI.FileOperations.OpenDocumentMeasurements
 
 Ovaj događaj se sakuplja za Office aplikacije koje se pokreću u okviru Android platforme i zapisa kada se pokrene operacija otvaranja datoteke. Događaj pomaže u održavanju otvorene operacije datoteka bezbednim, ažuriranim i da ispravno funkcionišu. Cilj prikupljanja ovih podataka jeste da se kontinuirano poboljšava performanse otvorene datoteke. 
@@ -2744,7 +2758,7 @@ Telemetrija korišćenja da biste videli koliko puta se korisnik prebacuje izme�
 
 Prikupljaju se sledeća polja:
 
-- **EventDate** – vremenska oznake pojave događaja 
+- **EventDate** – vremenska oznaka pojavljivanja događaja 
 
 - **SessionID** – GUID za povezivanje događaja po sesiji
 
@@ -6595,6 +6609,28 @@ Prikupljaju se sledeća polja:
 
   - **Podaci\_CloseAndReopen:bool -** Da li je ovaj dokument zatvoren i ponovo otvoren?
 
+  - **Data_ClpDocHasDrmDoc:bool** – Da li dokument ima DRM dokument
+
+  - **Data_ClpDocHasIdentity:bool**  – Da li dokument ima informacije o identitetu (koje se koriste za preuzimanje i podešavanje oznaka osetljivosti)
+
+  - **Data_ClpDocHasSessionMetadata:bool** – Da li dokument ima metapodatke radne oznake osetljivosti iz sesije
+
+  - **Data_ClpDocHasSpoMetadata:bool** – Da li dokument ima metapodatke oznake osetljivosti iz SPO putem IMetadataCache-a
+
+  - **Data_ClpDocHasSpoPackage:bool** – Da li dokument ima metapodatke oznake osetljivosti iz SPO putem IPackage-a
+
+  - **Data_ClpDocIsProtected:bool** – Da li je dokument zaštićen putem IRM ili nije
+
+  - **Data_ClpDocMetadataSource:int** – Prebrojavanje koje označava odakle su metapodaci oznake osetljivosti (IRM, OPC deo, SharePoint itd.)
+
+  - **Data_ClpDocNeedsUpconversion:bool** – Da li dokument mora da konvertuje naviše podatke oznake osetljivosti iz custom.xml dela
+
+  - **Data_ClpDocNumFailedSetLabels:int** – Ukupan broj oznaka osetljivosti čije podešavanje na dokumentu nije uspelo
+
+  - **Data_ClpDocSessionMetadataDirty:bool** – Da li dokument ima metapodatke radne oznake osetljivosti koji su nesređeni
+
+  - **Data_ClpDocWasInTrustBoundary:bool** – Da li je dokument bio u granicama poverenja (da li je dozvoljavao koautorstvo nad dokumentima koje štite oznake osetljivosti)
+
   - **Data\_DetachedDuration:long -** Vreme tokom kog je aktivnost bila uklonjena/nije bila pokrenuta
 
   - **Data\_Doc\_AccessMode:long -** Kako je dokument otvoren (samo za čitanje/čitanje i pisanje)
@@ -6714,6 +6750,28 @@ Prikupljaju se sledeća polja:
   - **Podaci\_ClearDirtyFlagTimeMS:long -** Vreme utrošeno da se ukloni zastavica za nesređeni dokument
 
   - **Podaci\_CloneDocumentTimeMS:long -** Vreme utrošeno na kloniranje dokumenta pre početka čuvanja
+
+  - **Data_ClpDocHasDrmDoc:bool** – Da li dokument ima DRM dokument
+
+  - **Data_ClpDocHasIdentity:bool**  – Da li dokument ima informacije o identitetu (koje se koriste za preuzimanje i podešavanje oznaka osetljivosti)
+
+  - **Data_ClpDocHasSessionMetadata:bool** – Da li dokument ima metapodatke radne oznake osetljivosti iz sesije
+
+  - **Data_ClpDocHasSpoMetadata:bool** – Da li dokument ima metapodatke oznake osetljivosti iz SPO putem IMetadataCache-a
+
+  - **Data_ClpDocHasSpoPackage:bool** – Da li dokument ima metapodatke oznake osetljivosti iz SPO putem IPackage-a
+
+  - **Data_ClpDocIsProtected:bool** – Da li je dokument zaštićen putem IRM ili nije
+
+  - **Data_ClpDocMetadataSource:int** – Prebrojavanje koje označava odakle su metapodaci oznake osetljivosti (IRM, OPC deo, SharePoint itd.)
+
+  - **Data_ClpDocNeedsUpconversion:bool** – Da li dokument mora da konvertuje naviše podatke oznake osetljivosti iz custom.xml dela
+
+  - **Data_ClpDocNumFailedSetLabels:int** – Ukupan broj oznaka osetljivosti čije podešavanje na dokumentu nije uspelo
+
+  - **Data_ClpDocSessionMetadataDirty:bool** – Da li dokument ima metapodatke radne oznake osetljivosti koji su nesređeni
+
+  - **Data_ClpDocWasInTrustBoundary:bool** – Da li je dokument bio u granicama poverenja (da li je dozvoljavao koautorstvo nad dokumentima koje štite oznake osetljivosti)
 
   - **Podaci\_CommitTransactionTimeMS:long -** Vreme utrošeno da se izvrši transakcija čuvanja
 
@@ -6860,6 +6918,28 @@ Prikuplja se kad god PowerPoint izvršava komandu „Sačuvaj kao“ Uključuje 
 Prikupljaju se sledeća polja:
 
 - **Data_AddDocTelemetryResult:long** - Da li stavka evidencije sadrži svu neophodnu telemetriju dokumenta (Data_Doc_* fields)? Ako ne, zašto?
+
+- **Data_ClpDocHasDrmDoc:bool** – Da li dokument ima DRM dokument
+
+- **Data_ClpDocHasIdentity:bool**  – Da li dokument ima informacije o identitetu (koje se koriste za preuzimanje i podešavanje oznaka osetljivosti)
+
+- **Data_ClpDocHasSessionMetadata:bool** – Da li dokument ima metapodatke radne oznake osetljivosti iz sesije
+
+- **Data_ClpDocHasSpoMetadata:bool** – Da li dokument ima metapodatke oznake osetljivosti iz SPO putem IMetadataCache-a
+
+- **Data_ClpDocHasSpoPackage:bool** – Da li dokument ima metapodatke oznake osetljivosti iz SPO putem IPackage-a
+
+- **Data_ClpDocIsProtected:bool** – Da li je dokument zaštićen putem IRM ili nije
+
+- **Data_ClpDocMetadataSource:int** – Prebrojavanje koje označava odakle su metapodaci oznake osetljivosti (IRM, OPC deo, SharePoint itd.)
+
+- **Data_ClpDocNeedsUpconversion:bool** – Da li dokument mora da konvertuje naviše podatke oznake osetljivosti iz custom.xml dela
+
+- **Data_ClpDocNumFailedSetLabels:int** – Ukupan broj oznaka osetljivosti čije podešavanje na dokumentu nije uspelo
+
+- **Data_ClpDocSessionMetadataDirty:bool** – Da li dokument ima metapodatke radne oznake osetljivosti koji su nesređeni
+
+- **Data_ClpDocWasInTrustBoundary:bool** – Da li je dokument bio u granicama poverenja (da li je dozvoljavao koautorstvo nad dokumentima koje štite oznake osetljivosti)
 
 - **Data_CppUncaughtExceptionCount:long** - Neuhvaćeni izvorni izuzeci dok je aktivnost pokrenuta
 
@@ -7047,6 +7127,28 @@ Prikuplja se kad god PowerPoint vrši čuvanje pomoću zastarele putanje kôda. 
 Prikupljaju se sledeća polja:
 
 - **Data_AddDocTelemetryResult:long** - Da li stavka evidencije sadrži svu neophodnu telemetriju dokumenta (Data_Doc_* fields)? Ako ne, zašto?
+
+- **Data_ClpDocHasDrmDoc:bool** – Da li dokument ima DRM dokument
+
+- **Data_ClpDocHasIdentity:bool**  – Da li dokument ima informacije o identitetu (koje se koriste za preuzimanje i podešavanje oznaka osetljivosti)
+
+- **Data_ClpDocHasSessionMetadata:bool** – Da li dokument ima metapodatke radne oznake osetljivosti iz sesije
+
+- **Data_ClpDocHasSpoMetadata:bool** – Da li dokument ima metapodatke oznake osetljivosti iz SPO putem IMetadataCache-a
+
+- **Data_ClpDocHasSpoPackage:bool** – Da li dokument ima metapodatke oznake osetljivosti iz SPO putem IPackage-a
+
+- **Data_ClpDocIsProtected:bool** – Da li je dokument zaštićen putem IRM ili nije
+
+- **Data_ClpDocMetadataSource:int** – Prebrojavanje koje označava odakle su metapodaci oznake osetljivosti (IRM, OPC deo, SharePoint itd.)
+
+- **Data_ClpDocNeedsUpconversion:bool** – Da li dokument mora da konvertuje naviše podatke oznake osetljivosti iz custom.xml dela
+
+- **Data_ClpDocNumFailedSetLabels:int** – Ukupan broj oznaka osetljivosti čije podešavanje na dokumentu nije uspelo
+
+- **Data_ClpDocSessionMetadataDirty:bool** – Da li dokument ima metapodatke radne oznake osetljivosti koji su nesređeni
+
+- **Data_ClpDocWasInTrustBoundary:bool** – Da li je dokument bio u granicama poverenja (da li je dozvoljavao koautorstvo nad dokumentima koje štite oznake osetljivosti)
 
 - **Data_CppUncaughtExceptionCount:long** - Neuhvaćeni izvorni izuzeci dok je aktivnost pokrenuta
 
@@ -8753,6 +8855,12 @@ Prikupljaju se sledeća polja:
 
 - **has_mip_label** - označava da li je nalepnica "MIP" bila označena na poruci ili ne
 
+- **image_attachment_count** – označava koliko se slika šalje kao prilog poruke
+
+- **image_body_count** – označava koliko se slika šalje umetnuto kao deo tela poruke
+
+- **image_movement_count** – označava koliko se slika poruke koje su premeštene u umetnute ili premeštene nazad.
+
 - **is_group_escalation** – da li je ovo grupna eskalirana poruka, "eskalirana poruka" je poruka koja je poslata u poštansko sanduče korisnika zbog eskalacije (pretplaćenog na grupu)
 
 - **is_groups** - praćenje da li je poslata poruka grupna poruka ili nije
@@ -9782,6 +9890,28 @@ Prikupljaju se sledeća polja:
   - **Data\_CheckWebSharingViolationForIncOpen -** Trajanje izvršavanja metode CheckWebSharingViolationForIncOpen u milisekundama
    
   - **Data_CloseAndReopenWithoutDiscard –** Da li je dokument zatvoren i ponovo otvoren tokom otvorenog procesa bez odbacivanja.
+
+  - **Data_ClpDocHasDrmDoc:bool** – Da li dokument ima DRM dokument
+
+  - **Data_ClpDocHasIdentity:bool**  – Da li dokument ima informacije o identitetu (koje se koriste za preuzimanje i podešavanje oznaka osetljivosti)
+
+  - **Data_ClpDocHasSessionMetadata:bool** – Da li dokument ima metapodatke radne oznake osetljivosti iz sesije
+
+  - **Data_ClpDocHasSpoMetadata:bool** – Da li dokument ima metapodatke oznake osetljivosti iz SPO putem IMetadataCache-a
+
+  - **Data_ClpDocHasSpoPackage:bool** – Da li dokument ima metapodatke oznake osetljivosti iz SPO putem IPackage-a
+
+  - **Data_ClpDocIsProtected:bool** – Da li je dokument zaštićen putem IRM ili nije
+
+  - **Data_ClpDocMetadataSource:int** – Prebrojavanje koje označava odakle su metapodaci oznake osetljivosti (IRM, OPC deo, SharePoint itd.)
+
+  - **Data_ClpDocNeedsUpconversion:bool** – Da li dokument mora da konvertuje naviše podatke oznake osetljivosti iz custom.xml dela
+
+  - **Data_ClpDocNumFailedSetLabels:int** – Ukupan broj oznaka osetljivosti čije podešavanje na dokumentu nije uspelo
+
+  - **Data_ClpDocSessionMetadataDirty:bool** – Da li dokument ima metapodatke radne oznake osetljivosti koji su nesređeni
+
+  - **Data_ClpDocWasInTrustBoundary:bool** – Da li je dokument bio u granicama poverenja (da li je dozvoljavao koautorstvo nad dokumentima koje štite oznake osetljivosti)
 
   - **Data\_ContentTransaction -** Unapred definisani skup vrednosti koji se odnosi na to kada transakcija može biti kreirana (dozvoljeno pri učitavanju dokumenta, dozvoljeno pri završenom otvaranju, itd.)
 
@@ -12524,9 +12654,9 @@ Prikupljaju se sledeća polja:
   
 - **BootToStart** – Da li je korisnik odlučio da prikaže početni ekran kada se pokrene ova aplikacija.
 
-- **ColdBoot** – Da li se Office aplikacija prvi put pokreće nakon ponovnog pokretanja sistema ili se binarni aplikacije morao učitati sa diska.
+- **ColdBoot** – Da li je ovo prvi put kada se Office aplikacija pokreće nakon ponovnog pokretanja sistema ili se binarni aplikacije morao učitati sa diska. (samo za macOS/iOS)
 
-- **DeviceModel** – Model uređaja.
+- **DeviceModel** – Model uređaja. (samo za macOS/iOS)
 
 - **DocLocation** – Pri otvaranju dokumenta naznačeno je koja je usluga obezbedila dokument (OneDrive, File Server, SharePoint itd.).
 
@@ -12536,6 +12666,8 @@ Prikupljaju se sledeća polja:
 
 - **FirstBoot** – Da li je ovo bilo prvo pokretanje aplikacije.
 
+- **FreeMemoryPercentage** – Koji je procenat memorije uređaja slobodan. (samo za Windows)
+
 - **InitializationDuration** - Koliko je mikrosekundi bilo potrebo za prvo pokretanje Office procesa.
 
 - **InterruptionMessageId** - Da li je pokretanje prekinuto dijalogom u kome se traži korisnički unos i ID dijaloga.
@@ -12544,9 +12676,19 @@ Prikupljaju se sledeća polja:
 
 - **OpenAsNew** – da li je aplikacija pokrenuta otvaranjem postojećeg dokumenta kao predloška za novi dokument.
 
+- **PageFaultCount** – Broj padova stranice za proces. (samo za Windows)
+
+- **PrimaryDiskType** – Da li je primarni uređaj za skladištenje solid state uređaj ili rotaciona disk jedinica i njegova rotaciona disk jedinica, ako je primenjivo. (samo za macOS/iOS)
+
+- **PrivateCommitUsageMB** – Trošak izvršenja (tj. količina memorije koju je menadžer memorije izvršio za ovaj proces) u megabajtima za ovaj proces. (samo za Windows)
+
+- **Broj procesora** – Broj procesora u uređaju. (samo za macOS/iOS)
+
+- **TotalPhysicalMemory** – Ukupna količina fizičke memorije u uređaju. (samo za macOS/iOS)
+
 - **TotalWorkingSetMB** – Količina memorije u megabajtima u radnom skupu procesa.
 
-- **VirtualSetMB** – Količina memorije u megabajtima u virtualnom skupu procesa. (Samo za MacOS/iOS)
+- **VirtualSetMB** – Količina memorije u megabajtima u virtualnom skupu procesa. (samo za macOS/iOS)
 
 - **WorkingSetPeakMB** – najveća količina memorije u megabajtima koja je do sada bila u radnom skupu procesa.
 
