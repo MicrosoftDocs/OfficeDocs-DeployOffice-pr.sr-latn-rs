@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: 52922aee6117744074d382f6c86e7ec50c6f874b
-ms.sourcegitcommit: f006f5890d12988e03a3878937eb02aa7e265f8d
+ms.openlocfilehash: 69abd5fc0355db7758debc0193b4439754eda2f2
+ms.sourcegitcommit: b6f55a032079a9525cedd93b9e431c188ca24775
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51167383"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51889798"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -633,6 +633,8 @@ Pored toga, sledeća polja su uobičajena za sve događaje za aplikaciju Outlook
 
 - **gcc_restrictions_enabled** – Saopštava nam da li su GCC ograničenja primenjena na aplikaciju kako bismo obezbedili da GCC klijenti bezbedno koriste našu aplikaciju
  
+- **multi_pane_mode** – Govori nam da li korisnik na iPad računaru koristi svoje prijemno sanduče sa uključenim više okana gde može da vidi svoju listu direktorijuma dok triažira e-poštu. To je potrebno kako bi nam pomoglo da otkrijemo probleme specifične za one koji koriste svoje prijemno poštansko sanduče s više otvorenih okna.
+
 - **multi_window_mode** – Saopštava nam da li korisnik na iPad uređaju koristi više prozora kako bismo lakše otkrili probleme vezane za korišćenje većeg broja prozora.
 
 - **office_session_id** – Jedinstveni ID koji prati sesiju za povezane Office usluge, pomaže u otkrivanju problema sa integracijom određene Office usluge u programu Outlook, kao što je Word
@@ -5240,6 +5242,16 @@ Prikupljaju se sledeća polja:
 
 - **Data_FirstRunPanelName** - naziv table sa koje je iskustvo počelo
 
+
+#### <a name="officefloodgateuserfactappusage"></a>Office.Floodgate.UserFact.AppUsage
+
+To ukazuje na to kada korisnik koristi funkcije visoke vrednosti u okviru proizvoda. Ono može da ukazuje na to da li je korisnik otkrio funkciju ili ju je koristio. Signal će omogućiti uvid u upotrebu proizvoda koji pomaže u poboljšanju proizvoda.
+
+Prikupljaju se sledeća polja: 
+
+- **FeatureAction** – Oznaka koja označava funkciju velike vrednosti i radnju koju je izvršio korisnik, na primer ContentPickerTried, TemplatesSeen.
+
+
 #### <a name="officelenslenssdkcloudconnectorlaunch"></a>Office.Lens.LensSdk.CloudConnectorLaunch
 
 Kada korisnik zaberja sliku i željene funkcije u konačnom izboru za sliku za korišćenje sistema OCR, ovaj događaj se sakuplja.     
@@ -5292,19 +5304,6 @@ Prikupljaju se sledeća polja:
 - **Tip zadatka** –String koji identifikuje nameru poziva za uslugu.
 
 
-#### <a name="officelenslenssdkpermission"></a>Office. Lens. LensSdk. dozvola
-
-Dozvole su osetljivoj funkciji, kao što bez njih korisnici ne mogu da iskuse nijednu od funkcija soиiva. Dozvole se prate da bi se razumela korisnička navika za pružanje/opoziv dozvola. Kada korisnik komunicira sa svim dijalozima dozvola u našoj aplikaciji, skupljamo ove događaje. Na osnovu trendova korisnika za prihvatanje i odbacivanje dozvola, prepoznaćemo poboljšanja funkcija koje pomažu korisnicima da razumeju zašto su dozvole ključne.
-
-Prikupljaju se sledeća polja:
-
-- **Data_action** – sadrži vrednosti kao što su "Kameraperonalno (ili demantovano), što će nam pomoći da shvatimo da li je korisnik prihvatio ili odbio dozvole za skladištenje i kameru.
-
-- **Data_Action** – ovo polje nam pomaže da shvatimo koji tip dozvole je tražio od korisnika kao što je kamera ili skladište
-
-- **Data_status** – sadrži vrednosti kao što je dozvoljeno, uskraćen i poricano zauvek, što nam pomaže da shvatimo da li je korisnik prihvatila ili odbacila dozvole za skladištenje i kameru.
-
-
 #### <a name="officelenslenssdksavemedia"></a>Office.Lens.LensSdk.SaveMedia
 
 Ovaj događaj je pozvan kada korisnik klikne na dugme Gotovo i sačuva slike na Android i iOS uređaju. On olakšava merenje nivoa učešća korisnika kvanciranjem korisnika koji završe čuvanjem slika kroz našu aplikaciju.
@@ -5352,105 +5351,22 @@ Prikupljaju se sledeća polja samo za iOS:
 
 #### <a name="officelenslenssdkserviceidmapping"></a>Office.Lens.LensSdk.ServiceIDMapping
 
-Kada se slika uspešno otpremljena u uslugu, ovaj događaj se sakuplja. On označava da će usluga sada pokrenuti jedan ili više poslova da obrađuje sliku i sadrži relevantne ID–ove da bi pomogao u rešavanju procesa. On takođe pomaže u analizi upotrebe različitih funkcija usluge.
+Ovaj događaj se prikuplja kada Lens SDK komunicira sa Microsoft uslugom „Slika u dokument“ (ili I2D). To znači da se događaj zove:
+
+- Kada se slika otpremi u našu I2D uslugu za konverziju i izdvajanje datoteka (OCR).
+- Kada korisnik treba da ispravi izlaz usluge, šaljemo povratne informacije da bismo poboljšali kvalitet.
+
+Podaci se koriste za analizu upotrebe i rešavanje problema na strani usluge.  
 
 Prikupljaju se sledeća polja:
 
-- **CloudConnectorRequestId** –String koji identifikuje zahtev za uslugom koji je napravljen da konvertuje slike koristeći uslugu.
+- **CloudConnectorRequestId** – Niska koja identifikuje zahteve za uslugom klijentske aplikacije za scenarije konverzije i povratnih informacija.
 
-- **I2DserviceProcessID** –String koji identifikuje posao usluge koji koristi određenu subzahtev 
+- **CustomerId** – Ova niska pomaže da mapirate korisnike u zahteve za uslugu i pomogne nam da pratimo korišćenje. UserId je potreban da bi se ispunili GDPR zahtevi jer usluga nije direktno izložena korisnicima, već putem korisnika i identifikuje ukupan broj ljudi koji koriste uslugu, pomažući usluzi da prati obim korisnika koji koriste proizvod. 
 
+- **I2DFeedbackAPICorrelationId** – niska koja identifikuje zahtev za povratne informacije u usluzi I2D kada korisnik ispravi izlaz usluge.
 
-#### <a name="officeiospaywallpaywallpresented"></a>Office.iOS.Paywall.Paywall.Presented
-
-Ova kritična telemetrija korištenja se sakuplja kada se Paywall kontrola prikazuje korisniku i koristi se za razumevanje iskustva kupovine iz aplikacije i optimizaciju iste u budućim verzijama.
-
-Prikupljaju se sledeća polja:
-
-- **mesto unosa** – String – Dugme/Tok odakle je Paywall prikazan. Kao što je "Dugme za premijum nadogradnju" ili "Tok prvog pokretanja"
-
-- **is FRE** – Bulov izraz – Da li pokazujemo Iskustvo prvog pokretanja ili običan korisnički interfejs?
-
-#### <a name="officeiospaywallpaywallstats"></a>Office.iOS.Paywall.Paywall.Stats
-
-Ovi metapodaci zasnovani na sesiji se sakupljaju kada se Paywall korisnički interfejs prikazuje korisniku, trajanju interakcije i tome da li je pokušana kupovina bila uspela ili nije.  Podaci se koriste za razumevanje upotrebe i ispravnosti celokupnog iskustva plaćanja i otklanjanje grešaka, optimizaciju i otklanjanje problema prilikom kupovine iz aplikacije u budućim verzijama.
-
-Prikupljaju se sledeća polja:
-
-- **entryPoint** – niz – dugme/tok s kojeg je prikazan Paywall. Kao što je "Dugme za premijum nadogradnju" ili "Tok prvog pokretanja".
-
-- **is FRE** – Bulov izraz – Da li pokazujemo Iskustvo prvog pokretanja ili običan korisnički interfejs?
-
-- **status** – niska – Status izlaska Paywall-a. Kao što je “initiated”, “paymentDone”, “provisionFailed”
-
-- **Trajanje korisnika** – Duplo – Trajanje u milisekundama koje je korisnik potrošio na Paywall-u
-
-
-#### <a name="officeiospaywallprovisioningresponse"></a>Office.iOS.Paywall.Provisioning.Response
-
-Kritična telemetrija inženjerstva sa uslugom Microsoft Retail Federation Service (RFS) za prikupljanje informacija obezbeđenih u ovom događaju. RFS je interna usluga koja se u okviru korporacije Microsoft koristi za unakrsnu proveru kupovine. Podaci se koriste za dobijanje ispravnosti API poziva upućenog usluzi RFS, što bi pomoglo u razumevanju stope uspešnosti i otklanjanju grešaka u slučaju otkazivanja.
-
-Prikupljaju se sledeća polja:
-
-- **entryPoint** – niska – Dugme/tok sa kojeg je prikazan Paywall. Kao što je „Premium Upgrade Button“ ili „First run flow“
-
-- **failureReason** – niska – Dodaje se samo kada je status „neupeh“. Ukazuje na odgovor na grešku koji je dao RFS odgovor dodeljivanja privilegija.
-
-- **productId** – niska – ID proizvoda usluge App Store za koji je upućen zahtev
-
-- **status** – niska – Uspeh ili Neuspeh, što upućuje na to je li zahtev uspeo ili ne
-
-
-#### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
-
-Kritična telemetrija upotrebe koja ukazuje na to kada korisnik dodirne dugme Kupi. Upotrebljava se za zaključivanje o načinu korišćenja i mernim podacima konverzije za korisnike koji pokušaju da kupe pretplatu u aplikaciji.
-
-Prikupljaju se sledeća polja:
-
-- **entryPoint** – niska – Dugme/tok sa kojeg je prikazan Paywall. Kao što je „Premium Upgrade Button“ ili „First run flow“
-
-- **isdefaultSKU** – Bulova vrednost – Ako korisnik kupuje proizvod, preporučili smo mu ga tako što smo ga podrazumevano prikazali.
-
-- **productId** – niska – ID proizvoda usluge App-store za koji je dodirnuto dugme Kupi
-
-- **toggleCount** – Int – Koliko se puta korisnik prebacivao između prikazivanja različitih proizvoda pre nego što je dodirnuo dugme Kupi u trenutnoj sesiji u usluzi Paywall.
-
-
-#### <a name="officeiospaywallskuchoosermorebenefitsstats"></a>Office.iOS.Paywall.SKUChooser.MoreBenefits.Stats
-
-Ovaj događaj prikuplja funkcije i aplikacije koje korisnik razvija iz "Pogledajte dodatne pogodnosti" i trajanje potrošenog vremena.  Podaci se koriste da se razume upotreba funkcije "Pogledajte sve pogodnosti" i dodatno optimizujete iskustvo u budućim verzijama.
-
-Prikupljaju se sledeća polja:
-
-- **Proširene aplikacije** – Niska – Usluge/aplikacije, razdvojene zarezima, za koje su razvijene pogodnosti.
-
-- **ID proizvoda** – Niska – ID proizvoda u App Store za koji korisnik prikazuje više ponuđenih pogodnosti
-
-- **Trajanje korisnika** – Duplo – Trajanje u milisekundama koje je korisnik proveo na ekranu „Pogodnosti“.
-
-
-### <a name="officeiospaywallskuchooserproductswitched"></a>Office.iOS.Paywall.SKUChooser.ProductSwitched
-
-Telemetrija upotrebe koja prikazuje koliko puta se korisnik prebacuje između različitih SKU-ova pre pokušaja kupovine.
-
-Prikupljaju se sledeća polja:
-
-- **productId** – niska – ID proizvoda usluge App Store na čije prikazivanje se korisnik upravo prebacio sa dostupnih proizvoda u SKU biraču.
-
-
-#### <a name="officeiospaywallskuchooserstats"></a>Office.iOS.Paywall.SKUChooser.Stats
-
-Ova telemetrija korišćenja se prikuplja da bi se videlo kako je korisnik ušao u birač SKU, koliko vremena korisnik provodi na ekranu birača SKU i zašto je izašao iz birača SKU.  Podaci se koriste za razumevanje upotrebe birača SKU-a i optimizaciju iskustva kupovine iz aplikacije u budućim verzijama.
-
-Prikupljaju se sledeća polja:
-
-- **entryPoint** – niz – dugme/tok s kojeg je prikazan Paywall. Kao što je "Dugme za premijum nadogradnju" ili "Tok prvog pokretanja".
-
-- **Razlog napuštanja** – String – Razlog za izlaz iz birača SKU. Kao što je “BuyButton”, “CloseButton
-
-- **is FRE** – Bulov izraz – Da li pokazujemo Iskustvo prvog pokretanja ili običan korisnički interfejs?
-
-- **Trajanje korisnika** – Duplo – Trajanje u milisekundama koje je korisnik proveo na SKU biraču
+- **I2DServiceProcessID** – niska koja identifikuje zahtev za uslugom u usluzi I2D kada korisnik otprema slike radi konverzije.
 
 
 #### <a name="officelivepersonacardconfigurationsetaction"></a>Office.LivePersonaCard.ConfigurationSetAction
@@ -9052,6 +8968,33 @@ Prikupljaju se sledeća polja:
 
 - **RMS.Url** – URL adresa servera Usluge upravljanja pravima
 
+
+#### <a name="surveyfloodgatetriggermet"></a>Survey.Floodgate.TriggerMet
+
+Prati kada uređaj ispuni kriterijume za prikazivanje ankete. Koristi se za procenu ispravnosti procesa aktiviranja ankete, kao i za obezbeđivanje toga da signal koji se koristi za analizu problema klijenata i ispravnosti radi ispravno.
+
+Prikupljaju se sledeća polja: 
+
+- **CampaignId** – identifikator isporučene kampanje usluge
+
+- **SurveyId** – jedinstvena instanca kampanje
+
+- **SurveyType** – identifikuje tip ankete
+
+
+#### <a name="surveyuiformsubmit"></a>Survey.UI.Form.Submit
+
+Prati kada se prosledi anketa. Koristi se za procenu ispravnosti procesa podnošenja ankete, kao i za osiguravanje signala koji se koristi za analizu problema kupaca i da li stanje funkcioniše ispravno.
+
+Prikupljaju se sledeća polja: 
+
+- **CampaignId** – identifikator isporučene kampanje usluge
+
+- **SurveyId** – jedinstvena instanca kampanje
+
+- **SurveyType** – identifikuje tip ankete
+
+
 #### <a name="watchappv2"></a>watchAppV2
 
 Ovaj događaj nam omogućava da otkrijemo i rešimo moguće probleme sa mogućnostima na Apple satu kao što su primanje obaveštenja i odgovaranje na e-poruke.
@@ -12515,16 +12458,6 @@ Prikupljaju se sledeća polja:
 
 - **TypeId** -GUID za interfejs za koji se ovaj metod zove
 
-#### <a name="officeiospaywallfailedscreenretrybuttontap"></a>Office.iOS.Paywall.FailedScreen.RetryButtonTap
-
-Ova telemetrija korišćenja se sakuplja da bi se znalo kada kupovina/obezbeđivanje/aktivacija nije uspela, a korisnik je dodirnuo dugme "Pokušaj ponovo".  Koristi se za rešavanje problema sa scenarijima grešaka u kupovini koji dovode do ponovnog pokušaja i poboljšanja pouzdanosti procesa.
-
-Prikupljaju se sledeća polja:
-
-- **Razlog za neuspeh** – Niska – Označava koji neuspeh korisnik ponovo pokušava. Kao što je "obezbeđivanje nije uspelo", ", "kupovina nije uspela", „aktivacija nije uspela“.
-
-- **ID proizvoda** – Niska – ID proizvoda u App Store za koji korisnik ponovo pokušava neuspeli zahtev
-
 
 #### <a name="officemanageabilityserviceapplypolicy"></a>Office.Manageability.Service.ApplyPolicy
 
@@ -12654,6 +12587,8 @@ Prikupljaju se sledeća polja:
   
 - **BootToStart** – Da li je korisnik odlučio da prikaže početni ekran kada se pokrene ova aplikacija.
 
+- **ChildProcessCount** – broj podređenih procesa koje je pokrenula aplikacija. (samo za Windows)
+
 - **ColdBoot** – Da li je ovo prvi put kada se Office aplikacija pokreće nakon ponovnog pokretanja sistema ili se binarni aplikacije morao učitati sa diska. (samo za macOS/iOS)
 
 - **DeviceModel** – Model uređaja. (samo za macOS/iOS)
@@ -12668,6 +12603,10 @@ Prikupljaju se sledeća polja:
 
 - **FreeMemoryPercentage** – Koji je procenat memorije uređaja slobodan. (samo za Windows)
 
+- **HandleCount** – Broj operativnih sistema kojima je proces otvoren. (samo za Windows)
+
+- **HardFaultCount** – Broj padova preloma stranice za proces. (samo za Windows)
+
 - **InitializationDuration** - Koliko je mikrosekundi bilo potrebo za prvo pokretanje Office procesa.
 
 - **InterruptionMessageId** - Da li je pokretanje prekinuto dijalogom u kome se traži korisnički unos i ID dijaloga.
@@ -12676,13 +12615,23 @@ Prikupljaju se sledeća polja:
 
 - **OpenAsNew** – da li je aplikacija pokrenuta otvaranjem postojećeg dokumenta kao predloška za novi dokument.
 
+- **OtherOperationCount** – Broj izvedenih I/O operacija, osim operacija čitanja i pisanja. (samo za Windows)
+
+- **OtherTransferCount** – broj bajtova preneti tokom operacija koje se ne prenose, osim operacija čitanja i pisanja. (samo za Windows)
+
 - **PageFaultCount** – Broj padova stranice za proces. (samo za Windows)
 
 - **PrimaryDiskType** – Da li je primarni uređaj za skladištenje solid state uređaj ili rotaciona disk jedinica i njegova rotaciona disk jedinica, ako je primenjivo. (samo za macOS/iOS)
 
 - **PrivateCommitUsageMB** – Trošak izvršenja (tj. količina memorije koju je menadžer memorije izvršio za ovaj proces) u megabajtima za ovaj proces. (samo za Windows)
 
+- **PrivateWorkingSetMB** – Količina memorije u megabajtima u radnom skupu procesa koja se ne deli sa drugim procesima. (samo za Windows)
+
 - **Broj procesora** – Broj procesora u uređaju. (samo za macOS/iOS)
+
+- **ReadOperationCount** – broj izvršenih operacija čitanja. (samo za Windows)
+
+- **ReadTransferCount** – broj pročitanih bajtova.
 
 - **TotalPhysicalMemory** – Ukupna količina fizičke memorije u uređaju. (samo za macOS/iOS)
 
@@ -12691,6 +12640,10 @@ Prikupljaju se sledeća polja:
 - **VirtualSetMB** – Količina memorije u megabajtima u virtualnom skupu procesa. (samo za macOS/iOS)
 
 - **WorkingSetPeakMB** – najveća količina memorije u megabajtima koja je do sada bila u radnom skupu procesa.
+
+- **WriteOperationCount** – broj izvršenih operacija pisanja. (samo za Windows)
+
+- **WriteTransferCount** – broj pisanih bajtova. (samo za Windows)
 
 
 #### <a name="officepowerpointpptandroidrehearseview"></a>Office.PowerPoint.PPT.Android.RehearseView
@@ -13890,6 +13843,30 @@ Prikupljaju se sledeća polja:
   - **Data\_TagCount** - Broj svih grešaka do kojih je došlo
 
   - **Data\_TagID** - Identifikator greške do koje je došlo
+
+
+#### <a name="officeofficemobilepersonalizedcampaigningerrors"></a>Office.OfficeMobile.PersonalizedCampaigning.Errors
+
+Da bi povećao svest o funkcijama sistema Office Mobile koje korisnici još nisu istražili, Office Mobile se integriše sa IRIS-om za podršku u aplikacijama i prosleđenim obaveštenjima. U slučaju obaveštenja u aplikaciji, on snima greške koje se dešavaju tokom povlačenja ili prikazivanja obaveštenja i kada korisnik vrši interakciju sa obaveštenjem, kao i pružanje povratnih informacija IRIS serveru. U slučaju prosleđenih obaveštenja, snima greške koje se dešavaju tokom prikazivanja obaveštenja i kada korisnik stupi u interakciju sa obaveštenjem.
+
+Prikupljaju se sledeća polja:
+
+- **Class** – ime klase u kojoj se pojavila greška
+
+- **CreativeId** – ID obaveštenja koje jedinstveno identifikuje obaveštenje i njegov sadržaj.
+
+- **ErrorDetails** – Detalji o grešci
+
+- **ErrorMessage** – Poruka o grešci.
+
+- **ErrorReason** – najsloženiji razlog greške
+
+- **Method** – ime funkcije u kojoj se pojavila greška.
+
+- **RequestParams** – Zahtevajte parametre koji se koriste prilikom kontaktiranja IRIS servera radi povlačenja obaveštenja.
+
+- **SurfaceId** – ID površine na kojoj će se prikazati obaveštenje.
+
 
 #### <a name="officeoutlookdesktopcalendaracceptcalsharenavigatetosharedfoldererror"></a>Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder.Error
 
