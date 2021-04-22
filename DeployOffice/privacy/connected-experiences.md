@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije Office administratorima o povezanim iskustvima za Office, kao što su iskustva koja analiziraju sadržaj ili iskustva koja preuzimaju sadržaj na mreži.
 hideEdit: true
-ms.openlocfilehash: d7c4af6af94025136ab09f0709d8c65382f456dd
-ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
+ms.openlocfilehash: c1fb64bc45ed9e97cde37541dad85162a5a3699c
+ms.sourcegitcommit: 54b9d411bb6a021fb6db8df4acfb28287693c84c
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51181276"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51916101"
 ---
 # <a name="connected-experiences-in-office"></a>Povezana iskustva u sistemu Office
 
@@ -36,16 +36,16 @@ Sledeća tabela sadrži spisak povezanih iskustava koja analiziraju vaš sadrža
 | **Ime**   | **Više informacija**   |
 | ----------- | ------------------ |
 | *3D mape*\*    | [Prvi koraci uz 3D mape](https://support.microsoft.com/office/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
+| Analizirajte podatake (prethodno imenovane ideje) | [Analizirajte podatake u programu Excel](https://support.microsoft.com/office/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
 |Automatsko popravljanje|[Brzo i lako poravnajte sadržaj uz Automatsko popravljanje](https://support.microsoft.com/office/b5ec9a1e-f955-46d5-a91b-f236459525b4)|
 | Automatsko alternativni txt   | [Sve što treba da znate da biste napisali efikasan alternativni tekst](https://support.microsoft.com/office/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
 |Preporuke grafikona (Excel za veb)|[Kreiranje grafikona pomoću preporučenih grafikona](https://support.microsoft.com/office/cd131b77-79c7-4537-a438-8db20cea84c0#ID0EAADAAA=Web)|
 |Dodaci za Beležnicu za razred (OneNote)|[Prvi koraci uz OneNote beležnicu za razred: uputstva za nastavnike](https://support.microsoft.com/office/28666b8e-b0ae-48fe-b001-1874f5f6db58)|
 | Tipovi podataka| [Tipovi Excel podataka: „Deonice“ i „Geografija“](https://support.microsoft.com/office/61a33056-9935-484f-8ac8-f1a89e210877)   |
 |Dizajner (Word za Veb)|[Koristite Dizajner da biste kreirali dokumente sa doteranim izgledom](https://support.microsoft.com/office/97844bd3-b52d-4c94-9deb-b51db7f36d91    )|
-| Diktiranje  | [Diktiranje dokumenata u programu Word](https://support.microsoft.com/office/d4fd296e-8f15-4168-afec-1f95b13a6408) |
+| Diktiranje  | [Diktirajte u programu Microsoft 365](https://support.microsoft.com/office/eab203e1-d030-43c1-84ef-999b0b9675fe) |
 |Uređivač<sup>1</sup> |[Microsoft uređivač proverava gramatiku i još mnogo toga u dokumentima, pošti i na vebu](https://support.microsoft.com/office/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
 |Intuitivne veze u usluzi Outlook |[Intuitivnija imena veza u e-pošti](https://support.microsoft.com/office/02040f47-bd56-4806-8311-fc913fed54c0)|
-| Ideje     | [Ideje u programu Excel](https://support.microsoft.com/office/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
 | Mastilo u tekst, mastilo u oblik, mastilo u matematički izraz | [Promenite rukopis u oblike, tekst ili matematički izraz u programu PowerPoint za Microsoft 365](https://support.microsoft.com/office/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Umetanje podataka iz slike| [Umetanje podataka iz slike](https://support.microsoft.com/office/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 |Alatke za učenje|[Alatke za učenje](https://support.microsoft.com/office/eff7f7e3-7e21-42f0-a6f1-da7027f98261)|
@@ -103,6 +103,7 @@ Sledeća tabela sadrži spisak povezanih iskustava koja preuzimaju sadržaj na i
 | Predlošci  | [Preuzimanje besplatnih, unapred urađenih predložaka](https://support.microsoft.com/office/29f2a18d-29a6-4a07-998b-cfe5ff7ffbbb)  |
 |*Procenjuje se vreme putovanja u kartici „Sledi“*\*|Kada odlučite da omogućite programu Outlook za iOS i Android da pristupe lokaciji, procenjeno vreme putovanja do sledećeg događaja biće uključeno u [karticu „Sledi“](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e) na vrhu prijemnog poštanskog sandučeta.<br/><br/> [Šta su to obaveštenja „Vreme za odlazak“?](https://support.microsoft.com/office/ff4896c5-d3a7-40ef-8954-e5c99e8b88bd)|
 | *Outlook traka vremenske prognoze*\*| [Menjanje grada na traci „Vremenska prognoza“ u kalendaru](https://support.microsoft.com/office/D11B7532-7C58-489E-8103-5CC5D727B06B) |
+|*Vremenska prognoza na kalendaru*\* (Outlook mobile)|[Kako da uključim vremensku prognozu u kalendaru u programu Outlook Mobile?](https://support.microsoft.com/office/04c48f70-4780-47d6-bc2e-d77d2f4c4ef2)|
 
 > [!NOTE]
 >\*Kada su korisnici prijavljeni sa poslovnim ili školskim nalogom, povezana iskustva navedena gore u kurzivu nisu obavezna i pružaju se po uslovima[Microsoft ugovor o pružanju usluga](https://www.microsoft.com/servicesagreement)i[izjave o privatnosti](https://privacy.microsoft.com/), a mogu se primeniti i drugi uslovi. Za više informacija, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md). Ako ste administrator, ova povezana iskustva mogu biti upravljana kontrolom privatnosti za povezana iskustva ili u postavci privatnosti *Dozvoljavanje upotrebe dodatnih opcionalnih povezanih iskustava u sistemu Office*.

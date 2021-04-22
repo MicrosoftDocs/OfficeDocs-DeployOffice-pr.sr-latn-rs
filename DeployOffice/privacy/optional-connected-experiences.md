@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: d651fb94cb031a0fc1a154201e2875c28f979f2a
-ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
+ms.openlocfilehash: 8a5f236c3dbb2cb3bb61a9a987f764880987a189
+ms.sourcegitcommit: 54b9d411bb6a021fb6db8df4acfb28287693c84c
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51181745"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51914959"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
@@ -43,6 +43,7 @@ Bing omogućava sledeća iskustva u usluzi Outlook za iOS i Android:
 - **Predlozi lokacija:**   Kada u stavku kalendara dodate neko javno mesto sa adresom, Outlook za iOS i Android takođe će u polju Lokacija uključiti celu adresu.
 - **Zanimljivi kalendari:** Možete da se [pretplatite](https://support.microsoft.com/office/cff1429c-5af6-41ec-a5b4-74f2c278e98c)na kalendare o vašim omiljenim sportskim timovima ili o TV emisijama.
 - **Vreme putovanja u kartici „Sledi“:** predstojeći događaj će biti rezimiran na vrhu prijemnog poštanskog sandučeta e-pošte u kartici koja se zove [„Sledi“](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e). U programu Outlook za android, ovo iskustvo zahteva Bing mape kako bi obezbedilo predviđeno vreme putovanja.
+- **Vremenska prognoza u kalendaru:** vremenska [prognoza](https://support.microsoft.com/office/04c48f70-4780-47d6-bc2e-d77d2f4c4ef2) za trenutnu lokaciju pojaviće se na vrhu ekrana kalendara.
 
  Ova iskustva koja se oslanjaju na Bing su za vas licencirana pod uslovima[Microsoft ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i pokrivena su [izjavom o privatnosti](https://privacy.microsoft.com/). Svi upiti za pretragu koje unesete za organizaciju u usluzi Microsoft 365 Apps za preduzeće dok koristite ove usluge šalju se usluzi Microsoft Bing. Bing organizacija ih ne povezuje sa vama.
 
