@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: d71859f75046ad13901aae1b381bf97227f05383
-ms.sourcegitcommit: 8982800d8026ec2f82e8389b7dfa762381258874
+ms.openlocfilehash: d3e5ca5381c9fb68a1e05fca703729e282593ded
+ms.sourcegitcommit: cb1f6e3ba1336fc1a8cdca927f545dc43fd8e829
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51891218"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52308159"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -47,7 +47,7 @@ Sledeća tabela sadrži listu osnovnih usluga za Office i njihov opis.
 
 | **Usluga**  | **Opis**  |
 | ------ | ---- |
-| [Potvrda identiteta](#authentication-events) | Potvrda identiteta je usluga koja se nalazi na bilo kom uređaju i koja potvrđuje vaš korisnički identitet u sistemu Office.  Ona je potrebna za prijavljivanje u Office, aktiviranje Office licence, pristup vašim datotekama koje su uskladištene u oblaku i za pružanje doslednog iskustva u svim Office sesijama i uređajima.    |
+| [Potvrda identiteta](#authentication-events) | Potvrda identiteta je usluga koja se nalazi na bilo kom uređaju i koja potvrđuje vaš korisnički identitet u sistemu Office. Ona je potrebna za prijavljivanje u Office, aktiviranje Office licence, pristup vašim datotekama koje su uskladištene u oblaku i za pružanje doslednog iskustva u svim Office sesijama i uređajima.    |
 | [Klikni i pokreni](#click-to-run-events) | „Klikni i pokreni“ je tehnologija instaliranja koja se koristi za instalaciju i ažuriranje sistema Office na operativnom sistemu Windows. Ona proverava da li postoje nove verzije sistema Office, a kada nova verzija postane dostupna, preuzima je i instalira.  „Klikni i pokreni“ će otkrivati potrebu za preuzimanjem i instaliranjem Office ispravki, kao i bezbednosnih zakrpi.     |
 | [Usluga poboljšane konfiguracije (UPK)](#enhanced-configuration-service-ecs-events) | UPK omogućava korporaciji Microsoft da ponovo konfiguriše instalacije sistema Office, a da vi ne morate ponovo da ga instalirate. Koristi se za kontrolu postepenog objavljivanja funkcija i ažuriranja, dok se uticaj objavljivanja nadgleda preko dijagnostičkih podataka koji se prikupljaju. Takođe se koristi i za smanjivanje bezbednosnih problema i problema performansi uz pomoć funkcija ili ažuriranja. Osim toga, UPK podržava promene u konfiguraciji koje se odnose na dijagnostičke podatke kako bi se obezbedilo prikupljanje odgovarajućih događaja. |
 | [Licenciranje](#licensing-events)     | Licenciranje je usluga zasnovana na tehnologiji oblaka koja održava vašu Office aktivaciju tokom novih instalacija i čuva licencu na vašim uređajima nakon aktivacije. Ona registruje svaki od vaših uređaja i aktivira Office, provera status vaše pretplate na sistem Office i upravlja vašom šifrom proizvoda.    |
@@ -898,7 +898,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="onenotesigninssoexternalappsaccountfound"></a>OneNote.SignIn.SSOExternalAppsAccountFound
  
-Ovaj događaj se evidentira kada se na listi naloga, koju obezbeđuje TokenSharingManager, nalazi nalog sa važećim tokenom osvežavanja.  Ovaj slučaj je specifičan za jedinstveno prijavljivanje (SSO).
+Ovaj događaj se evidentira kada se na listi naloga, koju obezbeđuje TokenSharingManager, nalazi nalog sa važećim tokenom osvežavanja.Ovaj slučaj je specifičan za jedinstveno prijavljivanje (SSO).
  
 Prikupljaju se sledeća polja:
  
@@ -1168,7 +1168,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -1266,7 +1266,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeclicktorunscenarioinstalltaskfinalintegrate"></a>Office.ClickToRun.Scenario.InstallTaskFinalintegrate
 
-Podešavanje sistema Office i prikupljanje podataka o zalihama kada instalacioni program za Office instalira licence i postavke registratora. Koristi se za merenje uspeha / neuspeha instalacije sistema Office.
+Podešavanje sistema Office i prikupljanje podataka o zalihama kada instalacioni program Office instalira licence i postavke registra. Koristi se za merenje uspeha / neuspeha instalacije sistema Office.
 
 Prikupljaju se sledeća polja:
 
@@ -1320,7 +1320,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -1418,7 +1418,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeclicktorunscenarioinstalltaskinitupdates"></a>Office.ClickToRun.Scenario.InstallTaskInitupdates
 
-Podešavanje sistema Office i prikupljanje podataka o zalihama kada instalacioni program za Office kreira postavke da bi ažuriranja radila ispravno. Koristi se za merenje uspeha / neuspeha instalacije sistema Office.
+Podešavanje sistema Office i prikupljanje podataka o zalihama kada instalacioni program za Office kreira postavke da bi ispravke ispravno funkcionisale. Koristi se za merenje uspeha / neuspeha instalacije sistema Office.
 
 Prikupljaju se sledeća polja:
 
@@ -1472,7 +1472,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -1548,7 +1548,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName  –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -1570,7 +1570,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeclicktorunscenarioinstalltasklastrun"></a>Office.ClickToRun.Scenario.InstallTaskLastrun
 
-Podešavanje sistema Office i prikupljanje podataka o zalihama kada instalacioni program za Office završava instalaciju, kači prečice i kreira konačne postavke registratora. Koristi se za merenje uspeha / neuspeha instalacije sistema Office.
+Podaci o podešavanju sistema Office i inventar prikupljaju se kada instalacioni program Office završava instalaciju, zakači prečice i kreira konačna podešavanja registra. Koristi se za merenje uspeha / neuspeha instalacije sistema Office. Koristi se za merenje uspeha / neuspeha instalacije sistema Office.
 
 Prikupljaju se sledeća polja:
 
@@ -1624,7 +1624,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut. npr. instaliranje
+  - **Data\_ScenarioName  –** koji scenario je pokrenut, npr. instaliranje
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -1700,7 +1700,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut. npr. instaliranje
+  - **Data\_ScenarioName  –** koji scenario je pokrenut, npr. instaliranje
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -1722,7 +1722,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeclicktorunscenarioinstalltaskpublishrsod"></a>Office.ClickToRun.Scenario.InstallTaskPublishrsod
 
-Podešavanje sistema Office i prikupljanje podataka o zalihama kada instalacioni program za Office objavljuje virtuelni registrator za virtuelizaciju AppV sloja. Koristi se za merenje uspeha / neuspeha instalacije sistema Office.
+Podaci o podešavanju sistema Office i inventar prikupljeni kada Office instalacioni program objavljuje virtuelni registar za sloj virtuelizacije AppV. Koristi se za merenje uspeha / neuspeha instalacije sistema Office. Koristi se za merenje uspeha / neuspeha instalacije sistema Office.
 
 Prikupljaju se sledeća polja:
 
@@ -1852,7 +1852,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -1928,7 +1928,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -2004,7 +2004,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -2080,7 +2080,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -2156,7 +2156,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -2232,7 +2232,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -2308,7 +2308,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -2384,7 +2384,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -2460,7 +2460,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -2546,7 +2546,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -2708,7 +2708,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -2796,7 +2796,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -2872,7 +2872,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName -** koji scenario je pokrenut. npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
   - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
@@ -3053,7 +3053,7 @@ Izveštava o radnji koja donosi programske odluke u vezi sa unosom prikupljenim 
 
 ### <a name="officeclicktorununiversalbootstrappercollectembeddedsignature"></a>Office.ClickToRun.UniversalBootstrapper.CollectEmbeddedSignature
 
-Izveštava o radnji koja čita označeni unos iz ugrađenog potpisa izvršne datoteke.  Ovo je nedokazani koncept koji prethodna iteracija izvršne datoteke setup.exe nije primenila i to je ono na šta se oslanjamo prilikom prenošenja izbora korisnika u vezi sa proizvodom/jezikom/brojem bitova sa veb stranice u proces unutar izvršne datoteke setup.exe.
+Izveštava o radnji koja čita označeni unos iz ugrađenog potpisa izvršne datoteke. Ovo je nedokazani koncept koji prethodna iteracija izvršne datoteke setup.exe nije primenila i to je ono na šta se oslanjamo prilikom prenošenja izbora korisnika u vezi sa proizvodom/jezikom/brojem bitova sa veb stranice u proces unutar izvršne datoteke setup.exe.
  
 - **ErrorCode –**    Ceo broj povezan sa nekontrolisanim izuzetkom
 
@@ -3277,7 +3277,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeandroiddocsuipaywallcontrolpaywalluishown"></a>Office.Android.DocsUI.PaywallControl.PaywallUIShown
 
-Kritična telemetrija upotrebe kada se korisniku prikazuje kontrola Paywall. Upotrebljava se za razumevanje iskustva kupovine aplikacije za korisnika i optimizaciju istog za buduće verzije.
+Kritična telemetrija korištenja kada se Paywall kontrola prikazuje korisniku. Koristi se za razumevanje iskustva kupovine iz aplikacije i optimizaciju iste u budućim verzijama.
 
 Prikupljaju se sledeća polja:
 
@@ -3644,7 +3644,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officelicensingdialogswebviewdialoghandleerrornotification"></a>Office.Licensing.Dialogs.WebViewDialog.HandleErrorNotification
  
-Ovaj događaj se koristi kao signal koji nam govori da je iskustvo kupovine u aplikaciji pokušalo da se učita, ali došlo je do greške zbog koje se dijalog nije prikazao. Podaci se koriste za nadgledanje i upozoravanje na stanje toka kupovine u aplikaciji kako bi se osiguralo da radi kako se očekuje.  
+Ovaj događaj se koristi kao signal koji nam govori da je iskustvo kupovine u aplikaciji pokušalo da se učita. Podaci se koriste za nadgledanje i upozoravanje na stanje toka kupovine u aplikaciji kako bi se osiguralo da radi kako se očekuje.  
  
 Prikupljaju se sledeća polja:
   
@@ -3685,7 +3685,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officelicensingexpirationdialogshown"></a>Office.Licensing.ExpirationDialogShown
 
-Ovo se prikuplja prilikom prikazivanja dijaloga korisniku koji kaže da mu je licenca istekla. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu i ne nedostaje mu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru
+Ovo se prikuplja kada korisniku prikažemo dijalog isteka koji pokazuje da je njihova licenca istekla. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu i da li ima svu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru.
 
 Prikupljaju se sledeća polja:
 
@@ -3718,6 +3718,29 @@ Prikupljaju se sledeća polja:
 - **EntitlementCount** - Broj prava koji korisnik poseduje
 
 
+### <a name="officelicensinggetnextuserlicense"></a>Office.Licensing.GetNextUserLicense
+
+Ovaj događaj se pokreće prilikom dobavljanja licence za izabrano Office pravo zasnovano na korisniku tokom iskustva sa prvim pokretanjem aktivacije. Ove podatke koristimo za nadgledanje ispravnosti sistema i usluga.
+
+Prikupljaju se sledeća polja:
+
+- **Activity_Success** – Bulov: govori nam da li smo uspešno preuzeli licencu za uređaj koji će se aktivirati u njegovoj Office aplikaciji.
+
+- **Data_AllowNULPerpetual** – Bulov: govori nam je li uključen let za omogućavanje funkcije vNext Perpetual.
+
+- **Data_AttemptNulReactivation** – Bulov: govori nam da li je ovo scenario reaktivacije.
+
+- **Data_CurrentMode** – 0 znači SPP (zadati stek licenciranja), 2 znači vNext (moderni stek licenciranja).
+
+- **Data_HasError** – Bulov: govori nam da li smo imali grešku prilikom pokušaja dobijanja licence za izabrano pravo zasnovano na korisniku.
+
+- **Data_IsSubscription** – Bulov: govori nam da li je ponovno aktiviranje za office pretplatu.
+
+- **Data_NewMode** – 0 znači SPP (zadati stek licenciranja), 2 znači vNext (moderni stek licenciranja). Većinu vremena bismo trebali očekivati 2.
+
+- **Data_SkuToSkuNeeded** – Bulov: govori nam da li treba da izvršimo konverziju SKU u SKU zbog toga što naslovljeni Office SKU ne odgovara instaliranom Office SKU-u.
+
+
 ### <a name="officelicensingheartbeat"></a>Office.Licensing.Heartbeat 
 
 Prilikom svake sesije proveravamo da li je prošlo 72 sata od poslednje obnove licence i pokušavamo da produžimo rok isteka trenutne licence. Ovaj događaj izveštava o uspešnosti ili neuspešnosti poziva koji smo uputili da bismo proverili da li možemo da produžimo rok isteka licence i da korisnikovu instalaciju sistema Office održimo u funkciji. Od suštinske je važnosti pri dijagnostikovanju korisnikovih problema vezanih za pretplatu i uslugu, kao i za otkrivanje regresija kod korisnika koji su već aktivirali pretplatu.
@@ -3748,7 +3771,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officelicensinginrfm"></a>Office.Licensing.InRFM 
 
-Ako uređaj uđe u režim smanjene funkcionalnosti, šaljemo ovaj signal da bismo naznačili da se računar ne nalazi u ispravnom stanju. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu,a nedostaje mu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru
+Ako uređaj uđe u režim smanjene funkcionalnosti, šaljemo ovaj signal da bismo ukazali da računar nije u zdravom stanju. Ključno je u otkrivanju da li je korisnik u dobrom stanju i nedostaje mu funkcionalnost, koristi li se za zdravlje sistema i koristi u dijagnostičke svrhe ako korisnik prijavi problem sa svojim računarom
 
 Prikupljaju se sledeća polja:
 
@@ -3774,7 +3797,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officelicensinginvokelicensewizard"></a>Office.Licensing.InvokeLicenseWizard
 
-U slučaju da uočimo probleme s tokom rada aktivacije, pokrećemo čarobnjak za licencu i šaljemo ovaj signal da ukazuje na isto. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu i ne nedostaje mu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru
+U slučaju da primetimo probleme sa tokom posla aktivacije, pokrećemo čarobnjaka za licenciranje i šaljemo signal koji to naznačava. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu i da li ima svu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru.
 
 Prikupljaju se sledeća polja:
 
@@ -3798,7 +3821,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officelicensinglicexitofficeprocess"></a>Office.Licensing.LicExitOfficeProcess 
 
-Ako dođe do zatvaranja ili pada sistema Office zbog problema sa licenciranjem, šaljemo ovaj signal da bismo to naznačili. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu i ne nedostaje mu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru.
+Ako dođe do zatvaranja ili pada sistema Office zbog problema sa licenciranjem, šaljemo ovaj signal da bismo to naznačili. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu i da li ima svu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru.
 
 Prikupljaju se sledeća polja:
 
@@ -4228,7 +4251,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officelicensingusegracekey"></a>Office.Licensing.UseGraceKey
 
-Ako iz nekog razloga nismo u mogućnosti da licenciramo korisnika, instaliramo „grejs“ ključ i šaljemo signal koji to označava. Od suštinske je važnosti za određivanje da li se korisnik nalazi u dobrom statusu,a nedostaje mu funkcionalnost, za ispravnost sistema i za dijagnostičke svrhe ako korisnik prijavi problem na računaru
+Ako iz nekog razloga nismo u mogućnosti da licenciramo korisnika, instaliramo „grejs“ ključ i šaljemo signal koji to označava. Iz nekog razloga, ako ne možemo da licenciramo korisnika, instaliramo grejs ključ i šaljemo ovaj signal koji označava. 
 
 Prikupljaju se sledeća polja:
 
@@ -4246,7 +4269,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="skuproductpricenullevent"></a>SKU.PRODUCT.PRICE.NULL.EVENT
 
-Ovaj događaj se koristi za evidentiranje događaja radi kvantifikovanja uticaja greške zbog koje korisnici danas vide "Bez vrednosti" umesto cene na SKU ekrana za biranje. Greška će se dalje dijagnostikovati kako bi se utvrdila ispravka. 
+Ovaj događaj se koristi za evidentiranje događaja radi kvantifikovanja uticaja greške zbog koje korisnici danas vide "Bez vrednosti" umesto cene na SKU ekrana za biranje.Greška će se dalje dijagnostikovati kako bi se utvrdila ispravka. 
 
 Prikupljaju se sledeća polja:
 
@@ -5127,7 +5150,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="controllercheckwindownoupdatefoundok"></a>controller.checkwindow.noupdatefoundok
 
-Ovaj događaj označava da provera ažuriranja nije našla ažuriranja. Koristimo ga da bismo obezbedili da se ispravke nude na odgovarajući način, za optimizaciju opterećenja usluge i definisanje toga koliko često treba proveravati da li postoje ispravke. Želimo i da optimizujemo učestalost izdavanja na osnovu očekivanja korisnika u vezi sa ispravkama.
+Ovaj događaj pokazuje da se proverom da li postoje ispravke nisu pronašle nikakve ispravke. Koristimo ga da bismo obezbedili da se ispravke nude na odgovarajući način, za optimizaciju opterećenja usluge i definisanje toga koliko često treba proveravati da li postoje ispravke. Želimo i da optimizujemo učestalost izdavanja na osnovu očekivanja korisnika u vezi sa ispravkama.
 
 Prikupljaju se sledeća polja:
 
@@ -5333,7 +5356,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="controllercheckwindowuptodate"></a>controller.checkwindow.uptodate
 
-Ovaj događaj pokazuje da tokom procesa provere da li postoje ispravke nisu pronađene ispravke jer su aplikacije na uređaju ažurirane.  Koristimo ga da bismo obezbedili da se ispravke nude na odgovarajući način.
+Ovaj događaj pokazuje da tokom procesa provere da li postoje ispravke nisu pronađene ispravke jer su aplikacije na uređaju ažurirane. Koristimo ga da bismo obezbedili da se ispravke nude na odgovarajući način.
 
 Prikupljaju se sledeća polja:
 
@@ -12038,7 +12061,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="msupdatemonitorprogressdownloaded"></a>msupdate.monitor.progress.downloaded
 
-Ovaj događaj pokazuje da su ispravke preuzete. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj pokazuje da su ispravke preuzete. Ovaj događaj koristimo da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -15523,7 +15546,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
  
-Ovaj događaj evidentira rezultat sinhronizacije beležnice. Koristi se za otkrivanje broja jedinstvenih ciljeva sinhronizacije kada se izračunava rezultat sinhronizacije programa OneNote.
+Ovaj događaj evidentira rezultat sinhronizacije beležnice. Koristi se za otkrivanje koliko jedinstvenih ciljeva sinhronizacije se koristi prilikom izračunavanja rezultata OneNote sinhronizacije.
  
 Prikupljaju se sledeća polja
 
@@ -15908,7 +15931,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="onenotesyncfirstrunerror"></a>OneNote.Sync.FirstRunError
  
-Ovaj događaj se evidentira kada korisniku ne uspe sinhronizacija brzih beležaka tokom „Utiska pri prvom pokretanju“ na uređaju.  Ovo je specifično za slučaj „Prvog pokretanja“.
+Ovaj događaj se evidentira kada korisniku ne uspe sinhronizacija brzih beležaka tokom „Utiska pri prvom pokretanju“ na uređaju. Ovo je specifično za slučaj „Prvog pokretanja“.
  
 Prikupljaju se sledeća polja:
  
@@ -15933,6 +15956,10 @@ Prikupljaju se sledeća polja:
 - **action_type** – izvršena radnja, kao što je pokretanje sastanka ili instaliranje aplikacije
 
 - **aplication** – Aplikacija koja je pokrenuta putem duboke veze, kao što su Teams ili Skype za posao
+
+- **context** – Iskustvo do kojeg se došlo unutar aplikacije, npr. Office_union – word, office_union – excel itd.
+
+- **source** – Poreklo radnje, na primer pokrenuto od korisnika, automatski od strane klijenta itd.
 
 
 ### <a name="officeandroiddocsuipaywallcontrolpaywalloperationmetrics"></a>Office.Android.DocsUI.PaywallControl.PaywallOperationMetrics
@@ -16791,15 +16818,17 @@ Događaj pokreće abnormalni završetak aplikacije (primer: zatvaranje upravlja
 
 Prikupljaju se sledeća polja:
 
-  - **AffectedProcessAppBuild -** Identifikator izdanja verzije ugroženog procesa.
+  - **AffectedProcessAppBuild -** Identifikator izdanja verzije ugroženog procesa. *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
-  - **AffectedProcessAppBuildRevision -** Identifikator izdanja revizije ugroženog procesa.
+  - **AffectedProcessAppBuildRevision -** Identifikator izdanja revizije ugroženog procesa. *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
-  - **AffectedProcessAppMajorVer** – Identifikator međuverzije pogođenog procesa.
+  - **AffectedProcessAppMajorVer** – Identifikator međuverzije pogođenog procesa. *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
-  - **AffectedProcessAppMinorVer -** Identifikator međuverzije ugroženog procesa.
+  - **AffectedProcessAppMinorVer -** Identifikator međuverzije ugroženog procesa. *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
   - **AffectedProcessAppName -** Ime ugroženog procesa. *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
+  
+  - **AffectedProcessAppVersion** – Identifikator verzije ugroženog procesa.
 
   - **AffectedProcessExeBuildVersion –** Broj izdanja verzije ugroženog procesa. *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
@@ -16985,6 +17014,8 @@ Prikupljaju se sledeća polja:
   - **BucketId** – Watson identifikator grupe za pad
  
   - **CabGuid** – univerzalni jedinstveni identifikator (GUID) za Watson cab.
+
+  - **CallStack** – Microsoft interni stek poziva koji izaziva pad.
 
   - **CrashedAppBuild** – verzija izdanja pogođenog procesa. *[Ovo polje je uklonjeno iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
@@ -17433,7 +17464,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officetelemetryrulesenginediskthrottled"></a>Office.Telemetry.RulesEngineDiskThrottled
 
-Ograničavanje DQ metrike. Potrebno je za pouzdanost svih drugih podataka.
+Isključivanje DQ metrike. Potrebno je za pouzdanost svih drugih podataka.
 
 Prikupljaju se sledeća polja:
 
@@ -17447,13 +17478,13 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officetelemetryrulesenginemediumcostthrottled"></a>Office.Telemetry.RulesEngineMediumCostThrottled
 
-Ograničavanje DQ metrike. Potrebno je za pouzdanost svih drugih podataka.
+Isključivanje DQ metrike. Potrebno je za pouzdanost svih drugih podataka.
 
 Ovaj događaj ne prikuplja polja.
 
 ### <a name="officetelemetryrulesenginespikethrottled"></a>Office.Telemetry.RulesEngineSpikeThrottled
 
-Ograničavanje DQ metrike. Potrebno je za pouzdanost svih drugih podataka.
+Isključivanje DQ metrike. Potrebno je za pouzdanost svih drugih podataka.
 
 Prikupljaju se sledeća polja:
 
@@ -17475,7 +17506,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officetelemetryrulesenginethrottled"></a>Office.Telemetry.RulesEngineThrottled
 
-Ograničavanje DQ metrike. Potrebno je za pouzdanost svih drugih podataka.
+Isključivanje DQ metrike. Potrebno je za pouzdanost svih drugih podataka.
 
 Prikupljaju se sledeća polja:
 
