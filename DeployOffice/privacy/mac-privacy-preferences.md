@@ -14,14 +14,17 @@ ms.custom:
 - Ent_Office_Mac
 description: Administratorima sistema Office pruža informacije o tome kako da upravljaju kontrolama privatnosti u sistemu Office za Mac.
 hideEdit: true
-ms.openlocfilehash: d23d1288adf823888c900b44acd5bc905037cd94
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: b7beda7409cff00d54f36851eb21e4d66a8cacce
+ms.sourcegitcommit: 9b5f18c543c286c95e546e22fc8edb60ef541030
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43992887"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "52578386"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-for-mac"></a>Korišćenje željenih postavki za upravljanje kontrolama privatnosti u sistemu Office za Mac
+
+> [!NOTE]
+> Za listu Office proizvoda koji su obuhvaćeni ovim informacijama o privatnosti, pogledajte [„Dostupne kontrole privatnosti za Office proizvode“](products-versions-privacy-controls.md).
 
 Počevši od verzije 16.28 sistema Office za Mac, postoje nove željene postavke koje će vam omogućiti da kontrolišete postavke vezane za sledeće:
 
@@ -54,21 +57,20 @@ Ove nove postavke željenih opcija su CFPreferences API kompatibilne i mogu se p
 
 ## <a name="preference-setting-for-diagnostic-data"></a>Postavka željenih opcija za dijagnostičke podatke
 
-Dijagnostički podaci se koriste da bi Office bio bezbedan i ažuriran, da bi se otkrili i otklonili problemi i da bi se poboljšao proizvod. Više informacija potražite u članku [Dijagnostički podaci koji se šalju iz usluge Microsoft 365 Apps za preduzeće korporaciji Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft).
+Dijagnostički podaci se koriste da bi Office bio bezbedan i ažuriran, da bi se otkrili i otklonili problemi i da bi se poboljšao proizvod. Više informacija potražite u članku [Dijagnostički podaci koji se šalju iz Microsoft 365 aplikacija za velika preduzeća korporaciji Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft).
 
-|||
+|Kategorija|Detalji|
 |:-----|:-----|
 |**Prioritetni domen**  | `com.microsoft.office` |
 |**Taster**  | `DiagnosticDataTypePreference`  |
 |**Tip podataka**  | Niska |
-|**Moguće vrednosti**  | `BasicDiagnosticData` *(ovo postavlja nivo na Obavezno)* <br/> `FullDiagnosticData` *(ovo postavlja nivo na Opcionalno)* <br/> `ZeroDiagnosticData` *(ovo postavlja nivo na Nijedno)* |
+|**Moguće vrednosti**  | `BasicDiagnosticData` *(ova vrednost postavlja nivo na Obavezno)* <br/> `FullDiagnosticData` *(ova vrednost postavlja nivo na Opcionalno)* <br/> `ZeroDiagnosticData` *(ova vrednost postavlja nivo na Nijedno)* |
 |**Dostupnost** |16.28 i novije verzije |
 
-Počevši od novijih instalacija verzije 16.30, ako ne postavite ovu željenu postavku, samo se obavezni dijagnostički podaci šalju korporaciji Microsoft ako se korisnici sa pretplatom na Office 365 (ili Microsoft 365) prijave pomoću poslovnog ili školskog naloga ili ako korisnici imaju količinski licenciranu verziju sistema Office 2019 za Mac. Osim toga, ti korisnici ne mogu da promene nivo dijagnostičkih podataka bez obzira na to kako ste postavili ove željene opcije.
+Ukoliko ne odaberete ovu opciju, šalju se obavezni i opcionalni dijagnostički podaci šalju Microsoftu ako se korisnici sa pretplatom na Office 365 (ili Microsoft 365) prijave pomoću poslovnog ili školskog naloga ili ako korisnici imaju količinski licenciranu verziju sistema Office 2019 za Mac. Osim toga, ti korisnici ne mogu da promene nivo dijagnostičkih podataka bez obzira na to kako ste postavili ove željene opcije.
 
 > [!NOTE]
-> - Ako instalirate verziju 16.28 ili 16.29 i ne postavite ovu željenu postavku, i opcionalni i neophodni dijagnostički podaci šalju se korporaciji Microsoft. Ako se potom nadogradite na verziju 16.30 ili neku noviju verziju, i opcionalni i obavezni dijagnostički podaci se svakako šalju korporaciji Microsoft, osim ako ovu željenu postavku ne postavite na drugačiju vrednost.
-> - Ako postavite ovu željenu postavku, ona će se takođe primenjivati na verziju 1.00.217856 i novije verzije aplikacije Teams za Mac i na verziju 16.28 i novije verzije programa Skype za posao za Mac.
+> Ažurirali smo prethodni pasus da bismo pojasnili da se opcionalni dijagnostički podaci takođe šalju Microsoftu ako ne podesite ovu opciju.
 
 Za druge korisnike, kao što su kućni korisnici sa Office 365 (ili Microsoft 365) pretplatom, šalju se samo obavezni dijagnostički podaci, osim ako korisnik ne odabere da šalje i opcionalne dijagnostičke podatke tako što će posetiti **Željene opcije** > **Privatnost**.
 
@@ -76,7 +78,7 @@ Za druge korisnike, kao što su kućni korisnici sa Office 365 (ili Microsoft 36
 
 Povezana iskustva koja analiziraju vaš sadržaj su iskustva koja koriste vaš Office da pruže preporuke za dizajn, predloge za uređivanje, uvid u podatke i slične funkcije. Na primer, PowerPoint Dizajner ili Istraživač u programu Word. Kompletniji spisak povezanih iskustava potražite u članku [Povezana iskustva u sistemu Office](connected-experiences.md).
 
-|||
+|Kategorija|Detalji|
 |:-----|:-----|
 |**Prioritetni domen**  | `com.microsoft.office` |
 |**Taster**  | `OfficeExperiencesAnalyzingContentPreference`  |
@@ -94,7 +96,7 @@ Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365 (il
 
 Povezana iskustva koja preuzimaju sadržaj na internetu su iskustva koja vam omogućavaju da pretražite i preuzmete sadržaj na mreži, uključujući predloške, slike, 3D modele, video zapise i referentne materijale kako biste poboljšali svoje dokumente. Na primer, Office predloške ili PowerPoint QuickStarter. Kompletniji spisak povezanih iskustava potražite u članku [Povezana iskustva u sistemu Office](connected-experiences.md).
 
-|||
+|Kategorija|Detalji|
 |:-----|:-----|
 |**Prioritetni domen**  | `com.microsoft.office` |
 |**Taster**  | `OfficeExperiencesDownloadingContentPreference`  |
@@ -112,7 +114,7 @@ Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365 (il
 
 Pored povezanih iskustava spomenutih iznad, postoje neka opcionalna povezana iskustva za koje možete da odaberete da omogućite svojim korisnicima da im pristupe pomoću naloga organizacije koji se ponekad zove poslovni ili školski nalog. Na primer, LinkedIn funkcije Pomoćnika za biografiju u programu Word ili traka vremenske prognoze u programu Outlook koja koristi MSN vremensku prognozu. Za više primera, pogledajte[Pregled opcionalnih povezanih iskustava u sistemu Office](optional-connected-experiences.md).
 
-|||
+|Kategorija|Detalji|
 |:-----|:-----|
 |**Prioritetni domen**  | `com.microsoft.office` |
 |**Taster**  | `OptionalConnectedExperiencesPreference`  |
@@ -128,7 +130,7 @@ Za druge korisnike, kao što su kućni korisnici sa pretplatom na Office 365 (il
 
 Ovu opciju možete da koristite da biste kontrolisali da li je većina povezanih iskustva dostupna vašim korisnicima.
 
-|||
+|Kategorija|Detalji|
 |:-----|:-----|
 |**Prioritetni domen**  | `com.microsoft.office` |
 |**Taster**  | `ConnectedOfficeExperiencesPreference`  |
@@ -157,7 +159,7 @@ Kada se pokrene prva verzija 4.12 ili novija verzija programa Microsoft AutoUpda
 
 Ako ne želite da korisnici vide ovaj dijalog **Obaveštenje o obaveznim podacima** za Microsoft AutoUpdate, možete da postavite sledeće željene opcije. Bez obzira na to koju vrednost postavite, dijalog se neće prikazivati korisnicima.
 
-|||
+|Kategorija|Detalji|
 |:-----|:-----|
 |**Prioritetni domen**  | `com.microsoft.autoupdate2` |
 |**Taster**  | `AcknowledgedDataCollectionPolicy`  |
@@ -168,7 +170,7 @@ Ako ne želite da korisnici vide ovaj dijalog **Obaveštenje o obaveznim podacim
 Ako korisnicima dozvolite da vide ovaj dijalog, kada korisnik odabere **U redu**, vrednost `RequiredDataOnly` je upisana u `AcknowledgedDataCollectionPolicy` i dijalog se više neće prikazivati korisniku.
 
 
-## <a name="related-topics"></a>Povezane teme
+## <a name="related-articles"></a>Povezani članci
 
 - [Referenca profila za konfiguraciju (dokumentacija za Apple programere)](https://go.microsoft.com/fwlink/p/?linkid=852998)
 - [Primena željenih opcija za Office za Mac](../mac/deploy-preferences-for-office-for-mac.md)
