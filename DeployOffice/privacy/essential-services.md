@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: d3e5ca5381c9fb68a1e05fca703729e282593ded
-ms.sourcegitcommit: cb1f6e3ba1336fc1a8cdca927f545dc43fd8e829
+ms.openlocfilehash: 6dede4fdc57074aa5a9daaf28a20a736c813d626
+ms.sourcegitcommit: 0e2ec395ca334719883a7a48b5313a72217f2eab
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52308159"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "52907368"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -48,7 +48,7 @@ Sledeća tabela sadrži listu osnovnih usluga za Office i njihov opis.
 | **Usluga**  | **Opis**  |
 | ------ | ---- |
 | [Potvrda identiteta](#authentication-events) | Potvrda identiteta je usluga koja se nalazi na bilo kom uređaju i koja potvrđuje vaš korisnički identitet u sistemu Office. Ona je potrebna za prijavljivanje u Office, aktiviranje Office licence, pristup vašim datotekama koje su uskladištene u oblaku i za pružanje doslednog iskustva u svim Office sesijama i uređajima.    |
-| [Klikni i pokreni](#click-to-run-events) | „Klikni i pokreni“ je tehnologija instaliranja koja se koristi za instalaciju i ažuriranje sistema Office na operativnom sistemu Windows. Ona proverava da li postoje nove verzije sistema Office, a kada nova verzija postane dostupna, preuzima je i instalira.  „Klikni i pokreni“ će otkrivati potrebu za preuzimanjem i instaliranjem Office ispravki, kao i bezbednosnih zakrpi.     |
+| [Klikni i pokreni](#click-to-run-events) | „Klikni i pokreni“ je tehnologija instaliranja koja se koristi za instalaciju i ažuriranje sistema Office na operativnom sistemu Windows. Ona proverava da li postoje nove verzije sistema Office, a kada nova verzija postane dostupna, preuzima je i instalira.  „Klikni i pokreni“ će otkrivati potrebu za preuzimanjem i instaliranjem Office ispravki, kao i bezbednosnih zakrpi.     |
 | [Usluga poboljšane konfiguracije (UPK)](#enhanced-configuration-service-ecs-events) | UPK omogućava korporaciji Microsoft da ponovo konfiguriše instalacije sistema Office, a da vi ne morate ponovo da ga instalirate. Koristi se za kontrolu postepenog objavljivanja funkcija i ažuriranja, dok se uticaj objavljivanja nadgleda preko dijagnostičkih podataka koji se prikupljaju. Takođe se koristi i za smanjivanje bezbednosnih problema i problema performansi uz pomoć funkcija ili ažuriranja. Osim toga, UPK podržava promene u konfiguraciji koje se odnose na dijagnostičke podatke kako bi se obezbedilo prikupljanje odgovarajućih događaja. |
 | [Licenciranje](#licensing-events)     | Licenciranje je usluga zasnovana na tehnologiji oblaka koja održava vašu Office aktivaciju tokom novih instalacija i čuva licencu na vašim uređajima nakon aktivacije. Ona registruje svaki od vaših uređaja i aktivira Office, provera status vaše pretplate na sistem Office i upravlja vašom šifrom proizvoda.    |
 |[Microsoft AutoUpdate (MAU)](#microsoft-autoupdate-mau-events)|Microsoft AutoUpdate (MAU) predstavlja tehnologiju koja se koristi za ažuriranje Microsoft aplikacija za macOS, na primer za Office. MAU otkriva potrebu za ispravkama za aplikacije, kao i bezbednosnim ispravkama, preuzima ih i instalira.|
@@ -1114,7 +1114,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeclicktorunscenarioinstalltaskconfigure"></a>Office.ClickToRun.Scenario.InstallTaskConfigure
 
-Podešavanje sistema Office i prikupljanje podataka o zalihama kada instalacioni program za Office je primenjuje novo preuzete datoteke. Koristi se za merenje uspeha / neuspeha instalacionog programa za Office.
+Podaci o podešavanju sistema Office i inventar koji se prikupljaju kada program za instalaciju sistema Office postavlja nove preuzete datoteke. Koristi se za merenje uspeha / neuspeha instalacije sistema Office.
 
 Prikupljaju se sledeća polja:
 
@@ -1134,7 +1134,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -1158,21 +1158,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
   - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID -** Jedinstveni ID računara koji koristi Windows SQM 
 
@@ -1198,7 +1198,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_15\_UpdatesEnabled –** Ako su omogućena ažuriranja za Office 15 
 
-  - **Data\_15\_UpdateVersion –** Na koju verziju sistema Office 15 vršimo ažuriranje 
+  - **Data\_15\_UpdateVersion –** Na koju verziju sistema Office 15 vršimo ažuriranje 
 
   - **Data\_15\_Version –** Office 15 verzija 
 
@@ -1210,7 +1210,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -1222,7 +1222,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ErrorMessage –** Poruka o grešci koja prikazuje u čemu je bio problem 
 
-  - **Data\_ErrorSource –** Gde je došlo do greške 
+  - **Data\_ErrorSource –** Gde je došlo do greške 
 
   - **Data\_ExceptionType -** Izuzetak koji nismo uspeli da sredimo 
 
@@ -1234,21 +1234,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
   - **Data\_ScenarioName –** koji scenario je pokrenut. npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
 
@@ -1286,7 +1286,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version –** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -1310,21 +1310,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
   - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
 
@@ -1362,7 +1362,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -1374,7 +1374,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ErrorMessage –** Poruka o grešci koja prikazuje u čemu je bio problem 
 
-  - **Data\_ErrorSource –** Gde je došlo do greške 
+  - **Data\_ErrorSource –** Gde je došlo do greške 
 
   - **Data\_ExceptionType -** Izuzetak koji nismo uspeli da sredimo 
 
@@ -1386,23 +1386,23 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
   - **Data\_ScenarioName  –** koji scenario je pokrenut. npr. instaliranje
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
+  - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
 
   - **Data\_SusClientID–** identifikator ažuriranja za Office na računaru 
 
@@ -1438,7 +1438,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -1462,23 +1462,23 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
-  - **Data\_SqmMachineID ––** Jedinstveni ID računara koji koristi Windows SQM 
+  - **Data\_SqmMachineID ––** Jedinstveni ID računara koji koristi Windows SQM 
 
   - **Data\_SusClientID–** identifikator ažuriranja za Office na računaru 
 
@@ -1514,7 +1514,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -1538,23 +1538,23 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
   - **Data\_ScenarioName  –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM
+  - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM
 
   - **Data\_SusClientID–** identifikator ažuriranja za Office na računaru 
 
@@ -1590,7 +1590,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -1614,21 +1614,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
   - **Data\_ScenarioName  –** koji scenario je pokrenut, npr. instaliranje
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM
 
@@ -1646,7 +1646,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeclicktorunscenarioinstalltaskmigrate"></a>Office.ClickToRun.Scenario.InstallTaskMigrate
 
-Podešavanje sistema Office i prikupljanje podataka o zalihama kada instalacioni program za Office premešta postavke iz starije verzije sistema Office. Koristi se za merenje uspeha / neuspeha instalacije sistema Office.
+Podaci o podešavanju sistema Office i podaci prikupljeni kada Office Installer migrira postavke iz starijih verzija sistema Office. Koristi se za merenje uspeha / neuspeha instalacije sistema Office.
 
 Prikupljaju se sledeća polja:
 
@@ -1666,7 +1666,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -1678,7 +1678,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_ErrorMessage –** Poruka o grešci koja prikazuje u čemu je bio problem 
 
-  - **Data\_ErrorSource – –** Gde je došlo do greške
+  - **Data\_ErrorSource – –** Gde je došlo do greške
 
   - **Data\_ExceptionType -** Izuzetak koji nismo uspeli da sredimo 
 
@@ -1690,23 +1690,23 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
   - **Data\_ScenarioName  –** koji scenario je pokrenut, npr. instaliranje
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM
+  - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM
 
   - **Data\_SusClientID –** identifikator ažuriranja za Office na računaru
 
@@ -1742,7 +1742,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -1766,21 +1766,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM
 
@@ -1818,7 +1818,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -1842,23 +1842,23 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM
+  - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM
 
   - **Data\_SusClientID–** identifikator ažuriranja za Office na računaru 
 
@@ -1892,9 +1892,9 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_UpdateVersion –** Na koju verziju sistema Office 16 vršimo ažuriranje 
 
-  - **Data\_16\_Version –** Office 16 verzija 
+  - **Data\_16\_Version –** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts  –** Proizvodi čije je dodavanje zatraženo 
 
@@ -1918,21 +1918,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
 
@@ -1970,7 +1970,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -1994,21 +1994,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM
 
@@ -2046,7 +2046,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -2064,27 +2064,27 @@ Prikupljaju se sledeća polja:
 
   - **Data\_IsErrorCodeIgnorable -** Ako je kôd greške koji nismo uspeli da sredimo zanemarljiv 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** Ako smatramo da se kôd greške može zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** Ako smatramo da se kôd greške može zanemariti 
 
   - **Data\_NewestPackageVersion -** Najnovija verzija sistema Office na računaru 
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
 
@@ -2122,7 +2122,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -2146,21 +2146,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
 
@@ -2198,7 +2198,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -2216,27 +2216,27 @@ Prikupljaju se sledeća polja:
 
   - **Data\_IsErrorCodeIgnorable -** Ako je kôd greške koji nismo uspeli da sredimo zanemarljiv 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** Ako smatramo da se kôd greške može zanemariti 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth –** Ako smatramo da se kôd greške može zanemariti 
 
   - **Data\_NewestPackageVersion -** Najnovija verzija sistema Office na računaru 
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
 
@@ -2262,7 +2262,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_15\_UpdatesEnabled –** Ako su omogućena ažuriranja za Office 15 
 
-  - **Data\_15\_UpdateVersion –** Na koju verziju sistema Office 15 vršimo ažuriranje 
+  - **Data\_15\_UpdateVersion –** Na koju verziju sistema Office 15 vršimo ažuriranje 
 
   - **Data\_15\_Version –** Office 15 verzija 
 
@@ -2274,7 +2274,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -2298,21 +2298,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
 
@@ -2330,7 +2330,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeclicktorunscenarioupdatetaskintegrateupdate"></a>Office.ClickToRun.Scenario.UpdateTaskIntegrateupdate 
 
-Podešavanje sistema Office i prikupljanje podataka o zalihama kada klijent „Klikni i pokreni“ ažurira licence po potrebi. Koristi se za merenje uspeha / neuspeha ažuriranja sistema Office.
+Podaci o podešavanju sistema Office i inventar prikupljaju se kada klijent klikni za pokretanje po potrebi ažurira licence. Koristi se za merenje uspeha / neuspeha ažuriranja sistema Office.
 
 Prikupljaju se sledeća polja:
 
@@ -2350,7 +2350,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -2374,21 +2374,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
 
@@ -2426,7 +2426,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -2450,21 +2450,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
 
@@ -2502,7 +2502,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -2536,23 +2536,23 @@ Prikupljaju se sledeća polja:
 
   - **Data\_PackageOperationSuccessful -** Istinito ako smo uspešno dovršili zadatak sa Office paketom
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM
+  - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM
 
   - **Data\_SusClientID –** identifikator ažuriranja za Office na računaru 
 
@@ -2590,7 +2590,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -2614,23 +2614,23 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
   - **Data\_ScenarioName-** koji scenario je pokrenut. npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
-  - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM
+  - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM
 
   - **Data\_SusClientID–** identifikator ažuriranja za Office na računaru 
 
@@ -2666,7 +2666,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -2698,21 +2698,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_PackageUpdateAvailable -** Istinito ako je dostupna nova verzija sistema Office
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
 
@@ -2730,7 +2730,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeclicktorunscenarioupdatetaskupdatedownload"></a>Office.ClickToRun.Scenario.UpdateTaskUpdatedownload
 
-Podešavanje sistema Office i prikupljanje podataka o zalihama kada klijent „Klikni i pokreni“ preuzima novo ažuriranje. Koristi se za merenje uspeha / neuspeha ažuriranja sistema Office.
+Podaci o podešavanju sistema Office i inventar prikupljeni kada klijent „Klikni i pokreni“ preuzme novu ispravku. Koristi se za merenje uspeha / neuspeha ažuriranja sistema Office.
 
 Prikupljaju se sledeća polja:
 
@@ -2750,7 +2750,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -2786,21 +2786,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_PipelineExitCode -** Izlazni kôd koji je vratio kanal datoteke
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
 
@@ -2838,7 +2838,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_16\_Version -** Office 16 verzija 
 
-  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
+  - **Data\_AddingFixedProducts –** Proizvodi koje dodajemo 
 
   - **Data\_AddingProducts –** Proizvodi čije je dodavanje zatraženo 
 
@@ -2862,21 +2862,21 @@ Prikupljaju se sledeća polja:
 
   - **Data\_OldestPackageVersion -** Najstarija verzija sistema Office na računaru 
 
-  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
+  - **Data\_ProductsToAdd –** Koje Office proizvode dodajemo 
 
-  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
+  - **Data\_ProductsToRemove –** Koje Office proizvode uklanjamo 
 
-  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
+  - **Data\_RemovingFixedProducts –** Proizvodi koje uklanjamo 
 
-  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
+  - **Data\_RemovingProducts –** Proizvodi čije je uklanjanje zatraženo 
 
   - **Data\_ScenarioInstanceID –** Jedinstveni GUID za pokretanje scenarija 
 
-  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
+  - **Data\_ScenarioName –** koji scenario je pokrenut, npr. instaliranje 
 
-  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
+  - **Data\_ScenarioSubType –** Koji tip scenarija smo pokrenuli, npr. deinstaliranje, ponovno instaliranje 
 
-  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
+  - **Data\_SourceType –** Gde je naš izvor, npr. CDN 
 
   - **Data\_SqmMachineID –** Jedinstveni ID računara koji koristi Windows SQM 
 
@@ -2947,7 +2947,7 @@ Prikupljaju se sledeća polja:
 
   - **Data\_IsInstallMode** – 1 ako instaliramo i preuzimamo datoteke, 0 ako to ne radimo
 
-  - **Data\_SourceProtocol –** Ako preuzimamo sa mreže za podatke sadržaja, CDN, sa računara na koji instaliramo, lokalno, ili iz resursa sa lokalne mreže,
+  - **Data\_SourceProtocol –** Ako preuzimamo sa mreže za podatke sadržaja, CDN, sa računara na koji instaliramo, lokalno, ili iz resursa sa lokalne mreže,
 
   - **Data\_Status**– Uspeh ili neuspeh 
 
@@ -2976,13 +2976,13 @@ Izveštava o rezultatu pokušaja potpunog instaliranja
 
  - **ErrorCode –**    Vrednost celog broja povezana sa nekontrolisanim izuzetkom
 
- - **ErrorDetails** – Niska koja opisuje lokaciju na kojoj je došlo do nekontrolisanog izuzetka (funkcija, datoteka, broj reda, dodatni parametri koji postavlja izbacivač)
+ - **ErrorDetails** – Niska koja opisuje lokaciju na kojoj je došlo do nekontrolisanog izuzetka (funkcija, datoteka, broj reda, dodatni parametri koji postavlja izbacivač)
 
  - **ErrorMessage** – Niska definisana u trenutku javljanja nekontrolisanog izuzetka koja opisuje prirodu otkazivanja
 
  - **ErrorType –**    Niska koja opisuje kategoriju nekontrolisanog izuzetka
 
- - **ExitCode –**    Vrednost celog broja povezana sa rezultatom pokretanja programa koji se pokreće prilikom pokretanja računara koja označava uspeh naspram određenih tipova otkazivanja
+ - **ExitCode –**    Vrednost celog broja povezana sa rezultatom pokretanja programa koji se pokreće prilikom pokretanja računara koja označava uspeh naspram određenih tipova otkazivanja
 
 ### <a name="officeclicktorununiversalbootstrappercalculateparameters"></a>Office.ClickToRun.UniversalBootstrapper.CalculateParameters
 
@@ -2998,7 +2998,7 @@ Izveštava o radnji koja donosi programske odluke u vezi sa unosom prikupljenim 
 
 - **ErrorCode –**    Vrednost celog broja povezana sa nekontrolisanim izuzetkom
 
-- **ErrorDetails** – Niska koja opisuje lokaciju na kojoj je došlo do nekontrolisanog izuzetka (funkcija, datoteka, broj reda, dodatni parametri koji postavlja izbacivač)
+- **ErrorDetails** – Niska koja opisuje lokaciju na kojoj je došlo do nekontrolisanog izuzetka (funkcija, datoteka, broj reda, dodatni parametri koji postavlja izbacivač)
 
 - **ErrorMessage** – Niska definisana u trenutku javljanja nekontrolisanog izuzetka koja opisuje prirodu otkazivanja
 
@@ -3055,9 +3055,9 @@ Izveštava o radnji koja donosi programske odluke u vezi sa unosom prikupljenim 
 
 Izveštava o radnji koja čita označeni unos iz ugrađenog potpisa izvršne datoteke. Ovo je nedokazani koncept koji prethodna iteracija izvršne datoteke setup.exe nije primenila i to je ono na šta se oslanjamo prilikom prenošenja izbora korisnika u vezi sa proizvodom/jezikom/brojem bitova sa veb stranice u proces unutar izvršne datoteke setup.exe.
  
-- **ErrorCode –**    Ceo broj povezan sa nekontrolisanim izuzetkom
+- **ErrorCode –**    Ceo broj povezan sa nekontrolisanim izuzetkom
 
-- **ErrorDetails** – Niska koja opisuje lokaciju na kojoj je došlo do nekontrolisanog izuzetka (funkcija, datoteka, broj reda, dodatni parametri koji postavlja izbacivač)
+- **ErrorDetails** – Niska koja opisuje lokaciju na kojoj je došlo do nekontrolisanog izuzetka (funkcija, datoteka, broj reda, dodatni parametri koji postavlja izbacivač)
 
 - **ErrorMessage** – Niska definisana u trenutku javljanja nekontrolisanog izuzetka koja opisuje prirodu otkazivanja
 
@@ -3077,7 +3077,7 @@ Izveštava o parametrima koji se koriste za instaliranje sistema Office
 
 - **ErrorCode –**    Vrednost celog broja povezana sa nekontrolisanim izuzetkom
 
-- **ErrorDetails** – Niska koja opisuje lokaciju na kojoj je došlo do nekontrolisanog izuzetka (funkcija, datoteka, broj reda, dodatni parametri koji postavlja izbacivač)
+- **ErrorDetails** – Niska koja opisuje lokaciju na kojoj je došlo do nekontrolisanog izuzetka (funkcija, datoteka, broj reda, dodatni parametri koji postavlja izbacivač)
 
 - **ErrorMessage** – Niska definisana u trenutku javljanja nekontrolisanog izuzetka koja opisuje prirodu otkazivanja
 
@@ -3133,21 +3133,21 @@ Izveštava o parametrima koji se koriste za instaliranje sistema Office
 
 Izveštava o preduzetim radnjama koje utiču na mašinu, koje su odredili podaci iz događaja „CalculateParameters“ u vezi sa kojima su donete programske odluke
 
-- **AvailableClientVersionText –**    Vrednost niske klijenta za verziju 16.0.xxxxx.yyyyy „Klikni i pokreni“ koja se nalazi u XML datoteci opisa verzije, koja se koristi za određivanje toga da li treba ažurirati trenutno instalirani klijent za verziju „Klikni i pokreni“
+- **AvailableClientVersionText –**    Vrednost niske klijenta za verziju 16.0.xxxxx.yyyyy „Klikni i pokreni“ koja se nalazi u XML datoteci opisa verzije, koja se koristi za određivanje toga da li treba ažurirati trenutno instalirani klijent za verziju „Klikni i pokreni“
 
-- **CleanFireFlyAction –**    Ima vrednost „tačno“ ako je isplanirano da se zadatak CleanFireFlyAction pokrene tokom ovog instaliranja
+- **CleanFireFlyAction –**    Ima vrednost „tačno“ ako je isplanirano da se zadatak CleanFireFlyAction pokrene tokom ovog instaliranja
 
-- **CleanO15Action –**    Ima vrednost „tačno“ ako je isplanirano da se zadatak CleanO15Action pokrene tokom ovog instaliranja
+- **CleanO15Action –**    Ima vrednost „tačno“ ako je isplanirano da se zadatak CleanO15Action pokrene tokom ovog instaliranja
 
 - **CMDMode –**    Prepoznatljiva niska koja odgovara celokupnom prekidaču za režim otkrivenom u cmd argumentima prebačena je u .exe datoteku. Mogućnosti su: automatsko pokretanje, konfigurisanje, potrošačka verzija, preuzimanje, pomoć i program za pakovanje
 
-- **DeliveryMechanism –**    GUID „FFNRoot“ izdvojen iz XML datoteke opisa verzije (koju je označio RDX) koji saopštava putem kojih je korisnika/kanala dobijen izvor verzije
+- **DeliveryMechanism –**    GUID „FFNRoot“ izdvojen iz XML datoteke opisa verzije (koju je označio RDX) koji saopštava putem kojih je korisnika/kanala dobijen izvor verzije
 
-- **DownloadC2RClientAction –**    Ima vrednost „tačno“ ako je isplanirano da se zadatak DownloadC2RClientAction pokrene tokom ovog instaliranja
+- **DownloadC2RClientAction –**    Ima vrednost „tačno“ ako je isplanirano da se zadatak DownloadC2RClientAction pokrene tokom ovog instaliranja
 
 - **ErrorCode –**    Vrednost celog broja povezana sa nekontrolisanim izuzetkom
 
-- **ErrorDetails** – Niska koja opisuje lokaciju na kojoj je došlo do nekontrolisanog izuzetka (funkcija, datoteka, broj reda, dodatni parametri koji postavlja izbacivač)
+- **ErrorDetails** – Niska koja opisuje lokaciju na kojoj je došlo do nekontrolisanog izuzetka (funkcija, datoteka, broj reda, dodatni parametri koji postavlja izbacivač)
 
 - **ErrorMessage** – Niska definisana u trenutku javljanja nekontrolisanog izuzetka koja opisuje prirodu otkazivanja
 
@@ -3157,7 +3157,7 @@ Izveštava o preduzetim radnjama koje utiču na mašinu, koje su odredili podaci
 
 - **LaunchAction –**    Ima vrednost „tačno“ ako je isplanirano da se zadatak LaunchAction pokrene tokom ovog instaliranja
 
-- **LaunchUpdateAction –**    Ima vrednost „tačno“ ako je isplanirano da se zadatak LaunchUpdateAction pokrene tokom ovog instaliranja
+- **LaunchUpdateAction –**    Ima vrednost „tačno“ ako je isplanirano da se zadatak LaunchUpdateAction pokrene tokom ovog instaliranja
 
 - **PreReqResult –**    Numerička vrednost celog broja rezultata izvršavanja provera preduslova (prolaz/neuspeh/ponovno pokretanje)
 
@@ -3596,6 +3596,24 @@ Prikupljaju se sledeća polja:
 
   - **DwEulaId** – Numerički identifikator za tip EULA ugovora koji je korisnik prihvatio
 
+
+### <a name="officelicensingactivatedeviceentitlement"></a>Office.Licensing.ActivateDeviceEntitlement
+
+Ovaj događaj se pokreće kada pokušavamo da aktiviramo trajnu Office ponudu na osnovu uređaja za korisnika. Ove podatke koristimo za nadgledanje ispravnosti sistema i usluga.
+
+Prikupljaju se sledeća polja: 
+
+- **Activity_Success** – govori nam da li uređaj ima licencu uz trajnu Office ponudu zasnovanu na uređaju.
+
+- **Data_Count** – govori nam broj trajnih ovlašćenja za Office zasnovanih na uređaju povezanih sa uređajem. Tehnički ne bi trebalo da bude više od jednog.
+
+- **Data_EligibleEntitlementsCount** – govori nam broj prihvatljivih prava. Pošto će usluga vratiti sva ovlašćenja za uređaj povezana sa uređajem, ali moramo da proverimo one ponude koje su relevantne za Office aplikaciju koja je pokrenuta.
+
+- **Data_Errors** – niska sa listom grešaka dok dobavljamo licence za prava, odvojene zarezom.
+
+- **Data_LicensedEntitlementsCount** – govori nam broj ovlašćenja za koja smo uspešno dobavili licencu. Moglo bi doći do grešaka u ovlašćenju zbog kojih ne možemo dobiti licencu. 
+
+
 ### <a name="officelicensingactivation"></a>Office.Licensing.Activation 
 
 Kada podesimo licencu na računaru, pokušavamo da je aktiviramo tako što pozivamo uslugu AVS. Ovo izveštava o ishodu poziva za aktivaciju
@@ -3636,7 +3654,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officelicensingdialogswebviewdialogclose"></a>Office.Licensing.Dialogs.WebViewDialog.Close
  
-Ovaj događaj se koristi kao signal da nam kaže da iskustvo kupovine u aplikaciji zatvara korisnik ili aplikacija. Podaci se koriste za nadgledanje i upozoravanje na stanje toka kupovine u aplikaciji kako bi se osiguralo da radi kako se očekuje.  
+Ovaj događaj se koristi kao signal koji nam govori da korisnik ili aplikacija zatvara iskustvo kupovine u aplikaciji. Podaci se koriste za nadgledanje i upozoravanje na stanje toka kupovine u aplikaciji kako bi se osiguralo da radi kako se očekuje.  
  
 Prikupljaju se sledeća polja:
  
@@ -3806,6 +3824,19 @@ Prikupljaju se sledeća polja:
   - **LicenseStatus** – Status Office licence koju korisnik koristi
 
   - **MachineKey** - Alfanumerički identifikator ključa licence koji je izdat korisniku
+
+### <a name="officelicensinglaunchsetupoffice"></a>Office.Licensing.LaunchSetupOffice
+
+Ovaj događaj se pokreće kada iskoristimo Office ponudu za korisnika koji je kupio uređaj u paketu sa OEM ovlašćenjem ili je uneo šifru proizvoda. Ove podatke koristimo za nadgledanje ispravnosti sistema i usluga.
+
+Prikupljaju se sledeća polja:
+
+- **Activity_Result_Tag** – govori nam kako smo završili ovaj događaj.
+
+- **Data_DialogResult** – govori nam ukupan rezultat procesa prihvatanja.
+
+- **Data_Scenario** – govori nam o scenariju za koji je došlo do otkupa.
+
 
 ### <a name="officelicensinglicensingbar"></a>Office.Licensing.LicensingBar
 
@@ -4691,6 +4722,48 @@ Prikupljaju se sledeća polja:
 
 - **SessionId** – Identifikator sesije
 
+
+### <a name="cataloginvalid"></a>catalog.invalid
+
+Ovaj događaj beleži uslov greške koji upućuje na preuzet nevažeći katalog manifesta. Koristimo ovaj događaj da bismo se uverili da u objavljenim datotekama manifesta nema grešaka. 
+
+Prikupljaju se sledeća polja:
+
+- **App** – Proces aplikacije koji šalje događaj
+
+- **AppInfo_Language** – Jezik koji aplikacija koristi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **CatalogFile** – ime datoteke kataloga koja je izazvala stanje greške.
+
+- **Channel** – Željene opcije za korisnike
+
+- **Device_NetworkCountry** – Zemlja u kojoj se nalazi uređaj (na osnovu IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Model hardvera uređaja
+
+- **DeviceInfo_NetworkType** – Tip mreže (Wi-Fi, žična, nepoznato)
+
+- **DeviceInfo_OsBuild** – Verzija operativnog sistema
+
+- **Event_ReceivedTime** – Vreme kada je primljena telemetrija
+
+- **EventInfo_Name** – Ime događaja telemetrije koji se evidentira
+
+- **EventInfo_Time** – Vreme dešavanja evidentiranog događaja telemetrije 
+
+- **HowTocheck** – Željene opcije za proveru da li postoje ispravke
+
+- **PipelineInfo_ClientCountry** – Zemlja u kojoj se nalazi uređaj (na osnovu IP adrese)
+
+- **PipelineInfo_ClientIp** – prva tri okteta IP adrese
+
+- **SessionId** – Identifikator sesije
+
+
 ### <a name="cloningtaskbegin"></a>cloningtask.begin
 
 Ovaj događaj ukazuje na početak zadatka kloniranja pre ažuriranja aplikacije. Ovaj događaj koristimo zajedno sa događajem cloningtask.status da bismo utvrdili količinu neuspelih kloniranja kako bismo otkrili da li funkcija kloniranja treba da se ograniči na različitim kanalima korisnika.
@@ -5192,7 +5265,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="controllercheckwindowupdatecheck"></a>controller.checkwindow.updatecheck
 
-Ovaj događaj pokazuje da je provereno da li postoje ispravke. Koristimo ga da bismo obezbedili da se ispravke nude na odgovarajući način, za optimizaciju opterećenja usluge i definisanje toga koliko često treba proveravati da li postoje ispravke. Želimo i da optimizujemo učestalost izdavanja na osnovu očekivanja korisnika u vezi sa ispravkama.
+Ovaj događaj označava da je izvršena provera za ispravke. Koristimo ovaj događaj da bismo osigurali da se ispravno nude ažuriranja, da bismo optimizirali opterećenja usluga i definisali učestalost provere naših ažuriranja. Takođe želimo da optimizujemo svoj ritam izdanja na osnovu očekivanja korisnika od ažuriranja.
 
 Prikupljaju se sledeća polja:
 
@@ -5233,7 +5306,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="controllercheckwindowupdatecheckcancel"></a>controller.checkwindow.updatecheckcancel
 
-Ovaj događaj pokazuje da je korisnik ili sistem otkazao proces provere da li postoje ispravke. Koristimo ga da bismo obezbedili da se ispravke nude na odgovarajući način, za optimizaciju opterećenja usluge i definisanje toga koliko često treba proveravati da li postoje ispravke. Želimo i da optimizujemo učestalost izdavanja na osnovu očekivanja korisnika u vezi sa ispravkama.
+Ovaj događaj označava da je postupak provere ažuriranja otkazan (bilo od strane korisnika ili sistema). Koristimo ovaj događaj da bismo osigurali da se ispravno nude ažuriranja, da bismo optimizirali opterećenja usluga i definisali učestalost provere naših ažuriranja. Takođe želimo da optimizujemo svoj ritam izdanja na osnovu očekivanja korisnika od ažuriranja.
 
 Prikupljaju se sledeća polja:
 
@@ -5274,7 +5347,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="controllercheckwindowupdatecheckcanceluser"></a>controller.checkwindow.updatecheckcanceluser
 
-Ovaj događaj pokazuje da je korisnik otkazao proces provere da li postoje ispravke.  Koristimo ga da bismo obezbedili da se ispravke nude na odgovarajući način, za optimizaciju opterećenja usluge i definisanje toga koliko često treba proveravati da li postoje ispravke. Želimo i da optimizujemo učestalost izdavanja na osnovu očekivanja korisnika u vezi sa ispravkama.
+Ovaj događaj označava da je korisnik otkazao postupak provere ispravnosti. Koristimo ovaj događaj da bismo osigurali da se ispravno nude ažuriranja, da bismo optimizirali opterećenja usluga i definisali učestalost provere naših ažuriranja. Takođe želimo da optimizujemo svoj ritam izdanja na osnovu očekivanja korisnika od ažuriranja.
 
 Prikupljaju se sledeća polja:
 
@@ -5315,7 +5388,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="controllercheckwindowupdatesfound"></a>controller.checkwindow.updatesfound
 
-Ovaj događaj pokazuje da su se tokom procesa provere da li postoje ispravke pronašle ispravke.  Koristimo ga da bismo obezbedili da se ispravke nude na odgovarajući način.
+Ovaj događaj označava da je proces provere ispravnosti rezultirao pronađenim ispravkama. Koristimo ovaj događaj da bismo osigurali da se ispravne ponude nude.
 
 Prikupljaju se sledeća polja:
 
@@ -5807,7 +5880,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="controllerdownloadwindownetworkunavailablealert"></a>controller.downloadwindow.networkunavailablealert
 
-Ovaj događaj pokazuje da je mrežna veza izgubljena tokom preuzimanja ispravki.  Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je mrežna povezanost izgubljena tokom preuzimanja ispravki. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -6052,7 +6125,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="controllerdownloadwindowupdatesuccessful"></a>controller.downloadwindow.updatesuccessful
 
-Ovaj događaj pokazuje da su uspele sve ispravke iz trenutne grupe. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da su sva ažuriranja iz trenutne serije bila uspešna. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -6093,7 +6166,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="controllerdownloadwindowuserpaused"></a>controller.downloadwindow.userpaused
 
-Ovaj događaj pokazuje da su uspele sve ispravke iz trenutne grupe. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da su sva ažuriranja iz trenutne serije bila uspešna. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -7527,7 +7600,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="downloadmgrdownloadstart"></a>downloadmgr.downloadstart
 
-Ovaj događaj evidentira ispravku koja će se preuzeti. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj beleži ažuriranje koje će se preuzeti. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -7832,7 +7905,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbacheckforupdate"></a>fba.checkforupdate
 
-Ovaj događaj pokazuje da proces u pozadini proverava da li postoje ispravke. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da proces u pozadini proverava ažuriranja. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -8233,7 +8306,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbalaunchstatus"></a>fba.launchstatus
 
-Ovaj događaj evidentira otkazivanja daemona aplikacije MAU prilikom pokušaja pokretanja. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj evidentira MAU-ove kvarove demona prilikom pokušaja pokretanja. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -8523,7 +8596,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbasilentupdateoptin"></a>fba.silentupdateoptin
 
-Ovaj događaj pokazuje da korisnik daje saglasnost za tiha ažuriranja. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da se korisnik uključuje u nečujna ažuriranja. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -8645,7 +8718,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbaterminate"></a>fba.terminate
 
-Ovaj događaj pokazuje da je daemon aplikacije MAU normalno prekinut. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj ukazuje na to da se demon MAU normalno prekinuo. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -8686,7 +8759,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbaupdatefound"></a>fba.updatefound
 
-Ovaj događaj pokazuje da je daemon aplikacije MAU pronašao dostupne ispravke koje će ponuditi. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj ukazuje na to da je demon MAU pronašao dostupna ažuriranja koja može da ponudi. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -9065,7 +9138,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbasilentupdatedownload"></a>fbasilentupdate.download
 
-Ovaj događaj pokazuje da se ispravka preuzima. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava preuzimanje ažuriranja. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -9323,7 +9396,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbasilentupdateinstallcomplete"></a>fbasilentupdate.installcomplete
 
-Ovaj događaj pokazuje da je završeno instaliranje svih ispravki iz paketa. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da su sva ažuriranja paketa završena sa instaliranjem. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -10994,7 +11067,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="installstatuscodesign"></a>installstatus.codesign
 
-Ovaj događaj evidentira status binarnog alata operativnog sistema za potpisivanje koda. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj evidentira status binarnog softvera OS kodnog dizajna. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -11035,7 +11108,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="installstatusdaemon"></a>installstatus.daemon
 
-Ovaj događaj evidentira stanje daemona Microsoft automatskog ažuriranja. Ovaj događaj koristimo da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj beleži status demona Microsoft AutoUpdate. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -11082,7 +11155,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="installstatushelper"></a>installstatus.helper
 
-Ovaj događaj evidentira stanje pomoćne alatke Microsoft automatskog ažuriranja. Ovaj događaj koristimo da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj beleži status pomoćnog alata Microsoft AutoUpdate. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -11451,7 +11524,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="installupdatestaskretryfail"></a>installupdatestask.retryfail
 
-Ovaj događaj pokazuje da je došlo do grešaka tokom procesa pokušaja ponovnog instaliranja. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da su se tokom postupka ponovnog pokušaja instalacije pojavile greške. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -11492,7 +11565,7 @@ Prikupljaju se sledeća polja:
    
 ### <a name="installupdatestaskretryproxyerror"></a>installupdatestask.retryproxyerror
 
-Ovaj događaj evidentira greške u komunikaciji unutar procesa (komunikacija sa alatkom pomoćnik za MAU). Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj evidentira greške u komunikaciji unutar procesa (komunikacija sa MAU pomoćnim alatom). Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -11534,7 +11607,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="installupdatestaskretryresponse"></a>installupdatestask.retryresponse
 
-Ovaj događaj evidentira to da ponovni pokušaj nije uspeo. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj beleži da ponovljeni pokušaj nije uspeo. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -11575,7 +11648,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="installupdatestaskretrysuccess"></a>installupdatestask.retrysuccess
 
-Ovaj događaj evidentira uspešno instaliranje ispravke posle ponovnog pokušaja. Ovaj događaj koristimo da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj beleži uspešnu instalaciju ažuriranja nakon ponovnog pokušaja. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -12143,7 +12216,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="msupdatemonitorprogressfinished"></a>msupdate.monitor.progress.finished
 
-Ovaj događaj evidentira listu ispravki u redu za čekanje čije je instaliranje završeno. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj evidentira listu ispravki na čekanju koje su dovršile instalaciju. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -12184,7 +12257,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="msupdatemonitorprogressqueued"></a>msupdate.monitor.progress.queued
 
-Ovaj događaj evidentira listu ispravki u redu za čekanje. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj evidentira listu ažuriranja u redu. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -13130,6 +13203,47 @@ Prikupljaju se sledeća polja:
 
 - **SessionId** – Identifikator sesije
 
+### <a name="updateclonedisablereason"></a>update.clonedisablereason
+
+Ovaj događaj beleži uslov da je funkcija Install-On-Clone onemogućena za određeno ažuriranje. Ovaj događaj koristimo za nadgledanje ispravnosti funkcije Install-On-Clone i za pružanje poboljšane usluge.
+
+Prikupljaju se sledeća polja:
+
+- **App** – Proces aplikacije koji šalje događaj
+
+- **AppInfo_Language** – Jezik koji aplikacija koristi
+
+- **AppVersionLong** – Verzija aplikacije
+
+- **Channel** – Željene opcije za korisnike
+
+- **Device_NetworkCountry** – Zemlja u kojoj se nalazi uređaj (na osnovu IP adrese)
+
+- **DeviceID** – Identifikator uređaja
+
+- **DeviceInfo_Model** – Model hardvera uređaja
+
+- **DeviceInfo_NetworkType** – Tip mreže (Wi-Fi, žična, nepoznato)
+
+- **DeviceInfo_OsBuild** – Verzija operativnog sistema
+
+- **Event_ReceivedTime** – Vreme kada je primljena telemetrija
+
+- **EventInfo_Name** – Ime događaja telemetrije koji se evidentira
+
+- **EventInfo_Time** – Vreme dešavanja evidentiranog događaja telemetrije 
+
+- **HowTocheck** – Željene opcije za proveru da li postoje ispravke
+
+- **PipelineInfo_ClientCountry** – Zemlja u kojoj se nalazi uređaj (na osnovu IP adrese)
+
+- **PipelineInfo_ClientIp** – prva tri okteta IP adrese
+
+- **Reason** – razlog zašto je instaliranje na klonu onemogućeno za ovu ispravku.
+
+- **SessionId** – Identifikator sesije
+
+
 ### <a name="updatedownloadbegin"></a>update.download.begin 
 
 Ovaj događaj pokazuje početak procesa ažuriranja aplikacije. Ovaj događaj čini deo levka ispravke i koristi se za utvrđivanje ispravnosti ispravki aplikacije. 
@@ -13430,6 +13544,8 @@ Prikupljaju se sledeća polja:
 
 - **EventInfo_Time** – Vreme dešavanja evidentiranog događaja telemetrije 
 
+- **ForcedUpdate** – Oznaka niza da li IT administrator nameće ažuriranje
+
 - **HowToCheck** – Kako proveriti postavku
 
 - **Payload** – Ukazuje na to da li je prikaz toka prikazan tokom procesa instalacije
@@ -13699,7 +13815,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="updatecoreappregistration"></a>updatecore.appregistration
 
-Ovaj događaj evidentira pokušaje registrovanja aplikacije i rezultat/razlog. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj evidentira pokušaje registracije aplikacije i rezultata / razloga. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -13740,7 +13856,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="updatecoreloadinglaunchagent"></a>updatecore.loadinglaunchagent
 
-Ovaj događaj pokazuje da je učitan agent pokretanja. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj znači da se agent za pokretanje učitava. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -13820,7 +13936,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="updatecoreserverconnectionfail"></a>updatecore.server.connectionfail
 
-Ovaj događaj evidentira greške na koje se naišlo na putu do sistema CDN. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj evidentira greške pogođene prilikom kontaktiranja sa CDN-om. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -14187,7 +14303,7 @@ Prikupljaju se sledeća polja:
  
 ### <a name="updatefindercheckstart"></a>updatefinder.check.start
 
-Ovaj događaj evidentira svaki put kada pokrenemo operaciju provere da li postoje ispravke. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj se evidentira svaki put kada započnemo proveru operacija ažuriranja. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -15090,7 +15206,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="updatemanagerupdatespending"></a>updatemanager.updatespending
 
-Ovaj događaj pokazuje da su ispravke pronađene i da čekaju na instaliranje. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da su pronađene ispravke koje čekaju na instalaciju. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -15220,7 +15336,7 @@ Prikupljaju se sledeća polja:
    
 ### <a name="webservicescheckforsilentupdates"></a>webservices.checkforsilentupdates
 
-Ovaj događaj pokazuje da su pronađeni kandidati za tiho ažuriranje. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da su pronađeni kandidati za tiho ažuriranje. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -15343,7 +15459,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="webservicesserviceresponse"></a>webservices.serviceresponse
 
-Ovaj događaj evidentira zahteve upućene MAU usluzi, vremena odziva i greške. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj evidentira zahteve za MAU uslugu, vreme odziva i greške. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -15546,7 +15662,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
  
-Ovaj događaj evidentira rezultat sinhronizacije beležnice. Koristi se za otkrivanje koliko jedinstvenih ciljeva sinhronizacije se koristi prilikom izračunavanja rezultata OneNote sinhronizacije.
+Ovaj događaj evidentira rezultat sinhronizovanja sveske. Koristi se za otkrivanje broja jedinstvenih ciljeva sinhronizacije kada se izračunava rezultat sinhronizacije programa OneNote.
  
 Prikupljaju se sledeća polja
 
@@ -15678,7 +15794,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeonenotestoragesectionsyncresult"></a>Office.OneNote.Storage.SectionSyncResult
  
-Ovaj događaj evidentira rezultat sinhronizovanja odeljka. Koristi se za otkrivanje broja jedinstvenih ciljeva sinhronizacije kada se izračunava rezultat sinhronizacije programa OneNote. Koristi se i za kontrolnu tablu performansi moderne sinhronizacije programa OneNote.
+Ovaj događaj evidentira rezultat sinhronizacije odeljka. Koristi se za otkrivanje koliko jedinstvenih ciljeva sinhronizacije izračunava OneNote rezultat sinhronizacije. Takođe se koristi za OneNote modernu kontrolnu tablu performansi sinhronizacije.
  
 Prikupljaju se sledeća polja
 
