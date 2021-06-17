@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Pruža informacije administratorima sistema Office o opcionalnim povezanim iskustvima, uključujući koji uslovi korišćenja se primenjuju.
 hideEdit: true
-ms.openlocfilehash: 8a5f236c3dbb2cb3bb61a9a987f764880987a189
-ms.sourcegitcommit: 54b9d411bb6a021fb6db8df4acfb28287693c84c
+ms.openlocfilehash: 3583b22e9df50a3cdaff5e4cd3f6e695ab447498
+ms.sourcegitcommit: b906a2ca706cd4441964f09e1f4adf2e8b94d6be
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51914959"
+ms.lasthandoff: 06/16/2021
+ms.locfileid: "52957661"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Pregled opcionalnih povezanih iskustava u sistemu Office
 
@@ -28,7 +28,8 @@ ms.locfileid: "51914959"
 Ako imate poslovni ili školski nalog, administrator organizacije vam je možda omogućio da koristite neke usluge koje se baziraju na oblaku (nazivaju se i „opcionalna povezana iskustva”) dok koristite Office aplikacije kao što su Word ili Excel, koje su uključene uz Microsoft 365 Apps za preduzeće (prethodno poznato kao Office 365 ProPlus). Ove usluge u oblaku su opcionalne. Na vama je da li ih koristite. One se obezbeđuju u skladu sa uslovima [Microsoft ugovora o pružanju usluga](https://www.microsoft.com/servicesagreement) i [izjave o privatnosti](https://privacy.microsoft.com/). U nekim slučajevima, drugi uslovi se takođe mogu primenjivati. Ovaj članak navodi usluge u oblaku, dodatno objašnjava njihove uslove korišćenja i opisuje kako možete da ih uključite ili isključite u bilo kom trenutku.
 
 > [!NOTE]
-> Ako ste administrator, pogledajte [Administratorske kontrole za opcionalna povezana iskustva](#admin-controls-for-optional-connected-experiences).
+> - Ako ste administrator, pogledajte [Administratorske kontrole za opcionalna povezana iskustva](#admin-controls-for-optional-connected-experiences).
+> - Za Microsoft Teams pogledajte [Pregled opcionalnih povezanih iskustava u usluzi Microsoft Teams](/microsoftteams/teams-privacy-oce-overview).
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>Ako koristite te usluge, koje uslove korišćenja treba da prihvatite?
 
@@ -118,7 +119,7 @@ Za više informacija pogledajte [Postavke privatnosti naloga.](https://support.m
 
 ## <a name="required-service-data"></a>Neophodni podaci o usluzi
 
-Kada koristite bilo koju od opcionalnih usluga u oblaku koje su opisane u ovom članku, Microsoft može da prikuplja [obavezne podatke o usluzi](required-service-data.md) (kao što su podaci o korišćenju, podaci o greškama i performansama) o učinku tokom vašeg iskustva njihovog korišćenja. Ovi obavezni podaci o usluzi mogu da sadrže „lične podatke“ kao što je definisano u Članu 4 evropskog GDPR-a.  Svi obavezni podaci o usluzi koje Microsoft prikuplja tokom korišćenja aplikacija i usluga u okviru Microsoft 365 Apps za preduzeće imaju pseudonime, kao što je definisano u standardu ISO/IEC 19944:2017, (odeljak 8.3.3).
+Kada koristite bilo koju od opcionalnih usluga u oblaku koje su opisane u ovom članku, Microsoft može da prikuplja [obavezne podatke o usluzi](required-service-data.md) (kao što su podaci o korišćenju, podaci o greškama i performansama) o učinku tokom vašeg iskustva njihovog korišćenja. Ovi obavezni podaci o usluzi mogu da sadrže „lične podatke“ kao što je definisano u Članu 4 evropskog GDPR-a.  Svi obavezni podaci o usluzi koje Microsoft prikuplja tokom korišćenja aplikacija i usluga u okviru Microsoft 365 Apps za preduzeće imaju pseudonime, kao što je definisano u standardu ISO/IEC 19944:2017, (odeljak 8.3.3).
 
 ## <a name="admin-controls-for-optional-connected-experiences"></a>Administratorske kontrole za opcionalna povezana iskustva 
 
