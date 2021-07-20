@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o obaveznim dijagnostičkim podacima u sistemu Office kao i listu događaja i polja podataka.
 hideEdit: true
-ms.openlocfilehash: 47ecf8e0195324b1c40a627333275bbed0947253
-ms.sourcegitcommit: 0e2ec395ca334719883a7a48b5313a72217f2eab
+ms.openlocfilehash: 575d9e737e529ba999ece88d69bf8dd91d171d64
+ms.sourcegitcommit: 85bef3bf44e4d6db25fd5817a0e49a159642dab2
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "52907404"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53456210"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Obavezni dijagnostički podaci za Office
 
@@ -1327,6 +1327,28 @@ Prikupljaju se sledeća polja:
 
   - **OfficeArchitecture** – Arhitektura Office klijenta
 
+
+#### <a name="officeprogrammabilityaddinsribbonbuttonclick"></a>Office.Programmability.Addins.RibbonButtonClick
+
+Događaj se generiše prvi put u sesiji kada korisnik klikne na dugme koje je određeni programski dodatak dodao na traku. Ako sesija obuhvata više dana, ova telemetrija će se umesto nje slati jednom dnevno. Podaci se koriste na dva načina: 1. Kada se programski dodatak prekine, saznanje koliko ga korisnici zaista koriste, pomoći će nam da preispitamo problem. 2. Prikazati administratorima kao deo COM scenarija upravljanja programskim dodacima u inventaru dodataka i kao deo planiranih scenarija ispravnosti programskih dodataka u Microsoft 365 ispravnosti aplikacija. Administratori će moći da nadgledaju upotrebu programskih dodataka po uređaju, omogućavajući im da onemoguće ili deinstaliraju neiskorišćene COM programske dodatke.
+
+Prikupljaju se sledeća polja:
+
+- **AddinTimeDateStamp** - vremenska oznaka programskog dodatka dobijena iz DLL metapodataka
+
+- **CLSID** - identifikator klase programskog dodatka
+
+- **Opis programskog dodatka** - opis programskog dodatka
+
+- **FileName** - ime datoteke programskog dodatka, osim putanje datoteke
+
+- **FriendlyName** - prepoznatljivo ime programskog dodatka
+
+- **OfficeApplication** - Office aplikacija koja se trenutno izvršava
+
+- **ProgID** - Prog identifikator programskog dodatka
+
+
 #### <a name="officevisiovisioaddonload"></a>Office.Visio.Visio.AddonLoad
 
 Hvata greške kada se rešenje ne učita. Neophodna za otklanjanje grešaka pri učitavanju programskih dodataka u programu Visio.
@@ -1692,7 +1714,7 @@ Svi znakovi su takođe moguća svojstva. To nam pomaže da shvatimo znakove u ra
 
 #### <a name="applaunchreport"></a>app.launch.report
 
-Ovaj događaj nam omogućava da otkrijemo i rešimo probleme tamo gde se Outlook kreće sporo ili nepotpuno, što otežava korisnicima da koriste našu aplikaciju. Ovo obuhvata informacije o specifičnim funkcijama koje su omogućene i koliko su dugački delovi pokretanja.
+Ovaj događaj se pokreće kada se Outlook pokreće sporo ili nepotpuno. Prikupljeni podaci pružaju informacije o određenim funkcijama koje su omogućene i o tome koliko dugo je trajalo pokretanje.  Omogućava nam da otkrijemo i otklonimo uzrok problema.
 
 Prikupljaju se sledeća polja: 
 
@@ -2677,6 +2699,20 @@ Prikupljaju se sledeća polja:
 - **is_remembered** – da li je korisnik sačuvao željenu postavku da se otvara u novom prozoru sa prijavljene lokacije.
 
 - **multi_window_origin** – lokacija u okviru aplikacije u kojoj dolazi do interakcije za pokretanje ekrana druge aplikacije u novom prozoru.
+
+
+#### <a name="notificationcenter"></a>notification.center
+
+Ovaj događaj nam omogućava da pratimo kada korisnici ulaze i izlaze iz centra za obaveštenja pored broja neviđenih obaveštenja. Ovo nam pomaže da budemo sigurni da je centar za obaveštenja u skladu sa svim ostalim klijentima. Pratimo i kada korisnik dodirne obaveštenje kako bismo mogli da utvrdimo koji je tip.
+
+Prikupljaju se sledeća polja: 
+
+- **radnja** - radnja koju je preduzeo korisnik (zatvoreno, otvoreno, notification_tapped)
+
+- **otkucajte** – tip obaveštenja, od sada će uvek biti reakcija
+
+- **unseen_count** - koliko obaveštenja u trenutnom prikazu ranije nije viđeno
+ 
 
 
 #### <a name="officeandroiddocsuifileoperationsopendocumentmeasurements"></a>Office.Android.DocsUI.FileOperations.OpenDocumentMeasurements
@@ -5842,6 +5878,19 @@ Prikupljaju se sledeća polja:
   - **Data.Log** - Prilagođena poruka evidencije koja označava uspeh ili neuspeh predprovere
 
 
+#### <a name="officeofficemobilefluidfluidfileoperations"></a>Office.OfficeMobile.Fluid.FluidFileOperations
+
+Ovaj događaj se prikuplja za Office aplikacije kada se odvija fluidna datoteka. Podaci se koriste za praćenje stanja karakteristika i razumevanje korisničkog iskustva na osnovu operativnih informacija.
+
+Prikupljaju se sledeća polja: 
+
+- **FailureReason** - Ako je operacija bila neuspešna. Sadrži kod greške za neuspeh.
+
+- **Rezultat** - Logička vrednost koja označava krajnji rezultat operacije.
+
+- **Otkucajte** - tip operacije (na primer, "Otvori").
+
+
 #### <a name="officeofficemobilepdfviewerpdffileoperations-on-android"></a>Office.OfficeMobile.PdfViewer.PdfFileOperations (na Android uređaju)
 
 Događaj se prikuplja za Office aplikaciju za Android. On snima kad se izvršava operacija otvaranja, zatvaranja ili čuvanja pdf-a i koristi se za razumevanje korisnika i određivanje prioriteta korisničkog iskustva na osnovu informacija o operaciji pdf datoteka. Događaj nam omogućava da operacije otvaranja, zatvaranja i čuvanja pdf–a rade na očekivani način, kao i da se poboljšaju performanse operacija pdf datoteka.
@@ -8793,11 +8842,13 @@ Prikupljaju se sledeća polja:
 
 #### <a name="sendmessage"></a>send.message
 
-Koristi se za monitoring mogućeg negativnog uticaja na performanse i zdravlje slanja e-poruka.
+Prikupljeni podaci ukazuju na mogući negativan uticaj na performanse i ispravnost slanja e-poruka. Podaci se koriste za razumevanje da li funkcija uspešno funkcioniše i za planiranje poboljšanja funkcija za slike u e-porukama.
 
 Prikupljaju se sledeća polja:
   
 - **account** – prati nalog koji je izvršio akciju
+
+- **compose_addressing_duration** - ukazuje na ukupno vreme koje korisnik provodi na poljima "Za/Cc/Bcc"
 
 - **compose_duration** - prati ukupno vreme koje je korisniku potrebno za sastavljanje poruke, uključujući više sesija radnih verzija
 
@@ -11207,7 +11258,7 @@ Prikupljaju se sledeća polja:
 
 - **device_brand** - marka uređaja (proizvođač ili operater) kao što je naznačio android.os.Build#BRAND
 
-- **device_ID** - jedinstveni ID uređaja (IMEI)
+- **device_ID** - Jedinstveni ID uređaja (IMEI) *[Ovo polje je uklonjeno iz trenutnih verzija sistema Office, ali se i dalje može pojaviti u starijim verzijama.]*
 
 - **device_manufacturer** - proizvođač uređaja kao što je naznačio android.os.Build#PROIZVOĐAČ
 
@@ -11733,7 +11784,7 @@ Prikupljaju se sledeća polja:
 
 #### <a name="onenotesafebootaction"></a>OneNote.SafeBootAction
 
-To se pokreće tokom pokretanja aplikacije ako je aplikacija padala u prethodnoj sesiji. Ovi podaci se koriste za praćenje novih rušenja i pomoći će nam da utvrdimo da li logika otkrivanja rušenja funkcioniše ispravno i da pratimo broj rušenja i ranih rušenja.
+Ovo se pokreće tokom pokretanja aplikacije ako se aplikacija srušila u prethodnoj sesiji. Ovi podaci se koriste za praćenje novih rušenja i pomoći će nam da utvrdimo da li logika otkrivanja rušenja radi ispravno i da pratimo broj rušenja i ranih rušenja.
 
 Prikupljaju se sledeća polja: 
 
@@ -14465,6 +14516,8 @@ Prikupljaju se sledeća polja samo za Android:
 - **high_contrast** – saopštava nam ako je korisnik uključio postavku za veliki kontrast na uređaju kako bi nam pomogao da otkrijemo probleme u vezi sa ovom postavkom
 
 - **large_text** - saopštava nam da li uređaj ima uključene postavke za veliki tekst kako bi nam pomogao da otkrijemo problem u vezi sa ovom postavkom
+
+- **oem_preinstall** - saopštava nam da li je aplikacija unapred instalirana na uređaju (ovo se odnosi samo na Samsung uređaje)
 
 - **supported_abis** - govori nam koju vrstu binarnog interfejsa aplikacije (ABIs) podržava platforma uređaja kako bi nam pomogao da otkrijemo probleme u vezi sa ovom postavkom
 

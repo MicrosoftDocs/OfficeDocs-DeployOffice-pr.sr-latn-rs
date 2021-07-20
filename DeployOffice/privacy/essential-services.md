@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorima sistema Office pruža informacije o osnovnim uslugama u sistemu, kao što su „Klikni i pokreni“ i licenciranje, a pruža i listu događaja i polja sa podacima o ovim osnovnim uslugama.
 hideEdit: true
-ms.openlocfilehash: 6dede4fdc57074aa5a9daaf28a20a736c813d626
-ms.sourcegitcommit: 0e2ec395ca334719883a7a48b5313a72217f2eab
+ms.openlocfilehash: 66a34445b66389f82d7be4ab87d34ab9b331c675
+ms.sourcegitcommit: 85bef3bf44e4d6db25fd5817a0e49a159642dab2
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "52907368"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53456164"
 ---
 # <a name="essential-services-for-office"></a>Osnovne usluge za Office
 
@@ -853,6 +853,8 @@ Prikupljaju se sledeća polja:
 
 - **Issilent** – False ako je prikazano korisničko interfejs; true ako je reč o događaju u pozadini.
 
+- **oneauth_Activeflights** - Spisak letova koji su aktivni u sesiji,koriste se za AB testiranje.
+
 - **oneauth_api** – određuje javni API za OneAuth koji je pozvan.
 
 - **oneauth_Domain** – ako je poziv API-ja uzrokovao grešku, to je sistemski domen te greške.
@@ -1190,7 +1192,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeclicktorunscenarioinstalltaskconfigurelight"></a>Office.ClickToRun.Scenario.InstallTaskConfigurelight
 
-Podešavanje sistema Office i prikupljanje podataka o zalihama kada instalacioni program za Office odlučuje koje datoteke će preuzeti. Koristi se za merenje uspeha / neuspeha instalacije sistema Office.
+Podaci o podešavanju sistema Office i inventar prikupljaju se kada program za instalaciju sistema Office odlučuje koje datoteke treba preuzeti. Koristi se za merenje uspeha / neuspeha instalacije sistema Office.
 
 Prikupljaju se sledeća polja:
 
@@ -2646,7 +2648,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="officeclicktorunscenarioupdatetaskupdatedetection"></a>Office.ClickToRun.Scenario.UpdateTaskUpdatedetection
 
-Podešavanje sistema Office i prikupljanje podataka o zalihama kada klijent „Klikni i pokreni“ provera da li je dostupno novo ažuriranje. Koristi se za merenje uspeha / neuspeha ažuriranja sistema Office.
+Podaci o podešavanju sistema Office i inventar prikupljaju se kada klijent klikni za pokretanje proveri da li je dostupno novo ažuriranje. Koristi se za merenje uspeha / neuspeha ažuriranja sistema Office.
 
 Prikupljaju se sledeća polja:
 
@@ -3179,22 +3181,16 @@ Ovaj događaj se evidentira kada se završi poziv upućen funkciji webservice, o
 
 Prikupljaju se sledeća polja:
 
-- **ActionDetail** – Dodatni detalji kada dođe do neuspeha.
-   - Ako HTTP zahtev uspe, ActionDetail će biti 0.
-   - Ako polje „Result“ nije u redu (tj. nije 0), što znači da zahtev nije poslat, ovo polje će evidentirati kôd unutrašnje greške koji je isti kao polje „Result“.
-   - Ako je polje „Result“ u redu (tj. 0), što znači da je kôd HTTP odgovora >= 300, ono će evidentirati kôd HTTP odgovora (npr. 404).
+- **ActionDetail** - Dodatni detalji kada dođe do neuspeha.
 
-- **Result** – Zastavice numeričkog koda greške dobijene iz API-ja za pozivanje Office veb usluge. – npr. 3 bi značilo da je došlo do problema prilikom pokretanja HTTP zaglavlja.
+- **Result** - Zastavice numeričkog koda greške dobijene iz API-ja za pozivanje Office veb usluge. Na primer, 3 bi značilo da je došlo do problema prilikom pokretanja HTTP zaglavlja.
 
-- **Type** – Dodatne informacije o tipu. U slučaju zaliha, ove informacije navode tip korisnih podataka koji se šalju – npr. kompletni ili samo delta promena. 
+- **Type** - Dodatne informacije o tipu. U slučaju inventara, ove informacije određuju vrstu korisnog tereta koji se šalje. Na primer, puna ili samo delta promena. 
 
--  **WebCallSource** - Vrednost nabrajanja (navedena kao ceo broj) koja ukazuje na dodatak „Upravljač servisiranja“, koji je bio izvor poziva:
-   - Inventar: 0
-   - Konfiguracija inventara: 1
-   - Smernice za inventar: 2
-   - Status mreže inventara: 3
-   - Upravljač uslužnošću: 4
-   - Mogućnost upravljanja: 5
+- **Verzija** - puni četvorodelni broj verzije sistema Office. Na primer, 16.0.10000.10000. (Imajte na umu da se za ove događaje polje standardne verzije popunjava verzijom Windows, jer se ovo izvodi kao deo Windows procesa.)
+
+-  **WebCallSource** - Vrednost nabrajanja (navedena kao ceo broj) koja ukazuje na dodatak Upravljača servisiranja koji je bio izvor poziva.
+   
 
 ### <a name="officeserviceabilitymanagerwebservicefailure"></a>Office.ServiceabilityManager.WebserviceFailure
 
@@ -4289,6 +4285,21 @@ Prikupljaju se sledeća polja:
   - **OpportunisticTokenRenewalAttempted** - Ukazuje na to da smo pokušali oportunističku obnovu za korisnika koji se nalazi u režimu aktivacije deljenog računara
 
   - **ReArmResult** - Ukazuje na rezultat vraća instaliranog ključa u početno stanje, što može da produži rok trajanje trenutne licence
+
+### <a name="officesetupofficesdxlog"></a>Office.SetupOffice.Sdx.Log 
+
+Ovaj događaj se pokreće kada iskoristimo Office ponudu za korisnika koji je kupio uređaj u paketu sa OEM ovlašćenjem ili je uneo šifru proizvoda. Ovi podaci se koriste za opšte poruke evidencije.
+
+Prikupljaju se sledeća polja:
+
+- **Ctid (Data_Ctid)** - Korelacioni ID se koristi za povezivanje različitih evidencija u okviru jedne sesije otkupa.
+
+- **Okruženje (Data_ Environment)** - okruženje za projektante (Pr, Edog, Prod, Int).
+
+- **Poruka (Data_Message)** - Poruka evidencije od setup.office.com. Na primer, "slika "." ne može da se učita,koristi se /img/spinner.csv' i cdn."
+
+- **Tip (Data_Type)** - tip poruke evidencije (greška, upozorenje, Informacije)
+
 
 ### <a name="onenoteenrollmentresult"></a>OneNote.EnrollmentResult
  
@@ -5921,7 +5932,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="controllerdownloadwindownetworkunavailablealertok"></a>controller.downloadwindow.networkunavailablealertok
 
-Ovaj događaj pokazuje da je mrežna veza izgubljena tokom preuzimanja ispravki. On pokazuje i da je korisnik obavešten o toj grešci. Ovaj događaj koristimo da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj pokazuje da je mrežna veza izgubljena prilikom preuzimanja ispravki. Takođe pokazuje da je korisnik obavešten o ovoj grešci. Ovaj događaj koristimo za obezbeđivanje da proces ažuriranja funkcioniše na očekivani način i za rešavanje grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -5962,7 +5973,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="controllerdownloadwindownoconnectionok"></a>controller.downloadwindow.noconnectionok
 
-Ovaj događaj pokazuje da je mrežna veza izgubljena tokom preuzimanja ispravki. On pokazuje i da je korisnik obavešten o toj grešci. Ovaj događaj koristimo da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj pokazuje da je mrežna veza izgubljena prilikom preuzimanja ispravki. Takođe pokazuje da je korisnik obavešten o ovoj grešci. Ovaj događaj koristimo za obezbeđivanje da proces ažuriranja funkcioniše na očekivani način i za rešavanje grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -6084,7 +6095,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="controllerdownloadwindowupdatefailed"></a>controller.downloadwindow.updatefailed
 
-Ovaj događaj pokazuje da nisu uspele neke ispravke iz trenutne grupe. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da jedno ili više ažuriranja iz trenutne serije nije uspelo. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -6207,7 +6218,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="controllerdownloadwindowuserresumed"></a>controller.downloadwindow.userresumed
 
-Ovaj događaj pokazuje da je proces preuzimanja ispravki uspešno nastavljen posle pauziranja. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je postupak ažuriranja preuzimanja uspešno nastavljen nakon ulaska u pauzu. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -6248,7 +6259,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="controllermainwindowsetautomaticchecking"></a>controller.mainwindow.setautomaticchecking
 
-Ovaj događaj pokazuje da je uređaj registrovan za režim automatskog ažuriranja. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je uređaj prijavljen u režim automatskog ažuriranja. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -6289,7 +6300,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="controllermainwindowsetautomaticdownloadinstall"></a>controller.mainwindow.setautomaticdownloadinstall
 
-Ovaj događaj pokazuje da je uređaj registrovan za režim automatskog ažuriranja. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je uređaj prijavljen u režim automatskog ažuriranja. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -6330,7 +6341,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="controllermainwindowsetmanualchecking"></a>controller.mainwindow.setmanualchecking
 
-Ovaj događaj pokazuje da je uređaj registrovan za režim ručnog ažuriranja. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je uređaj prijavljen u režim ručnog ažuriranja. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -6371,7 +6382,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="controllertemplateawindowcancel"></a>controller.templateawindow.cancel
 
-Ovaj događaj pokazuje da je korisnik odabrao da otkaže ili zanemari prikazanu poruku upozorenja. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je korisnik izabrao da otkaže ili zanemari pruženu poruku upozorenja. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -6412,7 +6423,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="controllertemplateawindowenroll"></a>controller.templateawindow.enroll
 
-Ovaj događaj pokazuje da je korisnik odabrao da prihvati prikazanu preporuku upozorenja. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je korisnik odabrao da sledi obezbeđenu preporuku upozorenja. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -6495,7 +6506,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="controllerupdatewindowbegindownloadingapps"></a>controller.updatewindow.begindownloadingapps
 
-Ovaj događaj pokazuje da je preuzimanje ispravki započeto putem prozora za ažuriranje. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je preuzimanje ažuriranja započeto kroz prozor za ažuriranje. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
 
 Prikupljaju se sledeća polja:
 
@@ -7354,7 +7365,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="downloadmanifestfilenameerror"></a>downloadmanifest.filenameerror
 
-Ovaj događaj pokazuje da je došlo do neočekivane greške. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je došlo do neočekivane greške. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -7395,7 +7406,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="downloadmanifestinvalidhash"></a>downloadmanifest.invalidhash
 
-Ovaj događaj pokazuje nije uspela bezbednosna provera valjanosti datoteka. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da sigurnosna provera naših datoteka nije uspela. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -7477,7 +7488,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="downloadmanifestsignatureerror"></a>downloadmanifest.signatureerror
 
-Ovaj događaj pokazuje da za paket nije uspela verifikacija potpisa koda. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da verifikacija potpisa koda nije uspela za paket. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -7559,7 +7570,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="downloadmgrdownloadend"></a>downloadmgr.downloadend
 
-Ovaj događaj evidentira označivač koji pokazuje da se proces preuzimanja samostalno dovršio. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj beleži marker koji označava da je proces preuzimanja završen sam. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -7946,7 +7957,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbacheckforupdateskip"></a>fba.checkforupdateskip
 
-Ovaj događaj pokazuje da je proces u pozadini preskočio ažuriranje zbog toga što je otvoren grafički korisnički interfejs aplikacije MAU. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je pozadinski proces preskočio ažuriranje zbog otvaranja MAU GUI. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -8636,7 +8647,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbaskipforcedupdate"></a>fba.skipforcedupdate
 
-Ovaj događaj pokazuje da se preskače nametnuta provera da li postoje ispravke zbog otvorenih aplikacija. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj znači da je prisilna provera ažuriranja preskočena zbog otvorenih aplikacija. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -9097,7 +9108,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbasilentupdatecodesignfailure"></a>fbasilentupdate.codesignfailure
 
-Ovaj događaj evidentira rezultat verifikacije potpisa kodom posle primene ažuriranja. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj evidentira rezultat verifikacije kodnog dizajna nakon primene ispravke. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -9181,7 +9192,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbasilentupdatedownloadfailed"></a>fbasilentupdate.downloadfailed
 
-Ovaj događaj pokazuje da je došlo do otkazivanja prilikom preuzimanja ispravke. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je došlo do greške prilikom preuzimanja ispravke. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -9355,7 +9366,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbasilentupdateinstallattemptfailed"></a>fbasilentupdate.installattemptfailed
 
-Ovaj događaj pokazuje da nije uspeo pokušaj instaliranja ispravke (verzije). Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da pokušaj instalacije za ažuriranje (verziju) nije uspeo. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -9437,7 +9448,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbasilentupdateinstalled"></a>fbasilentupdate.installed
 
-Ovaj događaj pokazuje da je pojedinačna ispravka uspešno instalirana. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je pojedinačna ispravka uspešno instalirana. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -9478,7 +9489,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="fbasilentupdateinstalling"></a>fbasilentupdate.installing
 
-Ovaj događaj pokazuje da je pokrenuta pojedinačna ispravka. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je pokrenuto pojedinačno ažuriranje. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -9614,7 +9625,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbasilentupdatenotificationremoved"></a>fbasilentupdate.notificationremoved
 
-Ovaj događaj pokazuje da ispravka koja je bila blokirana nije više blokirana. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da ažuriranje koje je blokirano više nije blokirano. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -9655,7 +9666,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="fbasilentupdatequeueinstall"></a>fbasilentupdate.queueinstall
 
-Ovaj događaj pokazuje da se ispravka stavlja u red za čekanje za tiho instaliranje. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da će se ažuriranje staviti u red za tihu instalaciju. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -11278,7 +11289,7 @@ Prikupljaju se sledeća polja:
     
 ### <a name="installupdatestaskcodesignverificationfail"></a>installupdatestask.codesignverificationfail
 
-Ovaj događaj pokazuje da nije uspela verifikacija potpisa kodom za ispravku za aplikaciju. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da verifikacija CodeSign-a nije uspela za ažuriranje aplikacije. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -11319,7 +11330,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="installupdatestaskcodesignverificationstart"></a>installupdatestask.codesignverificationstart
 
-Ovaj događaj pokazuje da je verifikacija potpisa kodom pokrenuta za ispravku za aplikaciju. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je verifikacija CodeSign započeta za ažuriranje aplikacije. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -11360,7 +11371,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="installupdatestaskcodesignverificationsuccess"></a>installupdatestask.codesignverificationsuccess
 
-Ovaj događaj pokazuje uspešnu verifikaciju potpisa kodom za ispravku za aplikaciju. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava uspeh verifikacije CodeSign za ažuriranje aplikacije. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -12011,6 +12022,8 @@ Prikupljaju se sledeća polja:
 
 ### <a name="msupdateclieventhandlerapplyupdatesappids"></a>msupdate.cli.eventhandler.applyupdates.appids
 
+*[Ovaj događaj je uklonjen iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
+
 Ovaj događaj pokazuje da je izdata komanda interfejsa za pozive da se primeni ispravka. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
  
 Prikupljaju se sledeća polja:
@@ -12052,6 +12065,8 @@ Prikupljaju se sledeća polja:
 
 ### <a name="msupdateclieventhandlerconfig"></a>msupdate.cli.eventhandler.config
 
+*[Ovaj događaj je uklonjen iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
+
 Ovaj događaj pokazuje da je modul interfejsa sa komandnom linijom aplikacije Microsoft Autoupdate primio Apple događaj za konfigurisanje. Ovaj događaj koristimo da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
  
 Prikupljaju se sledeća polja:
@@ -12092,6 +12107,8 @@ Prikupljaju se sledeća polja:
 
 
 ### <a name="msupdateclieventhandlerupdates"></a>msupdate.cli.eventhandler.updates
+
+*[Ovaj događaj je uklonjen iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
 
 Ovaj događaj pokazuje da je modul interfejsa sa komandnom linijom aplikacije Microsoft Autoupdate primio Apple događaj za navođenje ispravki. Ovaj događaj koristimo da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
  
@@ -12175,7 +12192,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="msupdatemonitorprogressfailure"></a>msupdate.monitor.progress.failure
 
-Ovaj događaj evidentira listu ispravki u redu za čekanje čija primena nije uspela. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj evidentira listu ažuriranja u redu koje nisu uspele da se primene. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -12298,7 +12315,9 @@ Prikupljaju se sledeća polja:
 
 ### <a name="optinnotificationaction"></a>Optinnotificationaction
 
-Ovaj događaj evidentira odgovor korisnika u dijalogu za davanje saglasnosti za registrovanje za tiha ažuriranja. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+*[Ovaj događaj je uklonjen iz aktuelnih verzija sistema Office, ali se i dalje može pojavljivati u starijim verzijama.]*
+
+Ovaj događaj beleži odgovor korisnika na dijalog za prijavu za upis u nečujna ažuriranja. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -12948,7 +12967,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="sauupdateinfoprovider"></a>sauupdateinfoprovider
 
-Ovaj događaj evidentira svaki put kada ključ manifesta nedostaje u pomoćnoj datoteci. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj se evidentira kad god nedostaje manifestni ključ u dodatku. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -14385,7 +14404,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="updatefindercheckupdatefound"></a>updatefinder.check.updatefound
 
-Evidentiramo svaki put kada se provera da li postoje ispravke završi pronalaženjem ispravki. Ovaj događaj koristimo da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Registrujemo se svaki put kada provera za ispravke rezultira pronađenim ispravkama. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
@@ -14673,7 +14692,7 @@ Prikupljaju se sledeća polja:
 
 ### <a name="updatefinderofferupdatesupdaterulematched"></a>updatefinder.offerupdates.updaterulematched
 
-Ovaj događaj pokazuje da je pronađena ispravka za aplikaciju i osnovnu verziju. Koristimo ga da bismo obezbedili da proces ažuriranja funkcioniše na očekivani način i da bismo vam pomogli prilikom rešavanja problema u slučaju grešaka.
+Ovaj događaj označava da je pronađeno ažuriranje za aplikaciju i osnovnu liniju. Ovaj događaj koristimo da bismo osigurali da postupak ažuriranja radi kako se očekuje i da bismo pomogli u rešavanju grešaka.
  
 Prikupljaju se sledeća polja:
 
